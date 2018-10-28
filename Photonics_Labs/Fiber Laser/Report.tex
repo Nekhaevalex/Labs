@@ -102,16 +102,17 @@
 	Режим свободной генерации фактически означает отсутствие какого-либо специального управления генерацией или какого-либо воздействия на нее извне. В частности, отсутствует какая-либо модуляция (как активная, так и пассивная) добротности резонатора. Свободная генерация может иметь место как в случае импульсной, так и в случае непрерывной накачки. Свободное излучение волоконного лазера представляет собой, как правило, последовательность относительно коротких импульсов или, как принято говорить, пичков. Длительность отдельного пичка равна $10^{-7}-10^{-6}с$ (0.1 - 1 мкс); мощность достигает значений $10^4-10^5$ Вт. Временной интервал между писками составляет примерно 1-10 мкс.
 	\begin{figure}[!htb]
 		\centering
-		\includegraphics[scale=0.4]{pic1.jpg}
+		\minipage{0.45\textwidth}
+		\includegraphics[width=\linewidth]{pic1.jpg}
 		\caption{Осциллограмма излучения твердотельного лазера, работающего в режиме свободной генерации}
+		\endminipage\hfill
+		\minipage{0.45\textwidth}
+		\includegraphics[scale=0.2]{pic2.jpg}
+		\caption{Энергетическая схема квази-четырехуровневого лазера}
+		\endminipage
 	\end{figure}
 	\subsection{Динамика генерации лазера в различных режимах работы}
 	\subsubsection{Система уравнений, описывающая динамику генерации лазера}
-	\begin{figure}[!htb]
-		\centering
-		\includegraphics[scale=0.4]{pic2.jpg}
-		\caption{Энергетическая схема квази-четырехуровневого лазера}
-	\end{figure}
 	Считая, что переходы между уровнями 4 и 3 и уровнями 2 и 1 являются быстрыми, можно положить $n_4\approx n_3\approx 0$. В этом случае скоростные уравнения можно записать следующий образом
 	\begin{equation}
 		\begin{cases}
@@ -202,5 +203,180 @@
 		\item $P_p$ -- мощность электрической накачки (приложенная к лампе или к разряду),
 		\item $P_{\text{пор}}$ -- ее пороговое значение.
 	\end{itemize}
-	Таким образом, если выбрать $P_p/P_{\text{пор}}=1.1$, то количество фотонов в резонаторе будет около $10^{10}$
+	Таким образом, если выбрать $P_p/P_{\text{пор}}=1.1$, то количество фотонов в резонаторе будет около $10^{10}$.\par
+	Если считать основными потерями в резонаторе -- выход излучения через зеркала, то суммарная мощность излучения, выходящего через оба зеркала:
+	\begin{equation}
+		P=\frac{q_0\hbar\omega}{\tau_0},
+	\end{equation}
+	где $\tau_0$ -- время жизни фотонов в резонаторе, определяемое как
+	\begin{equation}
+		\frac{1}{\tau_0}=-\frac{c}{2L}\ln\left(1-T\right),
+	\end{equation}
+	где $T$ -- коэффициент пропускания выходного зеркала.
+	\subsubsection{Релаксационные колебания в лазере. Работа лазера в нестационарных режимах генерации при ступенчатом включении импульса накачки.}
+	Рассмотрим работу лазера при нестационарной накачке. Для данной временной зависимости скорости накачки $W_p(t)$, можно найти временную зависимость q(t) и N(t), если заданы начальные условия.\par
+	В случае, когда скорость накачки описывается ступенчатой функцией, будем считать, что скорость накачки имеет следующую временную зависимость: $W_p=0$ при $t<0$ и $W_p(t)=W_p$ (с независящей от времени величиной $W_p$) при $t>0$. При  небольших колебаниях инверсии и количества фотонов около стационарных значений $N_0$ и $q_0$, можно записать
+	\begin{equation}
+		\begin{cases}
+			N(t)=N_0+\delta N\\
+			q(t)=q_0+\delta q\\
+		\end{cases},
+	\end{equation}
+	где $\delta N\ll N_0$ и $\delta q\ll q_0$ (так что произведениями типа $\delta N\delta q$ в (\ref{eq526}) можно пренебречь). Тогда из уравнений (\ref{eq526}) получаем систему:
+	\begin{equation}
+		\begin{cases}
+			\delta\dot{N}=-\delta N\left(W_p-\frac{1}{\tau}\right)-B\left(q_0\delta N+N_0\delta q\right)\\
+			\delta\dot{q}=Bq_0V_a\delta N
+		\end{cases}
+		\label{eq:512}
+	\end{equation}
+	Подстановка нижнего уравнения из (\ref{eq:512}) в верхнее уравнение с учетом $BV_aN-1/\tau_c=0$, дает уравнение колебаний:
+	\begin{equation}
+		\delta \ddot{q}+\left[W_p+\left(\frac{1}{\tau}\right)+Bq_0\right]\delta\dot{q}+(B^2N_0q_0V_a)\delta q = 0,
+	\end{equation}
+	Решение которого имеет вид
+	\begin{equation*}
+		\delta q=\delta q_0\exp(st).
+	\end{equation*}
+	В этом случае получаем уравнение с параметром $s$:
+	\begin{equation*}
+		s^2+\left(\frac{2}{t_0}\right)s+\omega^2=0,
+	\end{equation*}
+	где
+	\begin{equation*}
+		\omega^2=B^2N_0q_0\qquad\frac{1}{t_0}=\frac{1}{2}\left(W_p+(1/\tau)+Bq_0\right).
+	\end{equation*}
+	Решение квадратного уравнения будет:
+	\begin{equation*}
+		s=-1/t_0\pm[(1/t_0)^2-\omega^2]^{1/2}
+	\end{equation*}
+	где для случая $(1/t_0)<\omega$ вводим $\omega'$ и получаем:
+	\begin{equation*}
+		\omega'=[\omega^2-(1/t_0)]^{1/2},\qquad s=-1/t_0\pm i\omega'.
+	\end{equation*}
+	В этом случае решение будет представлять собой затухающее гармоническое колебание:
+	\begin{equation}
+		\delta q=C\exp(-t/t_0)\sin(\omega't+\varphi)
+	\end{equation}
+	где константы $C$ и $\varphi$ определяются начальными условиями. Для изменения инверсии в случае $(1/t_0)\ll\omega'$ получаем
+	\begin{equation*}
+		\delta N=(\omega' C/Bq_0V_a)\exp(-t/t_0)\sin(\omega't+\varphi)
+	\end{equation*}
+	С учетом (\ref{eq:56}) и считая, что $N_0\ll N_t$, выражения для $t_0$ и $\omega$ можно записать в более простом виде:
+	\begin{equation}
+		t_0=2\tau/x\qquad\omega=\left(\frac{x-1}{\tau_0\tau}\right)^{1/2},
+	\end{equation}
+	где $x=W_p/W_{cp}$ --- относительное превышение скорости накачки над пороговой. Таким образом, при ступенчатом включении накачки при генерации лазера происходят затухающие релаксационные колебания количества фотонов в резонаторе и, следовательно, выходной мощности с частотой $\omega'$.\par
+	Проведенный анализ режимов работы лазера дает качественную картину динамики генерации лазера при постоянной накачке в режиме непрерывной генерации и в переходном режиме. Численное интегрирование системы уравнений (\ref{eq526}) при расчете параметров генерации лазера показывает следующие зависимости на рисунке \ref{pic:3} развития генерации от времени:
+	\begin{figure}[!htb]
+		\centering
+		\minipage{0.5\textwidth}
+		\includegraphics[width=\linewidth]{3a.png}
+		\endminipage\hfill
+		\minipage{0.5\textwidth}
+		\includegraphics[width=\linewidth]{3b.png}
+		\endminipage
+		\caption{Зависимость инверсии населенности $n(t)$ и полного числа фотонов в резонаторе $q(t)$ от времени при ступенчатом включении накачки (а и б – показано в разных временных масштабах).}
+		\label{pic:3}
+	\end{figure}
+	\par
+	Таким образом, при генерации лазера могут наблюдаться релаксационные колебания мощности генерации (рис.\ref{pic:3}) с частотой, определяемой параметрами лазерной системы. В стационарном режиме генерации инверсия устанавливается на уровне пороговой.
+	\newpage
+	\section{Практическая часть}
+	\begin{enumerate}
+		\item Построим график зависимости выходной мощности излучения от мощности накачки
+		\begin{table}[h]
+			\centering
+			\caption{Экспериментальные данные}
+			\begin{tabular}{|c|c|c|c|c|}
+				\hline
+				$I_{\text{накачки}}$, А & Напряжение, В & Показания калориметра, Дж & $W_{\text{выходное}}$, Вт & $W_{\text{накачка}}$, Вт\\
+				\hline
+				2.1 & 6 & 49 & 1.323 & 12.6\\
+ 				1.9 & 6 & 46 & 1.242 & 11.4\\
+			 	1.8 & 6 & 45 & 1.215 & 10.8\\
+ 				1.7 & 6 & 43 & 1.161 & 10.2\\
+ 				1.6 & 6 & 41 & 1.107 & 9.6\\
+ 				1.5 & 6 & 36 & 0.972 & 9.0\\
+			 	1.4 & 6 & 32 & 0.864 & 8.4\\
+ 				1.3 & 6 & 29 & 0.783 & 7.8\\
+ 				1.2 & 6 & 25 & 0.675 & 7.2\\
+ 				1.1 & 6 & 21 & 0.567 & 6.6\\
+ 				1.0 & 6 & 17 & 0.459  & 6.0\\
+ 				\hline
+			\end{tabular}
+		\end{table}
+		\begin{figure}[!htb]
+			\begin{tikzpicture}
+				\begin{axis}[
+				xlabel={$W_{\text{накачка}}$, Вт},
+				ylabel={$W_{\text{выходное}}$, Вт},
+				xmin=2,
+				xmax=13,
+				ymin=0,
+				ymax=1.5,
+				ymajorgrids=true,
+    			xmajorgrids=true,
+    			grid style=dashed,
+    			width=\textwidth,
+				]
+				\addplot[
+				color=black,
+				mark=square,
+				only marks,
+				]
+				coordinates{
+				(6, 0.459)
+				(6.6, 0.567)
+				(7.2, 0.675)
+				(7.8, 0.783)
+				(8.4, 0.864)
+				(9.0, 0.972)
+				(9.6, 1.107)
+				(10.2, 1.161)
+				(10.8, 1.215)
+				(11.4, 1.242)
+				(12.6, 1.323)
+				};
+				\addplot[
+				domain=2:13,
+				samples=3,
+				color=black
+				]
+				{-0.308003+0.138113*x};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{График зависимости выходной мощности от накачки}
+		\end{figure}
+		\newpage
+		По графику видим, то пороговая мощность накачки равняется примерно $W_{cp}\approx 2.23$ Вт, КПД примерно $\eta\approx 13.8\%$.
+		\item Снятие зависимости частоты релаксационных колебаний от превышения над порогом генерации:
+		\begin{figure}[h]
+			\minipage{0.44\textwidth}
+			\includegraphics[width=\linewidth]{1.1A.pdf}
+			\endminipage\hfill
+			\minipage{0.44\textwidth}
+			\includegraphics[width=\linewidth]{1.2A.pdf}
+			\endminipage\hfill
+			\minipage{0.44\textwidth}
+			\includegraphics[width=\linewidth]{1.3A.pdf}
+			\endminipage\hfill
+			\minipage{0.44\textwidth}
+			\includegraphics[width=\linewidth]{1.4A.pdf}
+			\endminipage\hfill
+			\minipage{0.44\textwidth}
+			\includegraphics[width=\linewidth]{1.5A.pdf}
+			\endminipage\hfill
+			\minipage{0.44\textwidth}
+			\includegraphics[width=\linewidth]{1.6A.pdf}
+			\endminipage\hfill
+			\minipage{0.44\textwidth}
+			\includegraphics[width=\linewidth]{1.7A.pdf}
+			\endminipage\hfill
+			\minipage{0.44\textwidth}
+			\includegraphics[width=\linewidth]{1.8A.pdf}
+			\endminipage
+		\end{figure}
+		\par
+	\end{enumerate}
 \end{document}
