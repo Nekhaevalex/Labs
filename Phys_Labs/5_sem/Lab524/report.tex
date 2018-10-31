@@ -1,0 +1,124 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools, misccorr, indentfirst, multirow}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{adjustbox}
+\usepackage{pgfplots}
+
+\usepackage{geometry}
+\geometry{top=20mm}
+\geometry{bottom=20mm}
+\geometry{left=20mm}
+\geometry{right=20mm}
+\newcommand{\angstrom}{\textup{\AA}}
+
+\title{Лабораторная работа 2.4\\Закон Моззли}
+\author{Нехаев Александр, гр. 654}
+\date{\today}
+\begin{document}
+\maketitle
+\tableofcontents
+\paragraph{Цель работы:}
+измерить спектры характеристического излучения атомов для набора химических элементов. Определить рентгеновские термы измеренных спектральных пиков излучения. Проверить закон Мозли. Определить рентгеновские термы измеренных спектральных пиков излучения. Проверить закон Мозли. Определить элементный состав контрольного образца.
+\paragraph{В работе используются:}
+рентгеновский спектрометр <<Спектроскан Макс-G>>, включающий в себя рентгеновский источник излучения, специально вогнутый кристалл LiF, гониометр, газовый детектор рентгеновских квантов и компьютер, а также образцы чистых химических элементов.
+\section{Теоретическое введение}
+\section{Ход работы}
+\subsection{Измерение спектров}
+В лабораторной работе предлагается определить длины волн характеристического излучения следующих элементов: $^{22}\text{Ti}$, $^{23}\text{V}$, $^{24}\text{Cr}$, $^{25}\text{Mn}$, $^{26}\text{Fe}$, $^{28}\text{Ni}$, $^{29}\text{Cu}$, $^{41}\text{Nb}$, $^{42}\text{Mo}$, $^{47}\text{Ag}$.\par
+Работать будем с наиболее яркими спектральными линиями: $K_{\alpha_{1,2}}$, $K_{\beta_{1,3}}$, $L_{\alpha_1}$, $L_{\beta_1}$.
+\subsection{Обработка данных}
+\begin{enumerate}
+	\item На основе измеренных данных составим таблицу:
+	\newpage
+	\begin{table}[!htb]
+		\centering
+		\caption{Экспериментальные данные}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\hline
+			Элемент & Z & $\lambda _{K_{\alpha }}$ & $\lambda _{K_{\beta }}$ & $E_{K_{\alpha}}$ & $E_{K_{\beta }}$ & $\sqrt{\frac{E_{K_{\alpha}}}{\text{Ry}}}$ & $\sqrt{\frac{E_{K_{\beta}}}{\text{Ry}}}$ \\
+			\hline
+   			Ti & 22 & $2749.9\text{ m{\AA}}$ & $2514.9\text{ m{\AA}}$ & $4508.53\text{ eV}$ & $4929.82\text{ eV}$ & 18.2036 & 19.0351 \\
+   			V & 23 & $2505\text{ m{\AA}}$ & $2285\text{ m{\AA}}$ & $4949.3\text{ eV}$ & $5425.82\text{ eV}$ & 19.0727 & 19.9697 \\
+   			Cr & 24 & $2291.1\text{ m{\AA}}$ & $2086\text{ m{\AA}}$ & $5411.37\text{ eV}$ & $5943.43\text{ eV}$ & 19.9431 & 20.9006 \\
+   			Mn & 25 & $2104\text{ m{\AA}}$ & $1911.\text{ m{\AA}}$ & $5892.59\text{ eV}$ & $6487.7\text{ eV}$ & 20.811 & 21.8366 \\
+   			Fe & 26 & $1937\text{ m{\AA}}$ & $1757\text{ m{\AA}}$ & $6400.62\text{ eV}$ & $7056.35\text{ eV}$ & 21.6896 & 22.7735 \\
+   			Ni & 28 & $1658\text{ m{\AA}}$ & $1500.1\text{ m{\AA}}$ & $7477.68\text{ eV}$ & $8264.78\text{ eV}$ & 23.4435 & 24.6465 \\
+			Cu & 29 & $1540\text{ m{\AA}}$ & $1390\text{ m{\AA}}$ & $8050.65\text{ eV}$ & $8919.42\text{ eV}$ & 24.3251 & 25.604 \\
+			Ag & 47 & $560\text{ m{\AA}}$ & $500\text{ m{\AA}}$ & $22139.3\text{ eV}$ & $24796.\text{eV}$ & 40.3387 & 42.6904 \\
+			Mo & 42 & $711\text{ m{\AA}}$ & $632\text{ m{\AA}}$ & $17437.4\text{ eV}$ & $19617.1\text{ eV}$ & 35.7998 & 37.9714 \\
+			Nb & 41 & $748\text{ m{\AA}}$ & $666\text{ m{\AA}}$ & $16574.9\text{ eV}$ & $18615.6\text{ eV}$ & 34.9032 & 36.9895 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\item Для всех спектральных линий построим на одном графике зависимости величины $\sqrt{\frac{E}{Ry}}$ от атомного номера $Z$.
+	\begin{figure}[!htb]
+	\begin{tikzpicture}
+		\begin{axis}[
+		xlabel=Z,
+		ylabel=$\sqrt{\frac{E}{Ry}}$,
+		xmin=22,
+		xmax=47,
+		ymin=17,
+		ymax=43,
+		ymajorgrids=true,
+		xmajorgrids=true,
+    	grid style= dashed,
+    	width=\textwidth,
+    	]
+    	\addplot[
+    	color=black,
+		mark=square,
+		only marks,
+    	]
+    	coordinates{
+    	(22, 18.2036)
+    	(23, 19.0727)
+    	(24, 19.9431)
+    	(25, 20.811)
+    	(26, 21.6896)
+    	(28, 23.4435)
+    	(29, 24.3251)
+    	(41, 34.9032)
+    	(42, 35.7998)
+    	(47, 40.3387)
+    	};
+    	\addplot[
+    	color=black,
+		mark=square,
+		only marks,
+    	]
+    	coordinates{
+    	(22, 19.0351)
+    	(23, 19.9697)
+    	(24, 20.9006)
+    	(25, 21.8366)
+    	(26, 22.7735)
+    	(28, 24.6465)
+    	(29, 25.604)
+    	(41, 36.9895)
+    	(42, 37.9714)
+    	(47, 42.6904)
+    	};
+    	\addplot[
+    	domain=22:47,
+		samples=3,
+		color=black
+    	]
+    	{-1.27391+0.883614*x};
+    	\addplot[
+    	domain=22:47,
+		samples=3,
+		color=black
+    	]
+    	{-1.84261+0.947373*x};
+		\end{axis}
+
+	\end{tikzpicture}
+	\end{figure}
+\end{enumerate}
+\end{document}
