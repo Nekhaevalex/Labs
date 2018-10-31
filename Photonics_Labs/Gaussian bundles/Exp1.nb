@@ -1,0 +1,557 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20613,        549]
+NotebookOptionsPosition[     19788,        528]
+NotebookOutlinePosition[     20142,        544]
+CellTagsIndexPosition[     20099,        541]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"LaserLens", "=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{"36.5", ",", "\"\<Centimeters\>\""}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"LaserGap", "=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{"20.5", ",", "\"\<Centimeters\>\""}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"FocusLens", " ", "=", " ", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{"2", ",", "\"\<Centimeters\>\""}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Experiment1", "=", 
+   RowBox[{"(", GridBox[{
+      {"15.67", "1"},
+      {"15.90", "2"},
+      {"16.0", "3"},
+      {"16.07", "4"},
+      {"16.14", "5"},
+      {"16.18", "6"},
+      {"16.25", "7"},
+      {"16.30", "8"},
+      {"16.36", "9"},
+      {"16.39", "10"},
+      {"16.46", "11"},
+      {"16.51", "12"},
+      {"16.56", "13"},
+      {"16.59", "14"},
+      {"16.62", "15"},
+      {"16.65", "16"},
+      {"16.68", "17"},
+      {"16.71", "18"},
+      {"16.73", "19"},
+      {"16.76", "20"},
+      {"16.78", "21"},
+      {"16.82", "22"},
+      {"16.84", "23"},
+      {"16.87", "24"},
+      {"16.89", "25"},
+      {"16.92", "26"},
+      {"16.96", "27"},
+      {"16.99", "28"},
+      {"17.03", "29"},
+      {"17.07", "30"},
+      {"17.11", "31"},
+      {"17.15", "32"},
+      {"17.19", "33"},
+      {"17.23", "34"},
+      {"17.28", "35"},
+      {"17.38", "36"},
+      {"17.51", "37"},
+      {"17.79", "36"},
+      {"17.96", "35"},
+      {"18.11", "34"},
+      {"18.21", "33"},
+      {"18.33", "31"},
+      {"18.42", "30"},
+      {"18.44", "29"},
+      {"18.46", "28"},
+      {"18.54", "27"},
+      {"18.57", "26"},
+      {"18.77", "25"},
+      {"19.07", "24"},
+      {"20.59", "23"},
+      {"\[Placeholder]", "\[Placeholder]"}
+     }], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", "\[LessEqual]", 
+    RowBox[{"Length", "[", "Experiment1", "]"}]}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Experiment1", "[", 
+      RowBox[{"[", 
+       RowBox[{"i", ",", "1"}], "]"}], "]"}], "=", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{
+       RowBox[{"Experiment1", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", " ", 
+       "\"\<Millimeters\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Experiment1", "[", 
+      RowBox[{"[", 
+       RowBox[{"i", ",", "2"}], "]"}], "]"}], "=", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{
+       RowBox[{"Experiment1", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", ",", "2"}], "]"}], "]"}], ",", " ", 
+       "\"\<Millivolts\>\""}], "]"}]}], ";"}]}], "\[IndentingNewLine]", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Experiment1", "//", "TableForm"}], "\[IndentingNewLine]", 
+ RowBox[{"ListLinePlot", "[", "Experiment1", "]"}]}], "Input",
+ CellChangeTimes->{{3.7498060126727877`*^9, 3.749806104666258*^9}, {
+   3.7498061827058496`*^9, 3.7498066392729483`*^9}, {3.749806670977853*^9, 
+   3.749806709637569*^9}, {3.7498067882683268`*^9, 3.749806807528858*^9}, {
+   3.749806850133031*^9, 3.749806983603241*^9}, {3.749807017582264*^9, 
+   3.749807063696697*^9}, {3.749807094005843*^9, 3.7498070985132313`*^9}, {
+   3.749807139465186*^9, 3.749807149471408*^9}, {3.7498072666301517`*^9, 
+   3.749807291201941*^9}, {3.749807324572822*^9, 3.749807935150676*^9}, {
+   3.7498079705956707`*^9, 3.7498080287634287`*^9}, 3.749808110403469*^9, {
+   3.749808177491007*^9, 3.749808337514102*^9}},
+ CellLabel->
+  "In[283]:=",ExpressionUUID->"81c10768-66db-4734-8dd6-cdb875d35739"],
+
+Cell[BoxData[
+ TemplateBox[{"36.5`","\"cm\"","centimeters","\"Centimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.749806291923324*^9, {3.749806323636948*^9, 3.749806469234654*^9}, {
+   3.749806568790533*^9, 3.749806640370351*^9}, 3.7498066772723827`*^9, 
+   3.749806710283265*^9, 3.749806918071989*^9, 3.749806951077196*^9, 
+   3.7498069874881353`*^9, {3.749807038049807*^9, 3.749807099487533*^9}, 
+   3.7498072882311287`*^9, {3.749807326747802*^9, 3.749807330213571*^9}, {
+   3.7498073898401957`*^9, 3.749807631073223*^9}, {3.74980767650325*^9, 
+   3.749807758277892*^9}, {3.749807788399323*^9, 3.749807841403037*^9}, {
+   3.749807879783901*^9, 3.749807922269253*^9}, 3.749807973790696*^9, {
+   3.749808018493753*^9, 3.749808029552697*^9}, 3.749808182145482*^9, 
+   3.7498083378815527`*^9},
+ CellLabel->
+  "Out[283]=",ExpressionUUID->"0f7621d0-7772-439a-b219-0230e77174d2"],
+
+Cell[BoxData[
+ TemplateBox[{"20.5`","\"cm\"","centimeters","\"Centimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.749806291923324*^9, {3.749806323636948*^9, 3.749806469234654*^9}, {
+   3.749806568790533*^9, 3.749806640370351*^9}, 3.7498066772723827`*^9, 
+   3.749806710283265*^9, 3.749806918071989*^9, 3.749806951077196*^9, 
+   3.7498069874881353`*^9, {3.749807038049807*^9, 3.749807099487533*^9}, 
+   3.7498072882311287`*^9, {3.749807326747802*^9, 3.749807330213571*^9}, {
+   3.7498073898401957`*^9, 3.749807631073223*^9}, {3.74980767650325*^9, 
+   3.749807758277892*^9}, {3.749807788399323*^9, 3.749807841403037*^9}, {
+   3.749807879783901*^9, 3.749807922269253*^9}, 3.749807973790696*^9, {
+   3.749808018493753*^9, 3.749808029552697*^9}, 3.749808182145482*^9, 
+   3.749808337896523*^9},
+ CellLabel->
+  "Out[284]=",ExpressionUUID->"9404df9f-f035-4117-b65a-2d1eb7ebe0c0"],
+
+Cell[BoxData[
+ TemplateBox[{"2","\"cm\"","centimeters","\"Centimeters\""},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.749806291923324*^9, {3.749806323636948*^9, 3.749806469234654*^9}, {
+   3.749806568790533*^9, 3.749806640370351*^9}, 3.7498066772723827`*^9, 
+   3.749806710283265*^9, 3.749806918071989*^9, 3.749806951077196*^9, 
+   3.7498069874881353`*^9, {3.749807038049807*^9, 3.749807099487533*^9}, 
+   3.7498072882311287`*^9, {3.749807326747802*^9, 3.749807330213571*^9}, {
+   3.7498073898401957`*^9, 3.749807631073223*^9}, {3.74980767650325*^9, 
+   3.749807758277892*^9}, {3.749807788399323*^9, 3.749807841403037*^9}, {
+   3.749807879783901*^9, 3.749807922269253*^9}, 3.749807973790696*^9, {
+   3.749808018493753*^9, 3.749808029552697*^9}, 3.749808182145482*^9, 
+   3.7498083379047823`*^9},
+ CellLabel->
+  "Out[285]=",ExpressionUUID->"8c72450f-2e44-4714-860a-6bead9df118a"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TemplateBox[{"15.67`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"1","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"15.9`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"2","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"3","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.07`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"4","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.14`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"5","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.18`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"6","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.25`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"7","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.3`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"8","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.36`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"9","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.39`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"10","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.46`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"11","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.51`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"12","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.56`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"13","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.59`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"14","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.62`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"15","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.65`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"16","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.68`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"17","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.71`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"18","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.73`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"19","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.76`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"20","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.78`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"21","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.82`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"22","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.84`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"23","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.87`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"24","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.89`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"25","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.92`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"26","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.96`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"27","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"16.99`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"28","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.03`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"29","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.07`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"30","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.11`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"31","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.15`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"32","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.19`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"33","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.23`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"34","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.28`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"35","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.38`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"36","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.51`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"37","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.79`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"36","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"17.96`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"35","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"18.11`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"34","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"18.21`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"33","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"18.33`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"31","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"18.42`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"30","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"18.44`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"29","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"18.46`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"28","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"18.54`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"27","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"18.57`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"26","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"18.77`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"25","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"19.07`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"24","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"20.59`","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"23","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]},
+    {
+     TemplateBox[{"\[Placeholder]","\"mm\"","millimeters","\"Millimeters\""},
+      "Quantity"], 
+     TemplateBox[{"\[Placeholder]","\"mV\"","millivolts","\"Millivolts\""},
+      "Quantity"]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.749806291923324*^9, {3.749806323636948*^9, 3.749806469234654*^9}, {
+   3.749806568790533*^9, 3.749806640370351*^9}, 3.7498066772723827`*^9, 
+   3.749806710283265*^9, 3.749806918071989*^9, 3.749806951077196*^9, 
+   3.7498069874881353`*^9, {3.749807038049807*^9, 3.749807099487533*^9}, 
+   3.7498072882311287`*^9, {3.749807326747802*^9, 3.749807330213571*^9}, {
+   3.7498073898401957`*^9, 3.749807631073223*^9}, {3.74980767650325*^9, 
+   3.749807758277892*^9}, {3.749807788399323*^9, 3.749807841403037*^9}, {
+   3.749807879783901*^9, 3.749807922269253*^9}, 3.749807973790696*^9, {
+   3.749808018493753*^9, 3.749808029552697*^9}, 3.749808182145482*^9, 
+   3.749808337916028*^9},
+ CellLabel->
+  "Out[288]//TableForm=",ExpressionUUID->"1333257a-8025-49fe-82b5-\
+e5ee0aa72476"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      NCache[
+       Rational[1, 60], 0.016666666666666666`]], AbsoluteThickness[1.6], 
+     LineBox[CompressedData["
+1:eJxF0j1Iw0AUB/DgojgpZHAo9ZMSRGqattamTfPapQ4uLYJLFxVdHIyDS12k
+0MUlOLm5VBy7CcWxIoLo4JRNEMc6uNRN8O7e/duDcPx4d++9u8vi/kn9cMIw
+DEd8co46gTe9u06GGj/+26scsKFnW89TVO/F24NZeIZuxfZoGTapW/1smkl4
+jmeCY6Tyb8ML1Aj7Q6sBL3G+A3iFfi2x4gxO0KNYHbZgi9T2EF4ldZ5reI3m
+24Na7wZO0pEcd7DN/XbhFNe7hx06N8WKBzjN9ftwhrbk9mc4y/fzDm9wPxGc
+434+4E0+7xecp++aTAC73M8QLpBY3Qn+4CLXn0xpe/p94BLfbwz2+fwJmOhU
+JrS1L4jP6yJe5vxVxMukuId4Rb8H4hWS7Xkv4zj3P97P/Tij/CqedUb1Zfnm
+DuI+38cxXOJ+A9jT/wdc5PqXcIHv4wp2SV5//AnO6/tKj96D/5+Mdo7+ASMz
+w88=
+      "]]}}, {}, {}, {}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{15.593125000000002`, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{15.67, 20.59}, {0, 37.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.749806291923324*^9, {3.749806323636948*^9, 3.749806469234654*^9}, {
+   3.749806568790533*^9, 3.749806640370351*^9}, 3.7498066772723827`*^9, 
+   3.749806710283265*^9, 3.749806918071989*^9, 3.749806951077196*^9, 
+   3.7498069874881353`*^9, {3.749807038049807*^9, 3.749807099487533*^9}, 
+   3.7498072882311287`*^9, {3.749807326747802*^9, 3.749807330213571*^9}, {
+   3.7498073898401957`*^9, 3.749807631073223*^9}, {3.74980767650325*^9, 
+   3.749807758277892*^9}, {3.749807788399323*^9, 3.749807841403037*^9}, {
+   3.749807879783901*^9, 3.749807922269253*^9}, 3.749807973790696*^9, {
+   3.749808018493753*^9, 3.749808029552697*^9}, 3.749808182145482*^9, 
+   3.749808338054905*^9},
+ CellLabel->
+  "Out[289]=",ExpressionUUID->"467d8181-690e-4148-8011-ae901a97cea8"]
+}, Open  ]]
+},
+WindowSize->{808, 592},
+WindowMargins->{{33, Automatic}, {Automatic, 21}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3564, 108, 1212, "Input",ExpressionUUID->"81c10768-66db-4734-8dd6-cdb875d35739"],
+Cell[4147, 132, 889, 15, 36, "Output",ExpressionUUID->"0f7621d0-7772-439a-b219-0230e77174d2"],
+Cell[5039, 149, 887, 15, 36, "Output",ExpressionUUID->"9404df9f-f035-4117-b65a-2d1eb7ebe0c0"],
+Cell[5929, 166, 885, 15, 36, "Output",ExpressionUUID->"8c72450f-2e44-4714-860a-6bead9df118a"],
+Cell[6817, 183, 10485, 283, 1096, "Output",ExpressionUUID->"1333257a-8025-49fe-82b5-e5ee0aa72476"],
+Cell[17305, 468, 2467, 57, 244, "Output",ExpressionUUID->"467d8181-690e-4148-8011-ae901a97cea8"]
+}, Open  ]]
+}
+]
+*)
+
