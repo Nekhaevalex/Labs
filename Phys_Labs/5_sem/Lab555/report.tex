@@ -74,6 +74,7 @@
 	 Из (\ref{eq:4}), (\ref{eq:5}) получаем, что
 	 \begin{equation}
 	 	R_i=\frac{\Delta E_i}{E_i}=\frac{\text{const}}{\sqrt{E_i}}.
+	 	\label{eq:6}
 	 \end{equation}
 	 \par
 	 Поскольку энергетическое разрешение зависит от энергии, его следует указывать для конкретной энергии. Чаще всего разрешение указывают для энергии гамма-линии $^{137}\text{Cs}$ (661.7 кэВ).
@@ -92,7 +93,7 @@
 	 Таким образом, спектр с аппроксимированными пиками имеет следующий вид:
 	 \begin{figure}[!htb]
 	 	\centering
-	 	\includegraphics[scale=0.7]{calibration_approx.pdf}
+	 	\includegraphics[scale=0.65]{calibration_approx.pdf}
 	 	\caption{Спектр $^{22}$Na с аппроксимированными пиками}
 	 \end{figure}
 	 \par
@@ -103,5 +104,84 @@
 	 	\caption{Калибровочный график}
 	 \end{figure}
 	 \par
+	 Функция для перевода номера канала в энергию имеет вид:
+	 \begin{equation}
+	 	E_i=-28239.5 + 746.416\cdot N
+	 \end{equation}
 	 Используя калибровочный график, определим для всех остальных источников значения энергии пиков полного поглощения $E_i$, их ширины на половине высоты $\Delta H_i$ и энергетическое разрешение $R_i$.
+	 \begin{figure}[!htb]
+	 	\centering
+	 	\includegraphics[scale=0.73]{co60.pdf}
+	 	\caption{Спектр $^{60}\text{Co}$}
+	 \end{figure}
+	 \begin{figure}[!htb]
+	 	\centering
+	 	\includegraphics[scale=0.65]{cs137.pdf}
+	 	\caption{Спектр $^{137}\text{Cs}$}
+	 \end{figure}
+	 \begin{figure}[!htb]
+	 	\centering
+	 	\includegraphics[scale=0.7]{am241.pdf}
+	 	\caption{Спектр $^{241}\text{Am}$}
+	 \end{figure}
+	 \begin{figure}[!htb]
+	 	\centering
+	 	\includegraphics[scale=0.7]{eu152.pdf}
+	 	\caption{Спектр $^{152}\text{Eu}$}
+	 \end{figure}
+	 \newpage
+	 \newpage
+	 Сведем результаты в таблицу \ref{table1}.
+	 \begin{table}[!htb]
+	 	\centering
+	 	\caption{Параметры пиков спектров}
+	 	\begin{tabular}{|c|c|c|c|c|c|}
+	 		\hline
+	 		Источник & $N_i$ & $\Delta N_i$ & $E_i$ & $\Delta E_i$ & $R_i$ \\
+	 		\hline
+Cobalt & 1604 & 135 & $1169.01\text{keV}$ & $72.3899\text{keV}$ & 0.061924 \\
+ Cobalt & 1816 & 143 & $1327.06\text{keV}$ & $78.2396\text{keV}$ & 0.0589571 \\
+ Cesium & 919 & 109 & $658.017\text{keV}$ & $52.9515\text{keV}$ & 0.0804713 \\
+ Americium & 75 & 59 & $27.739\text{keV}$ & 1$5.8365\text{keV}$ & 0.570911 \\
+ Americium & 128 & 57 & $67.4993\text{keV}$ & $14.4587\text{keV}$ & 0.214205 \\
+ Europium & 97 & 60 & $44.4872\text{keV}$ & $16.5465\text{keV}$ & 0.371939 \\
+ Europium & 138 & 113 & $75.\text{keV}$ & $56.1468\text{keV}$ & 0.748624 \\
+ Europium & 210 & 62 & $128.477\text{keV}$ & $18.3269\text{keV}$ & 0.142648 \\
+ Europium & 366 & 72 & $245.012\text{keV}$ & $25.2028\text{keV}$ & 0.102864 \\
+ Europium & 498 & 85 & $343.194\text{keV}$ & $35.4755\text{keV}$ & 0.103368 \\
+ \hline
+	 	\end{tabular}
+	 	\label{table1}
+	 \end{table}
+	 В этой таблице: $N_i$ -- номер канала, соответствующего пику полного поглощения.\par
+	 По результатам измерения энергии края комптоновского поглащения построим график, по одной оси которого отложены экспериментальные значения, а по другой расчетные значения этой энергии (рис. \ref{compton}).\par
+	 \begin{figure}
+	 	\centering
+	 	\includegraphics[scale=0.5]{edges.pdf}
+	 	\caption{Комптоновские края}
+	 	\label{compton}
+	 \end{figure}
+	 Для проверки зависимости (\ref{eq:6}), построим по полученным данным график $R_i^2=f\left(1/E_i\right)$ (рис. \ref{fig:re}).
+	 \begin{figure}[!htb]
+	 	\centering
+	 	\includegraphics[scale=0.7]{Re.pdf}
+	 	\caption{Зависимость разрешения от энергии}
+	 	\label{fig:re}
+	 \end{figure}
+	 \par
+	 Форма импульсов на выходе ФЭУ определяется выражением:
+	 \begin{equation}
+	 U(t)=\text{const}\cdot e^{-\frac{t}{RC}}\left(1-e^{-\frac{t}{\tau_0}}\right),
+	 \label{eq:7}
+	 \end{equation}
+	 где $\tau_0$ -- время высвечивания сцинтиллятора, а $RC$ -- постоянная времени ($R$ и $C$ -- сопротивление и емкость в анодной цепи ФЭУ). Выражение (\ref{eq:7}) справедливо при $RC\gg\tau_0$. Обычно выбирают $RC=(5\div 10)\tau_0$. По зарисованным импульсам оценим величину $\tau_0$ и постоянную времени $RC$.
+	 \begin{figure}[!htb]
+	 	\centering
+	 	\includegraphics[scale=0.7]{oscil.pdf}
+	 	\caption{Форма импульса}
+	 \end{figure}
+	 \par
+	 Аппроксимируя положительную часть графика согласно формуле (\ref{eq:7}), получаем, что $RC\approx 6.244 \mu s$, а $\tau_0\approx 3.61 \mu s$.
+	 \section{Вывод}
+	 В данной работе был разобран принцип работы устройства сцинтиллятора. Также был изучен ряд радиоактивных источников и проверены статистические отношения для разрешающей способности спектрометра.
 \end{document}
