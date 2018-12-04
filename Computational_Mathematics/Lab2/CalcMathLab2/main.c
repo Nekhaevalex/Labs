@@ -12,9 +12,9 @@
 #include <math.h>
 #define FTYPE long double
 
-FTYPE sourceData[7][2] = {{0.17453, 0.000012}, {0.52360, 0.00026}, {0.87267, 0.0025}, {1.22173,
-	0.01815}, {1.5708, 0.09763}, {1.91986, 0.40593}, {2.26893,
-		1.38035}};
+FTYPE sourceData[7][2] = {{0, 0}, {1, 2}, {2, 34}, {3,
+	246}, {4, 1028}, {5, 3130}, {6,
+		7782}};
 int length = 7;
 
 //FTYPE sourceData[6][2] = {{0.17453, 0.00162}, {0.5236, 0.00252}, {0.87267, 0.00498}, {1.22173,
@@ -187,7 +187,7 @@ static void simplifyInterpolation(long double (*cache)[2], long double *simpleFo
 		} else {
 			printf("%Lf*x^%d", simpleFormOfPolynom[i], i);
 		}
-		if ((i<length-1) && (simpleFormOfPolynom[i+1]>0)) {
+		if ((i<length-1) && (simpleFormOfPolynom[i+1]>=0)) {
 			printf("+");
 		}
 	}
@@ -237,6 +237,7 @@ int main(int argc, const char * argv[]) {
 	FTYPE x;
 	scanf("%Lf", &x);
 	FTYPE result = calculateInPoint(coefs, sourceData, x);
-	printf("S(%Lf)=%Lf\n", x, result);
+	FTYPE intRes = evaluate(simpleFormOfPolynom, x);
+	printf("I(%Lf)=%Lf\nS(%Lf)=%Lf\n", x, intRes, x, result);
 	return 0;
 }
