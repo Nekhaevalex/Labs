@@ -1165,7 +1165,7 @@ hDPPnWXLagiMW2woKCkhwSrgkHhVLYH/AWj/YZk=
  CellLabel->"Out[12]=",ExpressionUUID->"f72135ae-72ef-420e-9055-ad5cf0fe4c72"]
 }, Open  ]]
 },
-WindowSize->{808, 603},
+WindowSize->{808, 886},
 WindowMargins->{{Automatic, 88}, {Automatic, 5}},
 FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
 StyleDefinitions->"Default.nb"
