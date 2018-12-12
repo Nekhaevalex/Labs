@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  10 DEC 2018 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  12 DEC 2018 01:45
 entering extended mode
-**./report.tex
-(report.tex
+**./main.tex
+(main.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -1037,23 +1037,23 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks48
 
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
-cfg")) (report.aux)
-\openout1 = `report.aux'.
+cfg")) (main.aux)
+\openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
@@ -1136,7 +1136,7 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 18.
+ on input line 22.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1171,4 +1171,64 @@ your preamble.
 * \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/Users/alexn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(main.toc)
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [1]
+Overfull \hbox (0.12787pt too wide) in paragraph at lines 33--34
+ \T2A/cmr/bx/n/12 В ра-бо-те ис-поль-зу-ют-ся:[] \T2A/cmr/m/n/12 оп-ти-че-ский 
+пи-ро-метр, мо-дель аб-со-лют-но чер-но-го те-ла (АЧТ),
+ []
+
+[2]
+Overfull \hbox (10.66922pt too wide) in paragraph at lines 142--143
+[][] 
+ []
+
+[3] [4] (main.aux) ) 
+Here is how much of TeX's memory you used:
+ 27195 strings out of 492970
+ 667512 string characters out of 3126593
+ 875533 words of memory out of 3000000
+ 30558 multiletter control sequences out of 15000+200000
+ 18168 words of font info for 52 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 62i,14n,103p,777b,2571s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/enc
+/dvips/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alexn/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/alexn/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/User
+s/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr6.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexn/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/alexn/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/alexn/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/
+Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1
+440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm
+-super/sfbx1728.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/cm-super/sfrm0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Users/alexn/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Users/alexn/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on main.pdf (5 pages, 196576 bytes).
+PDF statistics:
+ 86 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

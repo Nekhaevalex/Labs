@@ -10,14 +10,21 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6384,        188]
-NotebookOptionsPosition[      5857,        170]
-NotebookOutlinePosition[      6209,        186]
-CellTagsIndexPosition[      6166,        183]
+NotebookDataLength[    177653,       4110]
+NotebookOptionsPosition[    171352,       4008]
+NotebookOutlinePosition[    171693,       4023]
+CellTagsIndexPosition[    171650,       4020]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell["\:0412\:0432\:043e\:0434\:0438\:043c \:043d\:0430\:0447\:0430\:043b\
+\:044c\:043d\:044b\:0439 \:043c\:0430\:0441\:0441\:0438\:0432 \:0438\:0437\
+\:043c\:0435\:0440\:0435\:043d\:0438\:0439", "Text",
+ CellChangeTimes->{{3.7535325280302687`*^9, 
+  3.7535325448661966`*^9}},ExpressionUUID->"5b998c48-2dba-4b95-840e-\
+144163ae96f2"],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"A", "=", 
@@ -62,7 +69,15 @@ Cell[BoxData[
  CellChangeTimes->{{3.753345575604014*^9, 3.753345634679061*^9}, {
   3.753345695943006*^9, 3.753345738574827*^9}, {3.75334577231361*^9, 
   3.753346024063072*^9}},
- CellLabel->"In[20]:=",ExpressionUUID->"2a8c4e25-cc7e-43e7-a4d7-d72fadc1e91d"],
+ CellLabel->"In[1]:=",ExpressionUUID->"2a8c4e25-cc7e-43e7-a4d7-d72fadc1e91d"],
+
+Cell["\:0414\:043e\:0431\:0430\:0432\:0434\:044f\:0435\:043c \:0441\:0442\
+\:043e\:043b\:0431\:0435\:0446 \:0437\:043d\:0430\:0447\:0435\:043d\:0438\
+\:0439 \:0441 \:0443\:0447\:0435\:0442\:043e\:043c \:0444\:043e\:043d\:0430", \
+"Text",
+ CellChangeTimes->{{3.7535325484755855`*^9, 
+  3.7535325722111406`*^9}},ExpressionUUID->"71884e71-04a7-4805-a44e-\
+165291b6b5cf"],
 
 Cell[CellGroupData[{
 
@@ -70,108 +85,3930 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"A", "=", 
    RowBox[{"Transpose", "[", "A", "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"A", "=", 
-  RowBox[{"Transpose", "[", 
-   RowBox[{"AppendTo", "[", 
-    RowBox[{"A", ",", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"A", "[", 
-        RowBox[{"[", 
-         RowBox[{"2", ",", "All"}], "]"}], "]"}], "-", "0.8098"}], ")"}]}], 
-    "]"}], "]"}]}]}], "Input",
- CellChangeTimes->{{3.7533460294315853`*^9, 3.7533461950905247`*^9}},
- CellLabel->"In[21]:=",ExpressionUUID->"558b8daf-f39f-4c91-adc2-d4078cf554cc"],
+ RowBox[{"AppendTo", "[", 
+  RowBox[{"A", ",", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"A", "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "All"}], "]"}], "]"}], "-", "0.8098"}], ")"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.7533460294315853`*^9, 3.7533461950905247`*^9}, {
+  3.753533151267253*^9, 3.7535331622102637`*^9}, {3.7535357946940145`*^9, 
+  3.7535357983552227`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"558b8daf-f39f-4c91-adc2-d4078cf554cc"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
    RowBox[{"{", 
-    RowBox[{"0", ",", "0.88`", ",", "0.07020000000000004`"}], "}"}], ",", 
+    RowBox[{
+    "0", ",", "0.2`", ",", "0.4`", ",", "0.6`", ",", "0.8`", ",", "1", ",", 
+     "1.2`", ",", "1.4`", ",", "1.6`", ",", "1.8`", ",", "2", ",", "2.2`", 
+     ",", "2.3`", ",", "2.4`", ",", "2.5`", ",", "2.6`", ",", "2.7`", ",", 
+     "2.8`", ",", "2.9`", ",", "3", ",", "3.1`", ",", "3.2`", ",", "3.4`", 
+     ",", "3.6`", ",", "3.8`", ",", "3.85`", ",", "3.9`", ",", "3.95`", ",", 
+     "4", ",", "4.2`", ",", "4.25`", ",", "4.3`", ",", "4.35`", ",", "4.4`", 
+     ",", "4.5`", ",", "4.6`"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"0.2`", ",", "0.8`", ",", 
-     RowBox[{"-", "0.00979999999999992`"}]}], "}"}], ",", 
+    RowBox[{
+    "0.88`", ",", "0.8`", ",", "0.84`", ",", "0.93`", ",", "0.98`", ",", 
+     "1.33`", ",", "1.799`", ",", "2.459`", ",", "3.249`", ",", "3.719`", ",",
+      "3.929`", ",", "4.219`", ",", "4.279`", ",", "4.489`", ",", "4.539`", 
+     ",", "4.199`", ",", "4.029`", ",", "4.239`", ",", "3.719`", ",", 
+     "3.289`", ",", "2.559`", ",", "2.259`", ",", "1.739`", ",", "1.37`", ",",
+      "1.29`", ",", "1.999`", ",", "3.449`", ",", "4.739`", ",", "6.038`", 
+     ",", "4.699`", ",", "4.659`", ",", "3.469`", ",", "2.159`", ",", "1.53`",
+      ",", "0.8`", ",", "0.43`"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"0.4`", ",", "0.84`", ",", "0.030200000000000005`"}], "}"}], ",", 
-   
-   RowBox[{"{", 
-    RowBox[{"0.6`", ",", "0.93`", ",", "0.12020000000000008`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"0.8`", ",", "0.98`", ",", "0.17020000000000002`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"1", ",", "1.33`", ",", "0.5202000000000001`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"1.2`", ",", "1.799`", ",", "0.9892`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"1.4`", ",", "2.459`", ",", "1.6492`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"1.6`", ",", "3.249`", ",", "2.4392`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"1.8`", ",", "3.719`", ",", "2.9092`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2", ",", "3.929`", ",", "3.1191999999999998`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2.2`", ",", "4.219`", ",", "3.4092000000000002`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2.3`", ",", "4.279`", ",", "3.4692`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2.4`", ",", "4.489`", ",", "3.6792`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2.5`", ",", "4.539`", ",", "3.7291999999999996`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2.6`", ",", "4.199`", ",", "3.3891999999999998`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2.7`", ",", "4.029`", ",", "3.2192`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2.8`", ",", "4.239`", ",", "3.4292`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"2.9`", ",", "3.719`", ",", "2.9092`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3", ",", "3.289`", ",", "2.4792`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3.1`", ",", "2.559`", ",", "1.7492`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3.2`", ",", "2.259`", ",", "1.4491999999999998`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3.4`", ",", "1.739`", ",", "0.9292000000000001`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3.6`", ",", "1.37`", ",", "0.5602000000000001`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3.8`", ",", "1.29`", ",", "0.48020000000000007`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3.85`", ",", "1.999`", ",", "1.1892`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3.9`", ",", "3.449`", ",", "2.6391999999999998`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"3.95`", ",", "4.739`", ",", "3.9292`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"4", ",", "6.038`", ",", "5.2282`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"4.2`", ",", "4.699`", ",", "3.8891999999999998`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"4.25`", ",", "4.659`", ",", "3.8491999999999997`"}], "}"}], ",", 
-   
-   RowBox[{"{", 
-    RowBox[{"4.3`", ",", "3.469`", ",", "2.6592`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"4.35`", ",", "2.159`", ",", "1.3491999999999997`"}], "}"}], ",", 
-   
-   RowBox[{"{", 
-    RowBox[{"4.4`", ",", "1.53`", ",", "0.7202000000000001`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"4.5`", ",", "0.8`", ",", 
-     RowBox[{"-", "0.00979999999999992`"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"4.6`", ",", "0.43`", ",", 
+    RowBox[{"0.07020000000000004`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", "0.030200000000000005`", ",",
+      "0.12020000000000008`", ",", "0.17020000000000002`", ",", 
+     "0.5202000000000001`", ",", "0.9892`", ",", "1.6492`", ",", "2.4392`", 
+     ",", "2.9092`", ",", "3.1191999999999998`", ",", "3.4092000000000002`", 
+     ",", "3.4692`", ",", "3.6792`", ",", "3.7291999999999996`", ",", 
+     "3.3891999999999998`", ",", "3.2192`", ",", "3.4292`", ",", "2.9092`", 
+     ",", "2.4792`", ",", "1.7492`", ",", "1.4491999999999998`", ",", 
+     "0.9292000000000001`", ",", "0.5602000000000001`", ",", 
+     "0.48020000000000007`", ",", "1.1892`", ",", "2.6391999999999998`", ",", 
+     "3.9292`", ",", "5.2282`", ",", "3.8891999999999998`", ",", 
+     "3.8491999999999997`", ",", "2.6592`", ",", "1.3491999999999997`", ",", 
+     "0.7202000000000001`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", 
      RowBox[{"-", "0.37979999999999997`"}]}], "}"}]}], "}"}]], "Output",
- CellChangeTimes->{{3.753346179012443*^9, 3.753346198451333*^9}},
- CellLabel->"Out[22]=",ExpressionUUID->"9d84eb51-bf0e-49ba-aeca-5a0684c97421"]
+ CellChangeTimes->{{3.753346179012443*^9, 3.753346198451333*^9}, 
+   3.753530261439*^9, {3.7535331530564885`*^9, 3.7535331664818277`*^9}, 
+   3.753535760872462*^9, 3.7535358032760277`*^9, 3.75353597985976*^9, {
+   3.7535360351887846`*^9, 3.7535360847205153`*^9}, 3.753536782113595*^9, 
+   3.75353759864542*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"1f025fc2-846b-4966-87d1-872009b09301"]
+}, Open  ]],
+
+Cell["\:041f\:043e\:0441\:0442\:0440\:043e\:0438\:043c \:0433\:0440\:0430\
+\:0444\:0438\:043a \:043f\:043e \:043f\:0435\:0440\:0432\:044b\:043c \:0434\
+\:0432\:0443\:043c \:0441\:0442\:043e\:043b\:0431\:0446\:0430\:043c", "Text",
+ CellChangeTimes->{{3.7535326323382163`*^9, 
+  3.7535326418168573`*^9}},ExpressionUUID->"dc73bdee-7f10-4d63-8afe-\
+40c29473a638"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{
+   RowBox[{"Transpose", "[", "A", "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{"All", ",", 
+     RowBox[{"1", ";;", "2"}]}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.753530503512384*^9, 3.753530562910946*^9}, {
+  3.753532578519277*^9, 3.7535326255892367`*^9}, {3.753535812885331*^9, 
+  3.753535814643628*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"9b6d1fe7-dd83-4545-9348-57009c06fbd1"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQAWIQDQOaMf2Hvmq8sZ81EwROQumXUPqm/cMqkXXuD1/Z
+G4PBY/vDXzWAOt7C1YG1x7y3h5j2wd4DrOErVP1n+ySBCMstJ/7Yp4HBN/vK
+l2qGHGuYHSD6f9qfXui67fNfToezZ0Dgj33v9Dyh5gO8DlDnOVjf9wcK8UPV
+Mzoc9zbvdHwg4AAxj8mBJYxPd5OsoAPEPmaH2z/rsvZ8EYTqZ3EAys59ry4E
+NZ/FAchbfuy0ANQ8Vqh+mHlsUP0CUPPYHVDdw+EgG5UCdBIX1DwOBzeg669U
+sEDN43QAO1eICaqf2yH3+e+VHy/9toeo53F4E7hDrvX1V2h48DksKbDlur74
+C1Sez2Gac3fO89//oeHH75ACDgBuqPn8UPcJQd0j4PAFaPtLNQmoewSg/oPJ
+Czp0OiY8vbBICOoeQah/uKH+FXQAck4tdGWEmi/oUA2K7qof0PgUcoDFM0S9
+kEPra5AHbtsDACOT9OE=
+      "]]}, {}}, {}, {}, {}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 4.6}, {0, 6.038}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.7535305112127423`*^9, 3.753530563238022*^9}, {
+   3.7535326018987665`*^9, 3.7535326259522476`*^9}, 3.7535358152799244`*^9, 
+   3.7535359824827356`*^9, {3.753536035243638*^9, 3.7535360847883635`*^9}, 
+   3.753536782158469*^9, 3.7535375988239713`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"71d982f8-9cc0-4331-ab00-f11890eea7e9"]
+}, Open  ]],
+
+Cell["\:0412\:0432\:0435\:0434\:0435\:043c \:0444\:0443\:043d\:043a\:0446\
+\:0438\:044e \:043f\:0435\:0440\:0435\:0432\:043e\:0434 \:044d\:043d\:0435\
+\:0440\:0433\:0438\:0438 \:0432 \:0438\:043c\:043f\:0443\:043b\:044c\:0441", \
+"Text",
+ CellChangeTimes->{{3.753532645937851*^9, 
+  3.753532664419421*^9}},ExpressionUUID->"248cf42c-fd8d-42d5-90c1-\
+42c53c8dc7d5"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", "[", "Energy_", "]"}], ":=", 
+   RowBox[{"UnitConvert", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"p", "/.", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Solve", "[", 
+           RowBox[{
+            RowBox[{"Energy", "\[Equal]", 
+             RowBox[{
+              RowBox[{"c", 
+               SqrtBox[
+                RowBox[{
+                 SuperscriptBox["p", "2"], "+", 
+                 RowBox[{
+                  SuperscriptBox["m", "2"], 
+                  SuperscriptBox["c", "2"]}]}]]}], "-", 
+              RowBox[{"m", " ", 
+               SuperscriptBox["c", "2"]}]}]}], ",", "p"}], "]"}], "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ")"}]}], ")"}], "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"m", "\[Rule]", " ", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{"1", ",", "\"\<ElectronMass\>\""}], "]"}]}], ",", 
+       RowBox[{"c", "\[Rule]", " ", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{"1", ",", "\"\<SpeedOfLight\>\""}], "]"}]}]}], "}"}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7535319553524804`*^9, 3.7535319625572643`*^9}, {
+  3.7535321374662495`*^9, 3.753532179064938*^9}, {3.7535322337146883`*^9, 
+  3.7535322448608823`*^9}, {3.753532286099178*^9, 3.753532330712598*^9}, {
+  3.753532364732748*^9, 3.7535324179695406`*^9}, {3.753532830866907*^9, 
+  3.753532833256519*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"3ee47196-0bd0-418a-bf42-8003ab8e6860"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"MkFermi", "[", 
+    RowBox[{"n_", ",", "nb_", ",", "p_"}], "]"}], ":=", 
+   RowBox[{
+    FractionBox[
+     SqrtBox[
+      RowBox[{"n", "-", "nb"}]], 
+     SuperscriptBox["p", 
+      RowBox[{"3", "/", "2"}]]], "*", 
+    SuperscriptBox["10", "6"]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.753532067086443*^9, 3.7535321254892845`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"a5f690d4-7868-4c98-ac59-fea4775c5917"],
+
+Cell[TextData[{
+ "\:042d\:043d\:0435\:0440\:0433\:0438\:044f \:044d\:043b\:0435\:043a\:0442\
+\:0440\:043e\:043d\:043e\:0432 \:0432\:043d\:0443\:0442\:0440\:0435\:043d\
+\:043d\:0435\:0439 \:043a\:043e\:043d\:0432\:0435\:0440\:0441\:0438\:0438 ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[" ", "137"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3a7545cb-75c5-4766-9e32-d10bae471154"],
+ "Cs 634 \:043a\:044d\:0412, \:0442\:043e\:0433\:0434\:0430"
+}], "Text",
+ CellChangeTimes->{{3.7535328980293436`*^9, 3.7535329197084646`*^9}, {
+  3.7535329544757586`*^9, 
+  3.7535330042937527`*^9}},ExpressionUUID->"1b2efa99-9bbf-481b-ae45-\
+57528985fb1d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CsElectronEnergy", "=", 
+  RowBox[{"UnitConvert", "[", 
+   RowBox[{
+    RowBox[{"p", "[", 
+     RowBox[{"Quantity", "[", 
+      RowBox[{"634", ",", "\"\<Kiloelectronvolts\>\""}], "]"}], "]"}], ",", 
+    RowBox[{"\"\<Kiloelectronvolts\>\"", "/", "\"\<SpeedOfLight\>\""}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.753533051600622*^9, 3.7535330631748424`*^9}, {
+  3.7535331031120524`*^9, 3.7535331218160443`*^9}, {3.7535338637418385`*^9, 
+  3.753533873023012*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"a3e2dbf5-37c4-42ee-8c44-1f2dfba0026b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "1024.6475803263401606215`7.588339923604852",
+   RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+     StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+   "kiloelectronvolts per speed of light",FractionBox[
+   "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.7535330643029346`*^9, 3.7535331227076197`*^9, 3.753533873988388*^9, 
+   3.753535989037208*^9, {3.753536035416177*^9, 3.7535360849548883`*^9}, 
+   3.753536782361904*^9, 3.753537599956911*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"01ddb5ae-3b25-4846-9159-4bf046f91e6a"]
+}, Open  ]],
+
+Cell[TextData[{
+ "\:0422\:0435\:043f\:0435\:0440\:044c \:043d\:0430\:0434\:043e \:043d\:0430\
+\:0439\:0442\:0438 \:0442\:0430\:043a\:043e\:0439 \:043a\:043e\:044d\:0444\
+\:0444\:0438\:0446\:0438\:0435\:043d\:0442 ",
+ Cell[BoxData[
+  FormBox["k", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "440b91dc-b949-4aa0-b34f-fef6b8d96e1c"],
+ " \:0432 \:0444\:043e\:0440\:043c\:0443\:043b\:0435 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "=", 
+    RowBox[{"k", " ", "I"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "17557fb3-89fc-4f6a-8f2c-d0b7d8417ecc"],
+ ", \:0447\:0442\:043e\:0431\:044b \:043f\:0438\:043a \
+\:0432\:043d\:0443\:0442\:0440\:0435\:043d\:043d\:0435\:0439 \:043a\:043e\
+\:043d\:0432\:0435\:0440\:0441\:0438\:0438 \:0432\:044b\:043f\:0430\:043b \
+\:043d\:0430 \:043f\:043e\:043b\:0443\:0447\:0435\:043d\:043d\:043e\:0435 \
+\:0437\:043d\:0430\:0447\:0435\:043d\:0438\:0435 \:0438\:043c\:043f\:0443\
+\:043b\:044c\:0441\:0430. \:0417\:043d\:0430\:0447\:0435\:043d\:0438\:0435 \
+\:0432\:043e\:0437\:044c\:043c\:0435\:043c \:0447\:0443\:0442\:044c \:043f\
+\:0440\:0430\:0432\:0435\:0435 \:043f\:0438\:043a\:043e\:0432\:043e\:0439 \
+\:0442\:043e\:0447\:043a\:0438 ",
+ StyleBox["-",
+  FontSize->14],
+ " 4.16 \:0410."
+}], "Text",
+ CellChangeTimes->{{3.7535333164991674`*^9, 3.7535333660947485`*^9}, {
+   3.7535334114205637`*^9, 3.7535334542889786`*^9}, {3.7535334850058327`*^9, 
+   3.753533533604307*^9}, 3.753533740988348*^9, {3.7535337712309866`*^9, 
+   3.753533807518937*^9}, {3.75353388263131*^9, 
+   3.7535338862995367`*^9}},ExpressionUUID->"d6ab74f1-2f89-41ff-8f01-\
+521d2f699c6f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"k", "=", 
+  RowBox[{"CsElectronEnergy", "/", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"4.16", ",", "\"\<Amperes\>\""}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7535338895408735`*^9, 3.7535339384879293`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"390f40a2-13f8-4bab-a840-a0917217d28b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "246.30951450152406`",
+   RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", 
+     "\"A\"", "\[ThinSpace]", 
+     StyleBox["\"c\"", Italic, StripOnInput -> False], "\[InvisibleSpace]", 
+     "\")\""}],"kiloelectronvolts per ampere speed of light",FractionBox[
+   "\"Kiloelectronvolts\"", 
+    RowBox[{"\"Amperes\"", " ", "\"SpeedOfLight\""}]]},
+  "Quantity"]], "Output",
+ CellChangeTimes->{
+  3.753533940365451*^9, 3.753535991156539*^9, {3.753536035472028*^9, 
+   3.753536085003793*^9}, 3.7535367823958125`*^9, 3.7535376002186747`*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"e892f724-0c7c-4f19-ba29-8514b042c452"]
+}, Open  ]],
+
+Cell["\<\
+\:0427\:0442\:043e\:0431\:044b \:0441\:044d\:043a\:043e\:043d\:043e\:043c\
+\:0438\:0442\:044c \:043d\:0435\:043c\:043d\:043e\:0433\:043e \:0432\:0440\
+\:0435\:043c\:0435\:043d\:0438 \:043f\:0440\:0438 \:0440\:0430\:0431\:043e\
+\:0442\:0435 \:0441 \:043f\:043e\:0440\:044f\:0434\:043a\:0430\:043c\:0438, \
+\:0432 \:0438\:0441\:0445\:043e\:0434\:043d\:043e\:0439 \:043c\:0430\:0442\
+\:0440\:0438\:0446\:0435 \:043f\:0440\:043e\:0441\:0442\:0430\:0432\:0438\
+\:043c \:0440\:0430\:0437\:043c\:0435\:0440\:043d\:043e\:0441\:0442\:044c \
+\:0443 \:043f\:0435\:0440\:0432\:043e\:0433\:043e \:0441\:0442\:043e\:043b\
+\:0431\:0446\:0430\
+\>", "Text",
+ CellChangeTimes->{{3.7535340479791956`*^9, 
+  3.7535341023001165`*^9}},ExpressionUUID->"2cfdc504-7c9d-4828-b55f-\
+dc80ab379d99"],
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", "\[LessEqual]", " ", 
+    RowBox[{"Length", "[", 
+     RowBox[{"A", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"A", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "i"}], "]"}], "]"}], "=", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{
+      RowBox[{"A", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "i"}], "]"}], "]"}], ",", "\"\<Amperes\>\""}], 
+     "]"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.7535341431839676`*^9, 3.7535342036388636`*^9}, {
+  3.7535358215701056`*^9, 3.7535358574990187`*^9}, {3.753536026059245*^9, 
+  3.7535360273398013`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"44809759-344b-4c1e-81da-67ad7a4f7ec4"],
+
+Cell["\:0422\:0435\:043f\:0435\:0440\:044c \:043c\:043e\:0436\:0435\:043c \
+\:0434\:043e\:0431\:0430\:0432\:0438\:0442\:044c \:0435\:0449\:0435 \:043e\
+\:0434\:0438\:043d \:0441\:0442\:043e\:043b\:0431\:0435\:0446 \:0434\:043b\
+\:044f \:0438\:043c\:043f\:0443\:043b\:044c\:0441\:043e\:0432", "Text",
+ CellChangeTimes->{{3.753534240037464*^9, 3.753534244170578*^9}, {
+  3.7535348860868416`*^9, 
+  3.7535348957749352`*^9}},ExpressionUUID->"0249836c-544f-425d-af59-\
+ce41aa8a2160"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AppendTo", "[", 
+  RowBox[{"A", ",", 
+   RowBox[{
+    RowBox[{"A", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "All"}], "]"}], "]"}], "*", "k"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7535350102673984`*^9, 3.753535058279671*^9}, {
+  3.7535360546260004`*^9, 3.7535360810832424`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"10121947-94b9-41c4-8ddc-325acca8bf59"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.3`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.5`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.7`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.9`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.1`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.85`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.9`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.95`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.25`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.3`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.35`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.5`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.88`", ",", "0.8`", ",", "0.84`", ",", "0.93`", ",", "0.98`", ",", 
+     "1.33`", ",", "1.799`", ",", "2.459`", ",", "3.249`", ",", "3.719`", ",",
+      "3.929`", ",", "4.219`", ",", "4.279`", ",", "4.489`", ",", "4.539`", 
+     ",", "4.199`", ",", "4.029`", ",", "4.239`", ",", "3.719`", ",", 
+     "3.289`", ",", "2.559`", ",", "2.259`", ",", "1.739`", ",", "1.37`", ",",
+      "1.29`", ",", "1.999`", ",", "3.449`", ",", "4.739`", ",", "6.038`", 
+     ",", "4.699`", ",", "4.659`", ",", "3.469`", ",", "2.159`", ",", "1.53`",
+      ",", "0.8`", ",", "0.43`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.07020000000000004`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", "0.030200000000000005`", ",",
+      "0.12020000000000008`", ",", "0.17020000000000002`", ",", 
+     "0.5202000000000001`", ",", "0.9892`", ",", "1.6492`", ",", "2.4392`", 
+     ",", "2.9092`", ",", "3.1191999999999998`", ",", "3.4092000000000002`", 
+     ",", "3.4692`", ",", "3.6792`", ",", "3.7291999999999996`", ",", 
+     "3.3891999999999998`", ",", "3.2192`", ",", "3.4292`", ",", "2.9092`", 
+     ",", "2.4792`", ",", "1.7492`", ",", "1.4491999999999998`", ",", 
+     "0.9292000000000001`", ",", "0.5602000000000001`", ",", 
+     "0.48020000000000007`", ",", "1.1892`", ",", "2.6391999999999998`", ",", 
+     "3.9292`", ",", "5.2282`", ",", "3.8891999999999998`", ",", 
+     "3.8491999999999997`", ",", "2.6592`", ",", "1.3491999999999997`", ",", 
+     "0.7202000000000001`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", 
+     RowBox[{"-", "0.37979999999999997`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{
+      "0.`",RowBox[{
+        "\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "49.26190290030482`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "98.52380580060964`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "147.78570870091443`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "197.04761160121927`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "246.30951450152406`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "295.57141740182885`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "344.83332030213364`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "394.09522320243855`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "443.35712610274334`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "492.6190290030481`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "541.880931903353`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "566.5118833535053`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "591.1428348036577`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "615.7737862538102`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "640.4047377039626`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "665.0356891541151`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "689.6666406042673`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "714.2975920544197`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "738.9285435045722`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "763.5594949547246`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "788.1904464048771`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "837.4523493051818`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "886.7142522054867`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "935.9761551057913`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "948.2916308308677`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "960.6071065559438`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "972.9225822810201`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "985.2380580060963`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1034.4999609064012`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1046.8154366314773`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1059.1309123565534`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1071.4463880816295`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1083.761863806706`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1108.3928152568583`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1133.0237667070105`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7535350634837537`*^9, 3.7535357723467765`*^9, {3.7535360356366224`*^9, 
+   3.7535360853777924`*^9}, 3.7535367827867937`*^9, 3.753537600699391*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"3db01faf-5d1e-496d-b92d-1f4d34da74d0"]
+}, Open  ]],
+
+Cell["\<\
+\:0421\:043e\:043e\:0431\:0440\:0430\:0437\:0438\:043c, \:0434\:043e\:0431\
+\:0430\:0432\:0438\:043c \:0435\:0449\:0435 \:043e\:0434\:0438\:043d \:0441\
+\:0442\:043e\:043b\:0431\:0435\:0446 (\:043f\:043e\:043a\:0430 \:0435\:0449\
+\:0435 \:0441\:0442\:0440\:043e\:043a\:0443) \:0441 \:043d\:0430\:0437\:043d\
+\:0430\:0447\:0435\:043d\:0438\:044f\:043c\:0438 \:044d\:043d\:0435\:0440\
+\:0433\:0438\:0438\
+\>", "Text",
+ CellChangeTimes->{{3.7535351802051244`*^9, 3.7535352070569057`*^9}, {
+  3.7535353031192956`*^9, 
+  3.7535353120892973`*^9}},ExpressionUUID->"7c583c58-179b-470a-8298-\
+796173088ac7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AppendTo", "[", 
+  RowBox[{"A", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Quantity", "[", 
+      RowBox[{"1", ",", "\"\<SpeedOfLight\>\""}], "]"}], " ", 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"A", "[", 
+         RowBox[{"[", 
+          RowBox[{"4", ",", "All"}], "]"}], "]"}], "2"], "+", 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"Quantity", "[", 
+          RowBox[{"1", ",", "\"\<ElectronMass\>\""}], "]"}], "2"], 
+        SuperscriptBox[
+         RowBox[{"Quantity", "[", 
+          RowBox[{"1", ",", "\"\<SpeedOfLight\>\""}], "]"}], "2"]}]}]]}], "-", 
+    RowBox[{
+     RowBox[{"Quantity", "[", 
+      RowBox[{"1", ",", "\"\<ElectronMass\>\""}], "]"}], " ", 
+     SuperscriptBox[
+      RowBox[{"Quantity", "[", 
+       RowBox[{"1", ",", "\"\<SpeedOfLight\>\""}], "]"}], "2"]}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.753535668612956*^9, 3.7535357213733797`*^9}, {
+  3.753536125590601*^9, 3.7535361456259794`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"33f2c4cd-6b58-43c7-914e-a08af8be6be7"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.3`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.5`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.7`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.9`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.1`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.85`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.9`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.95`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.25`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.3`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.35`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.5`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.88`", ",", "0.8`", ",", "0.84`", ",", "0.93`", ",", "0.98`", ",", 
+     "1.33`", ",", "1.799`", ",", "2.459`", ",", "3.249`", ",", "3.719`", ",",
+      "3.929`", ",", "4.219`", ",", "4.279`", ",", "4.489`", ",", "4.539`", 
+     ",", "4.199`", ",", "4.029`", ",", "4.239`", ",", "3.719`", ",", 
+     "3.289`", ",", "2.559`", ",", "2.259`", ",", "1.739`", ",", "1.37`", ",",
+      "1.29`", ",", "1.999`", ",", "3.449`", ",", "4.739`", ",", "6.038`", 
+     ",", "4.699`", ",", "4.659`", ",", "3.469`", ",", "2.159`", ",", "1.53`",
+      ",", "0.8`", ",", "0.43`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.07020000000000004`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", "0.030200000000000005`", ",",
+      "0.12020000000000008`", ",", "0.17020000000000002`", ",", 
+     "0.5202000000000001`", ",", "0.9892`", ",", "1.6492`", ",", "2.4392`", 
+     ",", "2.9092`", ",", "3.1191999999999998`", ",", "3.4092000000000002`", 
+     ",", "3.4692`", ",", "3.6792`", ",", "3.7291999999999996`", ",", 
+     "3.3891999999999998`", ",", "3.2192`", ",", "3.4292`", ",", "2.9092`", 
+     ",", "2.4792`", ",", "1.7492`", ",", "1.4491999999999998`", ",", 
+     "0.9292000000000001`", ",", "0.5602000000000001`", ",", 
+     "0.48020000000000007`", ",", "1.1892`", ",", "2.6391999999999998`", ",", 
+     "3.9292`", ",", "5.2282`", ",", "3.8891999999999998`", ",", 
+     "3.8491999999999997`", ",", "2.6592`", ",", "1.3491999999999997`", ",", 
+     "0.7202000000000001`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", 
+     RowBox[{"-", "0.37979999999999997`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{
+      "0.`",RowBox[{
+        "\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "49.26190290030482`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "98.52380580060964`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "147.78570870091443`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "197.04761160121927`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "246.30951450152406`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "295.57141740182885`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "344.83332030213364`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "394.09522320243855`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "443.35712610274334`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "492.6190290030481`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "541.880931903353`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "566.5118833535053`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "591.1428348036577`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "615.7737862538102`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "640.4047377039626`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "665.0356891541151`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "689.6666406042673`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "714.2975920544197`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "738.9285435045722`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "763.5594949547246`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "788.1904464048771`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "837.4523493051818`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "886.7142522054867`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "935.9761551057913`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "948.2916308308677`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "960.6071065559438`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "972.9225822810201`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "985.2380580060963`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1034.4999609064012`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1046.8154366314773`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1059.1309123565534`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1071.4463880816295`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1083.761863806706`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1108.3928152568583`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1133.0237667070105`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{
+      "5.684341886080802`*^-14","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "2.36900965091246`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "9.411337447100266`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "20.941406387457334`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "36.67585169581599`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "56.26492533049526`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "79.32502061106521`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "105.46673962008862`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "134.31568090065656`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "165.5256019583657`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "198.78512711112973`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "233.81973465183802`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "251.92676247921128`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "270.3906967567721`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "289.1868314886447`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "308.29230302025604`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "327.6859712876308`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "347.3483017901261`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "367.2612504284577`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "387.4081527090296`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "407.77361831042873`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "428.34343161687053`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "470.0445596190737`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "512.4179229259353`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "555.3833894882468`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "566.2089910357415`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "577.0662798338565`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "587.9543167048421`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "598.8721967165804`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "642.8251703986464`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "653.8797948274666`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "664.9594767195731`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "676.0635144388284`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "687.1912308441115`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "709.5151077269404`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "731.926143594239`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.7535356745002184`*^9, 3.75353572381884*^9}, {
+   3.753536035801148*^9, 3.7535360925565605`*^9}, {3.7535361309402523`*^9, 
+   3.7535361393198433`*^9}, 3.7535361838756495`*^9, 3.7535367834799128`*^9, 
+   3.7535376015451293`*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"c545110a-21df-40e8-a93e-575ee2f0ef28"]
+}, Open  ]],
+
+Cell["\:041d\:0430\:043a\:043e\:043d\:0435\:0446, \:0434\:043e\:0431\:0430\
+\:0432\:0438\:043c \:043f\:043e\:0441\:043b\:0435\:0434\:043d\:0438\:0439 \
+\:0441\:0442\:043e\:043b\:0431\:0435\:0446 \:0434\:043b\:044f \:0433\:0440\
+\:0430\:0444\:0438\:043a\:0430 \:0424\:0435\:0440\:043c\:0438-\:041a\:044e\
+\:0440\:0438", "Text",
+ CellChangeTimes->{{3.75353647557975*^9, 3.753536484016672*^9}, {
+  3.753536533257346*^9, 
+  3.753536567070518*^9}},ExpressionUUID->"6c22ee64-8b18-47bf-9f67-\
+c86f3ff8f512"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AppendTo", "[", 
+  RowBox[{"A", ",", 
+   RowBox[{"Re", "[", 
+    RowBox[{"MkFermi", "[", 
+     RowBox[{
+      RowBox[{"A", "[", 
+       RowBox[{"[", 
+        RowBox[{"2", ",", "All"}], "]"}], "]"}], ",", "0.8098", ",", 
+      RowBox[{"A", "[", 
+       RowBox[{"[", 
+        RowBox[{"4", ",", "All"}], "]"}], "]"}]}], "]"}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.753536612927314*^9, 3.7535366846368465`*^9}, {
+  3.753536788040764*^9, 3.7535367909041*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"f04d080c-df01-41c3-bde2-5951ea8fecbc"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Power","infy",
+   "\"Infinite expression \\!\\(\\*FractionBox[\\\"1\\\", \\\"0.`\\\"]\\) \
+encountered.\"",2,12,1,15756421774218260220,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.753536792220538*^9, 3.753537601659822*^9},
+ CellLabel->
+  "During evaluation of \
+In[12]:=",ExpressionUUID->"228b525b-6079-442d-ab20-1951a92fc773"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"1.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.3`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.5`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.7`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"2.9`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.1`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.85`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.9`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"3.95`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.25`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.3`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.35`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.5`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", 
+     TemplateBox[{"4.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.88`", ",", "0.8`", ",", "0.84`", ",", "0.93`", ",", "0.98`", ",", 
+     "1.33`", ",", "1.799`", ",", "2.459`", ",", "3.249`", ",", "3.719`", ",",
+      "3.929`", ",", "4.219`", ",", "4.279`", ",", "4.489`", ",", "4.539`", 
+     ",", "4.199`", ",", "4.029`", ",", "4.239`", ",", "3.719`", ",", 
+     "3.289`", ",", "2.559`", ",", "2.259`", ",", "1.739`", ",", "1.37`", ",",
+      "1.29`", ",", "1.999`", ",", "3.449`", ",", "4.739`", ",", "6.038`", 
+     ",", "4.699`", ",", "4.659`", ",", "3.469`", ",", "2.159`", ",", "1.53`",
+      ",", "0.8`", ",", "0.43`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.07020000000000004`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", "0.030200000000000005`", ",",
+      "0.12020000000000008`", ",", "0.17020000000000002`", ",", 
+     "0.5202000000000001`", ",", "0.9892`", ",", "1.6492`", ",", "2.4392`", 
+     ",", "2.9092`", ",", "3.1191999999999998`", ",", "3.4092000000000002`", 
+     ",", "3.4692`", ",", "3.6792`", ",", "3.7291999999999996`", ",", 
+     "3.3891999999999998`", ",", "3.2192`", ",", "3.4292`", ",", "2.9092`", 
+     ",", "2.4792`", ",", "1.7492`", ",", "1.4491999999999998`", ",", 
+     "0.9292000000000001`", ",", "0.5602000000000001`", ",", 
+     "0.48020000000000007`", ",", "1.1892`", ",", "2.6391999999999998`", ",", 
+     "3.9292`", ",", "5.2282`", ",", "3.8891999999999998`", ",", 
+     "3.8491999999999997`", ",", "2.6592`", ",", "1.3491999999999997`", ",", 
+     "0.7202000000000001`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", 
+     RowBox[{"-", "0.37979999999999997`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{
+      "0.`",RowBox[{
+        "\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "49.26190290030482`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "98.52380580060964`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "147.78570870091443`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "197.04761160121927`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "246.30951450152406`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "295.57141740182885`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "344.83332030213364`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "394.09522320243855`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "443.35712610274334`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "492.6190290030481`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "541.880931903353`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "566.5118833535053`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "591.1428348036577`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "615.7737862538102`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "640.4047377039626`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "665.0356891541151`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "689.6666406042673`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "714.2975920544197`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "738.9285435045722`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "763.5594949547246`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "788.1904464048771`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "837.4523493051818`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "886.7142522054867`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "935.9761551057913`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "948.2916308308677`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "960.6071065559438`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "972.9225822810201`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "985.2380580060963`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1034.4999609064012`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1046.8154366314773`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1059.1309123565534`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1071.4463880816295`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1083.761863806706`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1108.3928152568583`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "1133.0237667070105`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{
+      "5.684341886080802`*^-14","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "2.36900965091246`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "9.411337447100266`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "20.941406387457334`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "36.67585169581599`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "56.26492533049526`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "79.32502061106521`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "105.46673962008862`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "134.31568090065656`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "165.5256019583657`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "198.78512711112973`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "233.81973465183802`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "251.92676247921128`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "270.3906967567721`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "289.1868314886447`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "308.29230302025604`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "327.6859712876308`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "347.3483017901261`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "367.2612504284577`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "387.4081527090296`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "407.77361831042873`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "428.34343161687053`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "470.0445596190737`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "512.4179229259353`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "555.3833894882468`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "566.2089910357415`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "577.0662798338565`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "587.9543167048421`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "598.8721967165804`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "642.8251703986464`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "653.8797948274666`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "664.9594767195731`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "676.0635144388284`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "687.1912308441115`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "709.5151077269404`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "731.926143594239`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"Indeterminate",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"0.`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"177.7017489594803`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"192.9761225730334`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"149.14991668390283`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"186.57927090052488`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"195.72594675392148`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"200.55007432024573`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"199.62822691366304`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"182.70744713470089`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"161.53061080781788`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"146.37618918070496`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"138.13417319192638`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"133.45598450526805`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"126.37932821225063`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"113.5969823296393`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"104.61803317173239`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"102.24394033548445`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"89.34453859095524`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"78.38845724883501`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"62.683813715046035`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"54.40231902642409`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"39.77538964197176`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"28.346276482244612`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"24.199918348030796`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"37.34346166479557`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"54.56541447743965`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"65.31826523763117`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"73.93742596455857`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"59.26993086440585`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"57.92686981047031`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"47.309791644938485`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"33.119402909390125`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"23.78623808072625`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"0.`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"], ",", 
+     TemplateBox[{"0.`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.7535367925975637`*^9, 3.7535376023709197`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"a134bf2f-f273-4006-b1f4-39bee312e423"]
+}, Open  ]],
+
+Cell["\:0422\:0440\:0430\:043d\:0441\:043f\:043e\:043d\:0438\:0440\:0443\:0435\
+\:043c \:043c\:0430\:0442\:0440\:0438\:0446\:0443", "Text",
+ CellChangeTimes->{{3.753536808061177*^9, 
+  3.7535368158141356`*^9}},ExpressionUUID->"c84c7fed-6423-4206-a869-\
+6d02283aae9d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"A", "=", 
+  RowBox[{"Transpose", "[", "A", "]"}]}]], "Input",
+ CellChangeTimes->{{3.753536818297727*^9, 3.7535368225937696`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"fb5bceed-bba0-42d8-b1b3-547ad787f989"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "0.88`", ",", "0.07020000000000004`", ",", 
+     TemplateBox[{
+      "0.`",RowBox[{
+        "\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "5.684341886080802`*^-14","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"Indeterminate",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "0.8`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", 
+     TemplateBox[{
+      "49.26190290030482`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "2.36900965091246`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "0.84`", ",", "0.030200000000000005`", ",", 
+     TemplateBox[{
+      "98.52380580060964`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "9.411337447100266`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"177.7017489594803`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "0.93`", ",", "0.12020000000000008`", ",", 
+     TemplateBox[{
+      "147.78570870091443`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "20.941406387457334`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"192.9761225730334`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"0.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "0.98`", ",", "0.17020000000000002`", ",", 
+     TemplateBox[{
+      "197.04761160121927`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "36.67585169581599`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"149.14991668390283`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"1","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "1.33`", ",", "0.5202000000000001`", ",", 
+     TemplateBox[{
+      "246.30951450152406`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "56.26492533049526`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"186.57927090052488`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"1.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "1.799`", ",", "0.9892`", ",", 
+     TemplateBox[{
+      "295.57141740182885`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "79.32502061106521`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"195.72594675392148`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"1.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "2.459`", ",", "1.6492`", ",", 
+     TemplateBox[{
+      "344.83332030213364`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "105.46673962008862`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"200.55007432024573`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"1.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "3.249`", ",", "2.4392`", ",", 
+     TemplateBox[{
+      "394.09522320243855`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "134.31568090065656`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"199.62822691366304`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"1.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "3.719`", ",", "2.9092`", ",", 
+     TemplateBox[{
+      "443.35712610274334`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "165.5256019583657`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"182.70744713470089`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"2","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "3.929`", ",", "3.1191999999999998`", ",", 
+     TemplateBox[{
+      "492.6190290030481`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "198.78512711112973`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"161.53061080781788`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"2.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.219`", ",", "3.4092000000000002`", ",", 
+     TemplateBox[{
+      "541.880931903353`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "233.81973465183802`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"146.37618918070496`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"2.3`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.279`", ",", "3.4692`", ",", 
+     TemplateBox[{
+      "566.5118833535053`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "251.92676247921128`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"138.13417319192638`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"2.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.489`", ",", "3.6792`", ",", 
+     TemplateBox[{
+      "591.1428348036577`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "270.3906967567721`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"133.45598450526805`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"2.5`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.539`", ",", "3.7291999999999996`", ",", 
+     TemplateBox[{
+      "615.7737862538102`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "289.1868314886447`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"126.37932821225063`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"2.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.199`", ",", "3.3891999999999998`", ",", 
+     TemplateBox[{
+      "640.4047377039626`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "308.29230302025604`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"113.5969823296393`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"2.7`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.029`", ",", "3.2192`", ",", 
+     TemplateBox[{
+      "665.0356891541151`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "327.6859712876308`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"104.61803317173239`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"2.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.239`", ",", "3.4292`", ",", 
+     TemplateBox[{
+      "689.6666406042673`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "347.3483017901261`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"102.24394033548445`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"2.9`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "3.719`", ",", "2.9092`", ",", 
+     TemplateBox[{
+      "714.2975920544197`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "367.2612504284577`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"89.34453859095524`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"3","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "3.289`", ",", "2.4792`", ",", 
+     TemplateBox[{
+      "738.9285435045722`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "387.4081527090296`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"78.38845724883501`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"3.1`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "2.559`", ",", "1.7492`", ",", 
+     TemplateBox[{
+      "763.5594949547246`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "407.77361831042873`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"62.683813715046035`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"3.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "2.259`", ",", "1.4491999999999998`", ",", 
+     TemplateBox[{
+      "788.1904464048771`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "428.34343161687053`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"54.40231902642409`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"3.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "1.739`", ",", "0.9292000000000001`", ",", 
+     TemplateBox[{
+      "837.4523493051818`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "470.0445596190737`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"39.77538964197176`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"3.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "1.37`", ",", "0.5602000000000001`", ",", 
+     TemplateBox[{
+      "886.7142522054867`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "512.4179229259353`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"28.346276482244612`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"3.8`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "1.29`", ",", "0.48020000000000007`", ",", 
+     TemplateBox[{
+      "935.9761551057913`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "555.3833894882468`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"24.199918348030796`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"3.85`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "1.999`", ",", "1.1892`", ",", 
+     TemplateBox[{
+      "948.2916308308677`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "566.2089910357415`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"37.34346166479557`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"3.9`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "3.449`", ",", "2.6391999999999998`", ",", 
+     TemplateBox[{
+      "960.6071065559438`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "577.0662798338565`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"54.56541447743965`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"3.95`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.739`", ",", "3.9292`", ",", 
+     TemplateBox[{
+      "972.9225822810201`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "587.9543167048421`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"65.31826523763117`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"4","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "6.038`", ",", "5.2282`", ",", 
+     TemplateBox[{
+      "985.2380580060963`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "598.8721967165804`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"73.93742596455857`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"4.2`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.699`", ",", "3.8891999999999998`", ",", 
+     TemplateBox[{
+      "1034.4999609064012`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "642.8251703986464`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"59.26993086440585`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"4.25`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "4.659`", ",", "3.8491999999999997`", ",", 
+     TemplateBox[{
+      "1046.8154366314773`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "653.8797948274666`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"57.92686981047031`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"4.3`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "3.469`", ",", "2.6592`", ",", 
+     TemplateBox[{
+      "1059.1309123565534`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "664.9594767195731`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"47.309791644938485`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"4.35`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "2.159`", ",", "1.3491999999999997`", ",", 
+     TemplateBox[{
+      "1071.4463880816295`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "676.0635144388284`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"33.119402909390125`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"4.4`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "1.53`", ",", "0.7202000000000001`", ",", 
+     TemplateBox[{
+      "1083.761863806706`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "687.1912308441115`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"23.78623808072625`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"4.5`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "0.8`", ",", 
+     RowBox[{"-", "0.00979999999999992`"}], ",", 
+     TemplateBox[{
+      "1108.3928152568583`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "709.5151077269404`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{"4.6`","\"A\"","amperes","\"Amperes\""},
+      "Quantity"], ",", "0.43`", ",", 
+     RowBox[{"-", "0.37979999999999997`"}], ",", 
+     TemplateBox[{
+      "1133.0237667070105`",
+       RowBox[{"\"keV\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+         StyleBox["\"c\"", Italic, StripOnInput -> False]}],
+       "kiloelectronvolts per speed of light",FractionBox[
+       "\"Kiloelectronvolts\"", "\"SpeedOfLight\""]},
+      "Quantity"], ",", 
+     TemplateBox[{
+      "731.926143594239`","\"keV\"","kiloelectronvolts",
+       "\"Kiloelectronvolts\""},
+      "Quantity"], ",", 
+     TemplateBox[{"0.`",RowBox[{
+         SuperscriptBox[
+          StyleBox["\"c\"", Italic, StripOnInput -> False], 
+          RowBox[{"3", "/", "2"}]], "\[NegativeMediumSpace]", "\"/\"", 
+         "\[InvisibleSpace]", 
+         SuperscriptBox["\"keV\"", 
+          RowBox[{"3", "/", "2"}]]}],
+       "speed of light to the 3/2 per kiloelectronvolt to the 3/2",FractionBox[
+        SuperscriptBox["\"SpeedOfLight\"", 
+         RowBox[{"3", "/", "2"}]], 
+        SuperscriptBox["\"Kiloelectronvolts\"", 
+         RowBox[{"3", "/", "2"}]]]},
+      "Quantity"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.7535368230934258`*^9, 3.753537602462675*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"d4fe5b94-1a62-4fcf-9efb-539b99416d62"]
+}, Open  ]],
+
+Cell["\:041f\:043e\:0434\:0433\:043e\:0442\:043e\:0432\:0438\:043c \:043c\
+\:0430\:0442\:0440\:0438\:0446\:0443 \:043a \:044d\:043a\:0441\:043f\:043e\
+\:0440\:0442\:0443 \:0432 LaTeX", "Text",
+ CellChangeTimes->{{3.753536922340741*^9, 
+  3.753536963145434*^9}},ExpressionUUID->"9581d626-9333-430e-909c-\
+2db8c583e400"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"ex", "=", 
+   RowBox[{"{", 
+    RowBox[{"Table", "[", 
+     RowBox[{"i", ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"Length", "[", "A", "]"}]}], "}"}]}], "]"}], 
+    "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.753537176063691*^9, 3.7535372016628466`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"33c72fc9-c78f-4da3-912a-477fb3d65f4b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+   "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+    ",", "9", ",", "10", ",", "11", ",", "12", ",", "13", ",", "14", ",", 
+    "15", ",", "16", ",", "17", ",", "18", ",", "19", ",", "20", ",", "21", 
+    ",", "22", ",", "23", ",", "24", ",", "25", ",", "26", ",", "27", ",", 
+    "28", ",", "29", ",", "30", ",", "31", ",", "32", ",", "33", ",", "34", 
+    ",", "35", ",", "36"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.7535372024347706`*^9, 3.7535372214403214`*^9}, {
+   3.753537296729322*^9, 3.7535373058709116`*^9}, 3.7535373579336805`*^9, {
+   3.753537457993064*^9, 3.7535374786897154`*^9}, 3.753537602563404*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"91319da9-1ae9-4ef4-9ca5-dd6f280a83b0"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "1"}], ",", 
+   RowBox[{"i", "\[LessEqual]", " ", 
+    RowBox[{"Length", "[", 
+     RowBox[{"A", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ",", 
+   RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"ex", ",", 
+     RowBox[{"A", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "i"}], "]"}], "]"}]}], "]"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.7535373940826807`*^9, 3.753537473938429*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"362f2b42-c5a5-4720-9e0c-99875511b40c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TeXForm", "[", 
+  RowBox[{"QuantityMagnitude", "[", 
+   RowBox[{"Transpose", "[", "ex", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7535374923157606`*^9, 3.7535375059513416`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"c8bb4f4d-76f4-4729-b572-27921e60b0ee"],
+
+Cell["\<\
+\\left(
+\\begin{array}{ccccccc}
+ 1 & 0 & 0.88 & 0.0702 & 0. & \\text{5.684341886080802$\\grave{ \
+}$*${}^{\\wedge}$-14} &
+   \\text{Indeterminate} \\\\
+ 2 & 0.2 & 0.8 & -0.0098 & 49.2619 & 2.36901 & 0. \\\\
+ 3 & 0.4 & 0.84 & 0.0302 & 98.5238 & 9.41134 & 177.702 \\\\
+ 4 & 0.6 & 0.93 & 0.1202 & 147.786 & 20.9414 & 192.976 \\\\
+ 5 & 0.8 & 0.98 & 0.1702 & 197.048 & 36.6759 & 149.15 \\\\
+ 6 & 1 & 1.33 & 0.5202 & 246.31 & 56.2649 & 186.579 \\\\
+ 7 & 1.2 & 1.799 & 0.9892 & 295.571 & 79.325 & 195.726 \\\\
+ 8 & 1.4 & 2.459 & 1.6492 & 344.833 & 105.467 & 200.55 \\\\
+ 9 & 1.6 & 3.249 & 2.4392 & 394.095 & 134.316 & 199.628 \\\\
+ 10 & 1.8 & 3.719 & 2.9092 & 443.357 & 165.526 & 182.707 \\\\
+ 11 & 2 & 3.929 & 3.1192 & 492.619 & 198.785 & 161.531 \\\\
+ 12 & 2.2 & 4.219 & 3.4092 & 541.881 & 233.82 & 146.376 \\\\
+ 13 & 2.3 & 4.279 & 3.4692 & 566.512 & 251.927 & 138.134 \\\\
+ 14 & 2.4 & 4.489 & 3.6792 & 591.143 & 270.391 & 133.456 \\\\
+ 15 & 2.5 & 4.539 & 3.7292 & 615.774 & 289.187 & 126.379 \\\\
+ 16 & 2.6 & 4.199 & 3.3892 & 640.405 & 308.292 & 113.597 \\\\
+ 17 & 2.7 & 4.029 & 3.2192 & 665.036 & 327.686 & 104.618 \\\\
+ 18 & 2.8 & 4.239 & 3.4292 & 689.667 & 347.348 & 102.244 \\\\
+ 19 & 2.9 & 3.719 & 2.9092 & 714.298 & 367.261 & 89.3445 \\\\
+ 20 & 3 & 3.289 & 2.4792 & 738.929 & 387.408 & 78.3885 \\\\
+ 21 & 3.1 & 2.559 & 1.7492 & 763.559 & 407.774 & 62.6838 \\\\
+ 22 & 3.2 & 2.259 & 1.4492 & 788.19 & 428.343 & 54.4023 \\\\
+ 23 & 3.4 & 1.739 & 0.9292 & 837.452 & 470.045 & 39.7754 \\\\
+ 24 & 3.6 & 1.37 & 0.5602 & 886.714 & 512.418 & 28.3463 \\\\
+ 25 & 3.8 & 1.29 & 0.4802 & 935.976 & 555.383 & 24.1999 \\\\
+ 26 & 3.85 & 1.999 & 1.1892 & 948.292 & 566.209 & 37.3435 \\\\
+ 27 & 3.9 & 3.449 & 2.6392 & 960.607 & 577.066 & 54.5654 \\\\
+ 28 & 3.95 & 4.739 & 3.9292 & 972.923 & 587.954 & 65.3183 \\\\
+ 29 & 4 & 6.038 & 5.2282 & 985.238 & 598.872 & 73.9374 \\\\
+ 30 & 4.2 & 4.699 & 3.8892 & 1034.5 & 642.825 & 59.2699 \\\\
+ 31 & 4.25 & 4.659 & 3.8492 & 1046.82 & 653.88 & 57.9269 \\\\
+ 32 & 4.3 & 3.469 & 2.6592 & 1059.13 & 664.959 & 47.3098 \\\\
+ 33 & 4.35 & 2.159 & 1.3492 & 1071.45 & 676.064 & 33.1194 \\\\
+ 34 & 4.4 & 1.53 & 0.7202 & 1083.76 & 687.191 & 23.7862 \\\\
+ 35 & 4.5 & 0.8 & -0.0098 & 1108.39 & 709.515 & 0. \\\\
+ 36 & 4.6 & 0.43 & -0.3798 & 1133.02 & 731.926 & 0. \\\\
+\\end{array}
+\\right)\
+\>", "Output",
+ CellChangeTimes->{3.7535375065177794`*^9, 3.7535376028237085`*^9},
+ CellLabel->
+  "Out[16]//TeXForm=",ExpressionUUID->"56cd3616-1a31-4229-8e71-93c6a4dda08b"]
+}, Open  ]],
+
+Cell["\<\
+\:041f\:043e\:0441\:0442\:0440\:043e\:0438\:043c \:0433\:0440\:0430\:0444\
+\:0438\:043a \:0424\:0435\:0440\:043c\:0438 - \:041a\:044e\:0440\:0438. \
+\:0414\:043b\:044f \:044d\:0442\:043e\:0433\:043e \:0432\:043e\:0437\:044c\
+\:043c\:0435\:043c \:0441\:0442\:043e\:043b\:0431\:0435\:0446 \:044d\:043d\
+\:0435\:0440\:0433\:0438\:0438 (5) \:0438 \
+\:0441\:0442\:043e\:043b\:0431\:0435\:0446 mkFermi(6)\
+\>", "Text",
+ CellChangeTimes->{{3.75353797774894*^9, 3.7535380002547092`*^9}, {
+  3.7535384557789516`*^9, 
+  3.7535385007856646`*^9}},ExpressionUUID->"edf462cd-7866-44ca-b10d-\
+74d709ea2489"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"plot", "=", 
+   RowBox[{"A", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"5", ";;", "6"}]}], "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.753538503891395*^9, 3.7535385324510202`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"c79b4523-481f-4857-81e8-d759d2a3ce42"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "plot", "]"}]], "Input",
+ CellChangeTimes->{{3.753538534654126*^9, 3.753538539611868*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"36af3ac5-3589-43db-84d8-c33462ab75bf"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.012833333333333334`],
+      AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGBQBmIQ3TDvS8juz0wODFDw4ErqpVmXlBy47lvvKjFLc/gQ
+78fE8NHEQZopI9VGPsPhhc1Hv6YwJ4eZ54XkzixJcvihu1/opaKPw5sVCsmd
+QekOLoftlc9eCXaIvb7+i1V5hsMZxtv892OjHFJ/lZrOEsx0COO8yid1KsHh
+tEhIvtSXDId5e4x2X9yQ4sCXppOx+Fqag5bBk0PyNzMccvxbDv8ySHGIUtRy
+sbbKdZjS/mQvp0+Sw6vsk5wravMdYl5NVvV2SXS4ym/n7fCswKHW+GLO9HUJ
+DpU3mZ3/ChU5OLdce+k2I94hsuOd61qXYodzrfFfTdJiHF6msu/9WVXicFia
+8XavepTD2ttPl0zaWuqgf/TN9jn9kQ6rn7wV0ftS5mAmPv01T1iYw9MJSqfb
+zSoc/r04VX1nRrAD77vpexNqKh1ehhmbtof7O3xcq7ap7miVQ3rbLIN6Y28H
+31WqLdsSah2avx34bv/Y2UFh5s/n4cwNDkFzwyYvjbBxMOFt0hOMbnRYuNLv
+pq6xhUPY31rmNRsbHVjuuvR+W+3kkLRtx952jiaHp0syGuI9vB2mvTpdsCi+
+yUH8qEZpXEiAg9JqV6df25ocLvFUnvxXHeTQJPfh00yxFod3aaYSvYt8Hdxu
+3rvImd/iEHS+cfXibz4OO+IUmdYeb3G4c2q1w/Ll7g571twWblJodYgtMJ7h
+0e/gMCGbc0l7ZavDmWnSz9xOmjswnTzzQU6nDZ4eHFh/7s24j+ADAM+c9/o=
+
+      "]]}, {}}, {}, {}, {}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->{Automatic, 286.08647120308945`},
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 731.926143594239}, {0, 200.55007432024573`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.7535385399549475`*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"c370690f-1e08-40dd-b77c-454c070e05b6"]
+}, Open  ]],
+
+Cell["\<\
+\:0422\:0435\:043f\:0435\:0440\:044c \:043d\:0430\:043c \:043d\:0443\:0436\
+\:043d\:043e \:043f\:0440\:043e\:0432\:0435\:0441\:0442\:0438 \:043d\:0430\
+\:0438\:043b\:0443\:0447\:0448\:0443\:044e \:043f\:0440\:044f\:043c\:0443\
+\:044e \:0447\:0435\:0440\:0435\:0437 \:0447\:0430\:0441\:0442\:044c \:0433\
+\:0440\:0430\:0444\:0438\:043a\:0430 (\:041c\:041d\:041a)\
+\>", "Text",
+ CellChangeTimes->{{3.7535385930624685`*^9, 
+  3.7535386191636477`*^9}},ExpressionUUID->"5d712229-75a4-4425-bb0a-\
+550c70029b60"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"plotApproxS", "=", 
+  RowBox[{"QuantityMagnitude", "[", "plot", "]"}]}]], "Input",
+ CellChangeTimes->{{3.753538673854563*^9, 3.753538692038536*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"2ea7f75b-7684-492a-bb66-6f08e41f049f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"5.684341886080802`*^-14", ",", "Indeterminate"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2.36900965091246`", ",", "0.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9.411337447100266`", ",", "177.7017489594803`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"20.941406387457334`", ",", "192.9761225730334`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"36.67585169581599`", ",", "149.14991668390283`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"56.26492533049526`", ",", "186.57927090052488`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"79.32502061106521`", ",", "195.72594675392148`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"105.46673962008862`", ",", "200.55007432024573`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"134.31568090065656`", ",", "199.62822691366304`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"165.5256019583657`", ",", "182.70744713470089`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"198.78512711112973`", ",", "161.53061080781788`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"233.81973465183802`", ",", "146.37618918070496`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"251.92676247921128`", ",", "138.13417319192638`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"270.3906967567721`", ",", "133.45598450526805`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"289.1868314886447`", ",", "126.37932821225063`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"308.29230302025604`", ",", "113.5969823296393`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"327.6859712876308`", ",", "104.61803317173239`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"347.3483017901261`", ",", "102.24394033548445`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"367.2612504284577`", ",", "89.34453859095524`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"387.4081527090296`", ",", "78.38845724883501`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"407.77361831042873`", ",", "62.683813715046035`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"428.34343161687053`", ",", "54.40231902642409`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"470.0445596190737`", ",", "39.77538964197176`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"512.4179229259353`", ",", "28.346276482244612`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"555.3833894882468`", ",", "24.199918348030796`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"566.2089910357415`", ",", "37.34346166479557`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"577.0662798338565`", ",", "54.56541447743965`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"587.9543167048421`", ",", "65.31826523763117`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"598.8721967165804`", ",", "73.93742596455857`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"642.8251703986464`", ",", "59.26993086440585`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"653.8797948274666`", ",", "57.92686981047031`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"664.9594767195731`", ",", "47.309791644938485`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"676.0635144388284`", ",", "33.119402909390125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"687.1912308441115`", ",", "23.78623808072625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"709.5151077269404`", ",", "0.`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"731.926143594239`", ",", "0.`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.7535386924125032`*^9, 3.753539174596853*^9, 
+  3.753539219076898*^9},
+ CellLabel->"Out[36]=",ExpressionUUID->"0718cd68-58f3-469b-ae3a-ad62c4afc081"]
+}, Open  ]],
+
+Cell["\:041f\:043e\:0434\:043f\:0440\:0430\:0432\:0438\:043c \:0437\:043d\
+\:0430\:0447\:0435\:043d\:0438\:044f", "Text",
+ CellChangeTimes->{{3.7535387002864857`*^9, 
+  3.7535387072169523`*^9}},ExpressionUUID->"dba73452-6aa2-4712-a16f-\
+145d992655c3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"plotApproxS", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}], "=", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"plotApproxS", "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "2"}], "]"}], "]"}], "=", "0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.753538709129837*^9, 3.7535387353616858`*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"db13b98d-7aa9-41f6-b6a3-97645979e891"],
+
+Cell["\:0418\:043d\:0442\:0435\:0440\:0435\:0441\:0443\:044e\:0449\:0438\:0439\
+ \:043d\:0430\:0441 \:0438\:043d\:0442\:0435\:0440\:0432\:0430\:043b \:044d\
+\:043d\:0435\:0440\:0433\:0438\:0439: 130 - 520 \:043a\:044d\:0412 ", "Text",
+ CellChangeTimes->{{3.753538753685499*^9, 3.75353882736552*^9}, {
+  3.753539158499118*^9, 3.753539159024729*^9}, {3.7535392056817656`*^9, 
+  3.75353921240478*^9}},ExpressionUUID->"b0ec3ecd-1920-4485-8729-\
+71ac9ad2bf26"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"plotApproxS", "=", 
+  RowBox[{"plotApproxS", "[", 
+   RowBox[{"[", 
+    RowBox[{"9", ";;", "24"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7535388803661203`*^9, 3.7535389013310556`*^9}, {
+  3.7535391689779224`*^9, 3.753539170252508*^9}, {3.7535392144652786`*^9, 
+  3.753539214852235*^9}},
+ CellLabel->"In[39]:=",ExpressionUUID->"80f24bb9-5902-4b85-96fe-aa230c65d626"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"134.31568090065656`", ",", "199.62822691366304`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"165.5256019583657`", ",", "182.70744713470089`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"198.78512711112973`", ",", "161.53061080781788`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"233.81973465183802`", ",", "146.37618918070496`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"251.92676247921128`", ",", "138.13417319192638`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"270.3906967567721`", ",", "133.45598450526805`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"289.1868314886447`", ",", "126.37932821225063`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"308.29230302025604`", ",", "113.5969823296393`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"327.6859712876308`", ",", "104.61803317173239`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"347.3483017901261`", ",", "102.24394033548445`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"367.2612504284577`", ",", "89.34453859095524`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"387.4081527090296`", ",", "78.38845724883501`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"407.77361831042873`", ",", "62.683813715046035`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"428.34343161687053`", ",", "54.40231902642409`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"470.0445596190737`", ",", "39.77538964197176`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"512.4179229259353`", ",", "28.346276482244612`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.753538902866909*^9, {3.753539170873804*^9, 3.753539177824252*^9}, 
+   3.7535392236461763`*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"cc4bdc5e-89c9-4ee3-8144-5ac8ae33a69f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"plotApproxFunc", "=", 
+  RowBox[{"LinearModelFit", "[", 
+   RowBox[{"plotApproxS", ",", "x", ",", "x"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7535389103150015`*^9, 3.753538933911602*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"53d74016-183c-44d0-a230-0fc6175d8d29"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"FittedModel", "[", 
+   TagBox[
+    PanelBox[
+     TagBox[
+      RowBox[{"256.8864219640524`", "\[VeryThinSpace]", "-", 
+       RowBox[{"0.4604566402201095`", " ", "x"}]}],
+      Short[#, 2]& ],
+     FrameMargins->5],
+    Editable -> False], "]"}],
+  InterpretTemplate[
+  FittedModel[{
+    "Linear", {
+     256.8864219640524, -0.4604566402201095}, {{$CellContext`x}, {
+      1, $CellContext`x}}, {0, 0}}, {{1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 
+    1., 1., 1., 1., 1., 1.}}, {{134.31568090065656`, 199.62822691366304`}, {
+    165.5256019583657, 182.70744713470089`}, {198.78512711112973`, 
+    161.53061080781788`}, {233.81973465183802`, 146.37618918070496`}, {
+    251.92676247921128`, 138.13417319192638`}, {270.3906967567721, 
+    133.45598450526805`}, {289.1868314886447, 126.37932821225063`}, {
+    308.29230302025604`, 113.5969823296393}, {327.6859712876308, 
+    104.61803317173239`}, {347.3483017901261, 102.24394033548445`}, {
+    367.2612504284577, 89.34453859095524}, {387.4081527090296, 
+    78.38845724883501}, {407.77361831042873`, 62.683813715046035`}, {
+    428.34343161687053`, 54.40231902642409}, {470.0445596190737, 
+    39.77538964197176}, {512.4179229259353, 28.346276482244612`}}, {{1., 
+    134.31568090065656`}, {1., 165.5256019583657}, {1., 
+    198.78512711112973`}, {1., 233.81973465183802`}, {1., 
+    251.92676247921128`}, {1., 270.3906967567721}, {1., 289.1868314886447}, {
+    1., 308.29230302025604`}, {1., 327.6859712876308}, {1., 
+    347.3483017901261}, {1., 367.2612504284577}, {1., 387.4081527090296}, {1.,
+     407.77361831042873`}, {1., 428.34343161687053`}, {1., 
+    470.0445596190737}, {1., 512.4179229259353}}, 
+    Function[Null, 
+     Internal`LocalizedBlock[{$CellContext`x}, #], {HoldAll}]]& ],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->True]], "Output",
+ CellChangeTimes->{3.7535389344800406`*^9, 3.7535391792962837`*^9, 
+  3.753539225373561*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"08550ae1-b54b-412d-9614-dee70e4b8804"]
+}, Open  ]],
+
+Cell["\:0421\:043e\:0432\:043c\:0435\:0441\:0442\:0438\:043c \:0433\:0440\
+\:0430\:0444\:0438\:043a\:0438:", "Text",
+ CellChangeTimes->{{3.75353895144172*^9, 
+  3.7535389629908037`*^9}},ExpressionUUID->"c14a383d-9064-43e1-8453-\
+07f706e27502"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"plot", ",", 
+     RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}], ",", 
+     RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+     RowBox[{"FrameLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<T, \:043a\:044d\:0412\>\"", ",", " ", "\"\<mkFermi\>\""}],
+        "}"}]}], ",", 
+     RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}]}], "]"}], ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"plotApproxFunc", "[", "\"\<BestFit\>\"", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "130", ",", "598"}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7535390102551155`*^9, 3.75353901060119*^9}, {
+  3.753539044704771*^9, 3.7535391286808596`*^9}, {3.753539232869486*^9, 
+  3.7535392343186197`*^9}, {3.753539333004219*^9, 3.753539356137206*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"7664a866-545d-4b7b-bd86-c44b77670450"],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {
+     {RGBColor[0.368417, 0.506779, 0.709798], AbsolutePointSize[6], 
+      AbsoluteThickness[1.6], GeometricTransformationBox[InsetBox[
+        StyleBox["\<\"\[FilledCircle]\"\>",
+         StripOnInput->False,
+         FontSize->8.96], {0., 0.}], CompressedData["
+1:eJxTTMoPSmVmYGBQBmJGIGYC4oZ5X0J2f2ZyYICCB1dSL826pOTAdd96V4lZ
+msOHeD8mho8mDtJMGak28hkOL2w++jWFOTnMPC8kd2ZJksMP3f1CLxV9HN6s
+UEjuDEp3cDlsr3z2SrBD7PX1X6zKMxzOMN7mvx8b5ZD6q9R0lmCmQxjnVT6p
+UwkOp0VC8qW+ZDjM22O0++KGFAe+NJ2MxdfSHLQMnhySv5nhkOPfcviXQYpD
+lKKWi7VVrsOU9id7OX2SHF5ln+RcUZvvEPNqsqq3S6LDVX47b4dnBQ61xhdz
+pq9LcKi8yez8V6jIwbnl2ku3GfEOkR3vXNe6FDuca43/apIW4/AylX3vz6oS
+h8PSjLd71aMc1t5+umTS1lIH/aNvts/pj3RY/eStiN6XMgcz8emvecLCHJ5O
+UDrdblbh8O/Fqeo7M4IdeN9N35tQU+nwMszYtD3c3+HjWrVNdUerHNLbZhnU
+G3s7+K5SbdmWUOvQ/O3Ad/vHzg4KM38+D2ducAiaGzZ5aYSNgwlvk55gdKPD
+wpV+N3WNLRzC/tYyr9nY6MBy16X322onh6RtO/a2czQ5PF2S0RDv4e0w7dXp
+gkXxTQ7iRzVK40ICHJRWuzr92tbkcImn8uS/6iCHJrkPn2aKtTi8SzOV6F3k
+6+B2895FzvwWh6DzjasXf/Nx2BGnyLT2eIvDnVOrHZYvd3fYs+a2cJNCq0Ns
+gfEMj34HhwnZnEvaK1sdzkyTfuZ20tyB6eSZD3I6bfD04MD6c2/GfQQfANtQ
+9/w=
+       "]]}, {}}, {}, {}, {}, {}}, {{{}, {}, 
+     TagBox[
+      {RGBColor[1, 0, 0], AbsoluteThickness[1.6], Opacity[1.], 
+       LineBox[CompressedData["
+1:eJwVj3s01HkYxidSq6yELlZlQkXIzMTm0pkejJJwjEsRxs992NyNkRj6bUfp
+hk2pTLNDuUW5azin+hZS6mhrS20oCWmPSs7RxaV29o/nvOc953k+7/usDY33
+ilBhMBjuSv0/cXmhLgMUSt9qlgzIhWCsyXtXxKNgwwuxJjIhbhUsv2m5k0KP
+vPFeqVQIx/3rYoK9KHz195uMOisEz8WJ3Ain4PGgxGkyT4gdo5J9mbkUZuqs
+RhdkCeFh+Llj+jEF7/S9ZqwgIQLPD4umIkKg+nN5M60nhMhyKbl0KRR+fwuM
+O3OiEPaCX2HdE4bZLNMZMheJXFEbb+JTONbzFw/uE0eipjmpO3xTJHjtmgYt
+IxEoW7ztfZtvFBr0je8ogiJwfkHA1+7TQuguC+jy6w5H1ydZ6/y/ojHDqeqt
+tA1H9+TnFcypGHC2qHs0NISh+6xMMMXZh8D+owb+zDD86bPXsSYgFr1Ra/xb
+i0JRw+D2H5fEoXfFPfm9paFo4ScKNrTFo1t42lGcHYJdgf03+AkJ0JAnu738
+SsF2qOL2+JJE8NKS64YiKDhRh0ukNYlQ+VfXeVN1MGzeTXhc5yZhZV3kN3WZ
+ANU8esJuIAm/KGZCmOlBUK++QJkmJkNxvOl8VXQgRt4MdqQsTYHjxbrDsY4B
+GNC1mf/0agp6VfryC5h7QTz1tMsdRFhgaRpjou0Pw2BD3SeDIjAvtH35Nr4H
+cWnNw0miVDx/Fu/L7duN3tzA/PULxZAGeD8c6vHF9Vgz1pYyMVzWps/dqvZB
+XuAhmcImDfmNHTM6Um+8Wq02r+h5Gm4f9roqF3lh17Nz3KOi/VAp08w84cNH
+abHC9cPCdPSf/KD/frsnxJwfrrXl6eCJjF5qOntgy5OHeq/tDuCnyHpjUyM3
+6MQ1tW94cADDY8UXVTVcEfuChNyPzkDhR41j3l070MDf0/NqNgMZeZ3auVXO
+EBUvs+RLM7G1cb6qlcAJRhNBgs1sCVgJx0512Drg/dY24cZ2CbIlA4qN4OLX
+QG6UJCQLMK7Xv1Zvi+gcNyunqSykzerc1Ey0xkmHW+kNrtlw6f99M/8pC1P2
+o3fdz2VDTvzZJjITPLL3lJQMZaPOojuDZ8HEuHHPFSPOQTAqvar+WamBTJ0C
+niBDubttSND2Gbu56vuAi1HnQWSf6bkSf1+HTD/idi3XpUFpNwz7zRoS9+rh
+mttBNOQpgsQwsRn5rLW6dHEwDVg0nXK4YEZkqb5FPhQNMqLeYtBuRiYc7hwc
+DaXB2NM83adpTv54XrF7kVDJs9U45FNuTnrVfmN4JdFgfm894/zUggioT96v
+c5T59kUvT+mxyII7pjs3HqGhJbf+SJuzSK1ZKDc5V5nPoBhJ21iE8eWxidpx
+GhNWLYaeESxSeqJpzqRAySsPidKoZ5G3beKKhGIa+UcUE4dc2CSfWSdtldIY
+DH8zLyWATWxyxgpUZEq/g6ZOWBybHOX7ZxTKlfe/hVk7FLKJ+ZgdX1Gm5Mcs
+SZ97xSZP3JO3z6ugwdphd2x8kk0yG6vtXSuVfKMIaZ8ah/RIVq3vv6zk9bfd
+aDXjkNRhH/11Ncp/FSMPK7kcYuB6QivuCo26Qq3XRXwOuVvbqXbtqrJfov1k
+TjiHJCz7Pv2jloane6RqqphD/gOuUDHi
+        "]]},
+      Annotation[#, "Charting`Private`Tag$10380#1"]& ]}, {}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{
+     FormBox["\"mkFermi\"", TraditionalForm], None}, {
+     FormBox["\"T, \:043a\:044d\:0412\"", TraditionalForm], None}},
+  FrameStyle->Automatic,
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{Automatic, Automatic},
+  GridLinesStyle->Directive[
+    GrayLevel[0.4, 0.5], 
+    AbsoluteThickness[1], 
+    AbsoluteDashing[{1, 2}]],
+  ImagePadding->All,
+  ImageSize->{Automatic, 400.3438254168415},
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0, 731.926143594239}, {0, 200.55007432024573`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.7535391293081713`*^9, 3.7535391817616887`*^9, {3.7535392271857367`*^9, 
+   3.753539234729538*^9}, {3.7535393386421013`*^9, 3.753539356634894*^9}},
+ CellLabel->"Out[44]=",ExpressionUUID->"36e8ece7-49ea-45ab-92c6-e5bab8733714"]
+}, Open  ]],
+
+Cell["\:041d\:0430\:0439\:0434\:0435\:043c \:043f\:0435\:0440\:0441\:0435\
+\:0447\:0435\:043d\:0438\:0435 \:043f\:043e\:043b\:0443\:0447\:0435\:043d\
+\:043d\:043e\:0439 \:043f\:0440\:044f\:043c\:043e\:0439 \:0441 \:043e\:0441\
+\:044c\:044e OX", "Text",
+ CellChangeTimes->{{3.7535395779415245`*^9, 
+  3.7535395944781437`*^9}},ExpressionUUID->"433178f0-0dd3-4169-9350-\
+a45f03cf577d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"x", "/.", 
+    RowBox[{
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{"y", "==", 
+        RowBox[{"plotApproxFunc", "[", "\"\<BestFit\>\"", "]"}]}], ",", "x"}],
+       "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}]}], ")"}], "/.", 
+  RowBox[{"y", "\[Rule]", " ", "0"}]}]], "Input",
+ CellChangeTimes->{{3.7535396126774807`*^9, 3.7535396851289024`*^9}},
+ CellLabel->"In[51]:=",ExpressionUUID->"99164f24-8e05-441a-891e-5f5ea008e68a"],
+
+Cell[BoxData["557.8949232684632`"], "Output",
+ CellChangeTimes->{{3.7535396491919947`*^9, 3.7535396856186028`*^9}},
+ CellLabel->"Out[51]=",ExpressionUUID->"b0af982a-d424-4370-92d3-66591f8acce6"]
 }, Open  ]]
 },
-WindowSize->{808, 595},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+WindowSize->{808, 988},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -185,14 +4022,97 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1198, 44, 623, "Input",ExpressionUUID->"2a8c4e25-cc7e-43e7-a4d7-d72fadc1e91d"],
+Cell[558, 20, 333, 5, 34, "Text",ExpressionUUID->"5b998c48-2dba-4b95-840e-144163ae96f2"],
+Cell[894, 27, 1197, 44, 622, "Input",ExpressionUUID->"2a8c4e25-cc7e-43e7-a4d7-d72fadc1e91d"],
+Cell[2094, 73, 367, 6, 34, "Text",ExpressionUUID->"71884e71-04a7-4805-a44e-165291b6b5cf"],
 Cell[CellGroupData[{
-Cell[1781, 68, 559, 15, 80, "Input",ExpressionUUID->"558b8daf-f39f-4c91-adc2-d4078cf554cc"],
-Cell[2343, 85, 3498, 82, 261, "Output",ExpressionUUID->"9d84eb51-bf0e-49ba-aeca-5a0684c97421"]
+Cell[2486, 83, 588, 15, 82, "Input",ExpressionUUID->"558b8daf-f39f-4c91-adc2-d4078cf554cc"],
+Cell[3077, 100, 2597, 43, 166, "Output",ExpressionUUID->"1f025fc2-846b-4966-87d1-872009b09301"]
+}, Open  ]],
+Cell[5689, 146, 359, 5, 34, "Text",ExpressionUUID->"dc73bdee-7f10-4d63-8afe-40c29473a638"],
+Cell[CellGroupData[{
+Cell[6073, 155, 448, 10, 45, "Input",ExpressionUUID->"9b6d1fe7-dd83-4545-9348-57009c06fbd1"],
+Cell[6524, 167, 1989, 47, 251, "Output",ExpressionUUID->"71d982f8-9cc0-4331-ab00-f11890eea7e9"]
+}, Open  ]],
+Cell[8528, 217, 363, 6, 34, "Text",ExpressionUUID->"248cf42c-fd8d-42d5-90c1-42c53c8dc7d5"],
+Cell[8894, 225, 1561, 40, 137, "Input",ExpressionUUID->"3ee47196-0bd0-418a-bf42-8003ab8e6860"],
+Cell[10458, 267, 459, 13, 64, "Input",ExpressionUUID->"a5f690d4-7868-4c98-ac59-fea4775c5917"],
+Cell[10920, 282, 668, 14, 34, "Text",ExpressionUUID->"1b2efa99-9bbf-481b-ae45-57528985fb1d"],
+Cell[CellGroupData[{
+Cell[11613, 300, 569, 12, 66, "Input",ExpressionUUID->"a3e2dbf5-37c4-42ee-8c44-1f2dfba0026b"],
+Cell[12185, 314, 631, 12, 41, "Output",ExpressionUUID->"01ddb5ae-3b25-4846-9159-4bf046f91e6a"]
+}, Open  ]],
+Cell[12831, 329, 1642, 33, 56, "Text",ExpressionUUID->"d6ab74f1-2f89-41ff-8f01-521d2f699c6f"],
+Cell[CellGroupData[{
+Cell[14498, 366, 313, 6, 45, "Input",ExpressionUUID->"390f40a2-13f8-4bab-a840-a0917217d28b"],
+Cell[14814, 374, 664, 13, 43, "Output",ExpressionUUID->"e892f724-0c7c-4f19-ba29-8514b042c452"]
+}, Open  ]],
+Cell[15493, 390, 780, 13, 56, "Text",ExpressionUUID->"2cfdc504-7c9d-4828-b55f-dc80ab379d99"],
+Cell[16276, 405, 853, 22, 103, "Input",ExpressionUUID->"44809759-344b-4c1e-81da-67ad7a4f7ec4"],
+Cell[17132, 429, 478, 7, 34, "Text",ExpressionUUID->"0249836c-544f-425d-af59-ce41aa8a2160"],
+Cell[CellGroupData[{
+Cell[17635, 440, 393, 9, 45, "Input",ExpressionUUID->"10121947-94b9-41c4-8ddc-325acca8bf59"],
+Cell[18031, 451, 16674, 360, 382, "Output",ExpressionUUID->"3db01faf-5d1e-496d-b92d-1f4d34da74d0"]
+}, Open  ]],
+Cell[34720, 814, 608, 11, 34, "Text",ExpressionUUID->"7c583c58-179b-470a-8298-796173088ac7"],
+Cell[CellGroupData[{
+Cell[35353, 829, 1075, 29, 170, "Input",ExpressionUUID->"33f2c4cd-6b58-43c7-914e-a08af8be6be7"],
+Cell[36431, 860, 21663, 507, 559, "Output",ExpressionUUID->"c545110a-21df-40e8-a93e-575ee2f0ef28"]
+}, Open  ]],
+Cell[58109, 1370, 500, 8, 34, "Text",ExpressionUUID->"6c22ee64-8b18-47bf-9f67-c86f3ff8f512"],
+Cell[CellGroupData[{
+Cell[58634, 1382, 570, 15, 45, "Input",ExpressionUUID->"f04d080c-df01-41c3-bde2-5951ea8fecbc"],
+Cell[59207, 1399, 386, 9, 47, "Message",ExpressionUUID->"228b525b-6079-442d-ab20-1951a92fc773"],
+Cell[59596, 1410, 42441, 974, 819, "Output",ExpressionUUID->"a134bf2f-f273-4006-b1f4-39bee312e423"]
+}, Open  ]],
+Cell[102052, 2387, 267, 4, 34, "Text",ExpressionUUID->"c84c7fed-6423-4206-a869-6d02283aae9d"],
+Cell[CellGroupData[{
+Cell[102344, 2395, 232, 4, 45, "Input",ExpressionUUID->"fb5bceed-bba0-42d8-b1b3-547ad787f989"],
+Cell[102579, 2401, 43496, 1015, 1236, "Output",ExpressionUUID->"d4fe5b94-1a62-4fcf-9efb-539b99416d62"]
+}, Open  ]],
+Cell[146090, 3419, 318, 5, 34, "Text",ExpressionUUID->"9581d626-9333-430e-909c-2db8c583e400"],
+Cell[CellGroupData[{
+Cell[146433, 3428, 416, 11, 64, "Input",ExpressionUUID->"33c72fc9-c78f-4da3-912a-477fb3d65f4b"],
+Cell[146852, 3441, 792, 13, 52, "Output",ExpressionUUID->"91319da9-1ae9-4ef4-9ca5-dd6f280a83b0"]
+}, Open  ]],
+Cell[147659, 3457, 622, 16, 103, "Input",ExpressionUUID->"362f2b42-c5a5-4720-9e0c-99875511b40c"],
+Cell[CellGroupData[{
+Cell[148306, 3477, 291, 5, 45, "Input",ExpressionUUID->"c8bb4f4d-76f4-4729-b572-27921e60b0ee"],
+Cell[148600, 3484, 2484, 46, 686, "Output",ExpressionUUID->"56cd3616-1a31-4229-8e71-93c6a4dda08b"]
+}, Open  ]],
+Cell[151099, 3533, 602, 11, 34, "Text",ExpressionUUID->"edf462cd-7866-44ca-b10d-74d709ea2489"],
+Cell[151704, 3546, 327, 8, 45, "Input",ExpressionUUID->"c79b4523-481f-4857-81e8-d759d2a3ce42"],
+Cell[CellGroupData[{
+Cell[152056, 3558, 209, 3, 45, "Input",ExpressionUUID->"36af3ac5-3589-43db-84d8-c33462ab75bf"],
+Cell[152268, 3563, 2121, 50, 303, "Output",ExpressionUUID->"c370690f-1e08-40dd-b77c-454c070e05b6"]
+}, Open  ]],
+Cell[154404, 3616, 515, 9, 34, "Text",ExpressionUUID->"5d712229-75a4-4425-bb0a-550c70029b60"],
+Cell[CellGroupData[{
+Cell[154944, 3629, 251, 4, 45, "Input",ExpressionUUID->"2ea7f75b-7684-492a-bb66-6f08e41f049f"],
+Cell[155198, 3635, 3551, 77, 174, "Output",ExpressionUUID->"0718cd68-58f3-469b-ae3a-ad62c4afc081"]
+}, Open  ]],
+Cell[158764, 3715, 251, 4, 34, "Text",ExpressionUUID->"dba73452-6aa2-4712-a16f-145d992655c3"],
+Cell[159018, 3721, 467, 13, 48, "Input",ExpressionUUID->"db13b98d-7aa9-41f6-b6a3-97645979e891"],
+Cell[159488, 3736, 455, 6, 34, "Text",ExpressionUUID->"b0ec3ecd-1920-4485-8729-71ac9ad2bf26"],
+Cell[CellGroupData[{
+Cell[159968, 3746, 399, 8, 28, "Input",ExpressionUUID->"80f24bb9-5902-4b85-96fe-aa230c65d626"],
+Cell[160370, 3756, 1760, 39, 90, "Output",ExpressionUUID->"cc4bdc5e-89c9-4ee3-8144-5ac8ae33a69f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[162167, 3800, 294, 5, 45, "Input",ExpressionUUID->"53d74016-183c-44d0-a230-0fc6175d8d29"],
+Cell[162464, 3807, 2028, 41, 52, "Output",ExpressionUUID->"08550ae1-b54b-412d-9614-dee70e4b8804"]
+}, Open  ]],
+Cell[164507, 3851, 243, 4, 34, "Text",ExpressionUUID->"c14a383d-9064-43e1-8453-07f706e27502"],
+Cell[CellGroupData[{
+Cell[164775, 3859, 997, 21, 82, "Input",ExpressionUUID->"7664a866-545d-4b7b-bd86-c44b77670450"],
+Cell[165775, 3882, 4446, 93, 417, "Output",ExpressionUUID->"36e8ece7-49ea-45ab-92c6-e5bab8733714"]
+}, Open  ]],
+Cell[170236, 3978, 382, 6, 34, "Text",ExpressionUUID->"433178f0-0dd3-4169-9350-a45f03cf577d"],
+Cell[CellGroupData[{
+Cell[170643, 3988, 496, 13, 45, "Input",ExpressionUUID->"99164f24-8e05-441a-891e-5f5ea008e68a"],
+Cell[171142, 4003, 194, 2, 32, "Output",ExpressionUUID->"b0af982a-d424-4370-92d3-66591f8acce6"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
