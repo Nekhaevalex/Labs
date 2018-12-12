@@ -34,6 +34,7 @@
 		\end{equation}
 		Энергия электрона связана с импульсом обычным образом:
 		\begin{equation}
+			\label{pToEConversion}
 		    E = c\sqrt{p^2 + m^2c^2} -mc^2
 		\end{equation}
 		Таким образом, вероятность $d\omega$ принимает вид:
@@ -69,6 +70,8 @@
 		Снимем точки $\beta$-спектра. Фоновое излучение равно $N_b = 0.8098$. C учетом этого пересчитаем число частиц, зарегистрированных счетчиком.
 		\begin{table}[!htb]
 			\centering
+			\caption{Значения, полученные в ходе эксперимента}
+			\label{tab:experiment}
 			\begin{tabular}{|c|c|c|c|c|c|c|}
 				\hline
 				\# & $J$, A & $N$ & $N-N_b$ & $p$, кэВ/с & $T$, кэВ & mkFermi\\
@@ -113,6 +116,25 @@
 			\end{tabular}
 		\end{table}
 		\par
+		\newpage
+		Для наглядности построим график зависимости N(J), полученный во время измерений.
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=\textwidth]{sourcePlot.pdf}
+			\caption{Полученная зависимость $N(J)$}
+		\end{figure}
+		\par
+		Знаем, что пик, наблюдаемый при силе тока около 4 А -- пик внутренней конверсии $^{137}$Cs. Его энергия соотвествует значению 634 кэВ. Согласно формуле (\ref{pToEConversion}), выражая $p$, получаем, что этот пик соотвествует значению импульса электрона $p_{\text{конв}}=1024.6476$ кэВ/$c$. Зависимость импульса электрона от тока имеет вид
+		\begin{equation}
+			\label{eq:currentToImpuls}
+			p=kI.
+		\end{equation}
+		В качестве пика возьмем величину 4.16 А. Тогда $k=246.31$ кэВ/(А$c$). Таким образом c помощью формул (\ref{eq:currentToImpuls}) и (\ref{pToEConversion}) можем добавить значения импульса и энергии в таблицу \ref{tab:experiment}.\par
+		Теперь можем посчитать значение последнего столбца таблицы \ref{tab:experiment} по формуле
+		\begin{equation}
+			F=\frac{\sqrt{n-n_b}\cdot 10^6}{p^{3/2}}.
+		\end{equation}			
+		Используя эту форумлу определим значения последнего столбца.\par
 		Построим график Ферми-Кюри.
 		\newpage
 		\begin{figure}[!htb]
@@ -120,6 +142,11 @@
 			\includegraphics[width=\textwidth]{Fermi-Curie.pdf}
 			\caption{График Ферми-Кюри}	
 		\end{figure}
+		\par
+		Аппроксимируя участок графика получим уравнение прямой
+		\begin{equation*}
+			y=256.886-0.460457x
+		\end{equation*}
 		По точке пересечения графика с осью абсцисс определим максимальную энергию электронов в $\beta$-спектре. 
 $E_{max} = 557.9$ кэВ.
 \section{Вывод}

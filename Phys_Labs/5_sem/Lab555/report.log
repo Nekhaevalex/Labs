@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  13 DEC 2018 01:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  12 DEC 2018 21:11
 entering extended mode
 **./report.tex
 (report.tex
@@ -1037,23 +1037,24 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks48
 
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
-cfg")) (report.aux)
+cfg"))
+No file report.aux.
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
@@ -1136,7 +1137,7 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 19.
+ on input line 22.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1172,72 +1173,216 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (report.toc)
+)
+No file report.toc.
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
- [1
+[1
 
-{C:/Users/alexn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<pic1.png, id=21, 663.98062pt x 445.665pt>
-File: pic1.png Graphic file (type png)
-<use pic1.png>
-Package pdftex.def Info: pic1.png  used on input line 54.
-(pdftex.def)             Requested size: 290.22107pt x 194.79434pt.
-<pic2.png, id=23, 1008.01593pt x 440.39531pt>
-File: pic2.png Graphic file (type png)
-<use pic2.png>
-Package pdftex.def Info: pic2.png  used on input line 61.
-(pdftex.def)             Requested size: 386.95897pt x 169.05879pt.
- [2 <./pic1.png> <./pic2.png>] [3]
-<sourcePlot.pdf, id=32, 534.99875pt x 349.305pt>
-File: sourcePlot.pdf Graphic file (type pdf)
-<use sourcePlot.pdf>
-Package pdftex.def Info: sourcePlot.pdf  used on input line 123.
-(pdftex.def)             Requested size: 483.69687pt x 315.82133pt.
- [4 <./sourcePlot.pdf>]
-<Fermi-Curie.pdf, id=58, 631.35875pt x 401.5pt>
-File: Fermi-Curie.pdf Graphic file (type pdf)
-<use Fermi-Curie.pdf>
-Package pdftex.def Info: Fermi-Curie.pdf  used on input line 142.
-(pdftex.def)             Requested size: 483.69687pt x 307.59984pt.
- [5 <./Fermi-Curie.pdf>] (report.aux) ) 
+{C:/Users/alexn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+Overfull \hbox (11.17168pt too wide) in paragraph at lines 69--70
+[]\T2A/cmr/m/n/12 ѕолуширина пи-ка пол-но-го по-гло-ще-ни€ $\OT1/cmr/m/n/12 \O
+ML/cmm/m/it/12 E[]$ \T2A/cmr/m/n/12 про-пор-ци-о-наль-на сред-не-квад-ра-тич-но
+й флук-
+ []
+
+
+LaTeX Warning: Reference `eq:4' on page 3 undefined on input line 75.
+
+
+LaTeX Warning: Reference `eq:5' on page 3 undefined on input line 75.
+
+<calibration.pdf, id=25, 598.235pt x 385.44pt>
+File: calibration.pdf Graphic file (type pdf)
+<use calibration.pdf>
+Package pdftex.def Info: calibration.pdf  used on input line 86.
+(pdftex.def)             Requested size: 418.76164pt x 269.80615pt.
+<calibration_approx.pdf, id=26, 638.385pt x 410.53375pt>
+File: calibration_approx.pdf Graphic file (type pdf)
+<use calibration_approx.pdf>
+Package pdftex.def Info: calibration_approx.pdf  used on input line 97.
+(pdftex.def)             Requested size: 414.94533pt x 266.84377pt.
+<calibrator.pdf, id=27, 509.905pt x 324.21124pt>
+File: calibrator.pdf Graphic file (type pdf)
+<use calibrator.pdf>
+Package pdftex.def Info: calibrator.pdf  used on input line 104.
+(pdftex.def)             Requested size: 356.93106pt x 226.94632pt.
+<co60.pdf, id=28, 597.23125pt x 380.42125pt>
+File: co60.pdf Graphic file (type pdf)
+<use co60.pdf>
+Package pdftex.def Info: co60.pdf  used on input line 115.
+(pdftex.def)             Requested size: 435.97519pt x 277.70518pt.
+<cs137.pdf, id=29, 597.23125pt x 380.42125pt>
+File: cs137.pdf Graphic file (type pdf)
+<use cs137.pdf>
+Package pdftex.def Info: cs137.pdf  used on input line 120.
+(pdftex.def)             Requested size: 388.19571pt x 247.27087pt.
+<am241.pdf, id=30, 596.2275pt x 376.40625pt>
+File: am241.pdf Graphic file (type pdf)
+<use am241.pdf>
+Package pdftex.def Info: am241.pdf  used on input line 125.
+(pdftex.def)             Requested size: 417.3564pt x 263.48257pt.
+<eu152.pdf, id=31, 648.4225pt x 409.53pt>
+File: eu152.pdf Graphic file (type pdf)
+<use eu152.pdf>
+Package pdftex.def Info: eu152.pdf  used on input line 130.
+(pdftex.def)             Requested size: 453.89265pt x 286.66904pt.
+[3 <./calibration.pdf>] [4 <./calibration_approx.pdf> <./calibrator.pdf
+
+pdfTeX warning: pdflatex (file ./calibrator.pdf): PDF inclusion: multiple pdfs 
+with page group included in a single page
+>]
+
+LaTeX Warning: Reference `table1' on page 5 undefined on input line 135.
+
+
+LaTeX Warning: Reference `compton' on page 5 undefined on input line 158.
+
+<edges.pdf, id=140, 607.26875pt x 383.4325pt>
+File: edges.pdf Graphic file (type pdf)
+<use edges.pdf>
+Package pdftex.def Info: edges.pdf  used on input line 161.
+(pdftex.def)             Requested size: 303.63364pt x 191.71577pt.
+
+LaTeX Warning: Reference `eq:6' on page 5 undefined on input line 165.
+
+
+LaTeX Warning: Reference `fig:re' on page 5 undefined on input line 165.
+
+<Re.pdf, id=141, 538.01pt x 341.275pt>
+File: Re.pdf Graphic file (type pdf)
+<use Re.pdf>
+Package pdftex.def Info: Re.pdf  used on input line 168.
+(pdftex.def)             Requested size: 376.60443pt x 238.89085pt.
+
+Overfull \hbox (2.87842pt too wide) in paragraph at lines 165--172
+[]\T2A/cmr/m/n/12 ƒл€ про-вер-ки за-ви-си-мо-сти ([]), по-стро-им по по-лу-чен-
+ным дан-ным гра-фик $\OML/cmm/m/it/12 R[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 f 
+[]$
+ []
+
+[5 <./co60.pdf> <./cs137.pdf
+
+pdfTeX warning: pdflatex (file ./cs137.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+>]
+
+LaTeX Warning: Reference `eq:7' on page 6 undefined on input line 178.
+
+<oscil.pdf, id=210, 658.46pt x 421.575pt>
+File: oscil.pdf Graphic file (type pdf)
+<use oscil.pdf>
+Package pdftex.def Info: oscil.pdf  used on input line 181.
+(pdftex.def)             Requested size: 460.91887pt x 295.10048pt.
+[6 <./am241.pdf> <./eu152.pdf
+
+pdfTeX warning: pdflatex (file ./eu152.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+>]
+
+LaTeX Warning: Reference `eq:7' on page 7 undefined on input line 185.
+
+[7 <./edges.pdf> <./Re.pdf
+
+pdfTeX warning: pdflatex (file ./Re.pdf): PDF inclusion: multiple pdfs with pag
+e group included in a single page
+>]
+
+LaTeX Warning: Reference `eq:Ereverse' on page 8 undefined on input line 187.
+
+
+LaTeX Warning: Reference `fig:co60Re' on page 8 undefined on input line 204.
+
+
+LaTeX Warning: Reference `fig:ce137Re' on page 8 undefined on input line 204.
+
+<co60Reverse.pdf, id=374, 709.65125pt x 449.68pt>
+File: co60Reverse.pdf Graphic file (type pdf)
+<use co60Reverse.pdf>
+Package pdftex.def Info: co60Reverse.pdf  used on input line 207.
+(pdftex.def)             Requested size: 319.3401pt x 202.35413pt.
+<cs137Reverse.pdf, id=375, 698.61pt x 443.6575pt>
+File: cs137Reverse.pdf Graphic file (type pdf)
+<use cs137Reverse.pdf>
+Package pdftex.def Info: cs137Reverse.pdf  used on input line 213.
+(pdftex.def)             Requested size: 321.3645pt x 204.08492pt.
+<gotPeaks.pdf, id=376, 522.95375pt x 340.27126pt>
+File: gotPeaks.pdf Graphic file (type pdf)
+<use gotPeaks.pdf>
+Package pdftex.def Info: gotPeaks.pdf  used on input line 219.
+(pdftex.def)             Requested size: 313.77466pt x 204.16432pt.
+
+LaTeX Warning: Reference `fig:gotPeaks' on page 8 undefined on input line 225.
+
+
+LaTeX Warning: Reference `fig:background' on page 8 undefined on input line 227
+.
+
+<backgroundPb.pdf, id=377, 685.56125pt x 435.6275pt>
+File: backgroundPb.pdf Graphic file (type pdf)
+<use backgroundPb.pdf>
+Package pdftex.def Info: backgroundPb.pdf  used on input line 230.
+(pdftex.def)             Requested size: 411.33992pt x 261.37851pt.
+[8 <./oscil.pdf>]
+
+LaTeX Warning: Text page 9 contains only floats.
+
+[9 <./co60Reverse.pdf> <./cs137Reverse.pdf
+
+pdfTeX warning: pdflatex (file ./cs137Reverse.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+> <./gotPeaks.pdf
+
+pdfTeX warning: pdflatex (file ./gotPeaks.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
+>] [10 <./backgroundPb.pdf>] (report.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 26751 strings out of 492970
- 654199 string characters out of 3126593
- 863533 words of memory out of 3000000
- 30109 multiletter control sequences out of 15000+200000
- 18896 words of font info for 57 fonts, out of 3000000 for 9000
+ 26807 strings out of 492970
+ 655237 string characters out of 3126593
+ 852534 words of memory out of 3000000
+ 30160 multiletter control sequences out of 15000+200000
+ 19714 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,10n,96p,712b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/alexn/AppData/Local/Programs/M
-iKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alex
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.p
-fb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alexn/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/alexn/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexn
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:
-/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx
-1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/c
-m-super/sfbx1728.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/cm-super/sfrm0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Users/alexn/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Users/alexn/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on report.pdf (5 pages, 387563 bytes).
+ 62i,13n,96p,1562b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm
+-super-t2a.enc}<C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/alexn/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/alexn/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/alex
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
+:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr6.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/alexn/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/alexn/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/
+alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pf
+b><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super
+/sfbx1728.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/cm-super/sfrm0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/cm-super/sfrm1200.pfb><C:/Users/alexn/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Users/alexn/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on report.pdf (10 pages, 2155118 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
+ 614 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 
