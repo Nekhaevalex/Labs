@@ -91,7 +91,7 @@ FTYPE evaluateY(FTYPE yn, FTYPE** MethodMatrix, FTYPE* functions, int length, FT
 
 FTYPE X0 = 1.0;
 FTYPE Y0 = 2.0;
-FTYPE borders[2] = {1.0, 2.0};
+FTYPE borders[2] = {1.0, 3.0};
 FTYPE epsilon = 1E-4;
 
 FTYPE evalGridStepH(int steps) {
