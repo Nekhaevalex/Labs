@@ -16,6 +16,25 @@
 #define ThreeStepRK 4
 #define FourStepRK 5
 
+#define EULER_MODIFIED_METHOD 1
+#define EULER_RECOUNT_METHOD 2
+#define HEUN_METHOD 3
+#define RK32_METHOD 4
+#define RK33_METHOD 5
+#define RK4_CLASSIC_METHOD 6
+
+//Set up here!!!!
+
+#define DYX (-2 * powl(x, 2) - 3 * x*y + powl(y, 2)) / (x*(x - y))
+#define METHOD EULER_MODIFIED_METHOD
+#define X0_VALUE 1.0
+#define Y0_VALUE 1+sqrtl(2)
+#define BORDER_LEFT 1.0
+#define BORDER_RIGHT 2.9
+#define EPSILON 1E-4
+
+//Set up ends here.
+
 FTYPE EulerModifiedMethod[3][3] = {
 	{0,0,0},
 	{0.5,0.5,0},
@@ -30,23 +49,23 @@ FTYPE EulerRecountMethod[3][3] = {
 
 FTYPE HeunMethod[4][4] = {
 	{0,0,0,0},
-	{1/3, 1/3, 0, 0},
-	{2/3, 0, 2/3, 0},
-	{0, 1/4, 0, 3/4}
+	{1 / 3, 1 / 3, 0, 0},
+	{2 / 3, 0, 2 / 3, 0},
+	{0, 1 / 4, 0, 3 / 4}
 };
 
 FTYPE RK32[4][4] = {
 	{0,0,0,0},
-	{2/3,2/3,0,0},
-	{2/3,-1/3,1,0},
-	{0,1/4,2/4,1/4}
+	{2 / 3,2 / 3,0,0},
+	{2 / 3,-1 / 3,1,0},
+	{0,1 / 4,2 / 4,1 / 4}
 };
 
 FTYPE RK33[4][4] = {
 	{0,0,0,0},
-	{1/2,1/2,0,0},
+	{1 / 2,1 / 2,0,0},
 	{1,-1,2,0},
-	{0,1/6,4/6,1/6}
+	{0,1 / 6,4 / 6,1 / 6}
 };
 
 FTYPE RK4Classic[5][5] = {
@@ -54,52 +73,52 @@ FTYPE RK4Classic[5][5] = {
 	{0.5, 0.5, 0, 0, 0},
 	{0.5, 0, 0.5, 0, 0},
 	{1, 0, 0, 1, 0},
-	{0, 1.0/6.0, 2.0/6.0, 2.0/6.0, 1.0/6.0}
+	{0, 1.0 / 6.0, 2.0 / 6.0, 2.0 / 6.0, 1.0 / 6.0}
 };
 
 FTYPE dyx(FTYPE x, FTYPE y) {
-	return ((y-x*y*y)/x);
+	return DYX;
 }
 
 FTYPE* evaluateF(int funcNum, FTYPE xn, FTYPE yn, FTYPE** MethodMatrix, FTYPE h) {
-	FTYPE* f = malloc(sizeof(FTYPE)*4);
-	for (int i = 0; i<4; i++) {
+	FTYPE* f = (FTYPE*)malloc(sizeof(FTYPE) * 4);
+	for (int i = 0; i < 4; i++) {
 		f[i] = 0;
 	}
-	f[0] = dyx(xn,yn);
-	for (int i = 1; i<funcNum-1; i++) {
-		FTYPE x = xn+MethodMatrix[i][0]*h;
+	f[0] = dyx(xn, yn);
+	for (int i = 1; i < funcNum - 1; i++) {
+		FTYPE x = xn + MethodMatrix[i][0] * h;
 		FTYPE y = yn;
-		for (int j = 1; j<i+2; j++) {
+		for (int j = 1; j < i + 2; j++) {
 			FTYPE M = MethodMatrix[i][j];
-			y += MethodMatrix[i][j]*f[j-1]*h;
+			y += MethodMatrix[i][j] * f[j - 1] * h;
 		}
-		FTYPE fi = dyx(x,y);
-		f[i] = dyx(x,y);
+		FTYPE fi = dyx(x, y);
+		f[i] = dyx(x, y);
 	}
 	return f;
 }
 
 FTYPE evaluateY(FTYPE yn, FTYPE** MethodMatrix, FTYPE* functions, int length, FTYPE h) {
 	FTYPE ynp1 = yn;
-	for (int i = 1; i<length; i++) {
-		FTYPE a = MethodMatrix[length-1][i];
-		ynp1 += functions[i-1]*MethodMatrix[length-1][i]*h;
+	for (int i = 1; i < length; i++) {
+		FTYPE a = MethodMatrix[length - 1][i];
+		ynp1 += functions[i - 1] * MethodMatrix[length - 1][i] * h;
 	}
 	return ynp1;
 }
 
-FTYPE X0 = 1.0;
-FTYPE Y0 = 2.0;
-FTYPE borders[2] = {1.0, 3.0};
-FTYPE epsilon = 1E-4;
+FTYPE X0 = X0_VALUE;
+FTYPE Y0 = Y0_VALUE;
+FTYPE borders[2] = { BORDER_LEFT, BORDER_RIGHT };
+FTYPE epsilon = EPSILON;
 
 FTYPE evalGridStepH(int steps) {
-	return (borders[1]-borders[0])/steps;
+	return (borders[1] - borders[0]) / steps;
 }
 
 bool checkIfErrorAcceptable(FTYPE delta, int method) {
-	FTYPE val = (fabsl(delta))/(powl(2.0, method)-1);
+	FTYPE val = (fabsl(delta)) / (powl(2.0, method) - 1);
 	return val <= epsilon ? false : true;
 }
 
@@ -107,25 +126,61 @@ bool checkIfErrorAcceptable(FTYPE delta, int method) {
 int main(int argc, const char * argv[]) {
 	FTYPE* f = NULL;
 	FTYPE* fProxy = NULL;
-	FTYPE** method = malloc(sizeof(FTYPE*)*5);
-	for (int i = 0; i<5; i++) {
-		method[i] = malloc(sizeof(FTYPE)*5);
+	FTYPE** method = (FTYPE**)malloc(sizeof(FTYPE*) * 5);
+	for (int i = 0; i < 5; i++) {
+		method[i] = (FTYPE*)malloc(sizeof(FTYPE) * 5);
 	}
+	int methodSelector = METHOD;
 	FTYPE calcPoints[11];
 	FTYPE valuesInPoints[11];
 	FTYPE valuesInPointsProxy[11];
 	FTYPE deltas[11];
-	for (int i = 0; i<11; i++) {
-		calcPoints[i] = borders[0]+((borders[1]-borders[0])/10)*i;
+	for (int i = 0; i < 11; i++) {
+		calcPoints[i] = borders[0] + ((borders[1] - borders[0]) / 10)*i;
 	}
 	valuesInPoints[0] = Y0;
 	valuesInPointsProxy[0] = Y0;
-	for (int i = 0; i<5; i++) {
-		for (int j = 0; j<5; j++) {
-			method[i][j] = RK4Classic[i][j];
+	int stepM = 0;
+	if ((methodSelector == EULER_MODIFIED_METHOD) || (methodSelector == EULER_RECOUNT_METHOD)) {
+		stepM = TwoStepRK;
+	}
+	else if (((methodSelector == HEUN_METHOD) || (methodSelector == RK32_METHOD)) || (methodSelector == RK33_METHOD)) {
+		stepM = ThreeStepRK;
+	}
+	else if (methodSelector == RK4_CLASSIC_METHOD) {
+		stepM = FourStepRK;
+	}
+	else
+	{
+		return -1;
+	}
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 5; j++) {
+			if (methodSelector == EULER_MODIFIED_METHOD) {
+				method[i][j] = EulerModifiedMethod[i][j];
+			}
+			else if (methodSelector == EULER_RECOUNT_METHOD) {
+				method[i][j] = EulerRecountMethod[i][j];
+			}
+			else if (methodSelector == HEUN_METHOD) {
+				method[i][j] = HeunMethod[i][j];
+			}
+			else if (methodSelector == RK32_METHOD) {
+				method[i][j] = RK32[i][j];
+			}
+			else if (methodSelector == RK33_METHOD) {
+				method[i][j] = RK33[i][j];
+			}
+			else if (methodSelector == RK4_CLASSIC_METHOD) {
+				method[i][j] = RK4Classic[i][j];
+			}
+			else
+			{
+				return -1;
+			}
 		}
 	}
-	int steps = 10;
+	int steps = 5;
 	FTYPE maxDelta;
 	FTYPE h = 0.0;
 	FTYPE x = X0;
@@ -137,11 +192,11 @@ int main(int argc, const char * argv[]) {
 		xProxy = X0;
 		value = Y0;
 		valueProxy = Y0;
-		for (int i = 0; i<=steps; i++) {
+		for (int i = 0; i <= steps; i++) {
 			h = evalGridStepH(steps);
-			x = h*i+X0;
-			xProxy = 2*h*i+X0;
-			for (int j = 0; j<11; j++) {
+			x = h * i + X0;
+			xProxy = 2 * h*i + X0;
+			for (int j = 0; j < 11; j++) {
 				if (x == calcPoints[j]) {
 					valuesInPoints[j] = value;
 				}
@@ -150,27 +205,27 @@ int main(int argc, const char * argv[]) {
 					break;
 				}
 			}
-			f = evaluateF(FourStepRK, x, value, method, h);
-			fProxy = evaluateF(FourStepRK, xProxy, valueProxy, method, 2*h);
-			value = evaluateY(value, method, f, FourStepRK, h);
-			valueProxy = evaluateY(valueProxy, method, fProxy, FourStepRK, 2*h);
+			f = evaluateF(stepM, x, value, method, h);
+			fProxy = evaluateF(stepM, xProxy, valueProxy, method, 2 * h);
+			value = evaluateY(value, method, f, stepM, h);
+			valueProxy = evaluateY(valueProxy, method, fProxy, stepM, 2 * h);
 		}
 		free(f);
 		free(fProxy);
-		for (int i = 0; i<11; i++) {
-			deltas[i] = fabsl(valuesInPointsProxy[i]-valuesInPoints[i]);
+		for (int i = 0; i < 11; i++) {
+			deltas[i] = fabsl(valuesInPointsProxy[i] - valuesInPoints[i]);
 		}
 		maxDelta = deltas[0];
-		for (int i = 1; i<11; i++) {
+		for (int i = 1; i < 11; i++) {
 			if (maxDelta < deltas[i]) {
 				maxDelta = deltas[i];
 			}
 		}
-		steps = steps*2;
-	} while (checkIfErrorAcceptable(maxDelta, FourStepRK));
-	printf("Calculated with %d steps\nAccuracy: %Lf\nh=%Lf\n", steps/2, epsilon, h);
-	for (int i = 0; i<11; i++) {
-		printf("%d) x=%Lf\n\ty(h)=%Lf\n\ty(2h)=%Lf\n\t--------------\n\ty(2h)-y(h)=%Lf\n\n", i+1, calcPoints[i], valuesInPoints[i], valuesInPointsProxy[i], valuesInPointsProxy[i]-valuesInPoints[i]);
+		steps = steps * 2;
+	} while (checkIfErrorAcceptable(maxDelta, stepM));
+	printf("Calculated with %d steps\nAccuracy: %Lf\nh=%Lf\nDiff=%Le\n\n", steps / 2, epsilon, h, maxDelta);
+	for (int i = 0; i < 11; i++) {
+		printf("%d) x=%Lf\n\ty(h)=%Lf\n\ty(2h)=%Lf\n\t--------------\n\ty(2h)-y(h)=%Lf\n\n", i + 1, calcPoints[i], valuesInPoints[i], valuesInPointsProxy[i], valuesInPointsProxy[i] - valuesInPoints[i]);
 	}
 	return 0;
 }
