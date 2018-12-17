@@ -99,7 +99,7 @@ FTYPE evalGridStepH(int steps) {
 }
 
 bool checkIfErrorAcceptable(FTYPE delta, int method) {
-	FTYPE val = (fabsl(delta))/(powl(2.0, method));
+	FTYPE val = (fabsl(delta))/(powl(2.0, method)-1);
 	return val <= epsilon ? false : true;
 }
 
