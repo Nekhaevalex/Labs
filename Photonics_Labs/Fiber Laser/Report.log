@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  21 DEC 2018 22:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  22 DEC 2018 00:47
 entering extended mode
-**./report.tex
-(report.tex
+**./Report.tex
+(Report.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -1046,8 +1046,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks49
 
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
-cfg")) (report.aux)
-\openout1 = `report.aux'.
+cfg")) (Report.aux)
+\openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -1181,106 +1181,195 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+[1
+
+{C:/Users/alexn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(Report.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-{C:/Users/alexn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(report.toc)
+))
 \tf@toc=\write4
-\openout4 = `report.toc'.
+\openout4 = `Report.toc'.
 
  [1] [2]
-<sch1.png, id=20, 833.36343pt x 359.84438pt>
-File: sch1.png Graphic file (type png)
-<use sch1.png>
-Package pdftex.def Info: sch1.png  used on input line 62.
-(pdftex.def)             Requested size: 333.33946pt x 143.9352pt.
-<sch2.png, id=22, 618.81187pt x 417.81094pt>
-File: sch2.png Graphic file (type png)
-<use sch2.png>
-Package pdftex.def Info: sch2.png  used on input line 69.
-(pdftex.def)             Requested size: 272.27806pt x 183.83737pt.
- [3 <./sch1.png> <./sch2.png>]
-<1.pdf, id=33, 605.26125pt x 385.44pt>
-File: 1.pdf Graphic file (type pdf)
-<use 1.pdf>
-Package pdftex.def Info: 1.pdf  used on input line 171.
-(pdftex.def)             Requested size: 232.17242pt x 147.85083pt.
-<2.pdf, id=34, 612.2875pt x 389.455pt>
-File: 2.pdf Graphic file (type pdf)
-<use 2.pdf>
-Package pdftex.def Info: 2.pdf  used on input line 176.
-(pdftex.def)             Requested size: 232.17242pt x 147.67352pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
+
+("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+
+[3]
+
+LaTeX Warning: Command \cyrs invalid in math mode on input line 103.
+
+Missing character: There is no с in font cmr12!
+<pic1.jpg, id=28, 861.2175pt x 571.13374pt>
+File: pic1.jpg Graphic file (type jpg)
+<use pic1.jpg>
+Package pdftex.def Info: pic1.jpg  used on input line 107.
+(pdftex.def)             Requested size: 217.66211pt x 144.34303pt.
+<pic2.jpg, id=29, 640.3925pt x 615.29875pt>
+File: pic2.jpg Graphic file (type jpg)
+<use pic2.jpg>
+Package pdftex.def Info: pic2.jpg  used on input line 111.
+(pdftex.def)             Requested size: 128.07622pt x 123.05756pt.
+
+Underfull \hbox (badness 1983) in paragraph at lines 112--112
+[]\T2A/cmr/m/n/12 –ис. 2: |Ёнер-ге-ти-че-ска€ схе-ма квази-
+ []
+
+[4] [5 <./pic1.jpg> <./pic2.jpg>] [6] [7]
+<3a.png, id=50, 232.7094pt x 191.2746pt>
+File: 3a.png Graphic file (type png)
+<use 3a.png>
+Package pdftex.def Info: 3a.png  used on input line 275.
+(pdftex.def)             Requested size: 241.84843pt x 198.78952pt.
+<3b.png, id=52, 237.5274pt x 190.311pt>
+File: 3b.png Graphic file (type png)
+<use 3b.png>
+Package pdftex.def Info: 3b.png  used on input line 278.
+(pdftex.def)             Requested size: 241.84843pt x 193.78069pt.
+ [8 <./3a.png> <./3b.png>]
+Overfull \hbox (1.57578pt too wide) in paragraph at lines 292--309
+ [][] 
+ []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (9.38478pt too wide) in paragraph at lines 349--350
+[][] 
+ []
 
-<3.pdf, id=35, 669.50125pt x 427.5975pt>
-File: 3.pdf Graphic file (type pdf)
-<use 3.pdf>
-Package pdftex.def Info: 3.pdf  used on input line 207.
-(pdftex.def)             Requested size: 483.69687pt x 308.93999pt.
-[4]
+[9]
+<11A.pdf, id=61, 361.35pt x 237.88875pt>
+File: 11A.pdf Graphic file (type pdf)
+<use 11A.pdf>
+Package pdftex.def Info: 11A.pdf  used on input line 357.
+(pdftex.def)             Requested size: 212.82779pt x 140.11356pt.
+<12A.pdf, id=62, 361.35pt x 237.88875pt>
+File: 12A.pdf Graphic file (type pdf)
+<use 12A.pdf>
+Package pdftex.def Info: 12A.pdf  used on input line 360.
+(pdftex.def)             Requested size: 212.82779pt x 140.11356pt.
+<13A.pdf, id=63, 361.35pt x 237.88875pt>
+File: 13A.pdf Graphic file (type pdf)
+<use 13A.pdf>
+Package pdftex.def Info: 13A.pdf  used on input line 363.
+(pdftex.def)             Requested size: 212.82779pt x 140.11356pt.
+<14A.pdf, id=64, 361.35pt x 237.88875pt>
+File: 14A.pdf Graphic file (type pdf)
+<use 14A.pdf>
+Package pdftex.def Info: 14A.pdf  used on input line 366.
+(pdftex.def)             Requested size: 212.82779pt x 140.11356pt.
+<15A.pdf, id=65, 361.35pt x 237.88875pt>
+File: 15A.pdf Graphic file (type pdf)
+<use 15A.pdf>
+Package pdftex.def Info: 15A.pdf  used on input line 369.
+(pdftex.def)             Requested size: 212.82779pt x 140.11356pt.
+<16A.pdf, id=66, 361.35pt x 237.88875pt>
+File: 16A.pdf Graphic file (type pdf)
+<use 16A.pdf>
+Package pdftex.def Info: 16A.pdf  used on input line 372.
+(pdftex.def)             Requested size: 212.82779pt x 140.11356pt.
+<17A.pdf, id=67, 361.35pt x 237.88875pt>
+File: 17A.pdf Graphic file (type pdf)
+<use 17A.pdf>
+Package pdftex.def Info: 17A.pdf  used on input line 375.
+(pdftex.def)             Requested size: 212.82779pt x 140.11356pt.
+<18A.pdf, id=68, 361.35pt x 237.88875pt>
+File: 18A.pdf Graphic file (type pdf)
+<use 18A.pdf>
+Package pdftex.def Info: 18A.pdf  used on input line 378.
+(pdftex.def)             Requested size: 212.82779pt x 140.11356pt.
 
-LaTeX Warning: Text page 5 contains only floats.
+Overfull \hbox (11.59085pt too wide) in paragraph at lines 426--427
+[][] 
+ []
 
-[5 <./1.pdf> <./2.pdf
 
-pdfTeX warning: pdflatex (file ./2.pdf): PDF inclusion: multiple pdfs with page
- group included in a single page
->] [6 <./3.pdf>]
-<impuls.png, id=127, 526.21594pt x 303.38344pt>
-File: impuls.png Graphic file (type png)
-<use impuls.png>
-Package pdftex.def Info: impuls.png  used on input line 227.
-(pdftex.def)             Requested size: 263.10733pt x 151.69135pt.
-<card.jpg, id=128, 2638.85875pt x 2142.0025pt>
-File: card.jpg Graphic file (type jpg)
-<use card.jpg>
-Package pdftex.def Info: card.jpg  used on input line 235.
-(pdftex.def)             Requested size: 316.64938pt x 257.0292pt.
- [7 <./impuls.png> <./card.jpg>] [8] [9] [10] [11] (report.aux) ) 
+Overfull \hbox (10.19371pt too wide) in paragraph at lines 473--474
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--477
+
+ []
+
+[10 <./11A.pdf> <./12A.pdf
+
+pdfTeX warning: pdflatex (file ./12A.pdf): PDF inclusion: multiple pdfs with pa
+ge group included in a single page
+> <./13A.pdf
+
+pdfTeX warning: pdflatex (file ./13A.pdf): PDF inclusion: multiple pdfs with pa
+ge group included in a single page
+> <./14A.pdf
+
+pdfTeX warning: pdflatex (file ./14A.pdf): PDF inclusion: multiple pdfs with pa
+ge group included in a single page
+> <./15A.pdf
+
+pdfTeX warning: pdflatex (file ./15A.pdf): PDF inclusion: multiple pdfs with pa
+ge group included in a single page
+> <./16A.pdf
+
+pdfTeX warning: pdflatex (file ./16A.pdf): PDF inclusion: multiple pdfs with pa
+ge group included in a single page
+> <./17A.pdf
+
+pdfTeX warning: pdflatex (file ./17A.pdf): PDF inclusion: multiple pdfs with pa
+ge group included in a single page
+> <./18A.pdf
+
+pdfTeX warning: pdflatex (file ./18A.pdf): PDF inclusion: multiple pdfs with pa
+ge group included in a single page
+>]
+
+LaTeX Warning: Text page 11 contains only floats.
+
+[11] [12] [13] (Report.aux) ) 
 Here is how much of TeX's memory you used:
- 27085 strings out of 492970
- 659737 string characters out of 3126593
- 877532 words of memory out of 3000000
- 30431 multiletter control sequences out of 15000+200000
- 21148 words of font info for 56 fonts, out of 3000000 for 9000
+ 27620 strings out of 492970
+ 674406 string characters out of 3126593
+ 866530 words of memory out of 3000000
+ 30957 multiletter control sequences out of 15000+200000
+ 19805 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,96p,1453b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/alex
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<
-C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmex10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmmi12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/alexn/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/alexn/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alexn/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Use
-rs/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.
-pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy6.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/alexn/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/alexn/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/alex
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C
-:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfb
-x2074.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-cm-super/sfrm0600.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/cm-super/sfrm0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/alexn/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Users/alexn/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on report.pdf (12 pages, 1320033 bytes).
+ 62i,14n,96p,1974b,2011s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/
+fonts/enc/dvips/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alexn/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/a
+lexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/alexn/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/alexn/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexn/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Use
+rs/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/cm-super/sfbx1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/cm-super/sfbx1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/alexn/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx2074.pfb><C:/Users/alexn/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><C:/User
+s/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.
+pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-sup
+er/sfrm1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/cm-super/sfti1200.pfb>
+Output written on Report.pdf (14 pages, 729821 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
+ 244 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

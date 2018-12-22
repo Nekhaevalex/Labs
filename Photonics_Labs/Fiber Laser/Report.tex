@@ -9,6 +9,7 @@
 \usepackage{enumitem}
 \usepackage{adjustbox}
 \usepackage{pgfplots}
+\usepackage{caption}
 
 \usepackage{geometry}
 \geometry{top=20mm}
@@ -353,34 +354,129 @@
 		\item Снятие зависимости частоты релаксационных колебаний от превышения над порогом генерации:
 		\begin{figure}[h]
 			\minipage{0.44\textwidth}
-			\includegraphics[width=\linewidth]{1.1A.pdf}
+			\includegraphics[width=\linewidth]{11A.pdf}
 			\endminipage\hfill
 			\minipage{0.44\textwidth}
-			\includegraphics[width=\linewidth]{1.2A.pdf}
+			\includegraphics[width=\linewidth]{12A.pdf}
 			\endminipage\hfill
 			\minipage{0.44\textwidth}
-			\includegraphics[width=\linewidth]{1.3A.pdf}
+			\includegraphics[width=\linewidth]{13A.pdf}
 			\endminipage\hfill
 			\minipage{0.44\textwidth}
-			\includegraphics[width=\linewidth]{1.4A.pdf}
+			\includegraphics[width=\linewidth]{14A.pdf}
 			\endminipage\hfill
 			\minipage{0.44\textwidth}
-			\includegraphics[width=\linewidth]{1.5A.pdf}
+			\includegraphics[width=\linewidth]{15A.pdf}
 			\endminipage\hfill
 			\minipage{0.44\textwidth}
-			\includegraphics[width=\linewidth]{1.6A.pdf}
+			\includegraphics[width=\linewidth]{16A.pdf}
 			\endminipage\hfill
 			\minipage{0.44\textwidth}
-			\includegraphics[width=\linewidth]{1.7A.pdf}
+			\includegraphics[width=\linewidth]{17A.pdf}
 			\endminipage\hfill
 			\minipage{0.44\textwidth}
-			\includegraphics[width=\linewidth]{1.8A.pdf}
+			\includegraphics[width=\linewidth]{18A.pdf}
 			\endminipage
 		\end{figure}
 		\par
-		%Также проведем теоретический расчёт частоты релаксационных колебаний для лазера с параметрами: $L'=10$м, $\gamma=0.12$, $t_0=1.4$ мс, $\tau_c=278$ нс.%
+		Также проведем теоретический расчёт частоты релаксационных колебаний для лазера с параметрами: $L'=10$м, $\gamma=0.12$, $t_0=1.4$ мс, $\tau_c=278$ нс.
+		\begin{figure}[!htb]
+			\begin{tikzpicture}
+			\begin{axis}[
+				xlabel={$W_{\text{нак}}/W_{\text{пор}}$},
+				ylabel={$\omega^2$, $10^15$ рад$^2$/с$^2$},
+				xmin=2,
+				xmax=3.5,
+				ymin=0,
+				ymax=13,
+				ymajorgrids=true,
+    				xmajorgrids=true,
+    				grid style=dashed,
+    				width=\textwidth,
+    				height=11cm
+				]
+				\addplot[
+				color=black,
+				mark=square,
+				only marks,
+				]
+				coordinates{
+				(3.313, 12.34321)
+				(3.129, 10)
+				(2.944, 8.70489)
+				(2.761, 7.62129)
+				(2.577, 6.4)
+				(2.393, 5.43169)
+				(2.209, 5.09796)
+				(2.025, 4.44889)
+				};
+				\addplot[
+				domain=2:3.5,
+				samples=3,
+				color=red
+				]
+				{-8.179+5.877*x};
+				\addplot[
+				domain=2:3.5,
+				samples=3,
+				color=black
+				]
+				{-4.5+4.5*x};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{График зависимости квадрата частоты от превышения мощности накачки над пороговой}
+		\end{figure}
+		\\
+		\begin{figure}[!htb]
+			\begin{tikzpicture}
+				\begin{axis}[
+				xlabel={$W_{\text{пор}}/W_{\text{нак}}$},
+    				ylabel={$t_{\text{0}}$, мс},
+				xmin=0.3,
+				xmax=0.5,
+				ymin=0,
+				ymax=1,
+				ymajorgrids=true,
+    				xmajorgrids=true,
+    				grid style=dashed,
+    				width=\textwidth,
+    				height=11cm
+				]
+				\addplot[
+				color=black,
+				mark=square,
+				only marks,
+				]
+				coordinates{
+				(0.30184, 0.45)
+				(0.31959, 0.5)
+				(0.33967, 0.55)
+				(0.36219, 0.65)
+				(0.38805, 0.7)
+				(0.41789, 0.7)
+				(0.45269, 0.8)
+				(0.49383, 0.85)
+				};
+				\addplot[
+				domain=0.3:0.5,
+				samples=3,
+				color=red
+				]
+				{-0.14507+2.06797*x};
+				\addplot[
+				domain=0.3:0.5,
+				samples=3,
+				color=black
+				]
+				{1.6*x};
+				\end{axis}
+			\end{tikzpicture}
+			\caption{График зависимости времени затухания от выличины обратной превышению мощности накачки над пороговой}
+	\end{figure}
+	\\
+	\par
+	В обоих графиках красными линиями проведены экспериментальные кривые, а черными - теоретические. Такие координаты используем для того, чтобы наблюдать линейную зависимость. Из полученного графика видно, что значения, полученные в эксперименте, почти не отличаются от расчётных. Небольшую разницу можно объяснить некоторым отличием реальных параметров лазера. Однако сам характер зависимости хорошо согласуется с теорией.
 	\end{enumerate}
-	\newpage
 	\section{Задачи}
 	\begin{enumerate}
 			\item Рассчитать частоту релаксационных колебаний для волоконного лазера, используемого в работе.
@@ -411,18 +507,20 @@
 			\begin{equation*}
 				\omega=\sqrt{\frac{x-1}{\tau_0\tau}}, t_0=\frac{2\tau}{x}
 			\end{equation*}
-			\begin{table}[h]
+			\begin{table}[!htb]
 				\centering
 				\begin{tabular}{|c|c|c|c|c|c|c|c|}
 					\hline
 					Лазер & $L$ & $T,\%$ & $\tau$ & $\tau_0$ & $\omega$, рад/с & $t_0$ & $1/\omega$\\
 					\hline
-					Nd & 1 м & 10 & 230 мкс & 63 нс & $1.9\times 10^5$ & 307 мкс & 33 мкс\\
+					YAG Nd$^{(3+)}$ & 1 м & 10 & 230 мкс & 63 нс & $1.9\times 10^5$ & 307 мкс & 33 мкс\\
 					He-Ne & 1 м & 0.5 & 100 нс & 1.3 мкс & $1.9\times 10^{6}$ & 0.133 мкс & 3.2 мкс\\
 					Полупроводниковый & 0.5 мм & 35 & 1 нс & 7.7 пс & $8\times 10^9$ & 1.3 нс & 781 пкс\\
 					\hline
 				\end{tabular}
 			\end{table}
+			\\
+			Сказать о том, возможно ли наблюдать релаксационные колебания, мы сможем, сравнив столбцы $1/\omega$ и $\tau$. Если период колебаний в несколько раз меньше времени затухания, как в случае с волоконным лазером, то р.к. будут хорошо наблюдаться. Если же период больше или порядка времени затухания, как в He-Ne и полупроводниковом лазерах, то мы не сможем наблюдать р.к..
 	\end{enumerate}
 	\section{Вывод}
 	\begin{enumerate}
