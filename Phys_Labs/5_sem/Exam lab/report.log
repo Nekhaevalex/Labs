@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  24 JAN 2019 07:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  24 JAN 2019 08:25
 entering extended mode
 **./report.tex
 (report.tex
@@ -1409,43 +1409,109 @@ File: i2.jpeg Graphic file (type jpg)
 <use i2.jpeg>
 Package pdftex.def Info: i2.jpeg  used on input line 293.
 (pdftex.def)             Requested size: 483.69687pt x 31.01587pt.
-[10 <./hg_lamp.png (PNG copy)> <./plot1.pdf>] [11 <./plot2.pdf> <./i2.jpeg>]
-(report.aux) ) 
+<plot3.pdf, id=108, 621.32124pt x 392.46625pt>
+File: plot3.pdf Graphic file (type pdf)
+<use plot3.pdf>
+Package pdftex.def Info: plot3.pdf  used on input line 300.
+(pdftex.def)             Requested size: 372.79562pt x 235.48155pt.
+<plot4.pdf, id=109, 578.16pt x 365.365pt>
+File: plot4.pdf Graphic file (type pdf)
+<use plot4.pdf>
+Package pdftex.def Info: plot4.pdf  used on input line 306.
+(pdftex.def)             Requested size: 404.70924pt x 255.75375pt.
+<plot5.pdf, id=110, 578.16pt x 378.41376pt>
+File: plot5.pdf Graphic file (type pdf)
+<use plot5.pdf>
+Package pdftex.def Info: plot5.pdf  used on input line 313.
+(pdftex.def)             Requested size: 404.70924pt x 264.88782pt.
+<plot6.pdf, id=111, 578.16pt x 365.365pt>
+File: plot6.pdf Graphic file (type pdf)
+<use plot6.pdf>
+Package pdftex.def Info: plot6.pdf  used on input line 319.
+(pdftex.def)             Requested size: 346.89867pt x 219.22069pt.
+<plot7.pdf, id=112, 578.16pt x 364.36125pt>
+File: plot7.pdf Graphic file (type pdf)
+<use plot7.pdf>
+Package pdftex.def Info: plot7.pdf  used on input line 325.
+(pdftex.def)             Requested size: 346.89867pt x 218.61842pt.
+
+LaTeX Warning: Command \cyrerev invalid in math mode on input line 329.
+
+
+LaTeX Warning: Command \CYRV invalid in math mode on input line 329.
+
+Missing character: There is no ý in font cmr12!
+Missing character: There is no Â in font cmr12!
+[10 <./hg_lamp.png (PNG copy)> <./plot1.pdf>] [11 <./plot2.pdf> <./i2.jpeg> <./
+plot3.pdf
+
+pdfTeX warning: pdflatex (file ./plot3.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+>] [12 <./plot4.pdf> <./plot5.pdf
+
+pdfTeX warning: pdflatex (file ./plot5.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+>] [13 <./plot6.pdf> <./plot7.pdf
+
+pdfTeX warning: pdflatex (file ./plot7.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+>]
+<plot8.pdf, id=256, 361.35pt x 242.9075pt>
+File: plot8.pdf Graphic file (type pdf)
+<use plot8.pdf>
+Package pdftex.def Info: plot8.pdf  used on input line 333.
+(pdftex.def)             Requested size: 289.0804pt x 194.32625pt.
+<plot9.pdf, id=257, 361.35pt x 242.9075pt>
+File: plot9.pdf Graphic file (type pdf)
+<use plot9.pdf>
+Package pdftex.def Info: plot9.pdf  used on input line 345.
+(pdftex.def)             Requested size: 325.21199pt x 218.61472pt.
+ [14 <./plot8.pdf> <./plot9.pdf
+
+pdfTeX warning: pdflatex (file ./plot9.pdf): PDF inclusion: multiple pdfs with 
+page group included in a single page
+>]
+<plot10.pdf, id=276, 670.505pt x 432.61626pt>
+File: plot10.pdf Graphic file (type pdf)
+<use plot10.pdf>
+Package pdftex.def Info: plot10.pdf  used on input line 356.
+(pdftex.def)             Requested size: 483.69687pt x 312.08417pt.
+ [15 <./plot10.pdf>] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 36644 strings out of 492970
- 843639 string characters out of 3126593
- 962860 words of memory out of 3000000
- 39975 multiletter control sequences out of 15000+200000
+ 36687 strings out of 492970
+ 844368 string characters out of 3126593
+ 962891 words of memory out of 3000000
+ 40010 multiletter control sequences out of 15000+200000
  550056 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,96p,1803b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
-/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alexn/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/alexn/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/alex
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C
-:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/alexn/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexn/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/
-alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm
--super/sfbx1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/cm-super/sfbx1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/alexn/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0600.pfb><C:/Users/alexn/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/a
-lexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb
-><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/
-sfrm1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/cm-super/sfrm2074.pfb>
-Output written on report.pdf (11 pages, 3279018 bytes).
+{C:/Users/alexn/AppData/Local/Programs/MiKTe
+X 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alexn/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/U
+sers/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i6.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alexn/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/alexn/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/alex
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/alexn/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/alexn/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/alex
+n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0600.pfb><C
+:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfr
+m0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+cm-super/sfrm1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/cm-super/sfrm1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on report.pdf (15 pages, 6028675 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
+ 355 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
