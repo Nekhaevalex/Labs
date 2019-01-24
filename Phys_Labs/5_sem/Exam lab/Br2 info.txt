@@ -1,9 +1,0 @@
-Img0073.nef -- for calibration
-Img0074.nef -- big bottle
-Img0075.nef -- big+cone bottles
-Img0076.nef -- cone bottle
-Img0077.nef -- small bottle
-Img0078.nef -- clear lamp
-Img0079.nef -- all bottles together
-Img0080.nef -- cone bottle (again)
-Img0081.nef -- cone bottle (high res)
