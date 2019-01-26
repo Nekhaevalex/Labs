@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  25 JAN 2019 00:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  25 JAN 2019 08:43
 entering extended mode
 **./report.tex
 (report.tex
@@ -1456,60 +1456,60 @@ page group included in a single page
 pdfTeX warning: pdflatex (file ./plot7.pdf): PDF inclusion: multiple pdfs with 
 page group included in a single page
 >]
-<plot8.pdf, id=256, 361.35pt x 242.9075pt>
-File: plot8.pdf Graphic file (type pdf)
-<use plot8.pdf>
-Package pdftex.def Info: plot8.pdf  used on input line 333.
+<plotNew0.pdf, id=256, 361.35pt x 242.9075pt>
+File: plotNew0.pdf Graphic file (type pdf)
+<use plotNew0.pdf>
+Package pdftex.def Info: plotNew0.pdf  used on input line 333.
 (pdftex.def)             Requested size: 289.0804pt x 194.32625pt.
-<plot9.pdf, id=257, 361.35pt x 242.9075pt>
-File: plot9.pdf Graphic file (type pdf)
-<use plot9.pdf>
-Package pdftex.def Info: plot9.pdf  used on input line 345.
+<plotNew1.pdf, id=257, 361.35pt x 242.9075pt>
+File: plotNew1.pdf Graphic file (type pdf)
+<use plotNew1.pdf>
+Package pdftex.def Info: plotNew1.pdf  used on input line 345.
 (pdftex.def)             Requested size: 325.21199pt x 218.61472pt.
- [14 <./plot8.pdf> <./plot9.pdf
+ [14 <./plotNew0.pdf> <./plotNew1.pdf
 
-pdfTeX warning: pdflatex (file ./plot9.pdf): PDF inclusion: multiple pdfs with 
-page group included in a single page
+pdfTeX warning: pdflatex (file ./plotNew1.pdf): PDF inclusion: multiple pdfs wi
+th page group included in a single page
 >]
-<plot10.pdf, id=276, 670.505pt x 432.61626pt>
-File: plot10.pdf Graphic file (type pdf)
-<use plot10.pdf>
-Package pdftex.def Info: plot10.pdf  used on input line 356.
+<plotNew3.pdf, id=276, 670.505pt x 432.61626pt>
+File: plotNew3.pdf Graphic file (type pdf)
+<use plotNew3.pdf>
+Package pdftex.def Info: plotNew3.pdf  used on input line 356.
 (pdftex.def)             Requested size: 483.69687pt x 312.08417pt.
- [15 <./plot10.pdf>] (report.aux) ) 
+ [15 <./plotNew3.pdf>] (report.aux) ) 
 Here is how much of TeX's memory you used:
  36687 strings out of 492970
- 844368 string characters out of 3126593
- 962889 words of memory out of 3000000
+ 844408 string characters out of 3126593
+ 962891 words of memory out of 3000000
  40010 multiletter control sequences out of 15000+200000
  550056 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,96p,1803b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/alexn/AppData/Local/Programs/MiKTe
-X 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alexn/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/U
-sers/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
-i6.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alexn/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/alexn/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/alex
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/alexn/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/alexn/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/alex
-n/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0600.pfb><C
-:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfr
-m0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-cm-super/sfrm1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/cm-super/sfrm1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on report.pdf (15 pages, 6029131 bytes).
+{C:/Users/alexn/AppData/Local/Programs/MiK
+TeX 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alexn/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi6.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alexn/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/alexn/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/al
+exn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/alexn/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/alexn/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/al
+exn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0600.pfb>
+<C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/s
+frm0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/cm-super/sfrm1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/cm-super/sfrm1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on report.pdf (15 pages, 6027543 bytes).
 PDF statistics:
  355 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
