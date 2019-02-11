@@ -1,7 +1,7 @@
-PWD c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap
+PWD c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.tex
-OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.log
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.tex
+OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.log
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/size12.clo
@@ -258,9 +258,9 @@ INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxet
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.aux
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.aux
-OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.aux
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.aux
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.aux
+OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.aux
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
@@ -286,12 +286,12 @@ INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/pdft
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/larm1000.tfm
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/larm2074.tfm
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx2074.tfm
-OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.pdf
+OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.pdf
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/larm1728.tfm
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx1728.tfm
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.toc
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.toc
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.toc
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.toc
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx1200.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr8.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr6.tfm
@@ -314,24 +314,32 @@ INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsb.f
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.toc
+OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.toc
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/larm0800.tfm
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/larm0600.tfm
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/exp_scheme.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/exp_scheme.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/exp_scheme.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/exp_scheme.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/exp_scheme.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/exp_scheme.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/exp_scheme.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/exp_scheme.pdf
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/larm1440.tfm
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx1440.tfm
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/plot2.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/plot2.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/plot2.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/plot2.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/plot1.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/plot1.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/plot1.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/plot1.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.aux
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot1.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot1.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot1.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot1.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot2.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot2.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot2.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot2.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot3.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot3.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot3.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot3.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot4.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot4.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot4.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot4.pdf
+INPUT c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.aux
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
