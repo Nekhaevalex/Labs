@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1549761440 "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.tex" "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.pdf" "report" 1549761443
+["pdflatex"] 1549845350 "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.tex" "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.pdf" "report" 1549845353
   "C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx1200.tfm" 1544440001 3308 eee81981029f67083258db36df06e523 ""
   "C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1544439991 3304 6a543c07045572737981351171e0505e ""
   "C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx1728.tfm" 1544439989 3312 d199be9bd555944e2403193d58a0256a ""
@@ -221,17 +221,18 @@
   "C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty" 1419270738 5114 9c1069474ff71dbc47d5006555e352d3 ""
-  "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.aux" 1549761442 4693 1e8646f8e38ff851a77ed99655fafe5e ""
-  "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.tex" 1549761437 11966 a05864c6b97851509e6c76aa5763f800 ""
+  "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.aux" 1549845352 5610 6c78c08df124bcded3515e6e19151919 ""
+  "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.tex" 1549845349 13786 c5071bd6686f95d01be3dd41df391010 ""
   "exp_scheme.pdf" 1549756208 814302 0af434a9bf167bdd819219f2dd49a875 ""
+  "plot1.pdf" 1549842460 35493 3cde1d3ca28dfdf2771b7576bf326f9e ""
   "plot2.pdf" 1549759324 32092 7dc2f8a049ef220321438456bc885bdb ""
-  "report.aux" 1549761442 4693 1e8646f8e38ff851a77ed99655fafe5e ""
-  "report.tex" 1549761437 11966 a05864c6b97851509e6c76aa5763f800 ""
-  "report.toc" 1549761442 1584 1e1809f2d926348918f011342ff43743 ""
+  "report.aux" 1549845352 5610 6c78c08df124bcded3515e6e19151919 ""
+  "report.tex" 1549845349 13786 c5071bd6686f95d01be3dd41df391010 ""
+  "report.toc" 1549845352 1719 55bb62b4a16f8cf62fba6d295e19dbe6 ""
   (generated)
-  "report.aux"
   "report.toc"
-  "report.pdf"
-  "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.pdf"
   "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.log"
+  "c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Band gap/report.pdf"
   "report.log"
+  "report.pdf"
+  "report.aux"
