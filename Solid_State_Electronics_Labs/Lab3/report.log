@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  11 FEB 2019 14:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  11 FEB 2019 16:38
 entering extended mode
 **c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.tex
 (c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/report.tex
@@ -858,36 +858,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <exp_scheme.pdf, id=28, 845.0471pt x 597.50829pt>
 File: exp_scheme.pdf Graphic file (type pdf)
 <use exp_scheme.pdf>
-Package pdftex.def Info: exp_scheme.pdf  used on input line 93.
+Package pdftex.def Info: exp_scheme.pdf  used on input line 92.
 (pdftex.def)             Requested size: 483.69687pt x 342.00554pt.
-<plot1.pdf, id=29, 361.35pt x 237.88875pt>
+<plot1.pdf, id=29, 361.35pt x 226.8475pt>
 File: plot1.pdf Graphic file (type pdf)
 <use plot1.pdf>
-Package pdftex.def Info: plot1.pdf  used on input line 101.
-(pdftex.def)             Requested size: 361.34912pt x 237.88815pt.
-<plot2.pdf, id=30, 361.35pt x 237.88875pt>
+Package pdftex.def Info: plot1.pdf  used on input line 100.
+(pdftex.def)             Requested size: 361.34912pt x 226.84694pt.
+<plot2.pdf, id=30, 361.35pt x 229.85875pt>
 File: plot2.pdf Graphic file (type pdf)
 <use plot2.pdf>
-Package pdftex.def Info: plot2.pdf  used on input line 106.
-(pdftex.def)             Requested size: 361.34912pt x 237.88815pt.
+Package pdftex.def Info: plot2.pdf  used on input line 105.
+(pdftex.def)             Requested size: 361.34912pt x 229.85817pt.
  [3 <c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/exp_scheme.pdf>] [4 <c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot1.pdf> <c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot2.pdf
 
 pdfTeX warning: pdflatex (file c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<plot3.pdf, id=136, 361.35pt x 226.8475pt>
+<plot3.pdf, id=136, 361.35pt x 237.88875pt>
 File: plot3.pdf Graphic file (type pdf)
 <use plot3.pdf>
-Package pdftex.def Info: plot3.pdf  used on input line 126.
-(pdftex.def)             Requested size: 332.44052pt x 208.69876pt.
-<plot4.pdf, id=137, 361.35pt x 229.85875pt>
+Package pdftex.def Info: plot3.pdf  used on input line 125.
+(pdftex.def)             Requested size: 332.44052pt x 218.85666pt.
+<plot4.pdf, id=137, 361.35pt x 237.88875pt>
 File: plot4.pdf Graphic file (type pdf)
 <use plot4.pdf>
-Package pdftex.def Info: plot4.pdf  used on input line 131.
-(pdftex.def)             Requested size: 343.28055pt x 218.36455pt.
- [5 <c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot3.pdf> <c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot4.pdf
-
-pdfTeX warning: pdflatex (file c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [6] (c:/Users\alexn\Documents\GitHub\Labs\Solid_State_Electronics_Labs\Lab3\report.aux) ) 
+Package pdftex.def Info: plot4.pdf  used on input line 130.
+(pdftex.def)             Requested size: 343.28055pt x 225.99301pt.
+ [5 <c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot3.pdf>] [6 <c:/Users/alexn/Documents/GitHub/Labs/Solid_State_Electronics_Labs/Lab3/plot4.pdf>] (c:/Users\alexn\Documents\GitHub\Labs\Solid_State_Electronics_Labs\Lab3\report.aux) ) 
 Here is how much of TeX's memory you used:
  27051 strings out of 492970
  659934 string characters out of 3126593
@@ -897,9 +894,9 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  62i,12n,96p,2335b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx2074.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on c:/Users\alexn\Documents\GitHub\Labs\Solid_State_Electronics_Labs\Lab3\report.pdf (7 pages, 1121168 bytes).
+Output written on c:/Users\alexn\Documents\GitHub\Labs\Solid_State_Electronics_Labs\Lab3\report.pdf (7 pages, 1119547 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
+ 265 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
