@@ -17,7 +17,6 @@ namespace Lab4
             for (int i = 0; i<knots; i++)
             {
                 points[i] = currentX;
-                
 
                 currentX += step;
             }
