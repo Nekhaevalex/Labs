@@ -8,7 +8,7 @@ namespace Lab4
         {
         }
 
-        private double[] GetXPoints(int knots)
+        private double[] GetSolution(int knots)
         {
             double[] points = new double[knots];
             double[] array1 = new double[knots];
