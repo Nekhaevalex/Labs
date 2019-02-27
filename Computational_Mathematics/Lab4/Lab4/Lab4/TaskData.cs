@@ -18,6 +18,7 @@ namespace Lab4
             B2 = 1.0;
             E1 = 0.0;
             E2 = 1.0;
+            //Model
             Mkx = Math.Sqrt(Math.Exp(1.0));
             Mqx = Math.Sqrt(Math.Exp(1.0));
             Mfx = Math.Cos(0.5);
