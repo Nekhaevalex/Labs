@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lab4
+namespace TaskDatas
 {
     class TaskData : ITaskData
     {

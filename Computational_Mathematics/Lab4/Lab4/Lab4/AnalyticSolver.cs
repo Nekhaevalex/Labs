@@ -1,6 +1,7 @@
 ﻿using System;
+using TaskDatas;
 
-namespace Lab4
+namespace Solvers
 {
     class AnalyticSolver
     {
@@ -33,15 +34,14 @@ namespace Lab4
 
         private double EvaluateSolution(double x) => (C1 * Math.Exp(lambda1 * x)) + (C2 * Math.Exp(lambda2 * x)) + uPrivate;
 
-        public double[,] GetSolutions(int knots)
+        public virtual double[] GetSolution(int knots)
         {
-            double[,] result = new double[2, knots];
+            double[] result = new double[knots];
             double step = 1.0 / (knots - 1);
             double currentX = 0.0;
             for (int i = 0; i < knots; i++)
             {
-                result[0, i] = currentX;
-                result[1, i] = EvaluateSolution(currentX);
+                result[i] = EvaluateSolution(currentX);
                 currentX += step;
             }
             return result;

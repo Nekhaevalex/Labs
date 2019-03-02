@@ -1,4 +1,4 @@
-﻿namespace Lab4
+﻿namespace TaskDatas
 {
     interface ITaskData
     {

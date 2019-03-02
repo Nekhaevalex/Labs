@@ -11,8 +11,8 @@ C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\bin
 C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\bin\Debug\Lab4.exe
 C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\bin\Debug\Lab4.pdb
 C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
-C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\obj\Debug\Lab4.csprojAssemblyReference.cache
 C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\obj\Debug\Lab4.csproj.CoreCompileInputs.cache
 C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\obj\Debug\Lab4.csproj.CopyComplete
 C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\obj\Debug\Lab4.exe
 C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\obj\Debug\Lab4.pdb
+C:\Users\alexn\OneDrive\GitHub\Labs\Computational_Mathematics\Lab4\Lab4\Lab4\obj\Debug\Lab4.csprojAssemblyReference.cache
