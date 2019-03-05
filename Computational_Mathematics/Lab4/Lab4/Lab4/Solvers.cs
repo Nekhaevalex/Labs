@@ -5,7 +5,7 @@ namespace Solvers
 {
     class DifferModelSolver : AnalyticSolver, INumericalSolver
     {
-        public DifferModelSolver(TaskData task) : base(task)
+        public DifferModelSolver(ITaskData task) : base(task)
         {
         }
 
@@ -18,7 +18,7 @@ namespace Solvers
             set
             {
                 _knots = value;
-                h = 1.0 / (value);
+                h = 1.0 / (value-1);
             }
         }
 
@@ -27,7 +27,7 @@ namespace Solvers
             if (l == 0)
             {
                 return task.Mkx;
-            } else if (l == Knots)
+            } else if (l == Knots-1)
             {
                 return 0;
             } else
@@ -41,7 +41,7 @@ namespace Solvers
             if (l == 0)
             {
                 return -task.Mkx - task.B1 * h;
-            } else if (l == Knots)
+            } else if (l == Knots-1)
             {
                 return -task.Mkx - task.B2 * h;
             } else
@@ -55,7 +55,7 @@ namespace Solvers
             if (l == 0)
             {
                 return 0;
-            } else if (l == Knots)
+            } else if (l == Knots-1)
             {
                 return task.Mkx;
             } else
@@ -69,7 +69,7 @@ namespace Solvers
             if (l == 0)
             {
                 return -task.E1 * h;
-            } else if (l == Knots) {
+            } else if (l == Knots-1) {
                 return -task.E2 * h;
             } else
             {
@@ -89,9 +89,9 @@ namespace Solvers
 
         public double[] GetSolution()
         {
-            double[] values = new double[Knots+1];
-            values[Knots] = (Dl(Knots) - (Cl(Knots) * Beta(Knots - 1))) / (Bl(Knots) + (Cl(Knots) * Alpha(Knots - 1)));
-            for (int l = Knots-1; l>=0; l--)
+            double[] values = new double[Knots];
+            values[Knots-1] = (Dl(Knots-1) - (Cl(Knots-1) * Beta(Knots - 2))) / (Bl(Knots-1) + (Cl(Knots-1) * Alpha(Knots - 2)));
+            for (int l = Knots-2; l>=0; l--)
             {
                 values[l] = Alpha(l) * values[l + 1] + Beta(l);
             }
@@ -101,7 +101,7 @@ namespace Solvers
     }
     class VariableCoefsNumericalSolver : AnalyticSolver, INumericalSolver
     {
-        public VariableCoefsNumericalSolver(TaskData task) : base(task)
+        public VariableCoefsNumericalSolver(ITaskData task) : base(task)
         {
         }
 
@@ -114,7 +114,7 @@ namespace Solvers
             set
             {
                 _knots = value;
-                h = 1.0 / (value);
+                h = 1.0 / (value-1);
             }
         }
 
@@ -148,9 +148,9 @@ namespace Solvers
         {
             if (l == 0)
             {
-                return task.EvaluteKx(0);
+                return K(0, 0.0);
             }
-            else if (l == Knots)
+            else if (l == Knots-1)
             {
                 return 0;
             }
@@ -164,11 +164,11 @@ namespace Solvers
         {
             if (l == 0)
             {
-                return -(task.EvaluteKx(0) + task.B1 * h);
+                return -(K(0, 0.0) + task.B1 * h);
             }
-            else if (l == Knots)
+            else if (l == Knots-1)
             {
-                return -(task.EvaluteKx(l) + task.B2 * h);
+                return -(K(Knots-1, 0.0) + task.B2 * h);
             }
             else
             {
@@ -181,9 +181,10 @@ namespace Solvers
             if (l == 0)
             {
                 return 0;
-            } else if (l == Knots)
+            }
+            else if (l == Knots-1)
             {
-                return K(Knots, 0.0);
+                return K(Knots-1, 0.0);
             }
             else
             {
@@ -197,7 +198,7 @@ namespace Solvers
             {
                 return -(task.E1 * h);
             }
-            else if (l == Knots)
+            else if (l == Knots-1)
             {
                 return -(task.E2 * h);
             }
@@ -219,12 +220,11 @@ namespace Solvers
 
         public double[] GetSolution()
         {
-            int L = Knots;
-            double[] values = new double[L + 1];
-            values[L] = (Dl(L) - Cl(L) * Beta(L - 1)) / (Bl(L) + Cl(L) * Alpha(L - 1));
-            for (int i = L - 1; i >= 0; i--)
+            double[] values = new double[Knots];
+            values[Knots - 1] = (Dl(Knots - 1) - (Cl(Knots - 1) * Beta(Knots - 2))) / (Bl(Knots - 1) + (Cl(Knots - 1) * Alpha(Knots - 2)));
+            for (int l = Knots - 2; l >= 0; l--)
             {
-                values[i] = Alpha(i) * values[i + 1] + Beta(i);
+                values[l] = Alpha(l) * values[l + 1] + Beta(l);
             }
             return values;
         }

@@ -50,6 +50,7 @@
     <Compile Include="AnalyticSolver.cs" />
     <Compile Include="INumericalSolver.cs" />
     <Compile Include="ITaskData.cs" />
+    <Compile Include="Kalimova.cs" />
     <Compile Include="Solvers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

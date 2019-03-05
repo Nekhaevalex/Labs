@@ -5,14 +5,14 @@ namespace Solvers
 {
     class AnalyticSolver
     {
-        protected readonly TaskData task;
+        protected readonly ITaskData task;
         public double C1;
         public double C2;
         public double lambda1;
         public double lambda2;
         public double uPrivate;
 
-        public AnalyticSolver(TaskData task)
+        public AnalyticSolver(ITaskData task)
         {
             this.task = task;
             double lambda = Math.Sqrt(task.Mqx / task.Mkx);

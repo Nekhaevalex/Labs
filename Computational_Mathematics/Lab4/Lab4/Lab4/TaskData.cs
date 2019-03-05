@@ -19,8 +19,8 @@ namespace TaskDatas
             E1 = 0.0;
             E2 = 1.0;
             //Model
-            Mkx = Math.Sqrt(Math.Exp(1.0));
-            Mqx = Math.Sqrt(Math.Exp(1.0));
+            Mkx = Math.Exp(0.5);
+            Mqx = Math.Exp(0.5);
             Mfx = Math.Cos(0.5);
         }
 

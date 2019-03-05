@@ -9,10 +9,10 @@ namespace Lab4
     {
         public static int points = 11; //кол-во точек сетки
         
-        public static double[] makeNet()
+        public static double[] MakeNet()
         {
             double[] result = new double[points];
-            double step = 1.0 / (points - 1);
+            double step = 1.0 / (points-1);
             double currentX = 0.0;
             for (int i = 0; i < points; i++)
             {
@@ -67,18 +67,37 @@ namespace Lab4
             analyticSolver.PrintEquation();
             Console.WriteLine();
             Console.WriteLine("Solutions");
-            DifferModelSolver differModelSolver = new DifferModelSolver(inputs);
-            differModelSolver.Knots = points;
-            VariableCoefsNumericalSolver variableCoefsNumerical = new VariableCoefsNumericalSolver(inputs);
-            variableCoefsNumerical.Knots = points;
+            DifferModelSolver differModelSolver = new DifferModelSolver(inputs)
+            {
+                Knots = points
+            };
+            VariableCoefsNumericalSolver variableCoefsNumerical = new VariableCoefsNumericalSolver(inputs)
+            {
+                Knots = points
+            };
             double[] analyticSolve = analyticSolver.GetSolution(points);
             double[] differSolve = differModelSolver.GetSolution();
+            double[] variableSolve = variableCoefsNumerical.GetSolution();
             double[] differ = new double[points];
             for (int i = 0; i<points; i++)
             {
-                differ[i] = analyticSolve[i] - differSolve[i];
+                differ[i] = (analyticSolve[i] - differSolve[i]);
             }
-            PrintEvaluatedValues(new string[] { "X", "Analytic Solution", "Thomas algorithm", "Variable Coeffitients", "Differ" }, makeNet(), analyticSolve, differSolve, variableCoefsNumerical.GetSolution(), differ);
+            double maxDiffer = differ[0];
+            for(int i = 1; i<points; i++)
+            {
+                if (maxDiffer<differ[i])
+                {
+                    maxDiffer = differ[i];
+                }
+            }
+            double[] answer = new double[points];
+            for(int i = 0; i<points; i++)
+            {
+                answer[i] = maxDiffer + variableSolve[i];
+            }
+            PrintEvaluatedValues(new string[] { "X", "Analytic Solution", "Thomas algorithm", "Variable Coeffitients", "Differ Analytic-Thomas", "Answer"}, MakeNet(), analyticSolve, differSolve, variableSolve, differ, answer);
+            Console.WriteLine("Max differ: " + maxDiffer);
             Console.ReadLine();
         }
     }
