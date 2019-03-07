@@ -7,7 +7,7 @@ namespace Lab4
 {
     class Program
     {
-        public static int points = 11; //кол-во точек сетки
+        public static int points = 21; //кол-во точек сетки
         
         public static double[] MakeNet()
         {
@@ -91,12 +91,12 @@ namespace Lab4
                     maxDiffer = differ[i];
                 }
             }
-            double[] answer = new double[points];
-            for(int i = 0; i<points; i++)
-            {
-                answer[i] = maxDiffer + variableSolve[i];
-            }
-            PrintEvaluatedValues(new string[] { "X", "Analytic Solution", "Thomas algorithm", "Variable Coeffitients", "Differ Analytic-Thomas", "Answer"}, MakeNet(), analyticSolve, differSolve, variableSolve, differ, answer);
+            //double[] answer = new double[points];
+            //for(int i = 0; i<points; i++)
+            //{
+            //    answer[i] = maxDiffer + variableSolve[i];
+            //}
+            PrintEvaluatedValues(new string[] { "X", "Analytic Solution", "Thomas algorithm", "Variable Coeffitients", "Differ Analytic-Thomas"}, MakeNet(), analyticSolve, differSolve, variableSolve, differ);
             Console.WriteLine("Max differ: " + maxDiffer);
             Console.ReadLine();
         }
