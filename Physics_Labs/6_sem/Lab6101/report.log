@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  17 FEB 2019 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.12.10)  10 MAR 2019 18:56
 entering extended mode
-**c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.tex
-(c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.tex
+**c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.tex
+(c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -703,7 +703,12 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
  ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex"
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
-))) ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+))) ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wasysym\wasysym.sty"
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+) ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
  ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
@@ -725,23 +730,23 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen271
 \Gm@layoutvoffset=\dimen272
 \Gm@dimlist=\toks48
- ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (c:/Users\alexn\Documents\GitHub\Labs\Physics_Labs\6_sem\Lab6101\report.aux)
+ ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (c:/Users\alexn\OneDrive\GitHub\Labs\Physics_Labs\6_sem\Lab6101\report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
  ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count151
@@ -797,7 +802,7 @@ Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into your preamble.
- on input line 19.
+ on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -833,19 +838,28 @@ Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
  ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (c:/Users\alexn\Documents\GitHub\Labs\Physics_Labs\6_sem\Lab6101\report.toc)
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 24.
+ ("C:\Users\alexn\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wasysym\uwasy.fd"
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+) (c:/Users\alexn\OneDrive\GitHub\Labs\Physics_Labs\6_sem\Lab6101\report.toc
+Overfull \hbox (8.54991pt too wide) in paragraph at lines 7--7
+ [][] []\T2A/cmr/m/n/12 Получение сиг-на-ла ЭПР на сво-бод-ном ра-ди-ка-ле ДФ-ПГ и из-ме-ре-ние g-фактора 
+ []
+
+)
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
 
-Overfull \hbox (0.72644pt too wide) in paragraph at lines 26--27
+Overfull \hbox (0.72644pt too wide) in paragraph at lines 27--28
  \T2A/cmr/bx/n/12 Цель ра-бо-ты[] \T2A/cmr/m/n/12 Ис-сле-до-вать элек-трон-ный па-ра-маг-нит-ный ре-зо-нанс, опре-де-лить $\OML/cmm/m/it/12 g$\T2A/cmr/m/n/12 -фактор
  []
 
@@ -855,21 +869,21 @@ Overfull \hbox (0.72644pt too wide) in paragraph at lines 26--27
 <scheme.pdf, id=22, 428.68153pt x 480.59549pt>
 File: scheme.pdf Graphic file (type pdf)
 <use scheme.pdf>
-Package pdftex.def Info: scheme.pdf  used on input line 92.
+Package pdftex.def Info: scheme.pdf  used on input line 93.
 (pdftex.def)             Requested size: 214.34024pt x 240.29715pt.
- [2 <c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf>] [3] (c:/Users\alexn\Documents\GitHub\Labs\Physics_Labs\6_sem\Lab6101\report.aux) ) 
+ [2 <c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf>] [3] (c:/Users\alexn\OneDrive\GitHub\Labs\Physics_Labs\6_sem\Lab6101\report.aux) ) 
 Here is how much of TeX's memory you used:
- 26736 strings out of 492970
- 654337 string characters out of 3126593
- 847534 words of memory out of 3000000
- 30097 multiletter control sequences out of 15000+200000
- 18168 words of font info for 52 fonts, out of 3000000 for 9000
+ 26916 strings out of 492970
+ 656282 string characters out of 3126593
+ 848534 words of memory out of 3000000
+ 30266 multiletter control sequences out of 15000+200000
+ 19449 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,7n,96p,767b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on c:/Users\alexn\Documents\GitHub\Labs\Physics_Labs\6_sem\Lab6101\report.pdf (3 pages, 688777 bytes).
+ 62i,7n,96p,1075b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1728.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0800.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm2074.pfb><C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb>
+Output written on c:/Users\alexn\OneDrive\GitHub\Labs\Physics_Labs\6_sem\Lab6101\report.pdf (3 pages, 711550 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -8,6 +8,7 @@
 \usepackage{subfig}
 \usepackage{adjustbox}
 \usepackage{pgfplots}
+\usepackage{wasysym}
 
 \usepackage{geometry}
 \geometry{top=20mm}
@@ -94,4 +95,23 @@
 	\end{figure}
 	\newpage
 	\section{Ход работы}
+	\subsection{Получение сигнала ЭПР  на свободном радикале ДФПГ и измерение g-фактора электрона}
+	\begin{enumerate}
+		\item Поместим ампулу с исследуемым веществом внутрь катушки и настроим генератор на резонансную частоту:
+		\begin{equation*}
+			f_{\text{res}}=128.818\text{ МГц}
+		\end{equation*}
+		\item Будем изменять магнитное поле в катушках таким образом, чтобы расстояние между пиками на осциллографе было одинаковым. Действующее напряжение:
+		\begin{equation*}
+			V=11.9\text{ мВ}
+		\end{equation*}
+		Параметры катушки известны: $\diameter 14.3$ мм. Следовательно $S=160.606$ мм$^{2}$. Число витков: 49. $\omega_{\sim}=2\pi*50\ Hz$. Тогда:
+		\begin{equation*}
+			B_0=\frac{V}{n\cdot S\cdot\omega_{\sim}}=4.81\cdot 10^{-3}\text{ Тл}
+		\end{equation*}
+		\item Найдем $g$-фактор электрона по полученным данным:
+		\begin{equation*}
+			g=\frac{\hbar\cdot\omega_0}{\mu_{\text{Б}}\cdot B}=1.91
+		\end{equation*}
+	\end{enumerate}
 \end{document}

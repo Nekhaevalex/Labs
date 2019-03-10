@@ -1,7 +1,7 @@
-PWD c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101
+PWD c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.tex
-OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.log
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.tex
+OUTPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.log
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/size12.clo
@@ -246,6 +246,8 @@ INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendl
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wasysym/wasysym.sty
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wasysym/wasysym.sty
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.sty
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
@@ -256,9 +258,9 @@ INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxet
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.aux
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.aux
-OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.aux
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.aux
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.aux
+OUTPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.aux
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
@@ -298,10 +300,15 @@ INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsb.f
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wasysym/uwasy.fd
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wasysym/uwasy.fd
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/wasy/wasy10.tfm
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/wasy/wasy10.tfm
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/wasy/wasy7.tfm
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/larm1728.tfm
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx1728.tfm
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.toc
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.toc
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.toc
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.toc
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx1200.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr8.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/cm/cmr6.tfm
@@ -320,17 +327,20 @@ INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.toc
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/wasy/wasy10.tfm
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/wasy/wasy8.tfm
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/wasy/wasy6.tfm
+OUTPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.toc
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/labx1440.tfm
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/larm0800.tfm
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/fonts/tfm/lh/lh-t2a/larm0600.tfm
-OUTPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.pdf
+OUTPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.pdf
 INPUT C:/Users/alexn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf
-INPUT c:/Users/alexn/Documents/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.aux
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/scheme.pdf
+INPUT c:/Users/alexn/OneDrive/GitHub/Labs/Physics_Labs/6_sem/Lab6101/report.aux
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
@@ -360,3 +370,5 @@ INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-sup
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1440.pfb
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm2074.pfb
 INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm2074.pfb
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb
+INPUT C:/Users/alexn/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb
