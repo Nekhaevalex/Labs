@@ -1,14 +1,14 @@
 #!/usr/bin/env wolframscript
-Print["Lab 5. Nekhaev Alexander 654 gr"]
-AnalyticEval[x_, t_] := N[Cos[2*t + x]]; 
-L = 20480; 
+Print["Lab 5. Pomelov Nikolay 653 gr"]
+AnalyticEval[x_, t_] := N[Cos[2*t + x]];
+L = 11;
 trail = Table[AnalyticEval[x, 1], {x, 0, 1, 1/L}];
 Print["Trail:"]
 Print[trail]
 
 ClearAll[numerical]
 h = 1/L; 
-\[Tau] = h*1.5; 
+\[Tau] = h*0.5; (*0.5-1, 1.5*)
 Nm = Round[1/\[Tau]]; 
 dt = \[Tau]/h; 
 numerical = Table[0, {t, Nm + 1}, {x, L + 1}]; 
