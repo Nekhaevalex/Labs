@@ -9,17 +9,20 @@ namespace Lab6
         static void Main(string[] args)
         {
             Console.WriteLine("2019, Nekhav Alexander\nLab 6 Var 2 Task 4");
-            Solution solution = new Solution();
+            Solution solution = new Solution(1281,81,81);
             solution.Calculate();
+            Array analytic = solution.getAnalytic();
+            Array numerical = solution.getNumerical();
+            Array difference = solution.getDifference();
         }
     }
     class Solution
     {
-        public int N = 6;
+        public int N;
         public int L;
         public int M;
-        public int LK = 6;
-        public int MK = 6;
+        public int LK;
+        public int MK;
         public double X0;
         public double XN;
         public double Y0;
@@ -46,6 +49,13 @@ namespace Lab6
         public Array UV;
         private int MyTaskNo = 4;
 
+        public Solution(int n, int lK, int mK)
+        {
+            N = n;
+            LK = lK;
+            MK = mK;
+        }
+
         public void Calculate()
         {
             this.MyTaskNo = 4;
@@ -65,7 +75,7 @@ namespace Lab6
             this.UV = Array.CreateInstance(typeof(double), 801, 801);
             this.CalculateVar();
             Console.WriteLine("Initial values:");
-            Console.WriteLine("N = "+N+" K="+LK+" L="+MK);
+            Console.WriteLine("N = "+N+" L="+LK+" M="+MK);
             for (int i = 0; i < 100; i++)
             {
                 Console.Write("_");
@@ -92,6 +102,7 @@ namespace Lab6
                 }
                 Console.WriteLine();
             }
+            Object maxDiff = UV.GetValue(1, 1);
             Console.WriteLine("Differ:");
             for (int i = 1; (lj1 >> 31 ^ i) <= (lj1 >> 31 ^ (MK)); i += LJ)
             {
@@ -102,6 +113,21 @@ namespace Lab6
                 }
                 Console.WriteLine();
             }
+        }
+
+        public Array getAnalytic()
+        {
+            return this.UA;
+        }
+
+        public Array getNumerical()
+        {
+            return this.UM;
+        }
+        
+        public Array getDifference()
+        {
+            return this.UV;
         }
 
         private void CalculateVar()
