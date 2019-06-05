@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\nekha\OneDrive\Рабочий стол\Proverka.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DF0D583-6FFB-4B57-B163-B873F93E00FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Proverka</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Proverka</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyUtils.cs" />
+    <Compile Include="Plot.cs" />
+    <Compile Include="MainFormLab1.cs" />
+    <Compile Include="NumericLab1.cs" />
+    <Compile Include="MainFormLab2.cs" />
+    <Compile Include="NumericLab2.cs" />
+    <Compile Include="MainFormLab3.cs" />
+    <Compile Include="NumericLab3.cs" />
+    <Compile Include="MainFormLab4.cs" />
+    <Compile Include="NumericLab4.cs" />
+    <Compile Include="MainFormLab5.cs" />
+    <Compile Include="NumericLab5.cs" />
+    <Compile Include="MainFormLab6.cs" />
+    <Compile Include="NumericLab6.cs" />
+    <Compile Include="Proverka.cs" />
+    <Compile Include="SplashForm.cs" />
+    <Compile Include="My\MyApplication.cs" />
+    <Compile Include="My\MyComputer.cs" />
+    <Compile Include="My\MyProject.cs" />
+    <Compile Include="My\MySettings.cs" />
+    <Compile Include="My\MySettingsProperty.cs" />
+    <Compile Include="My\Resources\Resources.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainFormLab1.resx" />
+    <EmbeddedResource Include="MainFormLab2.resx" />
+    <EmbeddedResource Include="MainFormLab3.resx" />
+    <EmbeddedResource Include="MainFormLab4.resx" />
+    <EmbeddedResource Include="MainFormLab5.resx" />
+    <EmbeddedResource Include="MainFormLab6.resx" />
+    <EmbeddedResource Include="Proverka.resx" />
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="SplashForm.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
