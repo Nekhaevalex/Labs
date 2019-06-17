@@ -1,0 +1,451 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16656,        443]
+NotebookOptionsPosition[     16034,        425]
+NotebookOutlinePosition[     16377,        440]
+CellTagsIndexPosition[     16334,        437]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "Globals", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[HBar]", "=", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"UnitConvert", "[", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{
+         FractionBox["1", 
+          RowBox[{"2", "\[Pi]"}]], ",", "\"\<PlanckConstant\>\""}], "]"}], 
+       "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"m", "=", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"UnitConvert", "[", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"1", ",", "\"\<ElectronMass\>\""}], "]"}], "]"}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"e", "=", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"UnitConvert", "[", 
+       RowBox[{"Quantity", "[", 
+        RowBox[{"1", ",", "\"\<ElementaryCharge\>\""}], "]"}], "]"}], "]"}]}],
+     ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Alpha]", "[", "Energy_", "]"}], ":=", 
+     SqrtBox[
+      FractionBox[
+       RowBox[{"2", "*", "m", "*", "Energy", "*", "e"}], 
+       SuperscriptBox["\[HBar]", "2"]]]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Beta]", "[", 
+      RowBox[{"Energy_", ",", "V_"}], "]"}], ":=", 
+     SqrtBox[
+      FractionBox[
+       RowBox[{"2", "m", 
+        RowBox[{"(", 
+         RowBox[{"Energy", "+", "V"}], ")"}], "*", "e"}], 
+       SuperscriptBox["\[HBar]", "2"]]]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"KronigPenney", "[", 
+      RowBox[{"Energy_", ",", "V_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"1", "/", "a"}], "*", 
+      RowBox[{"ArcCos", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           RowBox[{
+            RowBox[{"\[Beta]", "[", 
+             RowBox[{"Energy", ",", "V"}], "]"}], "*", "b"}], "]"}], "*", 
+          RowBox[{"Cos", "[", 
+           RowBox[{
+            RowBox[{"\[Alpha]", "[", "Energy", "]"}], "*", 
+            RowBox[{"(", 
+             RowBox[{"a", "-", "b"}], ")"}]}], "]"}]}], ")"}], "-", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\[Alpha]", "[", "Energy", "]"}], "^", "2"}], "+", 
+            RowBox[{
+             RowBox[{"\[Beta]", "[", 
+              RowBox[{"Energy", ",", "V"}], "]"}], "^", "2"}]}], ")"}], "/", 
+          RowBox[{"(", 
+           RowBox[{"2", "*", 
+            RowBox[{"\[Alpha]", "[", "Energy", "]"}], "*", 
+            RowBox[{"\[Beta]", "[", 
+             RowBox[{"Energy", ",", "V"}], "]"}]}], ")"}]}], "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{
+           RowBox[{"\[Beta]", "[", 
+            RowBox[{"Energy", ",", "V"}], "]"}], "*", "b"}], "]"}], "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{
+           RowBox[{"\[Alpha]", "[", "Energy", "]"}], "*", 
+           RowBox[{"(", 
+            RowBox[{"a", "-", "b"}], ")"}]}], "]"}]}]}], "]"}]}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"PlotFunc", "[", 
+      RowBox[{"av_", ",", "bv_", ",", "Energy_"}], "]"}], ":=", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"Re", "[", 
+             RowBox[{"KronigPenney", "[", 
+              RowBox[{"3", ",", "Energy"}], "]"}], "]"}]}], ",", "Energy"}], 
+          "}"}], "]"}], ",", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Re", "[", 
+            RowBox[{"KronigPenney", "[", 
+             RowBox[{"3", ",", "Energy"}], "]"}], "]"}], ",", "Energy"}], 
+          "}"}], "]"}]}], "}"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"a", "\[Rule]", "av"}], ",", 
+        RowBox[{"b", "\[Rule]", "bv"}]}], "}"}]}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.769719329002035*^9, 3.769719472209346*^9}, {
+   3.7697195501115417`*^9, 3.7697195869231033`*^9}, 3.769722020910081*^9, {
+   3.769722051989739*^9, 3.769722072800308*^9}, {3.7697230647647543`*^9, 
+   3.7697230776606255`*^9}, {3.7697233007015686`*^9, 
+   3.7697233582704086`*^9}, {3.76972344923985*^9, 
+   3.7697234659057403`*^9}},ExpressionUUID->"5d322c3d-37f7-43b9-bcee-\
+d108fa6733b6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"plotter", "[", 
+    RowBox[{"a_", ",", "b_", ",", "Energy_"}], "]"}], ":=", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             RowBox[{
+              SuperscriptBox["10", "9"], "/", "2"}]}]}], ",", "1"}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"2", "a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             RowBox[{
+              SuperscriptBox["10", "9"], "/", "2"}]}]}], ",", "1"}], "}"}]}], 
+        "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{"2", "a", "*", 
+             SuperscriptBox["10", "9"]}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"-", "Energy"}]}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"PlotMarkers", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"Automatic", ",", " ", "Medium"}], "}"}]}], ",", 
+       RowBox[{"AxesLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<x*\!\(\*SuperscriptBox[\(10\), \(9\)]\)\>\"", ",", 
+          "\"\<V(x)\>\""}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             RowBox[{
+              SuperscriptBox["10", "9"], "/", "2"}]}]}], ",", "1.5"}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"2", "a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             RowBox[{
+              SuperscriptBox["10", "9"], "/", "2"}]}]}], ",", 
+           RowBox[{"1.5", "*", "Energy"}]}], "}"}]}], "}"}], ",", 
+       RowBox[{
+       "PlotMarkers", "\[Rule]", 
+        "\"\<\!\(\*SuperscriptBox[\(Z\), \(+\)]\)\>\""}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", "Black"}]}], "]"}], ",", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"Line", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             SuperscriptBox["10", "9"]}]}], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             SuperscriptBox["10", "9"]}]}], ",", 
+           RowBox[{"-", "Energy"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", "*", 
+            SuperscriptBox["10", "9"]}], ",", 
+           RowBox[{"-", "Energy"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", "*", 
+            SuperscriptBox["10", "9"]}], ",", "0"}], "}"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", "*", 
+            SuperscriptBox["10", "9"]}], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"2", "a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             SuperscriptBox["10", "9"]}]}], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"2", "a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             SuperscriptBox["10", "9"]}]}], ",", 
+           RowBox[{"-", "Energy"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"2", "a", "*", 
+            SuperscriptBox["10", "9"]}], ",", 
+           RowBox[{"-", "Energy"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"2", "a", "*", 
+            SuperscriptBox["10", "9"]}], ",", "0"}], "}"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"2", "a", "*", 
+            SuperscriptBox["10", "9"]}], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"3", "a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             SuperscriptBox["10", "9"]}]}], ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"3", "a", "*", 
+             SuperscriptBox["10", "9"]}], "-", 
+            RowBox[{"b", "*", 
+             SuperscriptBox["10", "9"]}]}], ",", 
+           RowBox[{"-", "Energy"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"3", "a", "*", 
+            SuperscriptBox["10", "9"]}], ",", 
+           RowBox[{"-", "Energy"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"3", "a", "*", 
+            SuperscriptBox["10", "9"]}], ",", "0"}], "}"}]}], 
+        "\[IndentingNewLine]", "}"}], "]"}], "]"}]}], "]"}]}], ";"}]], "Input",\
+ExpressionUUID->"34d1ff3e-173a-430e-b8e5-0d40b8a0b85d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"manip", "=", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"plotter", "[", 
+       RowBox[{"a", ",", "b", ",", "Energy"}], "]"}], ",", 
+      RowBox[{"ListLinePlot", "[", 
+       RowBox[{
+        RowBox[{"PlotFunc", "[", 
+         RowBox[{"a", ",", "b", ",", 
+          RowBox[{"Range", "[", 
+           RowBox[{"0", ",", "Energy", ",", "0.1"}], "]"}]}], "]"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", "Blue"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"\"\<ka\>\"", ",", "\"\<E\>\""}], "}"}]}]}], "]"}]}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", 
+      RowBox[{"0.1", "*", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "9"}]]}], ",", 
+      RowBox[{"1", "*", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "9"}]]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"b", ",", 
+      RowBox[{"0", "*", 
+       SuperscriptBox["10", 
+        RowBox[{"-", "9"}]]}], ",", "a"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"Energy", ",", "1", ",", "50"}], "}"}], ",", 
+    RowBox[{"ControlPlacement", "\[Rule]", "Bottom"}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.769720654219145*^9, 3.7697206631198945`*^9}, {
+  3.769720762159897*^9, 3.769720764725892*^9}, {3.769720906581052*^9, 
+  3.769720969244762*^9}, {3.7697221395474815`*^9, 3.7697221505786705`*^9}, {
+  3.769722203453561*^9, 3.769722264210134*^9}, {3.7697223443632126`*^9, 
+  3.769722415630314*^9}, {3.7697229739943943`*^9, 3.7697229961992817`*^9}, {
+  3.7697231993925624`*^9, 3.769723204672407*^9}, {3.7697232588102245`*^9, 
+  3.7697232608526416`*^9}, {3.7697233605520725`*^9, 3.7697234106259904`*^9}, {
+  3.769725612657544*^9, 3.769725616567875*^9}, {3.769725831719556*^9, 
+  3.769725839559989*^9}, {3.7697260399271193`*^9, 3.7697261480295415`*^9}, {
+  3.7697262570156655`*^9, 3.769726288573462*^9}, {3.7697264333482885`*^9, 
+  3.7697264358005247`*^9}},
+ CellLabel->
+  "In[167]:=",ExpressionUUID->"8cbca230-029c-4fba-a774-1d080e24013f"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 
+    8.092000000000001*^-10, $CellContext`b$$ = 
+    3.8517920000000006`*^-10, $CellContext`Energy$$ = 50., Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$, Typeset`name$$ = "\"untitled\"", 
+    Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 1.0000000000000002`*^-10, 
+      Rational[1, 1000000000]}, {
+      Hold[$CellContext`b$$], 0, 
+      Dynamic[$CellContext`a$$]}, {
+      Hold[$CellContext`Energy$$], 1, 50}}, Typeset`size$$ = {
+    1160., {182., 187.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`a$247176$$ = 
+    0, $CellContext`b$247177$$ = 0, $CellContext`Energy$247178$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 
+        1.0000000000000002`*^-10, $CellContext`b$$ = 0, $CellContext`Energy$$ = 
+        1}, "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$247176$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$247177$$, 0], 
+        Hold[$CellContext`Energy$$, $CellContext`Energy$247178$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> {
+        $CellContext`plotter[$CellContext`a$$, $CellContext`b$$, \
+$CellContext`Energy$$], 
+        ListLinePlot[
+         $CellContext`PlotFunc[$CellContext`a$$, $CellContext`b$$, 
+          Range[0, $CellContext`Energy$$, 0.1]], PlotStyle -> Blue, PlotRange -> 
+         Full, AxesLabel -> {"ka", "E"}]}, 
+      "Specifications" :> {{$CellContext`a$$, 1.0000000000000002`*^-10, 
+         Rational[1, 1000000000]}, {$CellContext`b$$, 0, 
+         Dynamic[$CellContext`a$$]}, {$CellContext`Energy$$, 1, 50}}, 
+      "Options" :> {ControlPlacement -> Bottom}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1211., {257., 263.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.769720663531891*^9, 3.769720765081893*^9, {3.7697209070480237`*^9, 
+   3.7697209987607284`*^9}, 3.769721762409134*^9, {3.7697219670930505`*^9, 
+   3.7697219803212276`*^9}, 3.769722099121019*^9, {3.769722145434677*^9, 
+   3.769722150999674*^9}, 3.7697222417145987`*^9, 3.7697223514182167`*^9, {
+   3.769722392439215*^9, 3.7697224387710676`*^9}, 3.7697229418871946`*^9, {
+   3.769722977331867*^9, 3.7697229964733653`*^9}, 3.7697230930054626`*^9, 
+   3.769723304342873*^9, 3.769723411115039*^9, {3.769723778422183*^9, 
+   3.769723779302765*^9}, {3.769723862727081*^9, 3.769723863473336*^9}, 
+   3.7697256171550207`*^9, 3.7697258400269766`*^9, {3.7697260610163765`*^9, 
+   3.7697261484665737`*^9}, {3.769726260053921*^9, 3.769726282599311*^9}, 
+   3.7697264365087447`*^9},
+ CellLabel->
+  "Out[167]=",ExpressionUUID->"597b6fa7-353a-44d1-9608-7fbe906ae6b1"]
+}, Open  ]]
+},
+WindowSize->{1620, 997},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4320, 119, 332, "Input",ExpressionUUID->"5d322c3d-37f7-43b9-bcee-d108fa6733b6"],
+Cell[4881, 141, 5561, 162, 183, "Input",ExpressionUUID->"34d1ff3e-173a-430e-b8e5-0d40b8a0b85d"],
+Cell[CellGroupData[{
+Cell[10467, 307, 2145, 49, 114, "Input",ExpressionUUID->"8cbca230-029c-4fba-a774-1d080e24013f"],
+Cell[12615, 358, 3403, 64, 539, "Output",ExpressionUUID->"597b6fa7-353a-44d1-9608-7fbe906ae6b1"]
+}, Open  ]]
+}
+]
+*)
+

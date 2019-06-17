@@ -53,4 +53,78 @@
         \caption{Периодический потенциал с периодом $a$ и шириной прямоугольной ямы $b$}
         \label{fig:two}
     \end{figure}
+
+    Распишем уравнения для двух участков: $0<x<a-b$ и $-b<x<0$:
+    \begin{equation}
+        \frac{-\hbar^2}{2m}\psi''=E\psi
+    \end{equation}
+    \begin{equation}
+        \frac{-\hbar^2}{2m}\psi''=(E+V_0)\psi
+    \end{equation}
+    При их решении получаем для волновой функции "на поверхности":
+    \begin{equation}
+        \psi=Ae^{i\alpha x}+A'e^{-i\alpha x},
+    \end{equation}
+    где $\alpha^2=\frac{2mE}{\hbar^2}$, $A=\frac{C_1}{2}-\frac{iC_2}{2}$ и $A'=\frac{C_1}{2}+\frac{iC_2}{2}$, а для волновой функции в яме:
+    \begin{equation}
+        \psi=Be^{i\beta x}+B'e^{-i\beta x},
+    \end{equation}
+    где $\beta^2=\frac{2m(E+V_0)}{\hbar^2}$. С помощью полученных волновых функций получим соотвествующие им функции Блоха:
+    \begin{equation}
+        \begin{aligned}
+            u(0<x<a-b)=Ae^{i(\alpha-k)x}+A'e^{-i(\alpha+k)x}\\
+            u(-b<x<0)=Be^{i(\beta-k)x}+B'e^{-i(\beta+k)x}.
+        \end{aligned}
+    \end{equation}
+    Далее проводим сшивку:
+    \begin{equation}
+        \begin{aligned}
+            \psi(0^-)=\psi(0^+)\\
+            \psi'(0^-)=\psi'(0^+)
+        \end{aligned}
+    \end{equation}
+    и накладываем условие на периодичность функций Блоха:
+    \begin{equation}
+        \begin{aligned}
+            u(-b)=u(a-b)\\
+            u'(-b)=u'(a-b).
+        \end{aligned}
+    \end{equation}
+    Эти условия дают матрицу:
+    \begin{equation*}
+        \left(
+        \begin{matrix}
+            1 & 1 & -1 & -1\\
+            \alpha & -\alpha & -\beta & \beta \\
+            e^{i(\alpha-k)(\alpha-b)} & e^{-i(\alpha+k)(a-b)} & -e^{-i(\beta-k)b} & -e^{i(\beta+k)b}\\
+            (\alpha - k)e^{i(\alpha-k)(a-b)} & -(\alpha+k)e^{-i(\alpha+k)(a-b)} & -(\beta-k)e^{-i(\beta-k)b} & (\beta+k)e^{i(\beta+k)b}
+        \end{matrix}
+        \right)
+        \left(
+        \begin{matrix}
+            A\\
+            A'\\
+            B\\
+            B'
+        \end{matrix}    
+        \right)=
+        \left(
+        \begin{matrix}
+            0\\
+            0\\
+            0\\
+            0
+        \end{matrix}    
+        \right).
+    \end{equation*}
+    Необходимое условие существования нетривиального решения -- зануление детерминанта. После преобразований получаем:
+    \begin{equation}
+        \cos(ka)=\cos(\beta b)\cos[\alpha(a-b)]-\frac{\alpha^2+\beta^2}{2\alpha\beta}\sin(\beta b)\sin[\alpha(a-b)].
+    \end{equation}
+    \section{Моделирование}
+    Используя методы компьютерного моделирования, была созданна программа, демонстрирующую завимость разрешенных значений энергии от параметров модели. Так же видна запрещенная зона.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=\textwidth]{SharedScreenshot.jpg}
+    \end{figure}
 \end{document}
