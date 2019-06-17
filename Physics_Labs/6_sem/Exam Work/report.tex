@@ -9,6 +9,8 @@
 \usepackage{adjustbox}
 \usepackage{pgfplots}
 \usepackage{mathrsfs}
+\usepackage{listings}
+\lstloadlanguages{[5.2]Mathematica}
 
 \usepackage{geometry}
 \geometry{top=20mm}
@@ -126,5 +128,12 @@
     \begin{figure}[!h]
         \centering
         \includegraphics[width=\textwidth]{SharedScreenshot.jpg}
+    \end{figure}
+    \subsection{Зависимость ширины запрещенной зоны от ширины ямы}
+    На основе полученного метода построим график зависимости ширины запрещенной зоны от ширины ямы при неизменных значениях её глубины и периоде потенциала.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics{bandGap.pdf}
+        \caption{Ширина запрещенной зоны при периоде 10$\angstrom$ и глубине ямы $V_0=60$}
     \end{figure}
 \end{document}
