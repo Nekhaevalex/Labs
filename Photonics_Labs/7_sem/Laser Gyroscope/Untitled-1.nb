@@ -1,0 +1,181 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6155,        171]
+NotebookOptionsPosition[      4858,        139]
+NotebookOutlinePosition[      5201,        154]
+CellTagsIndexPosition[      5158,        151]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"a", "=", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"(", 
+       RowBox[{"12.743", "+", "29.323"}], ")"}], "2"], ",", 
+     "\"\<Degrees\>\""}], "]"}], "/", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"1", ",", "\"\<Hours\>\""}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.779715468380269*^9, 3.779715476479842*^9}, {
+  3.7797155067746305`*^9, 3.7797156330969877`*^9}, {3.7797158135222607`*^9, 
+  3.779715842099697*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"b7791132-d0e2-4072-af2e-c4d7852de4cb"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "21.033`",RowBox[{"\[InvisibleSpace]", "\"\[Degree]\""}],
+   RowBox[{"\"per \"", "\[InvisibleSpace]", "\"hour\""}],"degrees per hour",
+   FractionBox["\"AngularDegrees\"", "\"Hours\""]},
+  "QuantityUnitPostfix"]], "Output",
+ CellChangeTimes->{
+  3.7797155505844564`*^9, {3.7797155922456245`*^9, 3.779715633697155*^9}, 
+   3.7797158664197397`*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"fb9c1ee1-4b55-46bc-8744-d7777bcee0c3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"b", "=", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "0.596"}], "-", "4.477"}], ")"}], "2"], ",", 
+     "\"\<Degrees\>\""}], "]"}], "/", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"1", ",", "\"\<Hours\>\""}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7797156469893236`*^9, 3.7797156471769176`*^9}, {
+  3.7797156787356987`*^9, 3.7797156999633346`*^9}, {3.7797158152923155`*^9, 
+  3.7797158156750617`*^9}, {3.779715862581741*^9, 3.7797158642074966`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"b6481e65-0475-4d6e-b48e-a09b565d29bb"],
+
+Cell[BoxData[
+ TemplateBox[{
+  RowBox[{"-", "2.5365`"}],RowBox[{"\[InvisibleSpace]", "\"\[Degree]\""}],
+   RowBox[{"\"per \"", "\[InvisibleSpace]", "\"hour\""}],"degrees per hour",
+   FractionBox["\"AngularDegrees\"", "\"Hours\""]},
+  "QuantityUnitPostfix"]], "Output",
+ CellChangeTimes->{3.7797157005991025`*^9, 3.7797158680347877`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"4bc8bb33-a60f-4d40-aac8-2d553c41d5d6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"c", "=", 
+  FractionBox[
+   RowBox[{"(", 
+    RowBox[{"a", "-", "b"}], ")"}], "2"]}]], "Input",
+ CellChangeTimes->{{3.779715878315672*^9, 3.7797158904598885`*^9}, {
+  3.7797159710066686`*^9, 3.7797159711776037`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"218f1f46-2e67-4d50-9f51-05fefde12b4f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "11.78475`",RowBox[{"\[InvisibleSpace]", "\"\[Degree]\""}],
+   RowBox[{"\"per \"", "\[InvisibleSpace]", "\"hour\""}],"degrees per hour",
+   FractionBox["\"AngularDegrees\"", "\"Hours\""]},
+  "QuantityUnitPostfix"]], "Output",
+ CellChangeTimes->{{3.7797158882777967`*^9, 3.7797158910953894`*^9}, 
+   3.779715974146475*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"74d98f21-b2f1-4fc1-8d6d-0d69d208fb61"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"d", "=", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{"12.433", ",", "\"\<Degrees\>\""}], "]"}], "/", 
+   RowBox[{"Quantity", "[", 
+    RowBox[{"1", ",", "\"\<Hours\>\""}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.779715918851825*^9, 3.779715941635725*^9}, {
+  3.779715972646424*^9, 3.779715972839427*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"651c8d9b-f51f-418c-a5cd-09b074445ec6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "12.433`",RowBox[{"\[InvisibleSpace]", "\"\[Degree]\""}],
+   RowBox[{"\"per \"", "\[InvisibleSpace]", "\"hour\""}],"degrees per hour",
+   FractionBox["\"AngularDegrees\"", "\"Hours\""]},
+  "QuantityUnitPostfix"]], "Output",
+ CellChangeTimes->{3.7797159421904025`*^9, 3.779715975758082*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"80711202-6b5d-444b-8c62-dd0accf89c98"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"1", "-", 
+    RowBox[{"c", "/", "d"}]}], ")"}], "*", "100"}]], "Input",
+ CellChangeTimes->{{3.7797159768452387`*^9, 3.779715986551657*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"b5fb8ac6-4f8c-420b-bd97-155af0ca2c70"],
+
+Cell[BoxData["5.21394675460467`"], "Output",
+ CellChangeTimes->{{3.779715978014209*^9, 3.779715986836679*^9}},
+ CellLabel->"Out[16]=",ExpressionUUID->"f755cd53-24b3-4426-8b46-d58cf4293dbe"]
+}, Open  ]]
+},
+WindowSize->{759, 813},
+WindowMargins->{{Automatic, 336}, {69, Automatic}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 563, 14, 46, "Input",ExpressionUUID->"b7791132-d0e2-4072-af2e-c4d7852de4cb"],
+Cell[1146, 38, 455, 9, 43, "Output",ExpressionUUID->"fb9c1ee1-4b55-46bc-8744-d7777bcee0c3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1638, 52, 639, 15, 46, "Input",ExpressionUUID->"b6481e65-0475-4d6e-b48e-a09b565d29bb"],
+Cell[2280, 69, 415, 7, 43, "Output",ExpressionUUID->"4bc8bb33-a60f-4d40-aac8-2d553c41d5d6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2732, 81, 319, 7, 46, "Input",ExpressionUUID->"218f1f46-2e67-4d50-9f51-05fefde12b4f"],
+Cell[3054, 90, 431, 8, 43, "Output",ExpressionUUID->"74d98f21-b2f1-4fc1-8d6d-0d69d208fb61"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3522, 103, 419, 9, 28, "Input",ExpressionUUID->"651c8d9b-f51f-418c-a5cd-09b074445ec6"],
+Cell[3944, 114, 399, 7, 43, "Output",ExpressionUUID->"80711202-6b5d-444b-8c62-dd0accf89c98"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4380, 126, 270, 6, 28, "Input",ExpressionUUID->"b5fb8ac6-4f8c-420b-bd97-155af0ca2c70"],
+Cell[4653, 134, 189, 2, 32, "Output",ExpressionUUID->"f755cd53-24b3-4426-8b46-d58cf4293dbe"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
