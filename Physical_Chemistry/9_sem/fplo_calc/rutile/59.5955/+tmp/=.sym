@@ -1,0 +1,41 @@
+########################################################################
+# this file is part of the FPLO bandstructure package
+# it was created automatically
+# please dont delete this file nor
+# edit it directly, unless you really know what you are doing
+# Use FEDIT to change its content
+#
+########################################################################
+
+
+
+section header{
+
+    struct {char[*] mainversion;char[*] subversion;} version
+    ={"5.00","M-CPA"};
+
+
+    struct {char[*] hostname;char[*] date;char[*] by;} last_changes
+    ={"SRV1QXN6HKWZE","Tue Nov 24 03:09:14 2020","fplo (5.00-20)"};
+
+  char[*] status="ready";
+
+  char[*] compound="Rutile";
+};
+
+section structure_definition{
+  struct {int number;char[*] symbol;} spacegroup
+  ={ 136,"P42/MNM"};
+ struct {int type;char[*] description;} lengthunit
+  ={   2,"Angstroem"};
+  real lattice_constants[3]={4.52303,4.52303,2.91309  };
+  real axis_angles[3]={90.,90.,90.  };
+  int max_L= 12;
+  int nsort=  2;
+  struct {char[2] element;real tau[3];} wyckoff_positions[nsort]
+  ={
+    {  "Ti",{  0.0,0.0,0.0  }}
+  ,    {  "O",{  0.3049,0.3049,0.0  }}
+  };
+};
+

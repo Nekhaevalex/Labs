@@ -1,0 +1,66 @@
+
+                   SYMMETRYGROUP      
+
+Space group      : 136 - P42/MNM
+Point group      :  16 - D4H
+Inversion        : yes
+Symmorphic       : no 
+
+                   OPERATIONS      
+
+
+(The XYZ-operation symbols "(A,B,C)+(t1,t2,t3)" mean:
+ if a vector is given relative to the lattice basis vectors 
+ r=X*a1+Y*a2+Z*a3 then it is transformed into
+ r'=(A+t1)*a1+(B+t2)*a2+(C+t3)*a2,
+ for RTG lattices the operations refer to the corresponding
+ STG unit cell!)
+
+Generators         : 3
+Index   rotation          translation      : symbol
+14:   (-Y  ,+X  ,+Z  ) + (1/2 ,1/2 ,1/2 )  :   C1/4(z) 
+34:   (-X  ,+Y  ,+Z  ) + (1/2 ,1/2 ,1/2 )  :   s(x) 
+32:   (-X  ,-Y  ,-Z  ) + (0   ,0   ,0   )  :   I 
+
+operations         : 16
+Index   rotation          translation      : symbol
+ 0:   (+X  ,+Y  ,+Z  ) + (0   ,0   ,0   )  :   E 
+ 1:   (-X  ,+Y  ,-Z  ) + (-1/2,-1/2,-1/2)  :   C2(y) 
+ 2:   (+X  ,-Y  ,-Z  ) + (1/2 ,1/2 ,1/2 )  :   C2(x) 
+ 3:   (-X  ,-Y  ,+Z  ) + (0   ,0   ,0   )  :   C2(z) 
+12:   (+Y  ,+X  ,-Z  ) + (0   ,0   ,0   )  :   C2(xy) 
+13:   (+Y  ,-X  ,+Z  ) + (1/2 ,1/2 ,-1/2)  :   C3/4(z) 
+14:   (-Y  ,+X  ,+Z  ) + (1/2 ,1/2 ,1/2 )  :   C1/4(z) 
+15:   (-Y  ,-X  ,-Z  ) + (0   ,0   ,0   )  :   C2(x-y) 
+32:   (-X  ,-Y  ,-Z  ) + (0   ,0   ,0   )  :   I 
+33:   (+X  ,-Y  ,+Z  ) + (-1/2,-1/2,-1/2)  :   s(y) 
+34:   (-X  ,+Y  ,+Z  ) + (1/2 ,1/2 ,1/2 )  :   s(x) 
+35:   (+X  ,+Y  ,-Z  ) + (0   ,0   ,0   )  :   s(z) 
+44:   (-Y  ,-X  ,+Z  ) + (0   ,0   ,0   )  :   s(xy) 
+45:   (-Y  ,+X  ,-Z  ) + (-1/2,-1/2,-1/2)  :   S3/4(z) 
+46:   (+Y  ,-X  ,-Z  ) + (1/2 ,1/2 ,1/2 )  :   S1/4(z) 
+47:   (+Y  ,+X  ,+Z  ) + (0   ,0   ,0   )  :   s(x-y) 
+
+                   TRANSLATION     
+
+lattice constants:  8.664394283095609      8.664394283095609      5.580361247106070    
+axis angles      :  90.000000000000000     90.000000000000000     90.000000000000000   
+bravais lattice  : ST 
+primitive to bravais transformation
+      b1  : 1    0    0   
+      b2  : 0    1    0   
+      b3  : 0    0    1   
+unit vectors of primitive lattice (ST)
+      u1  :  1.000000000000000      0.000000000000000      0.000000000000000    
+      u2  :  0.000000000000000      1.000000000000000      0.000000000000000    
+      u3  :  0.000000000000000      0.000000000000000      1.000000000000000    
+lattice vectors
+      a1  :  8.664394283095609      0.000000000000000      0.000000000000000    
+      a2  :  0.000000000000000      8.664394283095609      0.000000000000000    
+      a3  :  0.000000000000000      0.000000000000000      5.580361247106070    
+reciprocial lattice vectors / 2*Pi
+      g1  :  0.115414876946565      0.000000000000000      0.000000000000000    
+      g2  :  0.000000000000000      0.115414876946565      0.000000000000000    
+      g3  :  0.000000000000000      0.000000000000000      0.179199868201829    
+
+

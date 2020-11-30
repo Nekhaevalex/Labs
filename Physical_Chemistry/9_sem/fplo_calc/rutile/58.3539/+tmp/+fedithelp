@@ -1,0 +1,2175 @@
+This is the help file for the fedit tool.
+Klaus Koepernik Feb. 2002
+M<MAIN MENU> 
+
+B<MAIN MENU> 
+
+This help screen may be scrolled by  KEY_UP (CONTROL-K), KEY_DOWN 
+(CONTROL-N), PAGE_UP (CONTROL-P) and PAGE_DOWN (CONTORL-V). 
+
+This is an interactive tool to edit the input files used by the 
+B<FPLO>-package. It opens a quick way for changing values and 
+options. 
+
+For command line options type U<fedit -h>
+ 
+=H1 Contents 
+ 
+=H2 General remarks 
+=H2 Known problems 
+=H2 Keys 
+=H2 Usage 
+=H2 Menu bar 
+=H2 Status line 
+=H2 Alternative menu bar 
+=H2 GENERAL DATA 
+=H2 RELATIVISTIC SETTINGS
+=H2 OTHERS 
+=H2 Files 
+=H2 Error messages 
+=H2 Authors
+ 
+=H1 General remarks 
+ 
+B<Fedit> is designed with the help of the UNIX specific library 
+U<curses> (or U<ncurses> on Linux systmes). This gives a certain amount of 
+portability to various terminals. It works best with U<xterm>, U<hpterm>, 
+U<dtterm>, U<linux>. It also works on U<vt100> and U<vt220>. If you have a 
+terminal which is not supported by U<curses> (error message: can not 
+open terminal (or similar)) set the environment variable to some of 
+the above mentioned terminals, i.e. U<vt220> and try again. May be then
+some function keys, like LEFT, RIGHT and PAGE_UP ...  are not well 
+defined.  Use control keys instead.
+
+This tool knows about the B<fplo>-version, it is designed for.
+If you apply this tool to an older version of the input files,
+some data may be missing. Therefore, B<fedit> will try to run B<fplo>
+in order to update the input files. This should work if the installation
+is correct. It is not possible to downgrad input files in this way,
+due to the possibility of data loss. If you really want to use old
+B<fplo> versions with newer files, you should backup the calculation
+and downgrad the input files by hand (edit the version number) or
+use B<fdowngrad.pl>.
+ 
+=H1 Problems 
+ 
+The communication of B<fedit> with the input files is managed via 
+screen definitions (in the file U<+fedit>). This file is deleted
+and recreated on each start of B<fedit>.
+Most of the work is done in a temporary directory (U<+tmp>) which is created 
+when B<fedit> starts. In case the directory creation fails make sure 
+that the file permissions are appropriate.
+B<fedit> calls B<fplo> to perform various input file updates. If the
+executable (the default B<fplo> or the one, specified via 
+command line option U<fedit -p EXECUTABLE> ) is not in the PATH
+or does not run correctly, B<fedit> may come back with an error 
+message, stating that U<+fedit> is not found. In such cases, please 
+check if the B<fplo>-executable is running correctly!
+ 
+=H1 Keys 
+ 
+This is the list of all keys and their functionality.
+ 
+=H2 CONTROL-C
+Abort B<fedit>, discarding all changes. 
+=H2 CONTROL-R 
+Refresh screen 
+=H2 CONTROL-W or /
+Search content (and start data editing). see B<Usage>
+=H2 SPACE 
+Activate the alternative menus at the bottom of the screen. 
+If the alternative menu contains the entry U<[...]> the next part of
+the menu is shown on subsequent SPACE key press.
+While editing data, SPACE is simply a character. 
+=H2 ALPHANUMERIC KEYS AND (+), (-) 
+Acting as hotkeys, or while editing data, as simple characters.
+=H2 COMMA (,) 
+is a repetition indicator, when  editing data. 
+The comma is expanded to the string just before it: 
+1.3,,  or 1.3 , , means 1.3 1.3 1.3 
+1.1,1.2 means 1.1 1.1 1.2 
+=H1 
+The following function keys may work differently at different 
+terminals. For that reason  U<emacs>-style control-keys are supplied. 
+At least these should work in some way. 
+ 
+=H2 KEY_LEFT or CONTROL-B, KEY_RIGHT or CONTROL-F 
+move the cursor in the fields while editing 
+=H2 KEY_UP or CONTROL-K, KEY_DOWN or CONTROL-N 
+scroll the screen a line up or down 
+=H2 DELETE or CONTROL-D, BACKSPACE or CONTROL-H 
+delete the character at or before the cursor position. 
+=H2 KEY_HOME or CONTROL-A 
+move to beginning of the field 
+=H2 KEY_END or CONTROL-E 
+move to the end of the field 
+=H2 PAGE_UP or CONTROL-P 
+scroll up screen
+=H2 PAGE_DOWN or CONTROL-V 
+scroll down screen
+=H2 ESC ESC (two times pressed) 
+exit edit or search actions, discarding all changes 
+=H2 ENTER 
+accept and finish editing
+or select a data item for editing, when in search mode
+ 
+=H1 Usage 
+ 
+B<fedit> is a collection of screens/forms with editable fields. 
+The screens are scrollable. Scrolling is done with KEY_UP, 
+KEY_DOWN, PAGE-UP, PAGE_DOWN. If there is an invisible part of the 
+forms it is marked by B<[...]> above or below the forms. 
+Each field can be activated by a hotkey. Each active key is marked 
+by (X), X being an ordinary key. If a colored terminal is available
+the hotkeys are colored. Typing a hotkey, will start a data edit action,
+,execute a function, switch to a submenu or show the alternative menu bar.
+If the screen position of the data field is not currently visible,
+the screen is scrolled to make it visible.
+
+There are two kinds of hotkeys: 
+=H+ simple keys like 'B<e>', 'B<3>' or SPACE 
+    and compound keys 
+=H-
+The compound keys occur if i.e. some fields have automatic numbering 
+as hotkeys. All numbers greater than 9 consist of at least two digits. 
+The hotkey will be the sequence of these digits. 
+There may be other compound hotkeys.
+
+If the first key is typed the first data item below the current (internal) 
+screen position is selected, which has a compound hotkey starting with 
+the typed key. 
+Now, you may continue to type the next key. After each key press 
+the current position jumps to the next item having a hotkey starting 
+with the sequence typed allready. If the key sequence, allready typed, 
+is uniqe among all screen items, the editing starts. If not, the next 
+key may be typed, or the TAB key may be used to cycle through all 
+items fiting into the current key sequence.
+If the current sequence does not uniqely identify a single item, you
+have to select the item, typing ENTER. 
+Again: TAB cycles through the set of possible items, ENTER starts editing.
+As soon as the typed key sequence does not correspond any more to
+a possible compound hotkey on the screen, the hotkey selection process
+will abort. Another possibility to abort the hotkey selection is ESC-ESC
+or any function key except ENTER.
+Example: try to select the spacegroups 2,22,27,223! Its easy.
+
+SPACE has a special meaning. It is active if the symbol B<[]> 
+appears in the left corner of the menu bar. SPACE opens the alternative 
+menu, which adds additional submenus and functions. 
+
+ 
+There are some classes of editable fields: 
+=H2 boolean switches (t,f) 
+are simply toggled by typing the hotkey. 
+=H2 binary switches  (1,2) 
+are simply toggled by typing the hotkey. 
+=H2 select boxes 
+the hotkeys change the selected data, marked by [*]. 
+=H2 check boxes 
+the hotkeys toggle the options 
+=H2 editable fields 
+these fields may be edited with the function keys explaind above. 
+A field may freely be edited until B<ENTER> or B<ESC-ESC> is 
+pressed. 
+If the first key stroke is an insert character, the string is 
+deleted and the field contains only this character: continue editing. 
+If any cursor movement or delete action is done, the editing starts
+with the current string. 
+B<ENTER>: leave edit-mode and take changes. 
+If the new data value is invalid, an error message is shown in the 
+status-line and the edit-mode is reactivated, until the value is valid
+or B<ESC-ESC> is pressed. 
+B<ESC-ESC>: leave edit-mode and restore old value 
+=H2 BASIS edit fields 
+these fields are explaind below, here the action of the keys is 
+restricted, to enforce valid data values. 
+=H2 connected fields 
+These are editable fields, which are activated by the same hotkey. 
+After leaving the first field the editing continues with the next data 
+field.
+
+=H2 Searching
+When CONTROL-W or / is press the search utility is called and an 
+editable field appears in the status line. Enter the search string.
+While you type, the screen will scroll to the next position matching 
+the current search string. If no more lines below the current position
+match the string, the search may be continued at the top of the screen, 
+typing TAB or CONTROL-W. These keys cycle through occurances of the 
+search string.
+As long as the search is active you may complete or edit the search 
+string using BACKSPACE or cursor keys. ESC-ESC and all function keys 
+which have no meaning in lineediting will cancel the search.
+If the search is used in screens with data items, you may press ENTER
+if the desired data item is selected. This will start the data editing
+or just toggle the data value (if the data item is binary). To cancel 
+search without edit effects use ESC-ESC or other function keys.
+The next time you press CONTROL-W or / the previous search string is 
+default. If you want to take it, just press CONTROL-W or TAB again. 
+Otherwise, type a new string or edit the current one. 
+
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 [] 
+SPACE will call the alternative menu.
+=H2 extern edit (Expert mode)
+Call the external editor.  This is strongly discouraged.
+=H2 Quit/save 
+This leaves the tool. The files U<=.in>, U<=.basis> and U<=.sym> are saved.
+You will be prompted for saving the files. 
+If you type 'y' the files are saved.
+If you type 'n' all changes are discarded.
+If you type ESC-ESC B<fedit> continues.
+=H2 Exit/discard (Expert mode) 
+Exit B<fedit> without saving. 
+=H2 Symmetry 
+Call the B<SYMMETRY MENU>.
+This is the first action to do, if input-files for a new structure
+have to be created. 
+=H2 Basis
+Call the B<BASIS DEFINITION> menu.
+Here the basis orbitals are defined.
+=H2 Help 
+In the help screens the scrolling is possible with keys explaind above. 
+Additionally a search function is available via CONTROL-W. 
+ 
+=H1 Status line 
+ 
+At the bottom of the screen a status line is visible. It provides 
+information about the success of the operations done. Non-critical 
+error messages are displayed there. 
+Have an eye on it!
+ 
+=H1 Alternative menu 
+ 
+The alternative menu is activated with SPACE. The next key after space 
+may be one of the menu entry hotkeys or again SPACE, if the menu 
+continous (symbol U<[...]>)  or any other key (which closes the 
+menu).
+ 
+
+=H2 Bandplot
+This submenu contains all data for the creation of the bandstructure. 
+=H2 CPA 
+This submenu contains all data connected to a disorder calculation. 
+It is meaningful only if disordered structur input is detected or 
+if the B<OPTION BEB> is set. 
+=H2 LSDA+U
+=H2 Shape
+This settings control the shape function creation and application.
+=H2 Mesh
+Settings for the radial meshes.
+=H2 Restore 
+This function reloads all data from the files. 
+(All previous editing discarded.)  
+=H2 Recreate 
+This function recreates U<=.in> (all data except symmetry definition and 
+basis) and thus the default data. (All previous editing discarded.)  
+It is usefull for automatic input creation via U<fedit -pipe>.
+To avoid unwanted input file states, the first action in pipemode
+may be B<Recreate> to get the default settings.
+=H2 Core-occupation
+For some sort of calculations set here the core occupation numbers. 
+(4f states)
+=H2 Initial-spinsplit
+Define the initial symmetry breaking between spin sorts.
+=H2 Iteration
+Control version and settings for the iteration process.
+=H2 Brillouin-zone
+Control k-Integration internals.
+=H2 Numerics
+This submenu contains data, controling the numerics of the various 
+subroutines of the code. 
+=H2 Vatom
+This menu controls the definition of the spherically averaged crystal 
+potential, used in determinig the orbitals.
+ 
+=H1 GENERAL DATA 
+ 
+ 
+=H2 Spin sorts 
+B<2>= spin polarized calculation, B<1>= unpolarized 
+=H2 Initial polarization 
+if B<t>, an initial symmetry breaking between the two spin 
+sorts is applied. The amount  of splitting is given in alt. submenu 
+B<Initial spinsplit>
+=H2 K-mesh subdivision 
+A vector of 3 integers: gives the subdivision of the Brillouin 
+zone along the 3 axis from which the k-space integration mesh is
+constructed.
+=H2 occupied bands 
+This is the number of occupied valence bands. It is usually smaller
+than the number of valence states and a bit larger than  half 
+the number of valence electrons (depending on the nature of the 
+compound).
+The default is -1 which allways works.
+If memory use shall be lowered try to decrease this value to a little
+more than half the number of valence electrons (take care).
+=H2 Number of iterat. 
+Maximum number of iteration steps. If no convergency is obtained, the
+calculation will stop after this number of steps.
+If this value is B<1>, the program will stop after one cycle
+without overwriting the files U<=.dens> and U<=.basis>.
+=H2 Accuracy of iteration 
+Stop iteration, if convergency parameter below this value .
+=H2 Total energy calc. 
+If B<t>: calculate the total energy .
+This takes some time. One can perform the iteration without total 
+energy calc. and restart the converged calculation with this option 
+to obtain etot.
+=H2 Leave if deviation <. 
+If B<Total energ calc.> = B<t>, the iteration will stop, 
+if the deviation of the total energy over the last steps 
+is less than this value. 
+It takes at least 2 iteration cycles for this criterion to become
+active. A maximum of 5 cycles is considered in calculating the total 
+energy convergence condition. 
+=H2 Convergence condition
+Decide here, what you will consider a converged calculation.
+If density and or energy criterion is fulfilled this logical 
+function takes the final decision.
+The default is density only, which means energy convergence is ignored.
+For most applications this completely correct, since energy
+converges faster than density.
+=H2 options 
+Activates the B<OPTIONS> menu. 
+=H2 Fourier-comp of Ewald 
+The number of Fourier components per site, used in the Ewald 
+construction of the Coulomb potential. 
+The default is a negative value (-500). 
+
+There are two modes:
+
+Automatic mode
+=H+ 
+B<A negative or zero value indicates that the code automatically>
+B<determines the optimal Ewald screening parameter and the Fourier>
+B<components.>
+=H-
+Manual mode
+=H+ 
+A positive value sets the number of Fourier components per site by 
+hand. This number is multiplied with the number of lattice sites to
+obtain the total number of components. In case of CPA the number of
+crystallographic (real) sites is used, not the number of atoms per 
+unit cell. Be reminded that in CPA there may be more than one atom 
+at the same real site.
+
+In manual mode the number of Fourier components must be converged by 
+hand. In some cases this number  must be  enhanced remarkably.
+Such cases were found to be i.e. very low dimensional systems.
+=H-
+=H2 Relativistic 
+Select  box: non relativistic, scalar relativistic or full relativistic 
+LSDA. 
+The full relativistic mode is an implementation of the full 4-component
+KOHN-SHAM-DIRAC theory (There is no second variation or similar 
+approximations). It includes spin-orbit coupling and magnetic 
+anisotropy. 
+=H2 Vxc-potential 
+Activates a select box for the typ of the exchange and correlation 
+potential. 
+=H2 fixed spin mom. 
+True, if fixed spin moment calculation should be performed.
+=H2 spin moment 
+The value of the moment to be fixed via FSM. 
+
+=H1 RELATIVISTIC SETTINGS
+
+Here are the settings for the full relativistic mode.
+
+=H2 Spin population analysis
+Select  box: There are three different levels of accuracy of the
+spin population analysis. The higher the level, the more time and
+memory is used. The lowest level corresponds to the non relativistic
+effort.
+The spin occupation numbers in the output (Population analysis)
+depend on this setting. So, one should check the influence of the
+approximationon on this numbers, especially if these numbers are
+taken for physical interpretations. 
+=H2 Quantization axis
+For the full-relativistic magnetic case, the magnetization direction
+is specified via this vector. The energy depends on this direction due
+to spin-orbit coupling (magnetic anisotropy).
+
+=H1 OTHERS 
+ 
+These data are not well classified in the moment, nevertheless 
+they are placed here. 
+ 
+=H2  Verbosity level 
+A select box defining the chatyness of the code.
+
+ 
+=H1 Files 
+ 
+B<fplo>/B<fedit> needs several input files. 
+The main idea behind B<fedit> is, that B<fplo> is the master and
+knows everything about its files and about their content and 
+semantics.
+B<fedit> is the slave of B<fplo>. It is telled how to work by 
+B<fplo>, using communication files.
+ 
+=H2 Control files 
+
+U<+tmp/> temporary directory for B<fedit>. 
+
+U<+fedit,+tmp/+fedit> contains the screen control for fedit.
+It must be present in both directories.
+This file is allways deleted on B<fedit> startup. Then B<fplo> 
+is called by B<fedit>, to create U<+fedit>. If B<fplo> failes, 
+B<fedit> will not find U<+fedit> and will abort with error message. 
+In such cases U<+fedit> may be visible before B<fedit> was called. 
+The recreation process will delete it under assumption that B<fplo>
+will successfully run. Please check the PATH variable to the B<fplo>
+executable or just call fplo from command line, to see if it runs.
+
+U<+fedithelp> contains the help screens. It is allways recreated on
+every invocation of B<fedit> (by a call to B<fplo>).
+
+Both files may be deleted at any time, they just control the 
+comunication between B<fedit> and B<fplo>.
+
+=H2 Data files
+
+U<=.sym> contains the symmetry definitions. It is the master file.
+From this file all other input files are calculated/recreated.
+The recreation process takes place, if the status flag in U<=.sym>
+says so. This is normally set by B<fedit> before structure update
+(in B<SYMMETRY MENU>).
+If the status is "ready" and all other data files or correct,
+the data of U<=.sym> are not used in B<fplo> run, allthough the data are 
+read. So U<=.sym> must be present and correct even in a normal B<fplo>
+run.
+
+U<=.in> contains all informations for the B<fplo> calculation,
+including the symmetry information, which was copied from U<=.sym>.
+(Exception U<=.basis>)
+The normal B<fplo> run takes the symmetry settings from U<=.in>.
+Only a symmetry-update-run takes U<=.sym>. The comparision of the 
+symmetry data of both files will decide about, how data of U<=.in>
+are reset to default values. After a file-update-run B<fplo>
+will inform about which data where reset. 
+PLEASE OBSERVE THESE MESSAGES.
+B<fplo> will keep as many data as possible on every update.
+
+Important:
+If a default U<=.in> shall be created, the file has to be deleted 
+first.
+
+
+U<=.basis> contains informations about the basis orbitals.
+This consists of to parts: the set of orbitals for every atom and
+the compression parameter (x0) for the confining potential of
+the valence orbitals.
+These x0-parameter are input to B<fplo> on every start.
+
+In non optimizing mode, they are the fixed compression parameter
+for the whole calculation.
+
+In basis optimization mode (option B<BASIS_OPTIMIZATION>), the values are
+read in on startup and are written back after every iteration cycle.
+So U<=.basis> will be updated eventually while B<fplo> runs!!
+If you try to save this file from B<fedit>, (and if your file system
+works correctly) you get a warning if the file was updated meanwhile.
+Its best practice not to save U<=.basis> while B<fplo> is running.
+
+The auto optimization mode produces self-consistent sets of densities
+and x0. So, a successful restart of B<fplo> continuing where it left
+is possible only, if the density and x0 from the last iteration step
+may be retrieved. That's why U<=.basis> is updated on every iteration
+cycle.
+
+
+=H2 Internals 
+The input files are organized using a C-like code. The data are 
+structured with the help of syntactical rules.
+
+B<fedit> and B<fplo> call a parser to read the data. This makes
+the data handling between both programms easier. However, if the user
+wants to change the files by hand, he has to observe the syntax,
+otherwise the parser will return with an error. The syntax is
+not to complicated, so the user will understand it soon.
+Nevertheless, hand made changes on the files are strongly discouraged
+as well as changes performed by shell scripts. For automatization
+there is a special B<fedit> mode called pipe-mode. It interprets
+simple input files containing hotkey-data pairs. With the help of
+this  tool one can write shell scripts which automatically 
+create B<fplo> input whithout messing around with the syntax/parser.
+
+There are examples of such scripts in the distribution.
+
+
+=H2 Saving and backup-files 
+The three input files may be edited by B<fedit>. The changes are 
+saved on exit from B<MAIN MENU>. All file handling in between, like
+structure updates and similar things are performed in the 
+temporay directory U<+tmp>.
+Exception: 
+A B<fedit> start in an empty directory (no input files) will call 
+B<fplo> in the current working directory to create a default set
+of input files.
+On every B<fedit> start all files are copied onto backup files.
+
+If the function B<Restore> is used, the content of the files is reloaded
+into the screens.
+
+
+=H1 Error messages 
+ 
+=H2 Status line errors. 
+If the editing of a field is not correct, a message is displayed. 
+Than the editing goes on. Correct the value or use ESC-ESC,  to
+discard changes.
+
+=H2 Tests 
+Before some action takes place, various data validity tests are 
+performed. 
+If errors occur, they will be displayed in a seperate screen. Please 
+correct the  data and go on. You cannot save invalid data!
+
+=H2 Parser errors.
+If the syntax in U<+fedit> or in the input files is corrupted,
+a error message is diplayed before B<fedit> will abort. The message
+will say where the error occured. Depending on the nature of the error
+you will find the file name in the page header or in the error message
+itself. Normally there should be no parser errors. 
+Possible reason:
+The file version changed as well as the file content.
+If one now uses old files with hand made version number updates, the
+parser will not find the new data. Please use the converter tools
+for version updates.
+
+=H2 Serious errors 
+If some serious errors occur, which the author hopes not to be the 
+case, the program will abort. For instance a file (temorary file) 
+is not found. Recompile and reinstall the tool or clean the U</tmp>. 
+In cases of internal errors please send a report.
+
+=H1 Author 
+ 
+Klaus Koepernik December 2005 
+e-mail:k.koepernik@ifw-dresden.de 
+ 
+ 
+ 
+M<NUMERICS> 
+ 
+B<NUMERICS> 
+ 
+This menu contains settings, which control the numerics of the subroutines 
+of B<fplo>. 
+ 
+=H1 General remarks 
+ 
+Here, the settings for the numeric subroutines are displayed. 
+The most data should be OK with their default values. 
+However, there are cases when the numerical accuracy should be enhanced.
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 exit 
+Exit to the B<MAIN MENU>. 
+=H2 help 
+this page 
+ 
+=H1 XC-POTENTIAL 
+ 
+Here are the settings for the calculations of the local xc-potential 
+contributions. 
+=H2 radial mesh points 
+Number of mesh points for numerical integration. 
+=H2 degree of interpolat.
+Number of points, used for the interpolation of the off center
+contributions. 
+=H2 angular mesh 
+Type of angular mesh for numerical integration. B<13> is the finest mesh 
+for the moment. 
+=H2 use symmetry 
+Use crystal symmetry for the calculations, this saves a lot of time. 
+=H2 rotate 
+Is for test reasons only. Should be B<t>. 
+ 
+=H1 EWALD-POTENTIAL 
+
+See B<XC-POTENTIAL>
+
+=H1 AVERAGED CRYSTAL-POTENTIAL 
+ 
+For the orbital calculation the spherically averaged crystal-potential 
+is needed. This is done half-analytically. A 2-D numerical integration 
+has to be performed. 
+ 
+=H2 radial mesh points 
+Number of radial mesh points for integration. 
+=H2 azimutal mesh points 
+Number of azimutal mesh points for integration. 
+ 
+=H1 TWO CENTER INTEGRALS 
+
+The orbital integrals are calculated in different ways. 
+The kinetic terms, the overlap terms and the Hamiltonian elements 
+with the spherical potential contributions are done in the subroutine 
+U<twocenterint::calc_tcis> with bipolar coordinates, 
+half-analyticlly (2-D numerical integration). 
+ 
+=H2 xi-mesh points 
+number of points for the hyperbolic coordinate 
+=H2 eta-mesh points 
+number of points for the ellyptical coordinate 
+
+=H1 CRYSTAL FIELD INTEGRALS 
+
+The crystal field contributions to the one-center terms and the 
+two-center terms with the nonspherical potential contributions are done 
+in U<cryfldint::calc_tc_cryfld_is> again on a bibpolar 2-D mesh. 
+ 
+=H2 xi-mesh points 
+number of points for the hyperbolic coordinate 
+=H2 eta-mesh points 
+number of points for the ellyptical coordinate 
+
+=H1 ONE CENTER INTEGRALS 
+
+The one-center terms are done half-analytically, on a 1D-mesh 
+ 
+=H2radial mesh point 
+number of radial mesh points for the numerical intagration 
+
+=H1 THREE CENTER INTEGRALS 
+
+The three-center integrals are done fully numerically. 
+ 
+=H2 radial mesh point 
+Number of radial mesh points for the numerical integration. 
+This number hopefully may be reduced to B<25> without too much loss 
+of accuracy. This would saves time. 
+The angular integration is fixed to a particular scheme. 
+ 
+=H1 COULOMB ENERGY CALCULATION 
+ 
+The integral of density times potential is done like the two center terms 
+
+=H2 xi-mesh points 
+number of points for the hyperbolic coordinate 
+=H2 eta-mesh points 
+number of points for the ellyptical coordinate 
+
+=H1 XC ENERGY CALCULATION 
+
+The exchange and correlation energy (LSDA) is done like the 
+xc-potential. The settings here should be the same as for the 
+xc-potential. In some cases we remarked numerical noice in the
+total energy versus lattice constant.
+In this cases it helped to increase the XC,EXC radial mesh point 
+parameter.
+ 
+=H2 radial mesh points 
+Number of mesh points for numerical integration. 
+=H2 degree of interpolat.
+Number of points, used for interpolation of off center terms. 
+=H2 angular mesh 
+Type of angular mesh for numerical integration. B<13> is the finest mesh 
+for the moment. 
+=H2 use symmetry 
+Use crystal symmetry for the calculations, this saves a lot of time. 
+ 
+=H1 OVERLAP DENSITY CALCULATION
+ 
+The overlap density is calculated on a radial grid in polar coordinates
+with a numerical 1D-integration (half analytically). 
+Finally it is reinterpolated to the normal radial mesh.
+ 
+=H2 radial mesh points 
+number of radial mesh points for the radial grid to calculate on
+=H2 azimutal mesh points 
+number of azimutal mesh points for integration
+ 
+=H1 CUT-OFF TOLERANCES
+ 
+The extension of the radial functions is defined by testing their tails 
+with the help of the following tolerances 
+ 
+=H2 density 
+for the local density contributions 
+=H2 potential 
+for the local contributions to the total potential 
+=H2 orbitals 
+for the core and valence basis orbitals 
+ 
+
+=H1 INTERPOLATION OF RADIAL FUNCTIONS 
+
+=H2 degree
+This is the number of points used to perform the interpolation 
+of the radial functions. I think B<8> is OK. 
+More than 8 does not really increase accuracy.
+ 
+
+=H1 SYMMETRY TEST
+
+The symmetry test may be switched off (option B<NO_SYMMETRYTEST>).
+If it is performed it tests various symmetrical properties of the
+lattice functions. If the test failes, it may be a hint, that the 
+input data are bad, or that the symmetry is wrong or that the 
+numerical noice was great.
+
+If the last is the case, use 
+
+=H2 tolerance
+to make a sloppier test.
+
+=H1 CONFINING POTENTIAL
+
+The valence basis orbitals are calculated, using a power law confining 
+potential. The power usually is 4. For playing around we have the value
+here.
+
+=H2 Exponent
+We performed many tests: 4 is the devine number in many cases!!!
+However, there are exceptions :-(
+
+
+=H1 RELATIVISTIC BASIS MAPPING
+
+In the magnetic relativistic case, there are different radial functions
+for every \mu-quantum number. There is no longer a degeneracy.
+This leads to an enormous effort in the multi center integrals.
+To make things easier and faster, the magnetic orbitals are mapped
+onto pseudo-non relativistic symmetry. The resulting radial functions
+within one nl-shell differ only slightly and may be fitted to a few fit
+functions.
+The fit is self approving, say it increases the number of fit functions
+to achieve a minimum accuracy. However, the more fit functions are
+used the slower is the code. Therefore, we give here some control
+over the fit quality.
+
+=H2 min No. of fit functs.
+This is the minimum number of fit functions per nl-shell to be used. 
+If for a certain orbital the fit is exact with less functions, 
+then this setting is ignored.
+=H2 max No. of fit functs.
+This is maximum number of allowed fit functions. Even if the desired
+accuracy is not achieved with this number of functions, the fit will
+not further improve itself.
+=H2 error tolerance
+This is the required accuray of the fit. 
+=H2 derivative fit wins
+For the valence orbitals the derivative with respect to the confining 
+potential has to fitted as well. Normally, the fit of the derivative is 
+less accurate. The integration algorithms require the same number of 
+fit functions for the orbitals and the derivatives. If this switch is
+true then the derivative fit will determine the maximum number of
+fit functions, otherwise the orbital fit itself will win.
+
+
+=H1 EWALD CONTROL SETTINGS FIXED MODE
+
+If the number of Fourier components for the Ewald construction is
+chosen to be positive this indicates the manual choice of components.
+In this case there is a dimensionless cutoff factor c, which determines
+th Ewald screening parameter p via
+=H+ p=c/(r_NN/2)
+=H-
+This parameter normally need not be changed. It is for debugging purposes
+only.
+
+=H1 EWALD CONTROL SETTINGS AUTOMATIC MODE
+
+In automatic mode (negative or zero value of Fourier components) the Ewald
+parameter and the number of Fourier components are determined automatically.
+There are two tolerances, which determine acceptable cutoffs. 
+
+=H2 Real space tolerance
+This is the tolerance which determines the extend of the real space
+Ewald compensation charge. This charge is a Gaussian type function and
+the tolerance determines, how much of the tail is cut off at the 
+maximum mesh radius.
+
+=H2 Rec. space tolerance
+This is the tolerance which determines the acceptable cut off of
+the reciprocial space Ewald compensation charge. This charge is also
+of Gaussian type. This tolerance determines, how much of the tail is 
+cut  off at the maximum reciprocial lattice vector. This cut off
+hence determines the number of Fourier components.
+
+
+
+
+M<MESH DEFINITION> 
+ 
+B<MESH DEFINITION> 
+
+This menu controls the mesh generation for the crystal and orbital
+calculation. 
+
+=H1 General remarks 
+
+The use of the shape function technique for the xc and ewald construction
+and the automatic basis optimization  put restrictions on the extension 
+of the meshes.
+Normally B<fplo> will create automatic values for the maximum mesh 
+extension, depending on the lattice stucture. It is possible to change
+the settings here.
+The minimum radius for the meshs may be to large for havy atoms!!!
+Take 1.0e-6 for heavy atoms.
+
+
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 exit 
+Exit to the B<MAIN MENU>. 
+=H2 help 
+this page 
+ 
+
+=H1 RADIAL FUNCTION MESH
+
+This is the definition of the logarithmical radial mesh, used 
+throughout the crystal code. 
+
+=H2 number of mesh points
+gives the number of points on this mesh 
+
+=H2 minimal radius
+gives the minimum value, at which the mesh starts. 
+
+=H2 maximal radius
+gives the maximum range of the mesh.  
+0.0 means automatic choice.
+
+=H2 factor for rmax
+enhance the automatic rmax value by this factor. Its better to change 
+this, than to change rmax, since the factor scheme will scale with 
+lattice parameters.
+
+
+=H1 ATOM MESH 
+ 
+For the orbital calculation this logarithmic mesh is used. 
+ 
+=H2 number of mesh points
+This is the number of points on the mesh. 
+
+=H2 minimal radius 
+This is the minimum value, at which the mesh starts. 
+
+=H2 maximal radius 
+This is the maximum range of the mesh. The default value 0.0
+ties it to the radial mesh above. 
+The orbitals are calculated in a potential which jumps to infinity 
+at rmax. This avoids a running away of the orbitals in auto optimizing
+mode.
+
+
+M<SHAPE FUNCTION> 
+ 
+B<SHAPE FUNCTION> 
+ 
+This menu serves to control the shape function creation. 
+ 
+=H1 General remarks 
+ 
+The shape function is created in the initial part of the B<fplo> 
+run. It depends on the crystal structure including the 
+lattice constants and Wyckhof positions. 
+The calculated shape function is written in a rather lattice constant
+independend and Wyckhoff-position independend format into the file
+U<+voronoi>. In principle, its possible to run B<fplo> without
+recreating U<+voronoi>. Then, the file is read.
+In general its best practice to calculate the shape function on every 
+B<fplo>-run. 
+The creation of the shape function is controled by B<build shape>. 
+
+#B<IMPORTANT NOTE:>
+#The standard voronoi cell is the smallest possible cell definition.
+#That means, it contains only as many planes as nesseccary to define the
+#compact support of the cell. However, there are cases where the variation
+#of some lattice parameter (i.e. a Wyckoff position) is changing the
+#geometrical relations (ratio of next neighbor distances).
+#In this case it may be nesseccary to increase the set of planes defining the 
+#voronoi shape function. 
+#This is done by, first creating all cells for all different
+#geometries, present in the parameter range to be calculated and 
+#second to form the union of all cells. This union may be stored in a file,
+#which then may be used in all calculations.
+
+#The merged file may be given a name different from  U<+voronoi> .
+#Then the B<voronoi file> specified in this menu will be used instead.
+
+
+#This is the main reason for the switch B<build>.
+#The union can be formed using the B<Perl>-script U<MERGEVORONOI>
+#in the U<FPLO/bin> directory.
+
+#Unfortunatly, there are cases, when the merging will fail. This happens,
+#if the different geometries lead to a different atom order in the
+#symmetry calculation routines, which can not be controled at present.
+
+#We hope, you will never encounter such a situation.
+ 
+=H1 Problems 
+ 
+There may occur numerical noice, which results in various error 
+messages. In the Voronoi-shape case, an 'DINV33: zero determinant' 
+error or an 'volume' error may occur. Try to increase the 
+B<Arithmetic tolerance> in the submenu B<voronoi cell>. 
+If this does not help, change the symmetry input (e.g. lattice \
+constants) by a tiny ammount, which is unimportant for the situation
+condidered.
+ 
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 [] 
+Invoked by the space bar, it supplies the submenu  B<voronoi cell> .
+=H2 exit 
+Exit to B<MAIN MENU>. 
+=H2 help 
+This screen. 
+ 
+=H1 CREATION CONTROL
+
+=H2 Build shape
+If this switch is 't', the next B<fplo>-run will create a new
+U<+voronoi>. If false, the file specified in B<voronoi file> 
+will be read. Normally  't' is the correct/best choice. 
+#Only, if cell merging is used, 'f' is the appropriate choice, 
+#to force the input of the merged B<voronoi file>.
+=H2 Voronoi file
+The file from which to read the voronoi cell data, if build is 'f'.
+
+=H1 GEOMETRY AND FORM 
+ 
+This section gives the switches for the general layout of the 
+shape functions. 
+In principle, the form of the shape function is unimportant.
+However, the potential is represented as a finite angular momentum 
+series. Thus, the form of the shape function is important.
+It should be rather smooth.
+
+ 
+=H2 Siffness of shape 
+This number is the iteration depth of the recursive insertion of the 
+elementar shape profil. The higher this number the steeper the 
+function. Infinity (or > 100) would give the step function, 
+becoming zero at the middle of distance central atom --  cell
+boundary.
+2 should be a good choice. 
+=H2 Profil of the shape function 
+This determins the type of the elementar function, whose iterative 
+insertion gives steeper and steeper shape functions.
+We implemented the cosine type and the Becke type.
+We recommend the cosine type.
+
+
+=H1 TEST OPTIONS 
+ 
+These data control the testing of the shape function.
+The tests will be performed, when running the B<fplo> program, 
+ 
+=H2 Test shape 
+If 't' some tests on the shape function will be performed. 
+Two files are created U<+unity> and U<+dirsh>. The files are explaind 
+below. 
+=H2 Let it go if deviation less than
+This is the tolerance for comparing with zero. It decides wether the 
+tests are correct or not. This number may be to small, but 
+nevertheless it should be a tiny number. 
+=H2 Mesh points for tests 
+It gives the number of radial mesh-points for the tests. All tests 
+are done on a radial mesh along a certain direction, see below. 
+This number only determines the quality of the final pictures 
+in U<+dirsh>. 
+=H2 number of directions 
+This defines the total number of lines along which the tests are 
+performed. 
+=H2 1,2,... 
+A test-line is defined by a starting point, a direction and a length. 
+B<site> is the number of the atom in the unit cell (not Wyckhoff position) 
+where the line starts. 
+B<vector> gives the direction of the line. 
+B<distance> gives the length of the line .
+You can start editing the lines by typing the number, marked as 
+hotkey. If you want to add or delete lines, you have to change the 
+B<number of directions>. 
+ 
+
+=H1 Files
+
+=H2 +dirsh 
+Contains the shape function along the lines specified in B<TEST OPTIONS>. 
+This file has two columns, r and f(r), the data sets for different 
+test-lines are separated by empty lines. This shape functions should be  
+smooth and monoton functions, falling off to zero at the next neighbour, 
+if the line, along which it is callculated, is crossing a next neighbour
+site.  It is zero outside the voronoi cell.
+=H2 +unity 
+Contains the difference between the lattice sum of all shape functions 
+and unity. It should contain really tiny numbers, say zeros. At least 
+in the region near the specified sites this should be the case. 
+If the unity condition is violated far away from the atom, say U<+unity> 
+does not contain zeros, the internal lattice sum was not complete. 
+
+The file has three columns, The first is an continous index, the 
+second contains the 'zeros' and the third must be equal to the second, 
+otherwise the CPA treatment has a problem. The different test-lines are 
+concatenated together in this file. 
+If the B<mesh-points for test> are 30, the second line starts at 
+index 60 and so on. 
+ 
+
+
+
+M<VORONOI CELL> 
+ 
+B<VORONOI CELL> 
+ 
+This menu controls the creation of the voronoi cells 
+ 
+=H1 General remarks 
+ 
+The voronoi-cell shape construction should work more or less 
+automatically. The final result in the B<fplo> output may not 
+easily be tested. 
+The B<fplo> run outputs PostScript pictures containing the voronoi cells.
+The voronoi cell for a given atom is defined in the following: 
+Construct for each other atom in the lattice a plane, containing this 
+atom, and being perpendicular to the line connecting both atoms. 
+Then the voronoi cell is the inner region of all those planes. 
+Planes belonging to the cell boundary are those having more than 
+points or lines in common with the boundary. These planes are determined 
+when calulating the voronoi cell. 
+ 
+ 
+=H1 NEIGHBOUR ATOMS TO TEST 
+ 
+These are the control entries for the search of the cell boundary 
+ 
+=H2 Cut-off radius 
+Search for neighbours up to this distance around the actual atom. 
+The larger this value the slower the code. 
+If it is to small some planes are not found.
+=H2 number off neighbours 
+A second limiting value for set of planes to search in. 
+All neighbours are sorted by distance. Than this number is the 
+maximum number of neighbouring atoms or planes to search in 
+=H2 arythmetic tolerance 
+This tolerance is a difficult thing. It defines when two atoms or planes 
+are equivalent. Since some numerical noise is always present, it 
+should not be to small. 
+ 
+=H1 TEST-OUTPUT 
+ 
+If some informations are needed about which planes ar chosen, this 
+controls the output. 
+ 
+=H2 detials of search 
+If true, the calculated planes are printed out, together with their 
+distance from the atom and with the number of corners, which this 
+plane has in common with the cell boundary. 
+Additionally, all corners of the voronoi cell are printed out together 
+with their distance from the atom. 
+Finally the minimum and maximum distance of all corners and planes 
+are given. 
+=H2 print up to neighbour 
+If this number is zero, nothing more is done. 
+If it is positive, a lot of information while searching the planes 
+is printed, up to the plane-number given in this entry. 
+This is usefull only if one knows the code 
+=H2 only print neighbour 
+If this number is zero, nothing more is done. 
+If it is positive, a lot of information while searching the planes 
+is printed out only for the plane-number given in this entry. 
+This is usefull only if one knows the code 
+If both numbers above are given, the union of both is done: 
+If B<print up to neighb.>=3 and B<only print neighb.>=10 than 
+for the planes 1,2,3 and 10 the information is printed. 
+ 
+ 
+
+
+
+M<CPA> 
+ 
+B<CPA MENU> 
+ 
+This submenu contains the control for the CPA-calculations. 
+ 
+=H1 General remarks 
+ 
+This menu is used to set all data necessary for a CPA calculation. 
+The CPA step consists of two iteration loops, the CPA loop 
+and the Fermi-energy loop. 
+
+=H1 Important notes
+
+The self energy integration path has to be specified in this menu.
+The path is defined by a lower and an upper energy bound. 
+First, the path must be defined such, that the band bottom and the fermi
+energy are both within this energy interval.
+(In many cases the default settings should be sufficient.)
+Second, the Interval should not be to large, especially, the
+band bottom should not be far above the lower bound. Otherwise,
+the integration is integrating zeros and accuracy is lost.
+Be aware, that the semi core states are far below the valence band
+bottom, therefore the lower bound is that deep in semi-core calculations.
+Both numbers are specified in Hartree.
+You have to experiment, to find the proper values in case a warning occurs.
+
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+
+=H2 exit 
+Exit to the B<MAIN MENU>. 
+=H2 help 
+this page 
+
+=H1 CONCENTRATION 
+ 
+For each Wyckoff position there may be more than one atom in the CPA 
+case. Here you give the concentration for each atom. The sum of 
+concentrations of all atoms at one position must be unity. The 
+concentrations must not be zero. If you need zero, remove the atom 
+from the structure. 
+
+
+=H1 DENSITY OF STATES, BLOCH SPECTRAL DENSITY
+ 
+=H2 number of e-points
+The number of energy points between the B<lower energy bound> and
+the B<upper energy bound> ( defined in B<BANDPLOT MENU>).
+=H2 imag(e)
+The imaginary part of the energy.
+The smaller the value the sharper the curves. But
+there is a limit. The equal weight sampling in the reciprocial cell
+(k-integration) must be extremely refined if imag(e) is to small !!
+It needs some playing, to get good pictures.
+
+#=H1 BLOCH SPECTRAL DENSITY
+#
+#See above. (Not yet implemented)
+#
+=H1 SELF ENERGY ITERATION 
+ 
+This controls the inner CPA iteration loop for the calculation of the 
+self energy. 
+ 
+=H2 Lower energy bound 
+The lower energy bound for the integration path in the complex 
+upper half plane. This value must be below the band bottom.
+See related warnings.
+=H2 Upper energy bound 
+The upper energy bound for the integration path in the complex 
+upper half plane. This value must be above the fermi energy. 
+=H2 Imaginary part at e_F
+(in Hartree)
+The imaginary part of the energy at the Fermi energy.
+The smaller the value the more accurate are the results. But
+there is a limit. The equal weight sampling in the reciprocial cell
+(k-integration) must be extremely refined if imag(e_F) is to small !!
+There is a tradeoff between calculation time and accuracy.
+Especially, if the CPA loop does permanently not converge or if
+it takes many steps to converge it (in particular around the Fermi energy)
+then it may be wise to sacrifice accuracy. 
+IMPORTANT: for a set of calculations this number must be the same
+throughout all calculations, otherwise comparison of the results is
+senseless!
+=H2 Number of E-points 
+Number of energy points on the semi circular integration path. 
+30 should be enough in many cases, since all functions are very 
+smooth in the upper half plane. 
+=H2 CPA loops maximum 
+Maximum number of inner CPA loops (determination of the self energy). 
+If the self energy is not converging this number is killing the 
+infinit repetition of the sensless iterations. 
+10 is a good number. Often, the iteration speeds up remarkably
+while the density iteration goes on.
+ 
+=H1 FERMI ENERGY ITERATION 
+ 
+This controls the iteration loops of the fermi energy, which encloses 
+the inner CPA-loop. The CPA is much more accurate and much faster, 
+if using the semi circular path. But than the Fermi energy has to be 
+determined iteratively. 
+ 
+=H2 Guess of fermi energy 
+This is nothing than the first guess of the  Fermi energy in the 
+very first step. 
+=H2 Maximum of e-fermi loops 
+This prohibits infinit loops, if it does not converge. 
+If the Fermi energy does not converge the lacking number of electrons
+may spoil heavily the SCF-iteration.
+Try to increase this number, if no convergency is obtained.
+Sometimes the problem vanishes in the next charge self-consistency 
+cycle. 
+In cases of insulators a different method of e-fermi iteration may be 
+used. This  method is nearly fail-save but slow, so this number   
+must be 30 or more!
+=H2 First sloop 
+The secant method to converge the Fermi energy starts with a 
+tangent method. This number is the sloop of this first tangent step. 
+It is somthing like the density of states at the actual fermi energy. 
+The smaller the more changes in the Fermi energy. 
+=H2 Smallest slope 
+This is an lower bound for the sloop of the secant method. It prohibits 
+huge changes in the Fermi energy. 
+=H2 Iteration method 
+How to search Fermi energy. 
+Secant method: best method, fastest, for metalls, can fail
+Bisection method: (very) slow but save, for insulators
+ 
+ 
+M<BANDPLOT> 
+ 
+B<BANDPLOT MENU> 
+ 
+This submenu contains the control for the calculation of the bandstructure,
+density of states and Bloch spectral density (CPA) and DOS.
+ 
+=H1 General remarks 
+ 
+The bandstructure should be calculated, starting form a converged 
+self-consistent calculation. 
+The resulting files are rather large!
+The energies in output files (+band +bweights +dos +akbl) are given in eV. 
+B<REMARK:> The lower and upper energy bounds (see below) changed from
+Hartree to eV and are relative to the Fermi energy since version 4.01!!!
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 exit 
+Exit to the B<MAIN MENU>. 
+=H2 help 
+this page 
+ 
+=H1 Entries 
+ 
+=H2 Bandstructure plot 
+Normal calculations:
+'t', if one wants to calculate the bandstructure. (U<+band>) 
+The densities of states are also calculated. 
+CPA calculation:
+'t', if one wants to calculate the bloch spectral density. (U<+akbl*>) 
+The densities of states are also calculated. 
+The program will stop after DOS,A_bl(k) creation, since it is time
+very consuming and it makes no sense to use it in the density self
+consistency loop.
+=H2 Read in sym-points 
+'t', if the special k-points below shall be read in. 
+Otherwise, the default settings are used.
+=H2 Steps between sym-points. 
+Number of k-points along the lines connecting two special k-points. 
+=H2 Number of e-points
+gives the number of points in the energy interval where to calculate
+the DOS. (This is for non-CPA calculations only!)
+See B<CPA MENU> to set number of e-points and imaginary part for CPA case.
+=H2 Plot IDOS
+Switch on or off the output of integrated densities of states (IDOS).
+=H2 Lower energy bound (eV)
+normal calculation:
+Lower bound of the DOS to be printed relative to the Fermi energy.
+CPA calculation:
+Lower bound of the DOS,A_bl(k). 
+=H2 Upper energy bound (eV)
+Normal calculation:
+Upper bound of the DOS to be printed relative to the Fermi energy.
+CPA calculation:
+Upper bound of the DOS,A_bl(k). 
+=H2 Local DOS sites
+A list of sites for which to create the local projected densities
+of states. We mean sites not Wyckoff-position or sort numbers.
+This information formerly was contained in the file U<=.ldos>!
+=H2 Weights 
+'t', if the band weights shall be calculated. (U<+bweights>) 
+There is no CPA equivalent
+=H2 Transform quant. axes 
+'t', if the quantization axes should be rotated. 
+=H2 x-axis
+The x- quantization axis. 
+=H2 z-axis
+The z- quantization axis. 
+These should be orthogonal, otherwise orthogonality is forced
+in a certain way.
+
+=H1 Special symmetry points
+
+
+=H2 Number of sym-points 
+Number of special k-points, defining a path through the Brioullin zone
+along which the bandstructure is calculated. 
+=H2 1,2... 
+The special k-points: 
+First, the label  (used by U<fedit -bandplot> see fplo documentation)
+Second, a vector defining the k-point. The  units are 2Pi/a. 
+If a k-vector has cartesian coordinates 
+=H+ B<k>=(2Pi/a kx,2Pi/b ky,2Pi/c kz)
+=H- then it must be given as 
+=H+ U<B<k>>=(kx,a/b ky,a/c kz) 
+=H- here. 
+
+B<REMARK 1:>
+If you specified your own points here, be aware, that a change in the 
+lattice constants or in the symmetry group, will reset the points to
+their default values, due to the dependency of the k-points on
+the lattice scaling (especially for lower symemtric groups.)
+
+B<REMARK 2:>
+If one needs the Bloch spectral density or bandstructure at special
+k-points (i.e. for calculating Fermi surfaces) it is possible
+to overwrite the settings here by creating a file U<=.kp>.
+It contains in the first line the number of points following.
+Then, each following line is a k-vector.
+ 
+
+
+ 
+M<INITIAL SPINSPLIT> 
+ 
+B<INITIAL SPINSPLIT> 
+ 
+This submenu contains the initial spin polarization for all
+Wyckhof positions.
+ 
+=H1 General remarks 
+ 
+A spinpolarized calculation has to be started with some symmetry 
+breaking. Here the amount of the first spin polarization is defined.
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+
+=H2 exit 
+Exit to the B<MAIN MENU>. 
+=H2 help 
+this page 
+ 
+=H1 Initial spliting
+
+A real number in units of Bohr magnetons.
+ 
+ 
+M<CORE OCCUPATION> 
+ 
+B<CORE-OCCUPATION MENU> 
+ 
+This submenu contains the core occupation numbers.
+ 
+=H1 General remarks 
+ 
+The standard occupation numbers for core states are unity per state,
+of course.
+In the case, one puts 4f semi-core states in the core, to have localized
+4f-states one can change the core occupation by hand. One can
+enter non-spherical occupation. But this is not used at present.
+Instead, the occupation is spherically averaged.
+
+B<Example:>
+To  have a spherical nonpolarized occupation of the 4f states with 6 
+electrons one needs the occupation
+ state         spinup                           spindown
+  4f    3/7 3/7 3/7 3/7 3/7 3/7 3/7      3/7 3/7 3/7 3/7 3/7 3/7 3/7 
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 exit 
+Exit to the B<MAIN MENU>. 
+=H2 help 
+this page 
+ 
+=H1 Occupation numbers
+
+=H2 number of definitions 
+gives the number of entries to be defined
+=H2 array of entries
+For each entry define:
+Wy-pos.: sort of atom (Wyckoff position in B<SYMMETRY MENU>)
+state: a state definition like in B<BASIS and COMPRESSION>
+occupation spin up: the occupation numbers (fractionals or real)
+this field contains 7 numbers for each magnetic quantum  number
+-3 -2 -1 0 1 2 3. For i.e. p-states only the three numbers in 
+the middle are used.
+occupation spin down: dito
+
+M<ITERATION CONTROL> 
+ 
+B<ITERATION CONTROL> 
+ 
+This submenu contains the details to control the iteration procedure.
+ 
+=H1 General remarks 
+ 
+There are three possibilities to perform the iteration, 
+"Simple mix", "Iterat" and "Iterat with linear progress control".
+Simple mix is the simplest scheme, where some percent of the new
+solution are mixed into the old solution to get a new start density.
+Usually it is stable, but very slow.
+
+Iterat is a heuristic scheme, which uses the iteration history
+to predict the "best" new density. This scheme is very fast.
+In some cases it may run into troubles, then a random step is
+made, to get out of a closed cycle.
+
+Normaly, one would use Iterat.
+
+The Iterat with linear progress control is a newer idea, 
+which may fail in rare cases. It is not yet tested enough. However, 
+the main idea behind it, is to force the iteration progress in some 
+circumstances where iterat will make a bad choice. So, if iterat does
+jump around and it is not due to level crossing (tetrahedron method), 
+try this one.
+
+
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 exit 
+Exit to the B<MAIN MENU>. 
+=H2 help 
+this page 
+ 
+=H1 Iteration control 
+ 
+=H2 Version 
+A select box for the version choice.
+ 
+=H2 Mixing 
+"Simple mix": gives the amount of mixing of the new solution 
+vector into the previous solution vector.
+"Iterat ...": gives the amount by which the subspace interpolation 
+is used, this is only the starting and maximum value of mixing, 
+the internally used value is calculated from interpolation history. 
+=H2 Max subspace dim
+Only "Iterat ..."
+The new solution vector is calculated using a linear 
+interpolation within the subspace spanned by the last 
+solution vectors. This number limits the maximal allowed 
+dimension of this space.
+=H2 Progress control
+This number controls the nonlinearities of the interpolation.
+The smaller this value the longer will the dimensionalty of
+the present subspace retained. 
+
+
+=H1 ITERATION VECTOR RATIO
+
+At present, there may be three sorts of values contained in the iteration
+vector. The occupation matrix (LSDA+U), the density and in auto optimizing
+mode additionally the compression parameter.
+
+=H2 x0 / density
+This gives the ratio between the x0 and the density , when put into
+the iteration vector. The smaller this value, the less progress is
+made for the x0 part of the iteration vector.
+In other words, if heavy changes of x0 spoil the density iteration
+this number should be decreased.
+
+=H2 occu mat / density
+This gives the ratio between the occupation matrix and the density , 
+when put into the iteration vector. The smaller this value, the less
+progress is made for the LSDA+U part of the iteration vector.
+In other words, if heavy changes of the occupation matrix spoil the
+density iteration this number should be decreased. 
+
+
+
+
+M<BRILLOUIN ZONE INTEGRATION> 
+ 
+B<BRILLOUIN ZONE INTEGRATION> 
+ 
+This submenu contains the details to control the k-space integration.
+ 
+=H1 General remarks 
+ 
+Normaly, one would use the tetrahedron method. All other settings
+are not yet tested!! Especially, the fixed spin moment calculation
+does work with the tetrahedron method only.
+
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 exit 
+Exit to the B<MAIN MENU>. 
+=H2 help 
+this page 
+ 
+=H1 General data
+ 
+=H2 Integration method
+A select box for the method.
+Only tetrahedron method tested by now.
+=H2 Suppose its a metal
+Not yet tested. For insulators, a different scheme is used, if it is
+an insulator and if this switch is false.
+
+=H1 METHFESSEL-PAXTON METHOD
+
+Not yet tested!
+
+=H2 Number of energy points
+Number of points, to calculate the integrated DOS, from which the
+fermi energy and the integration weights are determined.
+=H2 Order parameter
+=H2 Width parameter
+=H2 Range parameter
+These parameter control the methods internal calculation.
+
+M<spacegroup> 
+
+=H1 Select the spacegroup by number
+Examples:
+=H2 spacegroup 2
+type 2, the spacegroup 2 will be highlighted.
+To select it type enter.
+=H2 spacegroup 27
+type 2, the spacegroup 2 will be highlighted.
+Type 7, to select 27.
+=H2 spacegroup 21
+type 2, the spacegroup 2 will be highlighted.
+Type 1, the spacegroup 21 will be highlighted.
+To select it type enter.
+=H2 spacegroup 213
+type 2, the spacegroup 2 will be highlighted.
+Type 1, the spacegroup 21 will be highlighted.
+Type 3, the spacegroup 213 will be selected.
+
+=H2 spacegroup 213
+type 2, the spacegroup 2 will be highlighted.
+Type 1, the spacegroup 21 will be highlighted.
+Type 3, the spacegroup 213 will be selected.
+
+If a group is highlighted, use TAB to cycle through all groups,
+which start with the numbers, allready typed in.
+
+=H1 Select a space group, using symbols:
+Type CONTROL-W, type in symbol,
+cycle around using TAB.
+If the current search position is below the occurance of the
+search string type again TAB to probe, if an occurance is above.
+To select the highlighted group, type ENTER.
+ 
+ 
+M<SYMMETRY MENU> 
+ 
+B<SYMMETRY MENU> 
+ 
+This menu serves to define the symmetry and to construct the main input
+file U<=.in> and U<=.basis> .
+ 
+ 
+=H1 General remarks 
+ 
+The symmetry file U<=.sym> contains all settings defining the 
+crystal symmetry  and the approximations to the full potential.
+From this settings the input files are calculated. In this process
+the data containted in the input files will be retained, except
+the symmetry changes will force a change in the data dimension
+or in the data interdependencies. 
+ 
+If a new structure shall be calculated or if the lattice constant or 
+the maximum number of angular momenta shall be changed the input files
+U<=.in> and U<=.basis> have to be updated using the update function 
+of this menu. 
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+
+=H2 Exit 
+Exit the menu. 
+If some changes where made in the menu data without updating the 
+files, B<fedit> will warn, that the changes will take place after
+update only.
+=H2 Extern edit (Expert mode)
+It calls an external editor to edit the U<=.sum> file directly. 
+The external editor may be set by a command line option. 
+Please, take care and meet the proper syntax rules for the
+input files.
+=H2 Update
+This runs B<fplo> to recreate the input files U<=.in> and U<=.basis>. 
+Afterwards the output is shown in a viewer. 
+If some data had to be reset to default values, due to symmetry
+changes, it will be shown in the output. Please, have a look on it.
+=H2 help 
+This screen. 
+
+=H1 Entries 
+
+=H2 Compound 
+Here the name of the compound may be entered. This information is 
+redundant.
+=H2 Space group number 
+The number and symbol of the space group of the lattice.
+=H2 Unit of length
+The unit of the lattice constants:
+Bohr radii or Angstrom. 
+=H2 Lattice constants 
+A vector containing the lattice constants. 
+=H2 Axis angles 
+A vector containing the angles between the axis. 
+(See B<fplo>-documentation.) 
+=H2 Maximum L 
+The maximum angular momentum used in the angular momentum expansion 
+of all real space functions (density, potential). 
+=H2 Number of atoms 
+The number of Wyckoff positions in the unit cell. 
+=H2 1,2,.. 
+The Wyckoff positions. First the element name second the vector in 
+the unit cell. The vector may contain fractional numbers. This is
+nice for hexagonal latices (i.e. hcp is group 194 with one Wyckoff
+position: 1/3 2/3 1/4.)
+If one needs to remove an atom, either edit it in the external editor, 
+or change the B<number of atoms>. If one uses the external editor 
+one has to change the variable nsort and wyckhoff_positions.
+ 
+
+
+M<options> 
+=H2 CALC_DOS            
+calculate density of states in normal and in CPA calculations
+If CPA, the calculation will stop after DOS creation.
+You will need a converged calculation to start from.
+=H2 BEB                 
+do CPA for ordered crystals
+=H2 FULLBZ              
+make total BZ -intergation, this needs mor RAM and time
+=H2 BASIS_OPTIMIZATION              
+auto optimize the compression parameters x0
+=H2 EMPTY_LATTICE_TEST  
+for empty lattice tests, 
+use He: 2s::1s2p3d4f for the 
+atomic configuration
+=H2 VAT_IN_CORE_ONLY    
+use averaged crystal potential for core states only.
+This is a test option, not for normal calculations.
+=H2 PLOT_REALFUNC       
+prints various r-dependend functions in files
+=H2 PLOT_BASIS          
+output of the basis functions in 
+=H+
+U<+fcore...>: core states
+U<+fval..>  : valence states
+U<+fdval..> : derivative of the valence states with respect to x0
+=H-
+=H2 TEST_LOI            
+tests the LOI's, its a debuging option.
+=H2 TEST_DIAGNO         
+test the solution of the eigenvalue problem
+=H2 TEST_SYMMETRIZATION 
+test the trace-matrices for symmetrization of Greens functions
+=H2 TEST_HS_SYM         
+test working of gtrace 
+=H2 PROT_PRINT_BASIS    
+print definition of basis orbitals
+=H2 PROT_MAKELATTICE    
+print info about lattice shells
+=H2 PROT_STRUCTURE_PRNT 
+print info about pairs of sites
+=H2 PROT_TCI            
+print info for the two-center integrals
+=H2 PROT_CPA            
+print varios informations about CPA loop 
+=H2 PROT_CPAEFITER      
+print info about CPA fermi energy itertion 
+=H2 PRCA                
+print matrices while !making CPA 
+=H2 NO_SYMMETRYTEST     
+switch off the symmetry test, this saves time
+It is recommended, to let the test run for every new structure.
+=H2 NO_POTENTIAL        
+read potential from file U<+pot>,see B<NO_LOI>
+=H2 NO_3CI              
+switch off 3-center-terms, debugging option
+NEVER for calculations!
+=H2 NO_CORE             
+no core orthogonalization, debugging option
+=H2 NO_VAT              
+do not calculate the averaged crystal potential for atom calculation!
+Debugging option.
+=H2 NO_POPANAL          
+do not make population anlysis, is usefull if memory is limited 
+(helps only if not CPA)
+=H2 NO_LOI              
+Do not generate LO-integrals This option usually is off. 
+If you make some tests or programming you may switch it on. 
+Than the program: 
+=H+
+B<1.> loads am existing U<+loi> file and does not calculate the 
+LO-Integrals (LOI), or 
+B<2.> if no such file exists, it calculates the LOI's and stores them 
+into U<+loi>. Each next run will read this file, as long as
+the option is on. The file must come from a similar calculation.
+B<No dimension checks are performed!>
+(Attention: the file U<+loi> is really large)
+=H-
+=H2 NO_BASIS            
+read in file U<+basis>, see B<NO_LOI>
+=H2 NO_EFCH             
+no guess of fermi energy due to change in onsite energies
+=H2 EXPORT_V3_DENSFILE             
+The format of the file U<=.dens> changed such that files modified
+with B<fplo>-version 4 or higher may be read by former versions, but
+the interpretation of the data is wrong. This option allows to
+write the U<=.dens>-file with the old data-semantics.
+=H2 X0_LOOP
+Debuggin option!
+This option allows to vary the x0-parameter for fixed potential.
+The calculation starts with calculating the potential from the density
+and then performs an endless loop in which the Kohn-Sham equation
+for this potential is solved and the x0-parameters are optimized.
+So, the only thing which changes from step to step are the x0's.
+There is no print out of the loop-counter. The calculation has
+to be interrupted by hand to stop!!! The variation of the
+x0's for a fixed density/potential NEED NOT be reasonable, since
+a change in the basis can create drastic potential changes, which
+are not accounted for if the potential is fixed.
+
+
+
+
+
+M<BASIS DEFINITION>
+
+B<BASIS DEFINITION>
+
+=H1 General remarks 
+
+The file U<=.basis> serves, to define the basis states for the crystal
+calculation. It containts the state definitions and the compression
+parameters x0 for the valence state confining potential.
+In auto optimizing mode, the x0 are changed by B<fplo> in every iteration
+cycle. So, its best not to touch this submenu, while the calculation
+is running.
+
+
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+
+=H2 :
+Command mode
+=H2 Exit 
+Exit the menu. 
+=H2 Extern edit (Expert mode)
+It calls an external editor to edit U<=.basis> directly. 
+The external editor may be set by a command line option. 
+Please, take care and meet the proper syntax rules for the
+input files.
+=H2 help 
+This screen. 
+
+
+=H1 BASIS AND COMPRESSION 
+
+ 
+This fields contain the information about the basis set and 
+the compression parameter for each atomic sort (Wyckoff-position). 
+The two editable fields are activated by the corresponding number. 
+Both fields are activated one after the other. 
+ 
+=H2 BASIS field 
+A basis definition looks like
+=H+
+1s:: 2s2p / 3s3p3d + 4d 
+=H1
+The first part before the colon are the cores orbitals.
+Between :: and / are the semi core orbitals.
+Between / and + are the valence orbitals.
+After + are the polarization orbitals.
+
+The core orbitals do NOT have a compression parameter. All
+other orbitals have one. The parameters for semi core and polarization
+orbitals are allways negativ (fixed). If you type a positive
+value it will be corrected. So, the only free orbitals are
+the valence orbitals between / and +.
+
+
+
+The editing of this field works as follows: 
+The core-marker may be shifted to the cursor position by typing ':' or 
+SPACE. The same holds for the semi-core marker '/'  and for the 
+polarization marker '+'. If a marker is placed into another section
+the other markers are adjusted as well. (Example: move cursor
+into the core section and type '+'. Now everything left of the cursor
+still is core, but everything which was right of the cursor is now
+polarization orbitals, while the semi-core and valence section are empty.)
+
+Orbitals in all but the core-section may be deleted by one of the 
+delete keys. The markers and the core states may not be deleted. 
+(If you need to delete a core-orbital, move the core-marker ':' such
+that it becomes a non-core orbital, then you can delete it.)
+
+In the non-core sections of the field you can add a state, by typing
+the main quantum number say a digit followed by the angular momentum 
+s, p, d or f. The non-core sections together must contain at least 
+one orbital. There must not be any two identical states in the whole field. 
+After leaving the field 
+1. the corresponding compression parameter are adjusted in number 
+and order, according to the changes made. 
+2. the editing continues with the compression field.
+
+
+B<Grouping>:
+One may define groups of orbitals. All orbitals of a group have the 
+same compression parameter. This reduces the number of variational
+parameters and may stabilize the calculation. However, some
+experience has to be gathered before doing extensive grouping.
+
+If the cursor is before at least a pair of orbitals one may created a 
+grouped pair by typing '('. Any group may be enlarged by typing 
+'(' before it or ')' after it. 
+
+Example 1
+=H+ You have
+=H+ 2s2p(3s3p)3d
+=H- Move cursor to the 2s orbital and type '(', you get
+another group
+=H+ (2s2p)(3s3p)3d
+=H-
+=H-
+Example 2
+=H+ You have
+=H+ 2s2p(3s3p)3d
+=H- Move cursor to the 2p orbital and type '(', you get
+a larger group
+=H+ 2s(2p3s3p)3d
+=H-
+=H-
+Example 3
+=H+ You have
+=H+ (2s2p)3s3p3d
+=H- Move behind to the 3d orbital and type ')', you get
+a group of five orbitals
+=H+ (2s2p3s3p3d)
+=H-
+=H-
+Any group may be made shorter by typing one of the parenthese
+inside the group. 
+
+Example 4
+=H+ You have:
+=H+ (2s2p3s3p3d)
+=H- Move cursor to 3p and type '(', you get
+=H+ 2s2p3s(3p3d)
+=H-
+=H-
+Example 5
+=H+ You have:
+=H+ (2s2p3s3p)3d
+=H- Move cursor to 3s and type ')', you get
+=H+ (2s2p)3s3p3d
+=H-
+=H-
+
+If any of the group edit actions would create a group of 1 orbital,
+the group (parentheses) will disapear.
+
+
+Example 6
+=H+ You have:
+=H+ (2s2p3s3p)3d
+=H- Move cursor to 3p and type '(', you get
+=H+ 2s2p3s3p3d
+=H-
+=H-
+
+The group markers may be deleted, thus ungrouping the corresponding 
+orbitals.
+
+B<Summary:>
+=H+ '(' outside a group creates a grouped pair, if at least a pair of 
+=H+ ungrouped orbitals is available at the cursor
+=H-
+=H-
+=H+ '(' before a group adds one orbital to the group or creates
+=H+ a new group (depends on the number of orbitals between cursor
+position and group)
+=H-
+=H-
+=H+ '(' inside a group shifts group begin to cursor position
+=H-
+=H+ ')' outside a group enlarges an existing group
+=H-
+=H+ ')' inside a group shifts the group end marker to the cursor position
+=H-
+=H+ Group markers may be deleted, resolving the group into individual
+orbitals.
+=H-
+
+
+
+ 
+=H2 COMPRESSION field 
+The number of parameters is determined by the number of non-core
+orbitals/groups. Each parameter correspondes to a single orbital or to 
+a group in the same order as they appear in the BASIS field. 
+
+The semi-core and the polarization section refer to fixed
+compression in the process of automatic x0-optimization. 
+This is indicated by negative numbers. You may edit all compression
+parameters, with any sign you want. After typing U<ENTER> the
+proper sign is choosen automatically. So, you never need to care
+about the sign, just about the classification.
+
+There are two sections with fixed compression, just for convinience
+and clarity (semi-core and polarization orbitals behave rather 
+different).
+However, at present there is no difference in the result, if orbitals 
+are shifted between these two classes.
+
+Normally you only need to specify the fixed values (semi-core and 
+polarization section), since the other (valence section) are obtained 
+by optimization.
+
+Sometimes it is nesseccary to set proper start values for the
+optimization in the valence section.
+
+
+(A zero value is allowed and means no compression at all. This
+however is no longer recommended.)
+
+
+
+=H1 Command mode
+
+There is the possibility to form equivalence classes of sorts.
+All sorts (Wyckoff-positions) of a class share the same basis definition
+and compression parameter. This is a usefull tool for cases, where
+the atoms are extremly similar, but symmtrically inequivalent.
+It just reduces the number of parameters which have to be optimized.
+Only experienced users should use this!
+Only chemically equivaleny sorts (same elements) may be collected in
+classes.
+
+
+You may type ':' (shown in the menu bar). Then a command line appears
+at the bottom of the screen. There you may type two commands
+
+=H2 Make equivalences
+
+The first command is called B<eqm> and has to be followed by
+a space-separated list of Wyckhoff or sort numbers. 
+
+=H+ eqm sort1 sort2 ... sortn sort-target
+=H-
+
+It declares all these sorts to belong to the same equivalence class.
+Practically it is a move command, which moves all but the last sorts 
+of the list into the class of the last list element. 
+The classes are displayed in a unique way. The 'hotkey'-sort is 
+allways the smallest sort of a class. All other class members are 
+displayed in the 'equivalences' line below the compression parameters.
+For the B<eqm> command it does not matter, which of the class elements 
+is given as the target, say it need not be the hotkey-sort. 
+The main point is, that the basis definition of the target-sort 
+(last list element) will be used for the newly created or enlarged 
+class.
+
+The sorts, which shall be moved, may be in any class.
+
+
+=H2 Extract equivalences
+
+The command
+
+=H+ eqx sort1 sort2 ... sortn
+=H-
+
+extracts the given sorts from which class ever and makes them classes
+by themselfs. 
+
+
+
+
+
+
+
+M<SPHERICALLY AVERAGED CRYSTAL POTENTIAL> 
+ 
+B<SPHERICALLY AVERAGED CRYSTAL POTENTIAL> 
+ 
+This menu serves to control the creation of the spherically
+averaged crystal potential (Vatom). 
+ 
+=H1 General remarks 
+
+The orbitals are calculated, using the spherical average of the 
+crystal potential. For the core orbitals only this potential
+is used, while for the valence orbitals the confining potential 
+is added.
+
+This potential must be as close to the true crystal potential
+as possible in the core region (otherwise the core energies
+are wrong). Therefore in the core region the true average is
+used. In the outer (valence) region the true average is spiky
+due to the 1/r-potential contributions of the neighbouring atoms.
+
+There are many ways to continue the true average into the 
+valence region, omitting the spikes. 
+In all cases the radius, from which Vatom starts to deviate from
+the average, is chosen to be the first maximum of the true average
+ between 0 and the nearest neighbour.
+
+In FPLO-1, Vatom stays constant at the maximum value. (This was option
+U<OLD_VAT> in FPLO-2 menus).
+In FPLO-2, Vatom is continued from the maximum position to the next 
+neighbor radius using a cosine function in such a way that the value
+at and after the next neighbor radius equals the averaged crystal
+potential (full average, a constant).
+In FPLO-3, we use a Gauss convolution of the true spherical average.
+The convolution starts to be used at the maximum position and between
+this point and a certain radial offset the convolution width is
+switched on in a continous manner from zero up to a maximum width.
+This gives a Vatom-definition, which is independent of geometrical
+quantites like next neighbour distance. It is nesseccary for certain
+applications and should be the default.
+
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 exit 
+Exit to B<MAIN MENU>. 
+=H2 help 
+This screen. 
+ 
+=H1 GENERAL CONTROL
+
+=H2 type 
+This select box allows to select the type of definition of Vatom
+(explained above)
+1) FPLO-1 (constant)   (formerly option U<OLD_VAT>)
+2) FPLO-2 (cosine)     (the default of FPLO-2)
+3) FPLO-3 (convoluted) (the new, geometry independend definition)
+
+=H1 GAUSS CONVOLUTION PARAMTER 
+
+Here the maximum width and the switch-on-length for the convolution 
+version is defined.
+These values are merly for debugging purposes. For actual calculations
+the default values should be sufficient.
+
+=H2 Width of Gauss function
+This is the maximum half width or screening length of the Gauss
+convolution.
+=H2 Switch-on-length
+This is the radial offset. Between maximum-position and
+maximum-position+U<Switch-on-length> the Gauss width is increases
+from 0 to U<Width of Gauss function>
+
+
+M<LSDA+U> 
+ 
+B<LSDA+U> 
+ 
+This menu serves to control the LSDA+U calculations. 
+ 
+=H1 General remarks 
+
+There are various LSDA+U functionals around. We implemented some of them. 
+You may specify the type of LSDA+U functional and the correlated states 
+here. The parameters U,J (expressed through Slater parameters) are
+external values. U<FPLO> does not calculate them!
+
+ 
+=H1 Problems 
+
+The iteration process may be spoiled heavily by LSDA+U. 
+There are several reasons:
+=H+ 1) The occupation matrix is changing to much.
+See B<Occu. matrix tolerance> below!
+=H-
+=H+ 2) There are several magnetic solutions, depending on the values of
+the occupation matrix elements. The iteration process may jump between
+this solutions. In this case decrease the global iteration mixing in 
+the B<ITERATION CONTROL> submenu!
+=H-
+
+The results of LSDA+U within U<FPLO> may remarkably deviate form other 
+implementations. This is manly due to the fact, that the definition of
+the correlated orbitals is rather arbitrary for different bandstructure
+methods.
+ 
+ 
+=H1 Menu bar 
+ 
+The menu bar contains the following entries 
+ 
+=H2 exit 
+Exit to B<MAIN MENU>. 
+=H2 help 
+This screen. 
+ 
+=H1 GENERAL CONTROL
+
+=H2 make LSDA+U
+If this switch is 't', the states defined in B<CORRELATED STATES> 
+will be treated within LSDA+U. If no states are defined this switch 
+has no effect.
+=H2 Functional
+Opens a select box for the choice among various functionals.
+=H2 Projection
+In a nonorthogonal basis, there are several choices to define the
+occupation matrix of the correlated states.
+
+
+
+=H1 CORRELATED STATES 
+
+Here the correlated states are defined. Each state is specified by a 
+atom sort (Wyckoff-position) and by a state label (i.e. 3d).
+The 4 Slater parameters F0-F6 define the Coulomb matrix elements.
+F0 is identical with U. The other parameters specify J in the 
+following manner:
+
+=H2 s-states
+=H+ J=0
+=H2 p-states
+=H+ J=F2/5
+=H2 d-states
+=H+ J=(F2+F4)/14
+=H2 f-states
+=H+ J=(286*F2+195*F4+250*F6)/6435
+=H-
+=H-
+
+If the B<Number of definitions> is nozero and B<Make LSDA+U> is false,
+no LSDA+U is done.
+If the B<Number of definitions> is zero and B<Make LSDA+U> is true,
+no LSDA+U is done.
+
+
+=H1 ITERATION CONTROL
+
+The occupation matrix is self consistently recalculated in every cycle.
+In the first loops, starting from a non converged density, this matrix
+may vary heavily from step to step. This may spoil the iteration process.
+
+=H2 Occu. matrix tolerance
+This tolerance controls the recalculation of the occupation matrix.
+If the deviation of the new occupation matrix form the old
+one is larger than this tolerance, it will be recalculated until
+the tolerance is met.
+This means, that the complete diagonalization step is reperformed 
+until the deviations are small enough. For large systems, this may
+lead to rather slow cycles in the beginning of the iteration!

@@ -1,0 +1,343 @@
+########################################################################
+# this file is part of the FPLO bandstructure package
+# it was created automatically
+# please dont delete this file nor
+# edit it directly, unless you really know what you are doing
+# Use FEDIT to change its content
+#
+########################################################################
+section header{
+
+    struct {char[*] mainversion;char[*] subversion;} version
+    ={"5.00","M-CPA"};
+
+
+    struct {char[*] hostname;char[*] date;char[*] by;} last_changes
+    ={"SRV1QXN6HKWZE","Tue Nov 24 01:58:26 2020","fedit (5.00-20)"};
+
+    char[*] compound="Anatase";
+};
+
+
+section structure_information{
+
+    struct {int number;char[*] symbol;} spacegroup
+    ={141,"I41/AMD"};
+
+
+    struct {int type;char[*] description;} lengthunit
+    ={2,"Angstroem"};
+
+    real lattice_constants[3]={3.69402,3.69402,9.2375
+    };
+    real axis_angles[3]={90.,90.,90.
+    };
+    int max_L=12;
+    int nsort=2;
+
+    struct {char[2] element;real tau[3];} wyckoff_positions[nsort]
+    ={
+        {"Ti",{0.0,0.25,0.375}}
+        ,{"O",{0.0,0.25,0.1656}}        
+    };
+
+};
+
+
+section structure_dependend{
+
+    struct {char[2] atom;real concentration;} concentrations[nsort]
+    ={
+        {"Ti",1.0}
+        ,{"O",1.0}        
+    };
+
+
+    struct {char[2] element;real split;} initial_spin_split[nsort]
+    ={
+        {"Ti",0.5}
+        ,{"O",0.5}        
+    };
+
+
+    struct {int sort;char[2] state;real spinup[7];real spindn[7];} core_occupation[*]
+    ={
+    };
+
+
+    struct {char[20] label;real kpoint[3];} special_sympoints[*]
+    ={
+        {"$~G",{0,0,0}}
+        ,{"X",{1/2,1/2,0}}
+        ,{"P",{1/2,1/2,0.199946955345061}}
+        ,{"$~G$_3",{0.420042430096480,0.420042430096480,0.399893910690122}}
+        ,{"Z",{0,0,0.399893910690122}}
+        ,{"$~G",{0,0,0}}
+        ,{"$~G$_1",{0,0.579957569903520,0}}
+        ,{"$~G$_2",{0.420042430096480,0.579957569903520,0}}        
+    };
+
+};
+
+
+section mesh{
+
+    struct {int nr;real rmin;real rmax;real rmax_factor;} radial_mesh
+    ={200,1.0e-5,0.0,1.0};
+
+
+    struct {int nr;real rmin;real rmax;} atom_radial_mesh
+    ={2000,1.0e-7,0.0};
+
+};
+
+
+section brillouin{
+
+    struct {logical metal;int nkxyz[3];} bzone_integration
+    ={t,{8,8,8}};
+
+
+    struct {int ne;real range;real width;int norder;} mp_bzone_integration
+    ={1001,5.0,0.005,0};
+
+
+    struct {int type;char[*] description;} bzone_method
+    ={1,"tetrahedron method"};
+
+    int nband=-1;
+};
+
+
+section bandstructure_plot{
+
+    struct {logical bandplot;logical read_sympoints;int ndivisions;real emin;real emax;int nptdos;logical plot_idos;} bandplot_control
+    ={f,t,50,-20.0,20.0,1000,f};
+
+
+    struct {logical bandweights;logical bweight_rot;real z_axis[3];real x_axis[3];} bandweight_control
+    ={f,f,{0.0,0.0,1.0},{1.0,0.0,0.0}};
+
+};
+
+
+section iteration_control{
+
+    struct {int steps;real tolerance;real mixing;int maxdim;real progress;} iteration_control
+    ={45,1.e-6,0.4,5,0.1};
+
+
+    struct {int scheme;char[*] description;} iteration_version
+    ={2,"Iterat   : Hyperspace interpolation"};
+
+
+    struct {int type;char[*] description;} iteration_convergence_condition
+    ={2,"Density"};
+
+    real etot_tolerance=1.e-8;
+    # ratio of things put into iteration vector compared 
+    # to density 
+
+    struct {real x0;real U;} iterationvector_ratio
+    ={1.0,1.0};
+
+};
+
+
+section options{
+
+    struct {int mspin;logical initial_spin_split;} spin
+    ={1,f};
+
+
+    struct {int type;char[*] description;} xc_potential
+    ={9,"Perdew Wang 92"};
+
+
+    struct {int type;char[*] description;} relativistic
+    ={2,"scalar relativistic"};
+
+
+    struct {int type;char[*] description;} spin_pop_type
+    ={2,"medium approximation (less expensive)"};
+
+    real quantization_axis[3]={0,0,1
+    };
+    flag options[*]={CALC_DOS(+),BEB(-),FULLBZ(-),BASIS_OPTIMIZATION(+)
+    ,EMPTY_LATTICE_TEST(-),VAT_IN_CORE_ONLY(-),PLOT_REALFUNC(-),PLOT_BASIS(+)
+    ,TEST_LOI(-),TEST_DIAGNO(-),TEST_SYMMETRIZATION(-),TEST_HS_SYM(-)
+    ,PROT_PRINT_BASIS(-),PROT_MAKELATTICE(-),PROT_STRUCTURE_PRNT(-),PROT_TCI(-)
+    ,PROT_CPA(-),PROT_CPAEFITER(-),PRCA(-),NO_SYMMETRYTEST(-)
+    ,NO_POTENTIAL(-),NO_3CI(-),NO_CORE(-),NO_VAT(-)
+    ,NO_POPANAL(-),NO_LOI(-),NO_BASIS(-),NO_EFCH(-)
+    ,NO_CUT_STOP(-),EXPORT_V3_DENSFILE(-),X0_LOOP(-)
+    };
+
+    struct {int type;char[*] description;} verbosity_level
+    ={200,"more information"};
+
+
+    struct {real moment;logical fsm;} fsmoment
+    ={1.0,f};
+
+    logical calc_etot=t;
+};
+
+
+section cpa{
+
+    struct {real emin0;real emax0;int nec;int max_se_loops;real eimag;} cpa_control
+    ={-1.60,0.4,30,10,1.0e-5};
+
+
+    struct {real efermi0;real slop_0;real slop_min;int max_ef_loops;} cpa_fermi_control
+    ={0.08,30.0,0.3,10};
+
+
+    struct {int type;char[*] description;} cpa_fermi_method
+    ={1,"secant method"};
+
+
+    struct {int ne;real eimag;} cpa_dos
+    ={1000,1.e-3};
+
+
+    struct {int ne;real eimag;} cpa_bloch_spectral_density
+    ={100,1.e-3};
+
+};
+
+
+section numerics{
+
+    struct {real exponent;} confining_potential
+    ={4.0};
+
+
+    struct {int degree;} interpolation
+    ={8};
+
+
+    struct {int nr;int neta;} vatcr_calc
+    ={50,50};
+
+
+    struct {int nit;int degree;int nvg;logical sym;logical rot;} vxc_calc
+    ={80,4,13,t,t};
+
+
+    struct {int nit;int nvg;logical sym;logical rot;} ewp_calc
+    ={80,13,t,t};
+
+
+    struct {int nxi;int neta;} two_center_integrals
+    ={26,56};
+
+
+    struct {int nxi;int neta;} cryfld_integrals
+    ={20,26};
+
+
+    struct {int nr;} one_center_integrals
+    ={200};
+
+
+    struct {int nr;} three_center_integrals
+    ={40};
+
+
+    struct {int nxi;int neta;} coulomb_energy_calc
+    ={26,46};
+
+
+    struct {int nit;int degree;int nvg;logical sym;} exc_calc
+    ={150,4,13,t};
+
+
+    struct {int nr;int neta;} overlap_density_calc
+    ={50,20};
+
+
+    struct {real dens;real pot;real orbital;} cutoff_tolerances
+    ={1.e-9,1.e-12,1.e-8};
+
+
+    struct {real cutoff;real eps_r;real eps_g;} ewald_parameter
+    ={2.0,1.0e-5,1.0e-5};
+
+
+    struct {real tol;} symtest
+    ={5.0e-13};
+
+    int nfft_ewp_per_site=-500;
+
+    struct {int mmin;int mmax;real tol;logical dv_wins;} basismapping
+    ={2,2,1.0e-12,t};
+
+};
+
+
+section shape{
+
+    struct {real rcut;int ncut;logical doc;int nprint;int nprint0;real tol;} voronoi_control
+    ={100.,200,f,0,0,1.0e-8};
+
+
+    struct {logical test;real tol;int nmesh;
+        struct {int site;real vector[3];real distance;} directions[*];
+    } shape_test
+    ={f,1.e-13,200
+        ,{
+            {1,{1.,0.,0.},7.}
+            ,{1,{1.,1.,0.},7.}
+            ,{1,{1.,1.,1.},7.}            
+        }
+    };
+
+    int shape_stiffness=2;
+    logical build_shape=t;
+    char[*] voronoi_file="+voronoi";
+
+    struct {int type;char[*] description;} shape_profile
+    ={1,"Cosine"};
+
+};
+
+
+section LSDA_U{
+    logical make_lsdau=f;
+
+    struct {int type;char[*] description;} lsdau_projection
+    ={1,"orthogonal"};
+
+
+    struct {int type;char[*] description;} lsdau_functional
+    ={1,"LSDA+U Around mean field (AMF/OP)"};
+
+    real lsdau_dmat_deviation=1.e-2;
+
+    struct {int sort;char[2] state;real f_slater[4];} lsdau_defs[*]
+    ={
+    };
+
+};
+
+
+section Vatom{
+
+    struct {int type;char[*] description;} vatom_type
+    ={3,"FPLO-3 (convoluted)"};
+
+
+    struct {real r0;real rcut;} vatom_convolution
+    ={1.5,1.0};
+
+};
+
+
+section Advanced_output{
+    int ldossites[*]={
+    };
+};
+
+

@@ -1,0 +1,3 @@
+WARNING in MODULE IO(fplo_io):
+ lattice type or lattice constants changed!
+ Will take default values for special bandplot symmetry points!

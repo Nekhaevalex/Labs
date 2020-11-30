@@ -1,0 +1,2759 @@
+%!PS-Adobe-2.0
+%%Creator: fplo
+%%Title: vcell005.ps                                                                                         
+%%Pages: 1
+%%PageOrder: Ascend
+%%BoundingBox:          0          0       2483       3508
+%%DocumentPaperSizes: a4
+%%Orientation: Portrait  
+%%EndComments
+%%BeginProlog
+%%EndProlog
+%%Page: 1 1
+/N {def} bind def
+/B {bind def} bind N
+/i {index} B
+/m {moveto} B
+/rm {rmoveto} B
+/l {lineto} B
+/rl {rlineto} B
+/n {newpath} B
+/c {closepath} B
+/v {gsave} B
+/r {grestore} B
+/s {stroke} B
+/g {setgray} B
+/q {setrgbcolor} B
+/f {fill} B
+/x {exch} B
+/w {setlinewidth} B
+/RJ {
+ stringwidth neg x neg x
+ rm
+} B
+/CS {stringwidth
+2 div neg x 2 div neg x
+rm
+} B
+/max { 2 copy ge{pop}{x pop}ifelse} B
+/min { 2 copy le{pop}{x pop}ifelse} B
+/SL {
+  { x stringwidth pop  max  }repeat
+} B
+    0.2400     0.2400  scale
+
+1   setlinecap
+   mark             
+   /ISOLatin1Encoding 
+     8#000 1 8#054 {StandardEncoding exch get} for 
+     /minus 
+     8#056 1 8#217 {StandardEncoding exch get} for 
+     /dotlessi 
+     8#301 1 8#317 {StandardEncoding exch get} for 
+     /space /exclamdown /cent /sterling /currency /yen /brokenbar /section 
+     /dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen 
+     /registered /macron /degree /plusminus /twosuperior /threesuperior /acute 
+     /mu /paragraph /periodcentered /cedilla /onesuperior /ordmasculine 
+     /guillemotright /onequarter /onehalf /threequarters /questiondown /Agrave 
+     /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla /Egrave /Eacute
+     /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis /Eth /Ntilde
+     /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply /Oslash /Ugrave 
+     /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls /agrave /aacute 
+     /acircumflex /atilde /adieresis /aring /ae /ccedilla /egrave /eacute 
+     /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis /eth /ntilde
+     /ograve /oacute /ocircumflex /otilde /odieresis /divide /oslash /ugrave 
+     /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis 
+     /ISOLatin1Encoding where not {256 array astore def} if 
+    cleartomark 
+
+ 
+   /makeISOEncoded 
+   { findfont /curfont exch def 
+     /newfont curfont maxlength dict def  
+     /ISOLatin1 (-ISOLatin1) def
+     /curfontname curfont /FontName get dup length string cvs def 
+     /newfontname curfontname length ISOLatin1 length add string 
+        dup 0                  curfontname putinterval 
+        dup curfontname length ISOLatin1   putinterval 
+     def 
+     curfont   
+     { exch dup /FID ne  
+       { dup /Encoding eq  
+         { exch pop ISOLatin1Encoding exch }  
+         if  
+         dup /FontName eq  
+         { exch pop newfontname exch }  
+         if  
+         exch newfont 3 1 roll put  
+       }  
+       { pop pop }  
+       ifelse  
+     }  
+     forall 
+     newfontname newfont definefont 
+   } def 
+ 
+   /Times-Roman makeISOEncoded pop 
+   /Times-Bold makeISOEncoded pop 
+   /Times-Italic makeISOEncoded pop 
+   /Times-BoldItalic makeISOEncoded pop 
+   /Helvetica makeISOEncoded pop 
+   /Helvetica-Bold makeISOEncoded pop 
+   /Helvetica-Oblique makeISOEncoded pop 
+   /Helvetica-BoldOblique makeISOEncoded pop 
+/popr{{pop}repeat} B
+/lincolfunc{3{dup 2 i  mul 5 1 roll x pop}repeat pop q } B
+/pow1{} B
+/pow2{dup mul} B
+/pow5{dup dup mul dup mul mul} B
+/pow10{ pow2 pow5 } B
+/pow10c2colfunc{
+  % START:    ... c i
+  %
+  % do 3 times {
+  3{ 
+    % a... c i i i
+    dup dup
+    % a... c i i f1(i)
+    pow2
+    % a... c i f1(i) i
+    x
+    % a... c i f1(i) f(i)
+    pow10
+    % a... c i f(i) f1(i)
+    x 
+    % a... c i f(i) f1(i) c
+    3 i 
+    % a... c i min(1,f(i)+f1(i)*c)
+    mul add 1 min
+    % min(1,f(i)+f1(i)*c) a... i  
+    5 1 roll x pop
+  }repeat pop q } B
+% draw sphere 
+/sphere { 
+% red green blue n1 n2 n3 rad n x0 y0
+  v v
+  translate
+  % make N even
+  2 idiv 2 mul  /Nangle x N  
+  Nangle 2 lt {/Nangle 2 N } if
+  % take rad from stack rad
+  /rad x N
+  % normalize vector -> n1 n2 n3
+  3{2 i dup mul}repeat add add sqrt
+  3{dup 4 i x div x}repeat pop
+  /n3 x N /n2 x  N /n1 x  N 3 popr /blue x N /green x N /red x N
+  % save old matrix
+  /psmat matrix currentmatrix N 
+  /PSR {psmat setmatrix} N
+  % define eliptic transformation matrix
+  /mat [0 0 0 0 0 0] N
+  n3 1. sub abs 0.00001 lt 
+  { mat 0 1  put mat 3 1 put
+  }{
+    % sqrt(1-n3 n3)
+    1. n3 n3 mul sub sqrt /sss x N
+    mat 0 n1 n3 mul sss div put
+    mat 1 n2 n3 mul sss div put
+    mat 2 n2 neg  sss div put
+    mat 3 n1 sss div put
+  }ifelse
+  % for all angles
+  Nangle  -1 1 {    180 mul Nangle div /phi x N
+    rad n3 sss   
+    2 i phi sin mul 3 i phi cos mul  
+    red green blue 180 phi 180 Nangle div sub sub 180 div colfunc
+    mat 4 2 i n1 mul put mat 5 2 i n2 mul put
+    phi sin 4 i le{
+      phi 90 ge { PSR n 0 0 6 i 0 360 arc c  f }{ 
+   mat concat n 0 0 3 i 0 360 arc c  f } ifelse
+    }{
+      dup 3 i 5 i div div 
+      2 i dup mul 1 i  dup mul sub  sqrt 
+      dup 2 i atan  
+      mat concat 
+      v n 0 0 6 i 3 i dup neg arc  
+      pop PSR      
+      2{neg 2 copy mat transform dup 2 i  atan 5 1 roll 2 popr}repeat
+      2 popr 0 0 8 i 5 3 roll arc c v clip f r r
+    }ifelse
+    5 popr PSR
+  } for
+  PSR
+  v 1 1 1 q n 0 0 rad 0 360 arc c s r  
+  r r
+  %(final--------------) ==
+  %stack
+} B
+v
+     248      350  translate
+          0.4000           0.4000  scale
+ v 
+n 0 0 m        2483 0 l       2483       3508 l 0       3508 l c v s r clip
+v 
+1 .5 .5 q 
+5. w [ 40 40 ] 0 setdash 
+v 
+n        1211.8777        1754.0000  m        2690.4618        1974.9437  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    2740     2024 translate
+   0 rotate
+0 0  m
+
+(x) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(x) show
+r
+r 
+v 
+n        1211.8777        1754.0000  m         358.2168        2136.6857  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+     408     2186 translate
+   0 rotate
+0 0  m
+
+(y) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(y) show
+r
+r 
+v 
+n        1211.8777        1754.0000  m        1211.8777        2816.1445  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    1261     2866 translate
+   0 rotate
+0 0  m
+
+(z) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(z) show
+r
+r 
+r 
+0.0 g 5. w [  ] 0 setdash 0.5 0.5 1 q
+v 
+n         945.1877         809.4266  m         943.1017         808.6000  l s
+r 
+v 
+n        1765.3415        1455.2538  m         945.1877         809.4266  l s
+r 
+v 
+n        2058.4785        1738.4024  m        1765.3415        1455.2538  l s
+r 
+v 
+n        1238.3248        1092.5753  m        2058.4785        1738.4024  l s
+r 
+v 
+n        1227.0944        1082.9159  m        1238.3248        1092.5753  l s
+r 
+v 
+n         943.1017         808.6000  m        1227.0944        1082.9159  l s
+r 
+v 
+n         945.1877        2432.0857  m         943.1017        2442.6685  l s
+r 
+v 
+n        1765.3415        1672.5026  m         945.1877        2432.0857  l s
+r 
+v 
+n        2058.4785        1955.6512  m        1765.3415        1672.5026  l s
+r 
+v 
+n        1238.3248        2715.2343  m        2058.4785        1955.6512  l s
+r 
+v 
+n        1227.0944        2716.9844  m        1238.3248        2715.2343  l s
+r 
+v 
+n         943.1017        2442.6685  m        1227.0944        2716.9844  l s
+r 
+v 
+n        1103.9583        1497.0331  m        1103.9583        1485.6236  l s
+r 
+v 
+n        1122.8059        1491.8682  m        1103.9583        1497.0331  l s
+r 
+v 
+n        1103.9583        1485.6236  m        1122.8059        1491.8682  l s
+r 
+v 
+n         664.8765        1083.5249  m         445.1170        1573.9586  l s
+r 
+v 
+n         884.6361        1998.5014  m         664.8765        1083.5249  l s
+r 
+v 
+n         884.6361        2009.9109  m         884.6361        1998.5014  l s
+r 
+v 
+n         664.8765        2500.3446  m         884.6361        2009.9109  l s
+r 
+v 
+n         445.1170        1585.3680  m         664.8765        2500.3446  l s
+r 
+v 
+n         445.1170        1573.9586  m         445.1170        1585.3680  l s
+r 
+v 
+n        1625.8594        1989.7414  m        1641.1389        1992.5395  l s
+r 
+v 
+n        1625.8594        2001.1509  m        1625.8594        1989.7414  l s
+r 
+v 
+n        1641.1389        1992.5395  m        1625.8594        2001.1509  l s
+r 
+v 
+n         945.1877         809.4266  m         943.1017         808.6000  l s
+r 
+v 
+n         774.5376        1126.9787  m         945.1877         809.4266  l s
+r 
+v 
+n         445.1170        1573.9586  m         774.5376        1126.9787  l s
+r 
+v 
+n         664.8765        1083.5249  m         445.1170        1573.9586  l s
+r 
+v 
+n         746.0006         969.2745  m         664.8765        1083.5249  l s
+r 
+v 
+n         943.1017         808.6000  m         746.0006         969.2745  l s
+r 
+v 
+n         945.1877        2432.0857  m         943.1017        2442.6685  l s
+r 
+v 
+n         774.5376        1944.0129  m         945.1877        2432.0857  l s
+r 
+v 
+n         445.1170        1585.3680  m         774.5376        1944.0129  l s
+r 
+v 
+n         664.8765        2500.3446  m         445.1170        1585.3680  l s
+r 
+v 
+n         746.0006        2603.3430  m         664.8765        2500.3446  l s
+r 
+v 
+n         943.1017        2442.6685  m         746.0006        2603.3430  l s
+r 
+v 
+n        1238.3248        1092.5753  m        2058.4785        1738.4024  l s
+r 
+v 
+n        1255.2478        1591.3090  m        1238.3248        1092.5753  l s
+r 
+v 
+n        1625.8594        1989.7414  m        1255.2478        1591.3090  l s
+r 
+v 
+n        1641.1389        1992.5395  m        1625.8594        1989.7414  l s
+r 
+v 
+n        2080.2156        1868.0233  m        1641.1389        1992.5395  l s
+r 
+v 
+n        2058.4785        1738.4024  m        2080.2156        1868.0233  l s
+r 
+v 
+n        1238.3248        2715.2343  m        2058.4785        1955.6512  l s
+r 
+v 
+n        1255.2478        2408.3433  m        1238.3248        2715.2343  l s
+r 
+v 
+n        1625.8594        2001.1509  m        1255.2478        2408.3433  l s
+r 
+v 
+n        1641.1389        1992.5395  m        1625.8594        2001.1509  l s
+r 
+v 
+n        2080.2156        1868.0233  m        1641.1389        1992.5395  l s
+r 
+v 
+n        2058.4785        1955.6512  m        2080.2156        1868.0233  l s
+r 
+v 
+n        1103.9583        1497.0331  m        1103.9583        1485.6236  l s
+r 
+v 
+n         774.5376        1944.0129  m        1103.9583        1497.0331  l s
+r 
+v 
+n         445.1170        1585.3680  m         774.5376        1944.0129  l s
+r 
+v 
+n         445.1170        1573.9586  m         445.1170        1585.3680  l s
+r 
+v 
+n         774.5376        1126.9787  m         445.1170        1573.9586  l s
+r 
+v 
+n        1103.9583        1485.6236  m         774.5376        1126.9787  l s
+r 
+v 
+n        1765.3415        1455.2538  m        2058.4785        1738.4024  l s
+r 
+v 
+n        1743.6044        1542.8818  m        1765.3415        1455.2538  l s
+r 
+v 
+n        1765.3415        1672.5026  m        1743.6044        1542.8818  l s
+r 
+v 
+n        2058.4785        1955.6512  m        1765.3415        1672.5026  l s
+r 
+v 
+n        2080.2156        1868.0233  m        2058.4785        1955.6512  l s
+r 
+v 
+n        2058.4785        1738.4024  m        2080.2156        1868.0233  l s
+r 
+v 
+n         884.6361        2009.9109  m         884.6361        1998.5014  l s
+r 
+v 
+n        1255.2478        2408.3433  m         884.6361        2009.9109  l s
+r 
+v 
+n        1625.8594        2001.1509  m        1255.2478        2408.3433  l s
+r 
+v 
+n        1625.8594        1989.7414  m        1625.8594        2001.1509  l s
+r 
+v 
+n        1255.2478        1591.3090  m        1625.8594        1989.7414  l s
+r 
+v 
+n         884.6361        1998.5014  m        1255.2478        1591.3090  l s
+r 
+v 
+n        1227.0944        1082.9159  m         943.1017         808.6000  l s
+r 
+v 
+n         746.0006         969.2745  m        1227.0944        1082.9159  l s
+r 
+v 
+n         943.1017         808.6000  m         746.0006         969.2745  l s
+r 
+v 
+n        1227.0944        2716.9844  m         943.1017        2442.6685  l s
+r 
+v 
+n         746.0006        2603.3430  m        1227.0944        2716.9844  l s
+r 
+v 
+n         943.1017        2442.6685  m         746.0006        2603.3430  l s
+r 
+v 
+n        1765.3415        1455.2538  m         945.1877         809.4266  l s
+r 
+v 
+n        1743.6044        1542.8818  m        1765.3415        1455.2538  l s
+r 
+v 
+n        1122.8059        1491.8682  m        1743.6044        1542.8818  l s
+r 
+v 
+n        1103.9583        1485.6236  m        1122.8059        1491.8682  l s
+r 
+v 
+n         774.5376        1126.9787  m        1103.9583        1485.6236  l s
+r 
+v 
+n         945.1877         809.4266  m         774.5376        1126.9787  l s
+r 
+v 
+n        1765.3415        1672.5026  m         945.1877        2432.0857  l s
+r 
+v 
+n        1743.6044        1542.8818  m        1765.3415        1672.5026  l s
+r 
+v 
+n        1122.8059        1491.8682  m        1743.6044        1542.8818  l s
+r 
+v 
+n        1103.9583        1497.0331  m        1122.8059        1491.8682  l s
+r 
+v 
+n         774.5376        1944.0129  m        1103.9583        1497.0331  l s
+r 
+v 
+n         945.1877        2432.0857  m         774.5376        1944.0129  l s
+r 
+v 
+n        1227.0944        1082.9159  m        1238.3248        1092.5753  l s
+r 
+v 
+n         746.0006         969.2745  m        1227.0944        1082.9159  l s
+r 
+v 
+n         664.8765        1083.5249  m         746.0006         969.2745  l s
+r 
+v 
+n         884.6361        1998.5014  m         664.8765        1083.5249  l s
+r 
+v 
+n        1255.2478        1591.3090  m         884.6361        1998.5014  l s
+r 
+v 
+n        1238.3248        1092.5753  m        1255.2478        1591.3090  l s
+r 
+v 
+n        1227.0944        2716.9844  m        1238.3248        2715.2343  l s
+r 
+v 
+n         746.0006        2603.3430  m        1227.0944        2716.9844  l s
+r 
+v 
+n         664.8765        2500.3446  m         746.0006        2603.3430  l s
+r 
+v 
+n         884.6361        2009.9109  m         664.8765        2500.3446  l s
+r 
+v 
+n        1255.2478        2408.3433  m         884.6361        2009.9109  l s
+r 
+v 
+n        1238.3248        2715.2343  m        1255.2478        2408.3433  l s
+r 
+/colfunc {pow10c2colfunc} N
+1. w [  ] 0 setdash 
+          0.0000           0.6000           0.0000 1 1. 3         139.2335 32         1255.0000        1999.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1255     1971 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.6302           0.0000           0.0000 1 1. 3         139.2335 32         1802.0000        1961.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1802     1934 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(i) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(1) show
+r
+          0.0000           0.6701           0.0000 1 1. 3         139.2335 32          758.0000        1474.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+     758     1446 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.6790           0.0000 1 1. 3         139.2335 32         1708.0000        1462.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1708     1434 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.7168           0.0000 1 1. 3         139.2335 32          758.0000        2291.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+     758     2263 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.7257           0.0000 1 1. 3         139.2335 32         1708.0000        2279.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1708     2251 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.7491           0.0000 1 1. 3         139.2335 32         1211.0000         936.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1211      909 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.7656           0.0000           0.0000 1 1. 3         139.2335 32          664.0000        1791.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+     664     1764 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(i) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(1) show
+r
+          0.7917           0.0000           0.0000 1 1. 3         139.2335 32         1561.0000        1321.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1561     1293 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(i) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(1) show
+r
+          0.0000           0.7958           0.0000 1 1. 3         139.2335 32         1211.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1211     1726 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.8144           0.0000 1 1. 3         139.2335 32          571.0000        1292.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+     571     1264 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.8344           0.0000 1 1. 3         139.2335 32         1911.0000        1705.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1911     1677 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.8385           0.0000           0.0000 1 1. 3         139.2335 32         1561.0000        2138.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1561     2110 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(i) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(1) show
+r
+          0.0000           0.8425           0.0000 1 1. 3         139.2335 32         1211.0000        2571.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1211     2543 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.8611           0.0000 1 1. 3         139.2335 32          571.0000        2109.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+     571     2082 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.9045           0.0000 1 1. 3         139.2335 32         1415.0000        1179.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1415     1151 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.9512           0.0000 1 1. 3         139.2335 32         1415.0000        1996.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1415     1968 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          0.0000           0.9698           0.0000 1 1. 3         139.2335 32          774.0000        1535.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+     774     1507 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(O) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(2) show
+r
+          1.0000           0.0000           0.0000 1 1. 3         139.2335 32         1321.0000        1497.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+    1321     1469 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont  111 scalefont setfont
+(i) show
+0  -33  rm
+/Helvetica-ISOLatin1 findfont   66 scalefont setfont
+(1) show
+r
+ r 
+r
+v
+    1241      350  translate
+          0.4000           0.4000  scale
+ v 
+n 0 0 m        2483 0 l       2483       3508 l 0       3508 l c v s r clip
+v 
+1 .5 .5 q 
+5. w [ 40 40 ] 0 setdash 
+v 
+n        1197.6760        1754.0000  m        2533.4611        1754.0000  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    2583     1804 translate
+   0 rotate
+0 0  m
+
+(x) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(x) show
+r
+r 
+v 
+n        1197.6760        1754.0000  m        1197.6760        1754.0000  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    1247     1804 translate
+   0 rotate
+0 0  m
+
+(y) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(y) show
+r
+r 
+v 
+n        1197.6760        1754.0000  m        1197.6760        2614.3220  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    1247     2664 translate
+   0 rotate
+0 0  m
+
+(z) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(z) show
+r
+r 
+r 
+0.0 g 5. w [  ] 0 setdash 0.5 0.5 1 q
+v 
+n         815.5838        1096.8346  m         821.5435        1092.2138  l s
+r 
+v 
+n        1285.3240        1666.0158  m         815.5838        1096.8346  l s
+r 
+v 
+n        1911.9100        1666.0158  m        1285.3240        1666.0158  l s
+r 
+v 
+n        1442.1698        1096.8346  m        1911.9100        1666.0158  l s
+r 
+v 
+n        1428.5833        1092.2138  m        1442.1698        1096.8346  l s
+r 
+v 
+n         821.5435        1092.2138  m        1428.5833        1092.2138  l s
+r 
+v 
+n         815.5838        2411.1654  m         821.5435        2415.7862  l s
+r 
+v 
+n        1285.3240        1841.9842  m         815.5838        2411.1654  l s
+r 
+v 
+n        1911.9100        1841.9842  m        1285.3240        1841.9842  l s
+r 
+v 
+n        1442.1698        2411.1654  m        1911.9100        1841.9842  l s
+r 
+v 
+n        1428.5833        2415.7862  m        1442.1698        2411.1654  l s
+r 
+v 
+n         821.5435        2415.7862  m        1428.5833        2415.7862  l s
+r 
+v 
+n         727.5372        1758.6207  m         727.5372        1749.3793  l s
+r 
+v 
+n         741.1238        1754.0000  m         727.5372        1758.6207  l s
+r 
+v 
+n         727.5372        1749.3793  m         741.1238        1754.0000  l s
+r 
+v 
+n         884.3830        1180.1981  m         414.6428        1749.3793  l s
+r 
+v 
+n        1354.1232        1749.3793  m         884.3830        1180.1981  l s
+r 
+v 
+n        1354.1232        1758.6207  m        1354.1232        1749.3793  l s
+r 
+v 
+n         884.3830        2327.8019  m        1354.1232        1758.6207  l s
+r 
+v 
+n         414.6428        1758.6207  m         884.3830        2327.8019  l s
+r 
+v 
+n         414.6428        1749.3793  m         414.6428        1758.6207  l s
+r 
+v 
+n        1843.1109        1749.3793  m        1849.0705        1754.0000  l s
+r 
+v 
+n        1843.1109        1758.6207  m        1843.1109        1749.3793  l s
+r 
+v 
+n        1849.0705        1754.0000  m        1843.1109        1758.6207  l s
+r 
+v 
+n         815.5838        1096.8346  m         821.5435        1092.2138  l s
+r 
+v 
+n         571.0900        1423.1069  m         815.5838        1096.8346  l s
+r 
+v 
+n         414.6428        1749.3793  m         571.0900        1423.1069  l s
+r 
+v 
+n         884.3830        1180.1981  m         414.6428        1749.3793  l s
+r 
+v 
+n         930.8465        1092.2138  m         884.3830        1180.1981  l s
+r 
+v 
+n         821.5435        1092.2138  m         930.8465        1092.2138  l s
+r 
+v 
+n         815.5838        2411.1654  m         821.5435        2415.7862  l s
+r 
+v 
+n         571.0900        2084.8931  m         815.5838        2411.1654  l s
+r 
+v 
+n         414.6428        1758.6207  m         571.0900        2084.8931  l s
+r 
+v 
+n         884.3830        2327.8019  m         414.6428        1758.6207  l s
+r 
+v 
+n         930.8465        2415.7862  m         884.3830        2327.8019  l s
+r 
+v 
+n         821.5435        2415.7862  m         930.8465        2415.7862  l s
+r 
+v 
+n        1442.1698        1096.8346  m        1911.9100        1666.0158  l s
+r 
+v 
+n        1598.6170        1423.1069  m        1442.1698        1096.8346  l s
+r 
+v 
+n        1843.1109        1749.3793  m        1598.6170        1423.1069  l s
+r 
+v 
+n        1849.0705        1754.0000  m        1843.1109        1749.3793  l s
+r 
+v 
+n        1958.3735        1754.0000  m        1849.0705        1754.0000  l s
+r 
+v 
+n        1911.9100        1666.0158  m        1958.3735        1754.0000  l s
+r 
+v 
+n        1442.1698        2411.1654  m        1911.9100        1841.9842  l s
+r 
+v 
+n        1598.6170        2084.8931  m        1442.1698        2411.1654  l s
+r 
+v 
+n        1843.1109        1758.6207  m        1598.6170        2084.8931  l s
+r 
+v 
+n        1849.0705        1754.0000  m        1843.1109        1758.6207  l s
+r 
+v 
+n        1958.3735        1754.0000  m        1849.0705        1754.0000  l s
+r 
+v 
+n        1911.9100        1841.9842  m        1958.3735        1754.0000  l s
+r 
+v 
+n         727.5372        1758.6207  m         727.5372        1749.3793  l s
+r 
+v 
+n         571.0900        2084.8931  m         727.5372        1758.6207  l s
+r 
+v 
+n         414.6428        1758.6207  m         571.0900        2084.8931  l s
+r 
+v 
+n         414.6428        1749.3793  m         414.6428        1758.6207  l s
+r 
+v 
+n         571.0900        1423.1069  m         414.6428        1749.3793  l s
+r 
+v 
+n         727.5372        1749.3793  m         571.0900        1423.1069  l s
+r 
+v 
+n        1285.3240        1666.0158  m        1911.9100        1666.0158  l s
+r 
+v 
+n        1238.8605        1754.0000  m        1285.3240        1666.0158  l s
+r 
+v 
+n        1285.3240        1841.9842  m        1238.8605        1754.0000  l s
+r 
+v 
+n        1911.9100        1841.9842  m        1285.3240        1841.9842  l s
+r 
+v 
+n        1958.3735        1754.0000  m        1911.9100        1841.9842  l s
+r 
+v 
+n        1911.9100        1666.0158  m        1958.3735        1754.0000  l s
+r 
+v 
+n        1354.1232        1758.6207  m        1354.1232        1749.3793  l s
+r 
+v 
+n        1598.6170        2084.8931  m        1354.1232        1758.6207  l s
+r 
+v 
+n        1843.1109        1758.6207  m        1598.6170        2084.8931  l s
+r 
+v 
+n        1843.1109        1749.3793  m        1843.1109        1758.6207  l s
+r 
+v 
+n        1598.6170        1423.1069  m        1843.1109        1749.3793  l s
+r 
+v 
+n        1354.1232        1749.3793  m        1598.6170        1423.1069  l s
+r 
+v 
+n        1428.5833        1092.2138  m         821.5435        1092.2138  l s
+r 
+v 
+n         930.8465        1092.2138  m        1428.5833        1092.2138  l s
+r 
+v 
+n         821.5435        1092.2138  m         930.8465        1092.2138  l s
+r 
+v 
+n        1428.5833        2415.7862  m         821.5435        2415.7862  l s
+r 
+v 
+n         930.8465        2415.7862  m        1428.5833        2415.7862  l s
+r 
+v 
+n         821.5435        2415.7862  m         930.8465        2415.7862  l s
+r 
+v 
+n        1285.3240        1666.0158  m         815.5838        1096.8346  l s
+r 
+v 
+n        1238.8605        1754.0000  m        1285.3240        1666.0158  l s
+r 
+v 
+n         741.1238        1754.0000  m        1238.8605        1754.0000  l s
+r 
+v 
+n         727.5372        1749.3793  m         741.1238        1754.0000  l s
+r 
+v 
+n         571.0900        1423.1069  m         727.5372        1749.3793  l s
+r 
+v 
+n         815.5838        1096.8346  m         571.0900        1423.1069  l s
+r 
+v 
+n        1285.3240        1841.9842  m         815.5838        2411.1654  l s
+r 
+v 
+n        1238.8605        1754.0000  m        1285.3240        1841.9842  l s
+r 
+v 
+n         741.1238        1754.0000  m        1238.8605        1754.0000  l s
+r 
+v 
+n         727.5372        1758.6207  m         741.1238        1754.0000  l s
+r 
+v 
+n         571.0900        2084.8931  m         727.5372        1758.6207  l s
+r 
+v 
+n         815.5838        2411.1654  m         571.0900        2084.8931  l s
+r 
+v 
+n        1428.5833        1092.2138  m        1442.1698        1096.8346  l s
+r 
+v 
+n         930.8465        1092.2138  m        1428.5833        1092.2138  l s
+r 
+v 
+n         884.3830        1180.1981  m         930.8465        1092.2138  l s
+r 
+v 
+n        1354.1232        1749.3793  m         884.3830        1180.1981  l s
+r 
+v 
+n        1598.6170        1423.1069  m        1354.1232        1749.3793  l s
+r 
+v 
+n        1442.1698        1096.8346  m        1598.6170        1423.1069  l s
+r 
+v 
+n        1428.5833        2415.7862  m        1442.1698        2411.1654  l s
+r 
+v 
+n         930.8465        2415.7862  m        1428.5833        2415.7862  l s
+r 
+v 
+n         884.3830        2327.8019  m         930.8465        2415.7862  l s
+r 
+v 
+n        1354.1232        1758.6207  m         884.3830        2327.8019  l s
+r 
+v 
+n        1598.6170        2084.8931  m        1354.1232        1758.6207  l s
+r 
+v 
+n        1442.1698        2411.1654  m        1598.6170        2084.8931  l s
+r 
+/colfunc {pow10c2colfunc} N
+1. w [  ] 0 setdash 
+          0.0000           0.6000           0.0000 1 1. 3         108.9344 32         1598.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1598     1732 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.6337           0.0000 1 1. 3         108.9344 32         1084.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     1401 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.6337           0.0000 1 1. 3         108.9344 32         1084.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     2063 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.6935           0.0000           0.0000 1 1. 3         108.9344 32          884.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     884     1732 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.6935           0.0000           0.0000 1 1. 3         108.9344 32         1911.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1911     1732 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.0000           0.7533           0.0000 1 1. 3         108.9344 32          683.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     683     1401 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7533           0.0000 1 1. 3         108.9344 32          683.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     683     2063 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7533           0.0000 1 1. 3         108.9344 32         1711.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1711     2063 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7533           0.0000 1 1. 3         108.9344 32         1711.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1711     1401 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7869           0.0000 1 1. 3         108.9344 32         1197.0000        2415.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1197     2393 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7869           0.0000 1 1. 3         108.9344 32         1197.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1197     1732 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7869           0.0000 1 1. 3         108.9344 32         1197.0000        1092.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1197     1070 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.8467           0.0000           0.0000 1 1. 3         108.9344 32         1398.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1398     2063 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.8467           0.0000           0.0000 1 1. 3         108.9344 32         1398.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1398     1401 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.0000           0.9065           0.0000 1 1. 3         108.9344 32         1598.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1598     1732 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.9065           0.0000 1 1. 3         108.9344 32          571.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     571     1732 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.9402           0.0000 1 1. 3         108.9344 32         1084.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     2063 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.9402           0.0000 1 1. 3         108.9344 32         1084.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     1401 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          1.0000           0.0000           0.0000 1 1. 3         108.9344 32          884.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     884     1732 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+ r 
+r
+v
+     248     1754  translate
+          0.4000           0.4000  scale
+ v 
+n 0 0 m        2483 0 l       2483       3508 l 0       3508 l c v s r clip
+v 
+1 .5 .5 q 
+5. w [ 40 40 ] 0 setdash 
+v 
+n        1197.6760        1797.8240  m        2533.4611        1797.8240  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    2583     1847 translate
+   0 rotate
+0 0  m
+
+(x) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(x) show
+r
+r 
+v 
+n        1197.6760        1797.8240  m        1197.6760        3133.6091  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    1247     3183 translate
+   0 rotate
+0 0  m
+
+(y) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(y) show
+r
+r 
+v 
+n        1197.6760        1797.8240  m        1197.6760        1797.8240  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    1247     1847 translate
+   0 rotate
+0 0  m
+
+(z) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(z) show
+r
+r 
+r 
+0.0 g 5. w [  ] 0 setdash 0.5 0.5 1 q
+v 
+n         815.5838        1553.3302  m         821.5435        1566.9167  l s
+r 
+v 
+n        1285.3240        1083.5900  m         815.5838        1553.3302  l s
+r 
+v 
+n        1911.9100        1710.1760  m        1285.3240        1083.5900  l s
+r 
+v 
+n        1442.1698        2179.9162  m        1911.9100        1710.1760  l s
+r 
+v 
+n        1428.5833        2173.9565  m        1442.1698        2179.9162  l s
+r 
+v 
+n         821.5435        1566.9167  m        1428.5833        2173.9565  l s
+r 
+v 
+n         815.5838        1553.3302  m         821.5435        1566.9167  l s
+r 
+v 
+n        1285.3240        1083.5900  m         815.5838        1553.3302  l s
+r 
+v 
+n        1911.9100        1710.1760  m        1285.3240        1083.5900  l s
+r 
+v 
+n        1442.1698        2179.9162  m        1911.9100        1710.1760  l s
+r 
+v 
+n        1428.5833        2173.9565  m        1442.1698        2179.9162  l s
+r 
+v 
+n         821.5435        1566.9167  m        1428.5833        2173.9565  l s
+r 
+v 
+n         727.5372        1152.3891  m         727.5372        1152.3891  l s
+r 
+v 
+n         741.1238        1146.4295  m         727.5372        1152.3891  l s
+r 
+v 
+n         727.5372        1152.3891  m         741.1238        1146.4295  l s
+r 
+v 
+n         884.3830        2111.1170  m         414.6428        1641.3768  l s
+r 
+v 
+n        1354.1232        2580.8572  m         884.3830        2111.1170  l s
+r 
+v 
+n        1354.1232        2580.8572  m        1354.1232        2580.8572  l s
+r 
+v 
+n         884.3830        2111.1170  m        1354.1232        2580.8572  l s
+r 
+v 
+n         414.6428        1641.3768  m         884.3830        2111.1170  l s
+r 
+v 
+n         414.6428        1641.3768  m         414.6428        1641.3768  l s
+r 
+v 
+n        1843.1109        2267.9628  m        1849.0705        2254.3762  l s
+r 
+v 
+n        1843.1109        2267.9628  m        1843.1109        2267.9628  l s
+r 
+v 
+n        1849.0705        2254.3762  m        1843.1109        2267.9628  l s
+r 
+v 
+n         815.5838        1553.3302  m         821.5435        1566.9167  l s
+r 
+v 
+n         571.0900        1396.8830  m         815.5838        1553.3302  l s
+r 
+v 
+n         414.6428        1641.3768  m         571.0900        1396.8830  l s
+r 
+v 
+n         884.3830        2111.1170  m         414.6428        1641.3768  l s
+r 
+v 
+n         930.8465        2064.6535  m         884.3830        2111.1170  l s
+r 
+v 
+n         821.5435        1566.9167  m         930.8465        2064.6535  l s
+r 
+v 
+n         815.5838        1553.3302  m         821.5435        1566.9167  l s
+r 
+v 
+n         571.0900        1396.8830  m         815.5838        1553.3302  l s
+r 
+v 
+n         414.6428        1641.3768  m         571.0900        1396.8830  l s
+r 
+v 
+n         884.3830        2111.1170  m         414.6428        1641.3768  l s
+r 
+v 
+n         930.8465        2064.6535  m         884.3830        2111.1170  l s
+r 
+v 
+n         821.5435        1566.9167  m         930.8465        2064.6535  l s
+r 
+v 
+n        1442.1698        2179.9162  m        1911.9100        1710.1760  l s
+r 
+v 
+n        1598.6170        2424.4100  m        1442.1698        2179.9162  l s
+r 
+v 
+n        1843.1109        2267.9628  m        1598.6170        2424.4100  l s
+r 
+v 
+n        1849.0705        2254.3762  m        1843.1109        2267.9628  l s
+r 
+v 
+n        1958.3735        1756.6395  m        1849.0705        2254.3762  l s
+r 
+v 
+n        1911.9100        1710.1760  m        1958.3735        1756.6395  l s
+r 
+v 
+n        1442.1698        2179.9162  m        1911.9100        1710.1760  l s
+r 
+v 
+n        1598.6170        2424.4100  m        1442.1698        2179.9162  l s
+r 
+v 
+n        1843.1109        2267.9628  m        1598.6170        2424.4100  l s
+r 
+v 
+n        1849.0705        2254.3762  m        1843.1109        2267.9628  l s
+r 
+v 
+n        1958.3735        1756.6395  m        1849.0705        2254.3762  l s
+r 
+v 
+n        1911.9100        1710.1760  m        1958.3735        1756.6395  l s
+r 
+v 
+n         727.5372        1152.3891  m         727.5372        1152.3891  l s
+r 
+v 
+n         571.0900        1396.8830  m         727.5372        1152.3891  l s
+r 
+v 
+n         414.6428        1641.3768  m         571.0900        1396.8830  l s
+r 
+v 
+n         414.6428        1641.3768  m         414.6428        1641.3768  l s
+r 
+v 
+n         571.0900        1396.8830  m         414.6428        1641.3768  l s
+r 
+v 
+n         727.5372        1152.3891  m         571.0900        1396.8830  l s
+r 
+v 
+n        1285.3240        1083.5900  m        1911.9100        1710.1760  l s
+r 
+v 
+n        1238.8605        1037.1265  m        1285.3240        1083.5900  l s
+r 
+v 
+n        1285.3240        1083.5900  m        1238.8605        1037.1265  l s
+r 
+v 
+n        1911.9100        1710.1760  m        1285.3240        1083.5900  l s
+r 
+v 
+n        1958.3735        1756.6395  m        1911.9100        1710.1760  l s
+r 
+v 
+n        1911.9100        1710.1760  m        1958.3735        1756.6395  l s
+r 
+v 
+n        1354.1232        2580.8572  m        1354.1232        2580.8572  l s
+r 
+v 
+n        1598.6170        2424.4100  m        1354.1232        2580.8572  l s
+r 
+v 
+n        1843.1109        2267.9628  m        1598.6170        2424.4100  l s
+r 
+v 
+n        1843.1109        2267.9628  m        1843.1109        2267.9628  l s
+r 
+v 
+n        1598.6170        2424.4100  m        1843.1109        2267.9628  l s
+r 
+v 
+n        1354.1232        2580.8572  m        1598.6170        2424.4100  l s
+r 
+v 
+n        1428.5833        2173.9565  m         821.5435        1566.9167  l s
+r 
+v 
+n         930.8465        2064.6535  m        1428.5833        2173.9565  l s
+r 
+v 
+n         821.5435        1566.9167  m         930.8465        2064.6535  l s
+r 
+v 
+n        1428.5833        2173.9565  m         821.5435        1566.9167  l s
+r 
+v 
+n         930.8465        2064.6535  m        1428.5833        2173.9565  l s
+r 
+v 
+n         821.5435        1566.9167  m         930.8465        2064.6535  l s
+r 
+v 
+n        1285.3240        1083.5900  m         815.5838        1553.3302  l s
+r 
+v 
+n        1238.8605        1037.1265  m        1285.3240        1083.5900  l s
+r 
+v 
+n         741.1238        1146.4295  m        1238.8605        1037.1265  l s
+r 
+v 
+n         727.5372        1152.3891  m         741.1238        1146.4295  l s
+r 
+v 
+n         571.0900        1396.8830  m         727.5372        1152.3891  l s
+r 
+v 
+n         815.5838        1553.3302  m         571.0900        1396.8830  l s
+r 
+v 
+n        1285.3240        1083.5900  m         815.5838        1553.3302  l s
+r 
+v 
+n        1238.8605        1037.1265  m        1285.3240        1083.5900  l s
+r 
+v 
+n         741.1238        1146.4295  m        1238.8605        1037.1265  l s
+r 
+v 
+n         727.5372        1152.3891  m         741.1238        1146.4295  l s
+r 
+v 
+n         571.0900        1396.8830  m         727.5372        1152.3891  l s
+r 
+v 
+n         815.5838        1553.3302  m         571.0900        1396.8830  l s
+r 
+v 
+n        1428.5833        2173.9565  m        1442.1698        2179.9162  l s
+r 
+v 
+n         930.8465        2064.6535  m        1428.5833        2173.9565  l s
+r 
+v 
+n         884.3830        2111.1170  m         930.8465        2064.6535  l s
+r 
+v 
+n        1354.1232        2580.8572  m         884.3830        2111.1170  l s
+r 
+v 
+n        1598.6170        2424.4100  m        1354.1232        2580.8572  l s
+r 
+v 
+n        1442.1698        2179.9162  m        1598.6170        2424.4100  l s
+r 
+v 
+n        1428.5833        2173.9565  m        1442.1698        2179.9162  l s
+r 
+v 
+n         930.8465        2064.6535  m        1428.5833        2173.9565  l s
+r 
+v 
+n         884.3830        2111.1170  m         930.8465        2064.6535  l s
+r 
+v 
+n        1354.1232        2580.8572  m         884.3830        2111.1170  l s
+r 
+v 
+n        1598.6170        2424.4100  m        1354.1232        2580.8572  l s
+r 
+v 
+n        1442.1698        2179.9162  m        1598.6170        2424.4100  l s
+r 
+/colfunc {pow10c2colfunc} N
+1. w [  ] 0 setdash 
+          0.0000           0.6000           0.0000 1 1. 3         108.9344 32         1197.0000        1797.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1197     1776 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.7000           0.0000           0.0000 1 1. 3         108.9344 32         1398.0000        1597.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1398     1575 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.0000           0.7000           0.0000 1 1. 3         108.9344 32         1084.0000        1284.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     1262 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7000           0.0000 1 1. 3         108.9344 32          683.0000        1910.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     683     1888 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7000           0.0000 1 1. 3         108.9344 32         1084.0000        2311.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     2289 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7000           0.0000 1 1. 3         108.9344 32         1711.0000        1910.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1711     1888 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.8000           0.0000           0.0000 1 1. 3         108.9344 32          884.0000        1083.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     884     1061 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.0000           0.8000           0.0000 1 1. 3         108.9344 32         1598.0000        1396.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1598     1375 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.8000           0.0000           0.0000 1 1. 3         108.9344 32         1911.0000        2111.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1911     2089 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.0000           0.8000           0.0000 1 1. 3         108.9344 32          571.0000        1396.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     571     1375 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.8000           0.0000 1 1. 3         108.9344 32         1197.0000        1797.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1197     1776 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.8000           0.0000 1 1. 3         108.9344 32         1598.0000        2424.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1598     2402 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.8000           0.0000           0.0000 1 1. 3         108.9344 32          884.0000        2111.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     884     2089 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.0000           0.9000           0.0000 1 1. 3         108.9344 32         1084.0000        2311.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     2289 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.9000           0.0000 1 1. 3         108.9344 32          683.0000        1910.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     683     1888 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.9000           0.0000 1 1. 3         108.9344 32         1084.0000        1284.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     1262 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.9000           0.0000 1 1. 3         108.9344 32         1711.0000        1910.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1711     1888 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.9000           0.0000           0.0000 1 1. 3         108.9344 32         1398.0000        1597.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1398     1575 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.0000           1.0000           0.0000 1 1. 3         108.9344 32         1197.0000        1797.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1197     1776 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+ r 
+r
+v
+    1241     1754  translate
+          0.4000           0.4000  scale
+ v 
+n 0 0 m        2483 0 l       2483       3508 l 0       3508 l c v s r clip
+v 
+1 .5 .5 q 
+5. w [ 40 40 ] 0 setdash 
+v 
+n        1285.3240        1754.0000  m        1285.3240        1754.0000  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    1335     1804 translate
+   0 rotate
+0 0  m
+
+(x) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(x) show
+r
+r 
+v 
+n        1285.3240        1754.0000  m        2621.1091        1754.0000  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    2671     1804 translate
+   0 rotate
+0 0  m
+
+(y) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(y) show
+r
+r 
+v 
+n        1285.3240        1754.0000  m        1285.3240        2614.3220  l s
+r 
+v 1. w 0. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+    1335     2664 translate
+   0 rotate
+0 0  m
+
+(z) CS
+/Helvetica-ISOLatin1 findfont  160 scalefont setfont
+(z) show
+r
+r 
+r 
+0.0 g 5. w [  ] 0 setdash 0.5 0.5 1 q
+v 
+n        1040.8302        1096.8346  m        1054.4167        1092.2138  l s
+r 
+v 
+n         571.0900        1666.0158  m        1040.8302        1096.8346  l s
+r 
+v 
+n        1197.6760        1666.0158  m         571.0900        1666.0158  l s
+r 
+v 
+n        1667.4162        1096.8346  m        1197.6760        1666.0158  l s
+r 
+v 
+n        1661.4565        1092.2138  m        1667.4162        1096.8346  l s
+r 
+v 
+n        1054.4167        1092.2138  m        1661.4565        1092.2138  l s
+r 
+v 
+n        1040.8302        2411.1654  m        1054.4167        2415.7862  l s
+r 
+v 
+n         571.0900        1841.9842  m        1040.8302        2411.1654  l s
+r 
+v 
+n        1197.6760        1841.9842  m         571.0900        1841.9842  l s
+r 
+v 
+n        1667.4162        2411.1654  m        1197.6760        1841.9842  l s
+r 
+v 
+n        1661.4565        2415.7862  m        1667.4162        2411.1654  l s
+r 
+v 
+n        1054.4167        2415.7862  m        1661.4565        2415.7862  l s
+r 
+v 
+n         639.8891        1758.6207  m         639.8891        1749.3793  l s
+r 
+v 
+n         633.9295        1754.0000  m         639.8891        1758.6207  l s
+r 
+v 
+n         639.8891        1749.3793  m         633.9295        1754.0000  l s
+r 
+v 
+n        1598.6170        1180.1981  m        1128.8768        1749.3793  l s
+r 
+v 
+n        2068.3572        1749.3793  m        1598.6170        1180.1981  l s
+r 
+v 
+n        2068.3572        1758.6207  m        2068.3572        1749.3793  l s
+r 
+v 
+n        1598.6170        2327.8019  m        2068.3572        1758.6207  l s
+r 
+v 
+n        1128.8768        1758.6207  m        1598.6170        2327.8019  l s
+r 
+v 
+n        1128.8768        1749.3793  m        1128.8768        1758.6207  l s
+r 
+v 
+n        1755.4628        1749.3793  m        1741.8762        1754.0000  l s
+r 
+v 
+n        1755.4628        1758.6207  m        1755.4628        1749.3793  l s
+r 
+v 
+n        1741.8762        1754.0000  m        1755.4628        1758.6207  l s
+r 
+v 
+n        1040.8302        1096.8346  m        1054.4167        1092.2138  l s
+r 
+v 
+n         884.3830        1423.1069  m        1040.8302        1096.8346  l s
+r 
+v 
+n        1128.8768        1749.3793  m         884.3830        1423.1069  l s
+r 
+v 
+n        1598.6170        1180.1981  m        1128.8768        1749.3793  l s
+r 
+v 
+n        1552.1535        1092.2138  m        1598.6170        1180.1981  l s
+r 
+v 
+n        1054.4167        1092.2138  m        1552.1535        1092.2138  l s
+r 
+v 
+n        1040.8302        2411.1654  m        1054.4167        2415.7862  l s
+r 
+v 
+n         884.3830        2084.8931  m        1040.8302        2411.1654  l s
+r 
+v 
+n        1128.8768        1758.6207  m         884.3830        2084.8931  l s
+r 
+v 
+n        1598.6170        2327.8019  m        1128.8768        1758.6207  l s
+r 
+v 
+n        1552.1535        2415.7862  m        1598.6170        2327.8019  l s
+r 
+v 
+n        1054.4167        2415.7862  m        1552.1535        2415.7862  l s
+r 
+v 
+n        1667.4162        1096.8346  m        1197.6760        1666.0158  l s
+r 
+v 
+n        1911.9100        1423.1069  m        1667.4162        1096.8346  l s
+r 
+v 
+n        1755.4628        1749.3793  m        1911.9100        1423.1069  l s
+r 
+v 
+n        1741.8762        1754.0000  m        1755.4628        1749.3793  l s
+r 
+v 
+n        1244.1395        1754.0000  m        1741.8762        1754.0000  l s
+r 
+v 
+n        1197.6760        1666.0158  m        1244.1395        1754.0000  l s
+r 
+v 
+n        1667.4162        2411.1654  m        1197.6760        1841.9842  l s
+r 
+v 
+n        1911.9100        2084.8931  m        1667.4162        2411.1654  l s
+r 
+v 
+n        1755.4628        1758.6207  m        1911.9100        2084.8931  l s
+r 
+v 
+n        1741.8762        1754.0000  m        1755.4628        1758.6207  l s
+r 
+v 
+n        1244.1395        1754.0000  m        1741.8762        1754.0000  l s
+r 
+v 
+n        1197.6760        1841.9842  m        1244.1395        1754.0000  l s
+r 
+v 
+n         639.8891        1758.6207  m         639.8891        1749.3793  l s
+r 
+v 
+n         884.3830        2084.8931  m         639.8891        1758.6207  l s
+r 
+v 
+n        1128.8768        1758.6207  m         884.3830        2084.8931  l s
+r 
+v 
+n        1128.8768        1749.3793  m        1128.8768        1758.6207  l s
+r 
+v 
+n         884.3830        1423.1069  m        1128.8768        1749.3793  l s
+r 
+v 
+n         639.8891        1749.3793  m         884.3830        1423.1069  l s
+r 
+v 
+n         571.0900        1666.0158  m        1197.6760        1666.0158  l s
+r 
+v 
+n         524.6265        1754.0000  m         571.0900        1666.0158  l s
+r 
+v 
+n         571.0900        1841.9842  m         524.6265        1754.0000  l s
+r 
+v 
+n        1197.6760        1841.9842  m         571.0900        1841.9842  l s
+r 
+v 
+n        1244.1395        1754.0000  m        1197.6760        1841.9842  l s
+r 
+v 
+n        1197.6760        1666.0158  m        1244.1395        1754.0000  l s
+r 
+v 
+n        2068.3572        1758.6207  m        2068.3572        1749.3793  l s
+r 
+v 
+n        1911.9100        2084.8931  m        2068.3572        1758.6207  l s
+r 
+v 
+n        1755.4628        1758.6207  m        1911.9100        2084.8931  l s
+r 
+v 
+n        1755.4628        1749.3793  m        1755.4628        1758.6207  l s
+r 
+v 
+n        1911.9100        1423.1069  m        1755.4628        1749.3793  l s
+r 
+v 
+n        2068.3572        1749.3793  m        1911.9100        1423.1069  l s
+r 
+v 
+n        1661.4565        1092.2138  m        1054.4167        1092.2138  l s
+r 
+v 
+n        1552.1535        1092.2138  m        1661.4565        1092.2138  l s
+r 
+v 
+n        1054.4167        1092.2138  m        1552.1535        1092.2138  l s
+r 
+v 
+n        1661.4565        2415.7862  m        1054.4167        2415.7862  l s
+r 
+v 
+n        1552.1535        2415.7862  m        1661.4565        2415.7862  l s
+r 
+v 
+n        1054.4167        2415.7862  m        1552.1535        2415.7862  l s
+r 
+v 
+n         571.0900        1666.0158  m        1040.8302        1096.8346  l s
+r 
+v 
+n         524.6265        1754.0000  m         571.0900        1666.0158  l s
+r 
+v 
+n         633.9295        1754.0000  m         524.6265        1754.0000  l s
+r 
+v 
+n         639.8891        1749.3793  m         633.9295        1754.0000  l s
+r 
+v 
+n         884.3830        1423.1069  m         639.8891        1749.3793  l s
+r 
+v 
+n        1040.8302        1096.8346  m         884.3830        1423.1069  l s
+r 
+v 
+n         571.0900        1841.9842  m        1040.8302        2411.1654  l s
+r 
+v 
+n         524.6265        1754.0000  m         571.0900        1841.9842  l s
+r 
+v 
+n         633.9295        1754.0000  m         524.6265        1754.0000  l s
+r 
+v 
+n         639.8891        1758.6207  m         633.9295        1754.0000  l s
+r 
+v 
+n         884.3830        2084.8931  m         639.8891        1758.6207  l s
+r 
+v 
+n        1040.8302        2411.1654  m         884.3830        2084.8931  l s
+r 
+v 
+n        1661.4565        1092.2138  m        1667.4162        1096.8346  l s
+r 
+v 
+n        1552.1535        1092.2138  m        1661.4565        1092.2138  l s
+r 
+v 
+n        1598.6170        1180.1981  m        1552.1535        1092.2138  l s
+r 
+v 
+n        2068.3572        1749.3793  m        1598.6170        1180.1981  l s
+r 
+v 
+n        1911.9100        1423.1069  m        2068.3572        1749.3793  l s
+r 
+v 
+n        1667.4162        1096.8346  m        1911.9100        1423.1069  l s
+r 
+v 
+n        1661.4565        2415.7862  m        1667.4162        2411.1654  l s
+r 
+v 
+n        1552.1535        2415.7862  m        1661.4565        2415.7862  l s
+r 
+v 
+n        1598.6170        2327.8019  m        1552.1535        2415.7862  l s
+r 
+v 
+n        2068.3572        1758.6207  m        1598.6170        2327.8019  l s
+r 
+v 
+n        1911.9100        2084.8931  m        2068.3572        1758.6207  l s
+r 
+v 
+n        1667.4162        2411.1654  m        1911.9100        2084.8931  l s
+r 
+/colfunc {pow10c2colfunc} N
+1. w [  ] 0 setdash 
+          0.0000           0.6000           0.0000 1 1. 3         108.9344 32          884.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     884     1732 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.6337           0.0000 1 1. 3         108.9344 32         1398.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1398     1401 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.6337           0.0000 1 1. 3         108.9344 32         1398.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1398     2063 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.6935           0.0000           0.0000 1 1. 3         108.9344 32         1598.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1598     1732 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.6935           0.0000           0.0000 1 1. 3         108.9344 32          571.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     571     1732 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.0000           0.7533           0.0000 1 1. 3         108.9344 32         1799.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1799     1401 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7533           0.0000 1 1. 3         108.9344 32         1799.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1799     2063 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7533           0.0000 1 1. 3         108.9344 32          771.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     771     2063 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7533           0.0000 1 1. 3         108.9344 32          771.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     771     1401 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7869           0.0000 1 1. 3         108.9344 32         1285.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1285     1732 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7869           0.0000 1 1. 3         108.9344 32         1285.0000        2415.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1285     2393 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.7869           0.0000 1 1. 3         108.9344 32         1285.0000        1092.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1285     1070 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.8467           0.0000           0.0000 1 1. 3         108.9344 32         1084.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     2063 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.8467           0.0000           0.0000 1 1. 3         108.9344 32         1084.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1084     1401 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+          0.0000           0.9065           0.0000 1 1. 3         108.9344 32         1911.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1911     1732 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.9065           0.0000 1 1. 3         108.9344 32          884.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+     884     1732 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.9402           0.0000 1 1. 3         108.9344 32         1398.0000        2084.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1398     2063 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          0.0000           0.9402           0.0000 1 1. 3         108.9344 32         1398.0000        1423.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1398     1401 translate
+   0 rotate
+0 0  m
+
+(O2) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(O) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(2) show
+r
+          1.0000           0.0000           0.0000 1 1. 3         108.9344 32         1598.0000        1754.0000   sphere
+1. w 1. g [  ] 0 setdash 
+v
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+    1598     1732 translate
+   0 rotate
+0 0  m
+
+(Ti1) CS
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(T) show
+/Helvetica-ISOLatin1 findfont   87 scalefont setfont
+(i) show
+0  -26  rm
+/Helvetica-ISOLatin1 findfont   52 scalefont setfont
+(1) show
+r
+ r 
+r
+showpage
+%%Trailer
+%%DocumentFonts: 
+%%EOF
