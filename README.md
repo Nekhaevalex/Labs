@@ -141,3 +141,4 @@
 * **Jupyter Notebook** — так же упомянута выше.
 * **Inkscape** — бесплатный кросс-платформенный векторный редактор.
 * **KDE LabPlot** — бесплатный кросс-платформенный аналог Origin.
+* **Wolfram Engine** — Все же одна из возможностей бесплатно и легально использовать Wolfram Mathematica есть скрестить с Jupyter Notebook. Ссылки с описанием установки: https://github.com/WolframResearch/WolframLanguageForJupyter https://www.wolfram.com/developer/
