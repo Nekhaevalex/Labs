@@ -1,0 +1,295 @@
+========================================================================= 
+Log Path: ./Physics_Labs/1_sem/Lab111/rmarkdown/log/preparation.log 
+Program Path: /Users/alex/git/Labs/Physics_Labs/1_sem/Lab111/rmarkdown/prepare_data.r 
+Working Directory: /Users/alex/git/Labs 
+User Name: alex 
+R Version: 4.4.1 (2024-06-14) 
+Machine: Alexanders-Laptop.local arm64 
+Operating System: Darwin 23.5.0 Darwin Kernel Version 23.5.0: Wed May 1 20:12:58 PDT 2024; root:xnu-10063.121.3~5/RELEASE_ARM64_T6000 
+Base Packages: stats graphics grDevices utils datasets methods base 
+Other Packages: tidylog_1.1.0 yardstick_1.3.1 workflowsets_1.1.0 workflows_1.1.4 tune_1.2.1 rsample_1.2.1 recipes_1.0.10 parsnip_1.2.1 modeldata_1.4.0 infer_1.0.7 dials_1.2.1 scales_1.3.0 broom_1.0.6 tidymodels_1.2.0 knitr_1.47 kableExtra_1.4.0 readxl_1.4.3 procs_1.0.6 reporter_1.4.4 libr_1.3.3 logr_1.3.8 fmtr_1.6.5 common_1.1.3 sassy_1.2.5 lubridate_1.9.3 forcats_1.0.0 stringr_1.5.1 dplyr_1.1.4 purrr_1.0.2 readr_2.1.5 tidyr_1.3.1 tibble_3.2.1 ggplot2_3.5.1 tidyverse_2.0.0 
+Log Start Time: 2024-07-03 14:58:29.932395 
+========================================================================= 
+
+Setting up library 
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.932891 
+NOTE: Elapsed Time: 0.000242948532104492 secs 
+
+# library 'experimental': 2 items
+- attributes: rds not loaded
+- path: ./Physics_Labs/1_sem/Lab111/rmarkdown/data/experimental
+- items:
+      Name Extension Rows Cols   Size        LastModified
+1  current       rds   36    4 5.8 Kb 2024-07-03 14:56:12
+2 diameter       rds   10    2 3.7 Kb 2024-07-03 14:56:12
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.935233 
+NOTE: Elapsed Time: 0.00234222412109375 secs 
+
+# library 'meta': 2 items
+- attributes: rds not loaded
+- path: ./Physics_Labs/1_sem/Lab111/rmarkdown/data/meta
+- items:
+             Name Extension Rows Cols   Size        LastModified
+1        accuracy       rds    2    2 3.5 Kb 2024-07-03 14:56:12
+2 characteristics       rds    8    3 5.5 Kb 2024-07-03 14:56:12
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.937112 
+NOTE: Elapsed Time: 0.00187897682189941 secs 
+
+Preparing DIAMETER dataset 
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.937376 
+NOTE: Elapsed Time: 0.00026392936706543 secs 
+
+[1] "proc_transpose: input data set 2 rows and 10 columns"
+[2] "                name: NAME"                          
+[3] "                output dataset 10 rows and 3 columns"
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.944935 
+NOTE: Elapsed Time: 0.00755906105041504 secs 
+
+# A tibble: 10 × 3
+   NAME   COL1  COL2
+   <chr> <dbl> <dbl>
+ 1 1       0.4  0.36
+ 2 2       0.3  0.33
+ 3 3       0.4  0.33
+ 4 4       0.4  0.34
+ 5 5       0.4  0.36
+ 6 6       0.4  0.35
+ 7 7       0.4  0.35
+ 8 8       0.4  0.34
+ 9 9       0.4  0.35
+10 10      0.5  0.34
+
+NOTE: Data frame has 10 rows and 3 columns. 
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.950053 
+NOTE: Elapsed Time: 0.00511789321899414 secs 
+
+rename: renamed 2 variables (D1, D2)
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.951948 
+NOTE: Elapsed Time: 0.00189495086669922 secs 
+
+select: dropped one variable (NAME)
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.953317 
+NOTE: Elapsed Time: 0.00136899948120117 secs 
+
+datastep: columns started with 2 and ended with 2 
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.954704 
+NOTE: Elapsed Time: 0.00138711929321289 secs 
+
+# A tibble: 10 × 2
+      D1    D2
+   <dbl> <dbl>
+ 1   0.4  0.36
+ 2   0.3  0.33
+ 3   0.4  0.33
+ 4   0.4  0.34
+ 5   0.4  0.36
+ 6   0.4  0.35
+ 7   0.4  0.35
+ 8   0.4  0.34
+ 9   0.4  0.35
+10   0.5  0.34
+
+NOTE: Data frame has 10 rows and 2 columns. 
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.959369 
+NOTE: Elapsed Time: 0.00466489791870117 secs 
+
+Preparing CURRENT dataset 
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.963461 
+NOTE: Elapsed Time: 0.00409197807312012 secs 
+
+mutate: new variable 'group' (character) with one unique value and 0% NA
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.97138 
+NOTE: Elapsed Time: 0.0079190731048584 secs 
+
+mutate: new variable 'group' (character) with one unique value and 0% NA
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.980367 
+NOTE: Elapsed Time: 0.0089869499206543 secs 
+
+mutate: new variable 'group' (character) with one unique value and 0% NA
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.987504 
+NOTE: Elapsed Time: 0.00713706016540527 secs 
+
+rename: renamed one variable (length)
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.989095 
+NOTE: Elapsed Time: 0.00159096717834473 secs 
+
+mutate: no changes
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.995767 
+NOTE: Elapsed Time: 0.00667214393615723 secs 
+
+select: dropped one variable (Idel)
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.997752 
+NOTE: Elapsed Time: 0.00198483467102051 secs 
+
+datastep: columns started with 4 and ended with 4 
+
+NOTE: Log Print Time:  2024-07-03 14:58:29.999859 
+NOTE: Elapsed Time: 0.00210714340209961 secs 
+
+# A tibble: 36 × 4
+    Vdel     V     I length
+   <dbl> <dbl> <dbl> <chr> 
+ 1    30   300  141. 20    
+ 2    56   560  268. 20    
+ 3    72   720  346. 20    
+ 4    74   740  354. 20    
+ 5    85   850  405. 20    
+ 6    97   970  466. 20    
+ 7    77   770  372. 20    
+ 8    68   680  326. 20    
+ 9    57   570  271. 20    
+10    50   500  242. 20    
+# ℹ 26 more rows
+# ℹ Use `print(n = ...)` to see more rows
+
+NOTE: Data frame has 36 rows and 4 columns. 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.007237 
+NOTE: Elapsed Time: 0.00737786293029785 secs 
+
+[1] "proc_transpose: input data set 1 rows and 6 columns"
+[2] "                name: NAME"                         
+[3] "                output dataset 3 rows and 2 columns"
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.03879 
+NOTE: Elapsed Time: 0.0315530300140381 secs 
+
+# A tibble: 3 × 2
+  NAME   COL1
+  <chr> <dbl>
+1 ...2   2.06
+2 ...4   3.09
+3 ...6   5.16
+
+NOTE: Data frame has 3 rows and 2 columns. 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.042697 
+NOTE: Elapsed Time: 0.0039069652557373 secs 
+
+mutate: converted 'NAME' from character to double (0 new NA)
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.04464 
+NOTE: Elapsed Time: 0.00194311141967773 secs 
+
+rename: renamed 2 variables (length, r0)
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.046079 
+NOTE: Elapsed Time: 0.00143885612487793 secs 
+
+Preparing ACCURACY dataset 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.04641 
+NOTE: Elapsed Time: 0.00033116340637207 secs 
+
+rename: renamed 2 variables (tool, accuracy)
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.054587 
+NOTE: Elapsed Time: 0.00817680358886719 secs 
+
+datastep: columns started with 2 and ended with 2 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.055964 
+NOTE: Elapsed Time: 0.00137710571289062 secs 
+
+# A tibble: 2 × 2
+  tool           accuracy
+  <chr>             <dbl>
+1 Штангенциркуль     0.1 
+2 Микрометр          0.01
+
+NOTE: Data frame has 2 rows and 2 columns. 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.059629 
+NOTE: Elapsed Time: 0.00366497039794922 secs 
+
+Preparing CHARACTERISTICS dataset 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.062796 
+NOTE: Elapsed Time: 0.00316715240478516 secs 
+
+rename: renamed 3 variables (parameter, voltmeter, milliammeter)
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.070189 
+NOTE: Elapsed Time: 0.00739288330078125 secs 
+
+datastep: columns started with 3 and ended with 3 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.071578 
+NOTE: Elapsed Time: 0.0013890266418457 secs 
+
+# A tibble: 8 × 3
+  parameter                voltmeter            milliammeter
+  <chr>                    <chr>                <chr>       
+1 Система                  Магнитоэлектрическая Цифровая    
+2 Класс точности           0.2                  <NA>        
+3 Предел измерений         1.5                  <NA>        
+4 Число делений            150                  <NA>        
+5 Цена деления             0.01                 <NA>        
+6 Чувствительность         100                  <NA>        
+7 Абсолютная погрешность   3                    0.75        
+8 Внутреннее сопротивление 10000                1.2         
+
+NOTE: Data frame has 8 rows and 3 columns. 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.075394 
+NOTE: Elapsed Time: 0.00381588935852051 secs 
+
+Writing datasets 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.079033 
+NOTE: Elapsed Time: 0.00363898277282715 secs 
+
+lib_write: write data in library 'experimental' 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.080625 
+NOTE: Elapsed Time: 0.00159215927124023 secs 
+
+# library 'experimental': 3 items
+- attributes: rds not loaded
+- path: ./Physics_Labs/1_sem/Lab111/rmarkdown/data/experimental
+- items:
+      Name Extension Rows Cols   Size        LastModified
+1  current       rds   36    4 5.2 Kb 2024-07-03 14:58:30
+2 diameter       rds   10    2 3.2 Kb 2024-07-03 14:58:30
+3   bridge       rds    3    2 2.2 Kb 2024-07-03 14:58:30
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.082861 
+NOTE: Elapsed Time: 0.00223588943481445 secs 
+
+lib_write: write data in library 'meta' 
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.084098 
+NOTE: Elapsed Time: 0.00123715400695801 secs 
+
+# library 'meta': 2 items
+- attributes: rds not loaded
+- path: ./Physics_Labs/1_sem/Lab111/rmarkdown/data/meta
+- items:
+             Name Extension Rows Cols Size        LastModified
+1        accuracy       rds    2    2 3 Kb 2024-07-03 14:58:30
+2 characteristics       rds    8    3 5 Kb 2024-07-03 14:58:30
+
+NOTE: Log Print Time:  2024-07-03 14:58:30.086573 
+NOTE: Elapsed Time: 0.00247478485107422 secs 
+
+========================================================================= 
+Log End Time: 2024-07-03 14:58:30.091181 
+Log Elapsed Time: 0 00:00:00 
+========================================================================= 
