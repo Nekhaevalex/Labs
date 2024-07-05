@@ -1,0 +1,74 @@
+========================================================================= 
+Log Path: ./Physics_Labs/1_sem/Lab114/rmarkdown/log/preparation.log 
+Program Path: /Users/alex/git/Labs/Physics_Labs/1_sem/Lab114/rmarkdown/prepare_data.r 
+Working Directory: /Users/alex/git/Labs 
+User Name: alex 
+R Version: 4.4.1 (2024-06-14) 
+Machine: Alexanders-Laptop.local arm64 
+Operating System: Darwin 23.5.0 Darwin Kernel Version 23.5.0: Wed May 1 20:12:58 PDT 2024; root:xnu-10063.121.3~5/RELEASE_ARM64_T6000 
+Base Packages: stats graphics grDevices utils datasets methods base 
+Other Packages: tidylog_1.1.0 readxl_1.4.3 errors_0.4.1 kableExtra_1.4.0 knitr_1.47 procs_1.0.6 reporter_1.4.4 libr_1.3.3 logr_1.3.8 fmtr_1.6.5 common_1.1.3 sassy_1.2.5 yardstick_1.3.1 workflowsets_1.1.0 workflows_1.1.4 tune_1.2.1 rsample_1.2.1 recipes_1.0.10 parsnip_1.2.1 modeldata_1.4.0 infer_1.0.7 dials_1.2.1 scales_1.3.0 broom_1.0.6 tidymodels_1.2.0 lubridate_1.9.3 forcats_1.0.0 stringr_1.5.1 dplyr_1.1.4 purrr_1.0.2 readr_2.1.5 tidyr_1.3.1 tibble_3.2.1 ggplot2_3.5.1 tidyverse_2.0.0 
+Log Start Time: 2024-07-04 23:03:45.169317 
+========================================================================= 
+
+========================================================================= 
+Setting up library 
+========================================================================= 
+
+# library 'experimental': 1 items
+- attributes: rds not loaded
+- path: ./Physics_Labs/1_sem/Lab114/rmarkdown/data/experimental
+- items:
+    Name Extension Rows Cols   Size        LastModified
+1 counts       rds  300    2 7.3 Kb 2024-07-04 23:03:31
+
+NOTE: Log Print Time:  2024-07-04 23:03:45.171671 
+NOTE: Elapsed Time: 0.00210881233215332 secs 
+
+========================================================================= 
+Preparing COUNT dataset 
+========================================================================= 
+
+pivot_longer: reorganized (...1, ...2, ...3, ...4, ...5, …) into (time, value) [was 20x10, now 200x2]
+
+NOTE: Log Print Time:  2024-07-04 23:03:45.222939 
+NOTE: Elapsed Time: 0.0512681007385254 secs 
+
+mutate: converted 'time' from character to double (0 new NA)
+
+NOTE: Log Print Time:  2024-07-04 23:03:45.224554 
+NOTE: Elapsed Time: 0.00161504745483398 secs 
+
+pivot_longer: reorganized (...1, ...2, ...3, ...4, ...5, …) into (time, value) [was 10x10, now 100x2]
+
+NOTE: Log Print Time:  2024-07-04 23:03:45.277787 
+NOTE: Elapsed Time: 0.0532329082489014 secs 
+
+mutate: converted 'time' from character to double (0 new NA)
+
+NOTE: Log Print Time:  2024-07-04 23:03:45.279228 
+NOTE: Elapsed Time: 0.00144100189208984 secs 
+
+========================================================================= 
+Writing datasets 
+========================================================================= 
+
+lib_write: write data in library 'experimental' 
+
+NOTE: Log Print Time:  2024-07-04 23:03:45.281072 
+NOTE: Elapsed Time: 0.00184392929077148 secs 
+
+# library 'experimental': 1 items
+- attributes: rds not loaded
+- path: ./Physics_Labs/1_sem/Lab114/rmarkdown/data/experimental
+- items:
+    Name Extension Rows Cols   Size        LastModified
+1 counts       rds  300    2 6.8 Kb 2024-07-04 23:03:45
+
+NOTE: Log Print Time:  2024-07-04 23:03:45.282616 
+NOTE: Elapsed Time: 0.00154399871826172 secs 
+
+========================================================================= 
+Log End Time: 2024-07-04 23:03:45.282779 
+Log Elapsed Time: 0 00:00:00 
+========================================================================= 

@@ -1,0 +1,203 @@
+---
+title:
+    Измерение интенсивности радиационного фона
+subtitle:
+    Лабораторная работа №1.1.4
+author:
+    Александр Нехаев, 654 гр.
+output:
+    pdf_document:
+        toc: true
+        latex_engine: pdflatex
+        df_print: kable
+        extra_dependencies:
+            babel: ["english", "russian"]
+            inputenc: ["utf8"]
+            fontenc: ["T2A"]
+---
+# Цель работы
+Применение методов обработки экспериментальных данных для изучения статистических закномерностей при измерении радиационного фона.
+
+# В работе используются
+Счетчик Гейгера-Мюллера (СТС-6), блок питания, компьютер с интерфейсом связи со счетчиком.
+
+# Теоретические основы
+Интенсивность:
+
+$$
+    I = \frac{\text{число частиц}}{\text{см}^2\cdot \text{ср}\cdot\text{c}}
+$$
+
+Плотность потока частиц:
+
+$$
+F = 2 \pi \int_0^{\frac{\pi }{2}} I \sin (\theta ) \cos (\theta ) d\theta = \pi I \left(\frac{\text{число частиц}}{\text{см}^2\cdot \cdot\text{c}}\right)
+$$
+
+Концентрация частиц, имеющих абсолютное значение скорости $V$:
+
+$$
+n = \frac{4\pi I}{V}
+$$
+
+```{r, echo=FALSE, include=FALSE}
+# Importing packages & assigning libraries.
+# Make sure that prepare_data.r program was succesfully executed before
+# compiling this report
+library(tidyverse)
+library(tidymodels)
+library(sassy)
+library(knitr)
+library(kableExtra)
+library(errors)
+
+libname(experimental, "./Physics_Labs/1_sem/Lab114/rmarkdown/data/experimental")
+```
+
+# Ход работы
+1. Перенесем данные с программы:
+```{r, echo=FALSE}
+
+formatted_count_arrange <- function(timeval) {
+    experimental$counts |>
+    dplyr::filter(time == timeval) |>
+    mutate(
+        num = row_number(),
+        dec = num %/% 10 * 10,
+        dec = if_else(num %% 10 == 0, dec - 10, dec),
+        num = num - dec
+    ) |>
+    pivot_wider(
+        names_from = c("num"),
+        values_from = "value"
+    ) |>
+    select(-c(time))
+}
+
+formatted_count_arrange(20) |>
+    kable(
+        col.names = c("№ опыта", c(1:10)),
+        caption = "Число срабатываний счетчика за 20 с"
+    )
+
+formatted_count_arrange(40) |>
+    kable(
+        col.names = c("№ опыта", c(1:10)),
+        caption = "Число срабатываний счетчика за 40 с"
+    )
+```
+
+2. Приведем значения среднего числа срабатываний за заданные промежутки времени вместе с среднеквадратичными ошибками и проверим справедливость формулы $\sigma_\text{отд}=\sqrt{\bar{n}}$
+```{r, echo=FALSE}
+count_stat <-
+    experimental$counts |>
+    group_by(time) |>
+    summarise(
+        n = dplyr::n(),
+        mean = round(mean(value), digits = 2),
+        sd = round(sd(value), digits = 2),
+        estimate = sqrt(mean)
+    )
+
+count_stat |>
+    kable(
+        col.names = c("Время", "Число опытов", "Среднее число срабатываний", "Среднеквадратичная ошибка", "Оценка")
+    )
+```
+
+3. Строим гистограмму распределения числа срабатываний счетчика.
+
+```{r, echo=FALSE}
+experimental$counts |>
+    mutate(
+        time = as_factor(time)
+    ) |>
+    ggplot(aes(x = value, fill = time)) +
+    geom_histogram(binwidth = 1) +
+    theme_bw()
+```
+
+4. Определим процент случаев, когда отклонение от среднего не превышает $\sigma$, $2\sigma$.
+
+```{r, echo=FALSE, include=FALSE}
+sigma_exceed <-
+    experimental$counts |>
+    left_join(
+        count_stat,
+        by = "time"
+    ) |>
+    mutate(
+        sigma = if_else(
+            ((mean - sd) <= value) & (value <= (mean + sd)),
+            1, 0
+        ),
+        sigma2 = if_else(
+            ((mean - 2 * sd) <= value) & (value <= (mean + 2 * sd)),
+            1, 0
+        )
+    ) |>
+    group_by(time, sd, n, mean) |>
+    summarise(
+        sigma = sum(sigma),
+        sigma2 = sum(sigma2)
+    ) |>
+    mutate(
+        ratio = sigma / n * 100,
+        ratio2 = sigma2 / n * 100,
+        sigmat = round(1 - 2 * pnorm(1, 0, 1, lower.tail = FALSE), digits = 2) * 100,
+        sigmat2 = round(1 - 2 * pnorm(2, 0, 1, lower.tail = FALSE), digits = 2) * 100,
+        sd = round(sd, digits = 2)
+    ) |>
+    datastep({
+        output()
+        sigma <- sigma2
+        ratio <- ratio2
+        sigmat <- sigmat2
+        output()
+    }) |>
+    ungroup() |>
+    select(c(time, sd, sigma, ratio, sigmat))
+```
+
+```{r, echo=FALSE}
+sigma_exceed |>
+    kable(
+        col.names = c("Длительность, с", "Ошибка", "Число случаев", "Доля случае, %", "Теоретическая оценка, %")
+    ) |>
+    collapse_rows(
+        columns = 1:2,
+        valign = "middle"
+    )
+```
+
+5. Проведем расчет ошибок и приведем окончательные результаты.
+```{r, echo=FALSE}
+errors_fin <-
+    count_stat |>
+    mutate(
+        sn = round(sd / sqrt(n), digits = 2),
+        enf = round(sn / mean * 100, digits = 2),
+        enl = round(100 / sqrt(mean * n), digits = 2),
+        res = str_glue("${round(mean, digits = 2)} \\pm {round(sn, digits = 2)}$")
+    )
+
+errors_fin |>
+    ungroup() |>
+    select(c(time, sn, enf, enl, res)) |>
+    kable(
+        col.names = c(
+            "Длительность",
+            "$\\sigma_{\\bar{n}_t}$",
+            "$\\varepsilon_{\\bar{n}_t}^1$",
+            "$\\varepsilon_{\\bar{n}_t}^2$",
+            "$n_t = \\bar{n}_1\\pm \\sigma_{\\bar{n}_t}$"
+        )
+    )
+```
+
+# Вывод
+После применения метода обработки экспериментальных данных для изучения статистических закономерностей при измерении интенсивности радиационного фона из опыта получили:
+
+1. С увеличением количества Экспериментов уменьшается интервал, которому принадлежит истинное среднее значение числа импульсов за интервал времени.
+
+2. С увеличением количества Экспериментов наблюдается увеличением точности определения доли случаев, когда $n_i$ от отклоняется от среднего значения $\bar{n}$.

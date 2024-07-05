@@ -8,11 +8,10 @@ author:
 output:
     pdf_document:
         toc: true
-        number_sections: true
         latex_engine: pdflatex
         df_print: kable
         extra_dependencies:
-            babel: ["russian", "english"]
+            babel: ["english", "russian"]
             inputenc: ["utf8"]
             fontenc: ["T2A"]
 ---
@@ -224,8 +223,14 @@ kbl(
 
 ```{r, echo=FALSE}
 experimental$current |>
-    ggplot(aes(x = I, y = V, color = length)) +
+    ggplot(aes(
+        x = I,
+        y = V,
+        color = length
+    )) +
     geom_point() +
+    geom_errorbar(aes(ymin = V - 3, ymax = V + 3)) +
+    geom_errorbarh(aes(xmin = I - 0.75, xmax = I + 0.75)) +
     geom_smooth(method = "lm", formula = y ~ 0 + x) +
     labs(
         x = "I, A",
